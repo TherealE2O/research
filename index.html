@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civic Lens Dossier | Silicon Valley's African Trauma Factory</title>
+  <meta name="description" content="In-depth investigative dossier and scriptwriter's pack on Big Tech's content moderation hubs in Africa, featuring HumAngle's investigation and the landmark Nairobi court battles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #FCFCFD;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F3F4F6;
+      --text-main: #18191B;
+      --text-muted: #575A65;
+      --text-light: #8E929E;
+      --border-color: #E5E7EB;
+      --border-accent: #008751;
+      --accent-green: #008751;
+      --accent-red: #DC2626;
+      --accent-gold: #D97706;
+      --accent-blue: #2563EB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 28px rgba(0,0,0,0.1);
+      --radius: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #0D1117;
+      --bg-card: #161B22;
+      --bg-subtle: #21262D;
+      --text-main: #F0F6FC;
+      --text-muted: #8B949E;
+      --text-light: #6E7681;
+      --border-color: #30363D;
+      --border-accent: #10B981;
+      --accent-green: #10B981;
+      --accent-red: #EF4444;
+      --accent-gold: #F59E0B;
+      --accent-blue: #3B82F6;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 28px rgba(0,0,0,0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.75;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* TOP PROGRESS BAR */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--accent-green);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s;
+    }
+
+    /* STICKY HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 900;
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    [data-theme="dark"] header {
+      background-color: rgba(22, 27, 34, 0.95);
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-badge {
+      background: var(--accent-green);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 1px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle, .btn-action {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .theme-toggle:hover, .btn-action:hover {
+      background: var(--border-color);
+    }
+
+    /* STICKY NAV TABS */
+    .nav-tabs-wrapper {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .nav-tabs-wrapper::-webkit-scrollbar { display: none; }
+
+    .nav-tabs {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-tab-link {
+      display: inline-block;
+      padding: 12px 0;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .nav-tab-link:hover, .nav-tab-link.active {
+      color: var(--accent-green);
+      border-bottom-color: var(--accent-green);
+    }
+
+    /* MAIN CONTAINER */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 100px;
+    }
+
+    /* EDITORIAL MASTHEAD */
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent-green);
+    }
+
+    .meta-tag {
+      background: rgba(0, 135, 81, 0.1);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .meta-date {
+      color: var(--text-light);
+    }
+
+    h1.article-headline {
+      font-family: 'Newsreader', serif;
+      font-size: 42px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .article-standfirst {
+      font-family: 'Newsreader', serif;
+      font-size: 22px;
+      line-height: 1.5;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* FEATURED HERO IMAGE */
+    .hero-media {
+      margin: 32px 0 44px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .media-caption {
+      padding: 10px 16px;
+      background: var(--bg-subtle);
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .media-caption a {
+      color: var(--accent-green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* SUMMARY STATS GRID */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 36px 0;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent-red);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 4px;
+    }
+    .stat-num.green { color: var(--accent-green); }
+    .stat-num.gold { color: var(--accent-gold); }
+
+    .stat-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* SECTION HEADINGS */
+    h2.section-title {
+      font-family: 'Newsreader', serif;
+      font-size: 30px;
+      line-height: 1.3;
+      margin: 48px 0 20px;
+      color: var(--text-main);
+      padding-top: 24px;
+      border-top: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3.subsection-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 28px 0 12px;
+      color: var(--text-main);
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: var(--text-main);
+    }
+
+    /* QUOTE CALLOUTS */
+    blockquote.pull-quote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: var(--shadow-sm);
+      border-top: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    blockquote.pull-quote.red {
+      border-left-color: var(--accent-red);
+    }
+
+    blockquote.pull-quote p {
+      font-family: 'Newsreader', serif;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    blockquote.pull-quote cite {
+      display: block;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* PROTAGONIST CARDS */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .profile-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .profile-role {
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--bg-subtle);
+      padding: 3px 10px;
+      border-radius: 20px;
+      color: var(--text-muted);
+    }
+
+    /* INTERACTIVE READ-MORE ACCORDIONS */
+    .accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .accordion-header {
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      user-select: none;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text-main);
+    }
+
+    .accordion-header:hover {
+      background: var(--bg-subtle);
+    }
+
+    .accordion-icon {
+      font-size: 18px;
+      transition: transform 0.2s ease;
+      color: var(--accent-green);
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+      background: var(--bg-card);
+      border-top: 1px solid transparent;
+    }
+
+    .accordion-item.open .accordion-content {
+      padding: 20px;
+      max-height: 2000px;
+      border-top-color: var(--border-color);
+    }
+
+    /* SCRIPTWRITER'S ACT CARDS */
+    .act-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--accent-gold);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .act-box.act-1 { border-left-color: var(--accent-blue); }
+    .act-box.act-2 { border-left-color: var(--accent-red); }
+    .act-box.act-3 { border-left-color: var(--accent-green); }
+
+    .act-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .act-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .act-timing {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .act-cue-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .act-cue-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 15.5px;
+      color: var(--text-main);
+    }
+
+    .act-cue-list li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: bold;
+    }
+
+    /* COPY BUTTON */
+    .btn-copy {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      float: right;
+    }
+    .btn-copy:hover {
+      background: var(--accent-green);
+      color: #fff;
+      border-color: var(--accent-green);
+    }
+
+    /* SOURCE PILLS */
+    .source-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .source-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.15s ease;
+    }
+
+    .source-item:hover {
+      border-color: var(--accent-green);
+      transform: translateX(4px);
+    }
+
+    .source-title {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text-main);
+    }
+
+    .source-outlet {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .source-link-icon {
+      color: var(--accent-green);
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      background: var(--bg-card);
+    }
+
+    .footer-brand {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    /* TOAST ALERT */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10B981;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s ease;
+      z-index: 9999;
+    }
+    #toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      h1.article-headline { font-size: 32px; }
+      .article-standfirst { font-size: 19px; }
+      main { padding: 24px 16px 80px; }
+      .nav-tabs { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Sticky Top Masthead -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand-group">
+        <span class="brand-badge">Civic Lens</span>
+        <span class="brand-title">Editorial Dossier</span>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-action" onclick="copyFullText()">📋 Copy Brief</button>
+        <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌙 Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Section Jump Bar -->
+  <div class="nav-tabs-wrapper">
+    <div class="nav-tabs">
+      <a href="#overview" class="nav-tab-link active">1. Overview & Hook</a>
+      <a href="#human-faces" class="nav-tab-link">2. The Human Stories</a>
+      <a href="#sweatshop" class="nav-tab-link">3. The 50s Sweatshop</a>
+      <a href="#parallel-scandals" class="nav-tab-link">4. OpenAI & Ethiopia</a>
+      <a href="#court-reckoning" class="nav-tab-link">5. The Court Victory</a>
+      <a href="#script-studio" class="nav-tab-link">6. Scriptwriter Beats</a>
+      <a href="#sources" class="nav-tab-link">7. Primary Sources</a>
+    </div>
+  </div>
+
+  <!-- Main Article Body -->
+  <main id="dossier-content">
+
+    <div class="article-meta">
+      <span class="meta-tag">Investigative Dossier</span>
+      <span class="meta-tag">Human Rights & Big Tech</span>
+      <span class="meta-date">Case File: CL-2026-NBO-01</span>
+    </div>
+
+    <h1 class="article-headline">Silicon Valley’s African Trauma Factory: How Big Tech Outsources Psychological Horror to Africans</h1>
+
+    <p class="article-standfirst">
+      Two Nigerian graduates went to Nairobi expecting Hausa translation and customer care roles. Instead, they signed NDAs, were handed 50-second timers, and were forced to moderate raw terror footage for Meta. Now, a landmark Kenyan court battle is cracking open the digital colonialism powering modern social media.
+    </p>
+
+    <!-- Featured Illustration -->
+    <div class="hero-media">
+      <img src="assets/investigation/humangle_illustration_clean.jpg" alt="Content Moderators in distress at their computer desks" loading="lazy">
+      <div class="media-caption">
+        <span>Illustration: Akila Jibrin / HumAngle Media (October 2026)</span>
+        <a href="https://humanglemedia.com" target="_blank" rel="noopener">Source: HumAngle ↗</a>
+      </div>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">$1.50</div>
+        <div class="stat-label">Hourly Pay in Nairobi</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">50 sec</div>
+        <div class="stat-label">Decision Time Per Murder Clip</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">81%</div>
+        <div class="stat-label">Clinical PTSD Rate (Court Records)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num green">$1.6B</div>
+        <div class="stat-label">Damages Claimed in Kenya Court</div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: THE OVERVIEW & HOOK -->
+    <section id="overview">
+      <h2 class="section-title">1. The Core Premise & The Paradox</h2>
+      <p>
+        Silicon Valley promotes a frictionless, sanitized vision of the digital future. Trillion-dollar corporations like Meta (Facebook, Instagram) and OpenAI boast of machine learning algorithms that instantly detect hate speech and keep digital public squares safe.
+      </p>
+      <p>
+        <strong>The reality is far darker:</strong> Artificial intelligence cannot reliably distinguish hate speech, cultural context, or regional nuances. To keep billions of social media feeds clean, Big Tech operates an invisible, low-cost supply chain across the Global South. In air-conditioned offices in Nairobi, Kenya, hundreds of young African university graduates are paid roughly $1.50 an hour to act as biological filters—manually viewing, tagging, and scrubbing beheadings, rape, torture, and child abuse so Western users don’t have to.
+      </p>
+
+      <blockquote class="pull-quote red">
+        <p>“We are the shock absorbers of the internet. They break our minds so their platforms look respectable to advertisers.”</p>
+        <cite>— Former African Content Moderator, Nairobi</cite>
+      </blockquote>
+    </section>
+
+    <!-- SECTION 2: THE HUMAN STORIES -->
+    <section id="human-faces">
+      <h2 class="section-title">2. The Human Faces: Kauna Malgwi & Mustafa Mukhtar</h2>
+      <p>
+        An October 2026 investigation by Nigerian investigative outlet <strong>HumAngle</strong> brought into sharp focus the stories of Nigerian professionals recruited into this trauma machine:
+      </p>
+
+      <!-- Profile 1 -->
+      <div class="profile-card">
+        <div class="profile-header">
+          <div>
+            <div class="profile-name">Kauna Malgwi</div>
+            <div class="profile-role">Clinical Psychologist & Organizer</div>
+          </div>
+          <button class="btn-copy" onclick="copySnippet('Kauna Malgwi Profile: Grew up in Borno State amidst Boko Haram terror, moved to Nairobi for master\'s degree, recruited for \'Hausa translation\', forced to moderate Boko Haram executions, developed severe PTSD, now leads African Content Moderators Union.')">Copy Case</button>
+        </div>
+        <p>
+          Kauna grew up in <strong>Borno State, Northeast Nigeria</strong>, witnessing firsthand the destruction caused by the Boko Haram insurgency. Hoping to pursue her Master’s degree in Kenya, she applied for what recruiter Sama advertised as a benign <em>“Hausa language translator”</em> role in 2019.
+        </p>
+        <p>
+          Upon arrival in Nairobi, after signing a 20-page Non-Disclosure Agreement (NDA), she was brought onto the production floor. Her screen was filled with raw, unedited footage of Boko Haram executions, roadside massacres, and terrorist propaganda from her own home state. She was forced to relive the very terrorism she fled, reviewing atrocities every day under stopwatch surveillance.
+        </p>
+        <p>
+          Today, Malgwi has channeled her trauma into activism, founding the <strong>Digital Rights and Mental Health Initiative Africa (DRMHI)</strong> and co-leading the <strong>African Content Moderators Union</strong>.
+        </p>
+      </div>
+
+      <!-- Profile 2 -->
+      <div class="profile-card">
+        <div class="profile-header">
+          <div>
+            <div class="profile-name">Mustafa Mukhtar</div>
+            <div class="profile-role">Former Hausa Content Moderator</div>
+          </div>
+          <button class="btn-copy" onclick="copySnippet('Mustafa Mukhtar: Recruited under false pretenses for translation; testified that in-house company wellness therapists were so overwhelmed that they broke down in tears when listening to moderators recount the videos.')">Copy Case</button>
+        </div>
+        <p>
+          Recruited alongside Malgwi, Mukhtar was also promised a reputable customer support and linguistic desk job. Instead, he was assigned to high-priority violence queues.
+        </p>
+        <p>
+          Mukhtar provided one of the most chilling testimonies of the entire investigation: when workers sought help from the company’s mandatory in-house "wellness counselors", <strong>the counselors themselves broke down in tears</strong> upon hearing what the moderators had been exposed to. The support system was completely overwhelmed and useless.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE 50-SECOND SWEATSHOP -->
+    <section id="sweatshop">
+      <h2 class="section-title">3. The 50-Second Death Clock & Working Conditions</h2>
+      <p>
+        The working conditions inside the Nairobi hub were governed by strict, unforgiving algorithms:
+      </p>
+
+      <div class="accordion-item open">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>⏱️ The 50-Second Decision Rule</span>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>Moderators were forced to make high-stakes policy calls on horrifying content within <strong>50 seconds</strong> per post. This included reading captions, evaluating regional slang, identifying terror symbols, and deciding whether to delete or escalate. If an agent took longer, their efficiency metric dropped, risking disciplinary action.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>👁️ Keystroke Surveillance & 95% Accuracy Mandate</span>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>Every pause, click, and keystroke was tracked. To keep their jobs, moderators had to maintain a <strong>95% accuracy score</strong> according to Meta's opaque community standards. A wrong decision on whether a video depicted "glorification of terror" vs. "journalistic reporting" meant docked pay or probation.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>💰 The Global Wage Apartheid</span>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>In the United States and Europe, content moderators earn <strong>$18 to $25 per hour</strong> with access to clinical psychiatric care. In Nairobi, Sama paid African moderators between <strong>40,000 to 60,000 KSh per month (~$300 - $450 USD)</strong>—translating to about <strong>$1.50 per hour</strong>. Meta generated over $130 billion in annual revenue while paying its frontline human defense the equivalent of pocket change.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PARALLEL SCANDALS -->
+    <section id="parallel-scandals">
+      <h2 class="section-title">4. Connected Scandals: OpenAI & The Ethiopia Civil War</h2>
+      <p>
+        This is not an isolated problem confined to Facebook. The exact same infrastructure was leveraged across other Silicon Valley flagship projects:
+      </p>
+
+      <div class="accordion-item open">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>🤖 OpenAI / ChatGPT's Nairobi Secret (Time Magazine)</span>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>In late 2021, before ChatGPT’s global explosion, OpenAI contracted <strong>Sama in Nairobi</strong> to build the safety classifier that prevents ChatGPT from spitting out hate speech or violent text.</p>
+          <p>Kenyan workers were paid <strong>$1.32 to $2.00 per hour</strong> to read hundreds of thousands of passages scraped from the darkest corners of the web—explicit descriptions of sexual violence, pedophilia, bestiality, suicide, and torture. Workers reported recurring nightmares and severe mental distress. Sama canceled the contract early because the work was deemed too hazardous to human health.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>⚔️ The Tigray War & The Murder of Professor Meareg ($2B Lawsuit)</span>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>During the catastrophic civil war in Ethiopia (2020–2022), Facebook was flooded with virulent ethnic incitement. Meta had assigned fewer than <strong>30 content moderators</strong> in Nairobi to cover more than 100 million citizens across Ethiopia speaking Amharic, Oromo, and Tigrinya.</p>
+          <p>In November 2021, <strong>Professor Meareg Amare</strong>, an internationally respected chemistry professor at Bahir Dar University, was targeted with viral Facebook posts falsely accusing him of treason and publishing his home address. Despite repeated emergency reports by his son Abrham, Facebook’s systems failed to remove the posts. Gunmen tracked Professor Meareg to his home and executed him on his driveway. His son filed a landmark <strong>$2 Billion lawsuit</strong> against Meta in Kenya High Court.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: THE COURT RECKONING -->
+    <section id="court-reckoning">
+      <h2 class="section-title">5. The Turning Point: Africa Fights Back and Wins</h2>
+      <p>
+        For years, Silicon Valley assumed African jurisdictions were toothless. In 2022, South African whistleblower <strong>Daniel Motaung</strong> and human rights lawyer <strong>Mercy Mutemi</strong> initiated legal proceedings that upended Big Tech's playbook.
+      </p>
+
+      <div class="profile-card" style="border-left: 4px solid var(--accent-green);">
+        <h3 class="subsection-title" style="margin-top:0;">Key Legal Milestones (2024–2026):</h3>
+        <ul style="padding-left: 20px; margin-bottom: 16px;">
+          <li><strong>September 2024 (Court of Appeal):</strong> In a watershed ruling, the Kenyan Court of Appeal dismissed Meta’s claim of extraterritorial immunity, formally ruling that <strong>Meta CAN be sued in Kenyan courts</strong>. This destroyed Big Tech's legal shield of hiding behind local subcontractors.</li>
+          <li><strong>December 2024 (Medical Evidence):</strong> Psychiatric reports of 144 moderators submitted to the court proved that <strong>81% were suffering from severe clinical PTSD</strong> directly caused by exposure to graphic content.</li>
+          <li><strong>April 2026 (Subpoena of Executives):</strong> Kenyan judges ordered senior Meta executives to appear for cross-examination over disputed affidavits.</li>
+          <li><strong>The $1.6 Billion Suit:</strong> 184+ moderators, backed by international labor group Foxglove, are demanding $1.6 Billion in damages and permanent mental healthcare restitution.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SCRIPTWRITER'S STUDIO -->
+    <section id="script-studio">
+      <h2 class="section-title">6. Scriptwriter’s Studio (3-Act Video Beats)</h2>
+      <p>
+        Use this verified 3-act narrative blueprint to draft the next investigative video for <strong>Civic Lens</strong>:
+      </p>
+
+      <!-- ACT 1 -->
+      <div class="act-box act-1">
+        <div class="act-header">
+          <div class="act-title" style="color:var(--accent-blue);">Act 1: The Trap</div>
+          <div class="act-timing">0:00 — 2:30</div>
+        </div>
+        <p><strong>Goal:</strong> Subvert the viewer's expectation of Big Tech and establish the human stakes.</p>
+        <ul class="act-cue-list">
+          <li><strong>Opening Hook:</strong> Contrast Mark Zuckerberg’s metaverse speeches with a dark, windowless room in Nairobi. <em>"You think AI cleans the internet. In reality, young Africans do—for $1.50 an hour."</em></li>
+          <li><strong>The Bait:</strong> Introduce Kauna Malgwi in Borno State. An ambitious graduate applying for an overseas "translation" job in Kenya.</li>
+          <li><strong>The Ambush:</strong> Landing at Jomo Kenyatta Airport, signing a 20-page NDA before seeing the screen. Day 1: The monitor turns on, displaying Boko Haram execution videos.</li>
+          <li><strong>The Clock:</strong> Introduce the 50-second timer counting down on screen. <em>"Decide if this decapitation violates community guidelines. 49... 48... 47..."</em></li>
+        </ul>
+      </div>
+
+      <!-- ACT 2 -->
+      <div class="act-box act-2">
+        <div class="act-header">
+          <div class="act-title" style="color:var(--accent-red);">Act 2: The Digital Sweatshop</div>
+          <div class="act-timing">2:30 — 6:00</div>
+        </div>
+        <p><strong>Goal:</strong> Expose the structural cruelty, wage gap, and expanding web of scandals.</p>
+        <ul class="act-cue-list">
+          <li><strong>The Math:</strong> Contrast Meta’s $1.5 Trillion market valuation against the $350/month paid to African moderators.</li>
+          <li><strong>The Broken Therapists:</strong> Mustafa Mukhtar’s testimony: the company wellness counselors weeping at the moderators' stories.</li>
+          <li><strong>The OpenAI Connection:</strong> Reveal that ChatGPT was also scrubbed by the exact same Nairobi workers for $1.32/hr reading incest and suicide text.</li>
+          <li><strong>The Blood on the Feed:</strong> The Tigray civil war and the doorstep assassination of Professor Meareg Amare due to lack of moderators.</li>
+          <li><strong>The Medical Toll:</strong> Reveal the official court psychiatric finding: <strong>81% clinical PTSD</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- ACT 3 -->
+      <div class="act-box act-3">
+        <div class="act-header">
+          <div class="act-title" style="color:var(--accent-green);">Act 3: The Reckoning</div>
+          <div class="act-timing">6:00 — 9:00</div>
+        </div>
+        <p><strong>Goal:</strong> Show the courageous fightback, legal victory, and deliver the haunting moral question.</p>
+        <ul class="act-cue-list">
+          <li><strong>The Retaliation:</strong> Sama shuts down the hub, firing 1,100+ workers and stranding foreigners in Nairobi without work permits.</li>
+          <li><strong>The Resistance:</strong> Daniel Motaung, Kauna Malgwi, and lawyer Mercy Mutemi form the African Content Moderators Union and take Meta to court.</li>
+          <li><strong>The Precedent:</strong> The landmark Court of Appeal ruling establishing that African courts have authority over Silicon Valley giants.</li>
+          <li><strong>Closing Punchline:</strong> <em>"Next time you scroll through a clean timeline, or ask ChatGPT for an answer—ask yourself: whose mind was broken so your screen stays safe?"</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRIMARY SOURCES -->
+    <section id="sources">
+      <h2 class="section-title">7. Verifiable Primary Sources & Reading Links</h2>
+      <p>Direct links to verified investigative journalism and court records for script fact-checking:</p>
+
+      <div class="source-list">
+        <a href="https://humanglemedia.com" target="_blank" rel="noopener" class="source-item">
+          <div>
+            <div class="source-title">Africans Hired to Moderate Facebook Content Left With Sleepless Nights</div>
+            <div class="source-outlet">HumAngle Media • October 8, 2026 • By HumAngle Investigations</div>
+          </div>
+          <span class="source-link-icon">↗</span>
+        </a>
+
+        <a href="https://time.com/6247678/openai-chatgpt-kenya-workers/" target="_blank" rel="noopener" class="source-item">
+          <div>
+            <div class="source-title">OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic</div>
+            <div class="source-outlet">Time Magazine • January 2023 • By Billy Perrigo</div>
+          </div>
+          <span class="source-link-icon">↗</span>
+        </a>
+
+        <a href="https://time.com/6147458/facebook-africa-content-moderation-employee-treatment/" target="_blank" rel="noopener" class="source-item">
+          <div>
+            <div class="source-title">Inside Facebook’s African Sweatshop: Daniel Motaung’s Story</div>
+            <div class="source-outlet">Time Magazine • February 2022 • By Billy Perrigo</div>
+          </div>
+          <span class="source-link-icon">↗</span>
+        </a>
+
+        <a href="https://foxglove.org.uk" target="_blank" rel="noopener" class="source-item">
+          <div>
+            <div class="source-title">Meta in Kenya: The Battle for Content Moderators' Justice</div>
+            <div class="source-outlet">Foxglove Legal UK • Litigation Dossier & Case Documents</div>
+          </div>
+          <span class="source-link-icon">↗</span>
+        </a>
+
+        <a href="https://apnews.com" target="_blank" rel="noopener" class="source-item">
+          <div>
+            <div class="source-title">Kenya Court of Appeal Rules Meta Can Be Sued in Landmark Labor Case</div>
+            <div class="source-outlet">Associated Press & Reuters • September 2024 Legal Filing</div>
+          </div>
+          <span class="source-link-icon">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">CIVIC LENS INVESTIGATIVE NETWORK</div>
+    <p>Evidence-Based Civics • No Hype • No Fan Clubs</p>
+    <p style="margin-top: 8px; font-size: 12px; color: var(--text-light);">
+      Ready for GitHub Pages deployment. Open <code>index.html</code> in any browser or host directly at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>
+    </p>
+  </footer>
+
+  <!-- Toast Alert -->
+  <div id="toast">Copied to clipboard!</div>
+
+  <!-- Client-side Interactivity Script -->
+  <script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+
+      // Update active nav link
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-tab-link');
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (winScroll >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Accordion toggle
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      item.classList.toggle('open');
+    }
+
+    // Theme toggle
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('theme-btn').textContent = next === 'dark' ? '☀️ Theme' : '🌙 Theme';
+      localStorage.setItem('civic_lens_theme', next);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('civic_lens_theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.getElementById('theme-btn').textContent = savedTheme === 'dark' ? '☀️ Theme' : '🌙 Theme';
+    }
+
+    // Toast notification
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg || 'Copied to clipboard!';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // Copy text snippet
+    function copySnippet(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Snippet copied for your script!');
+      });
+    }
+
+    // Copy full dossier text
+    function copyFullText() {
+      const content = document.getElementById('dossier-content').innerText;
+      navigator.clipboard.writeText(content).then(() => {
+        showToast('Complete briefing copied to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>

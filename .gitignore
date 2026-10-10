@@ -1,0 +1,22 @@
+# Large media files
+*.mp4
+*.wav
+*.mp3
+videos/*.mp4
+audio/**/*.wav
+audio/**/*.mp3
+temp_*
+media/videos/*.mp4
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Root debug images
+/*.jpg
+/*.png
+/*.webp
+
+# OS files
+.DS_Store
+Thumbs.db
