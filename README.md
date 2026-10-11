@@ -1,135 +1,44 @@
-# Polititrace Nigeria: Political Investigative Research Pipeline
-### Deep Historical Tenure Scraping & Documentary Evidence Miner: Bola Ahmed Tinubu & Peter Gregory Obi
+# Civic Lens Investigative Research Hub
 
-An automated, forensic investigation pipeline built for investigative journalists, documentary producers, political researchers, and citizens. It goes far beyond superficial search engine hits to reconstruct the historical records, tenure actions, public sector crises, controversies, and verbatim quotes of Nigeria's foremost political candidates.
+Interactive plain-text investigative dossier hub and documentary scriptwriter's pack for **Civic Lens Media** (`@civiclensng`).
 
----
+## Available Investigations:
 
-## 💡 The Core Thesis: "The Illusion of Choice"
-
-> *"We do not remember the history of our politicians, and that actually warps the way we perceive them and the way we vote for them."*
-
-Public discourse frequently paints contemporary Nigerian politics in binary strokes:
-- The **"Builder of Modern Lagos"** (Bola Ahmed Tinubu)
-- The **"Prudent Frugal Technocrat"** (Peter Gregory Obi)
-
-By indexing contemporaneously reported news items, judicial rulings, investigative reports, and broadcast interviews from their **active tenures**, this pipeline provides evidence showing that regardless of candidate brand, both figures presided over governance models defined by:
-1. **Executive opacity and private financial entanglement** (Alpha Beta tax collection monopoly vs. Pandora Papers secret offshore shell companies & SABMiller state equity).
-2. **Paralyzing public sector labor crises** (Federal-state LG funding standoff leaving council workers unpaid for 14 months vs. a 13-month medical doctors' strike shuttering public hospitals).
-3. **Suppression of local democracy** (Unilateral 37 LCDAs under party machine control vs. nearly 8-year boycott of Local Government elections).
-4. **Unresolved security and human rights events** (Lekki Toll Gate EndSARS shootings & EndBadGovernance crackdowns vs. Ezu River corpses linked to Awkuzu SARS).
-5. **Rhetoric vs. Governance Reality** (Anti-subsidy mass protests in 2012 vs. abrupt subsidy abolition in 2023; N75B liquid savings claim vs. N127B liabilities audit).
-
----
-
-## 🔍 Data Source Architecture
-
-1. **Nigerian Broadcast TV Archives**:
-   - **Channels Television** (`channelstv.com` & broadcast channel)
-   - **TVC News** (`tvcnews.tv`)
-   - **Arise News** (`arisenews.tv`)
-   - **NTA News** (`nta.ng`)
-2. **Investigative & Digital Print Outlets**:
-   - **Premium Times** (`premiumtimesng.com` - Pandora Papers, Alpha Beta, audits)
-   - **The Punch** (`punchng.com`)
-   - **Vanguard News** (`vanguardngr.com` - extensive 1999–2014 archives)
-   - **TheCable** (`thecable.ng`)
-   - **Daily Trust** (`dailytrust.com`)
-   - **ThisDay Live** (`thisdaylive.com`)
-3. **International Media**:
-   - **BBC News** (`bbc.com`)
-   - **CNN** (`cnn.com`)
-   - **Reuters** (`reuters.com`)
-4. **Archival Time Machines**:
-   - **Wayback Machine (Internet Archive CDX API)**: Queries pre-redesign newspaper snapshots from 1999–2014.
+### 1. Tinubu 360: The Lion of Bourdillon & The Nigerian Presidency
+* **Overview:** A 360-degree forensic inquiry into Nigeria's 16th President.
+* **Topics Covered:**
+  - Early life, birth controversies, and maternal roots.
+  - Chicago State University (CSU) 1979 records and the 2023 sworn deposition of Registrar Caleb Westberg.
+  - 1993 US Federal Court Asset Forfeiture (*Case No. 93 C 4483*) involving $460,000 compromise settlement.
+  - 3rd Republic Senate, June 12 resistance, Abacha treason detention, exile, and clandestine funding of Radio Kudirat.
+  - 1999–2007 Lagos Governorship: ₦600M to ₦8B IGR growth, municipal agencies (LASTMA, LAMATA, LAWMA), the 37 LCDA Supreme Court victory over President Obasanjo (*SC 70/2004*).
+  - The Dark Side: Alpha-Beta Consulting monopoly, Dapo Apara's High Court lawsuit, 2019 Bourdillon bullion vans, and succession godfatherism.
+  - The Kingmaker Era: Electoral tribunal recoveries, the 2013 APC merger, Buhari alliance, Cabal tensions, and the 2022 *"Èmi L'ókàn"* Abeokuta speech.
+  - The Presidency (2023–Present): "Subsidy is gone" shock, Naira floating, hyper-inflation, #EndBadGovernance protests, controversial spending (₦150B jet, coastal highway), alongside landmark structural reforms (Supreme Court LGA direct autonomy, Student Loans Act, Crude-in-Naira) and official administration defenses.
+* **Master Dossier:** [`investigations/TINUBU_360_INVESTIGATIVE_DOSSIER.md`](investigations/TINUBU_360_INVESTIGATIVE_DOSSIER.md)
+* **Primary Deep-Dive Notes:**
+  - [`investigations/notes_agent1_origins_education_us_records.md`](investigations/notes_agent1_origins_education_us_records.md)
+  - [`investigations/notes_agent2_nadeco_democracy_struggle.md`](investigations/notes_agent2_nadeco_democracy_struggle.md)
+  - [`investigations/notes_agent3_lagos_governor_audit.md`](investigations/notes_agent3_lagos_governor_audit.md)
+  - [`investigations/notes_agent4_kingmaker_apc_rise.md`](investigations/notes_agent4_kingmaker_apc_rise.md)
+  - [`investigations/notes_agent5_presidency_policies_excuses.md`](investigations/notes_agent5_presidency_policies_excuses.md)
 
 ---
 
-## 🛠️ System Components
-
-- `cli.py`: Unified Command-Line Interface for scraping, searching, quote extraction, timeline inspection, and dossier compilation.
-- `core/database.py`: High-performance SQLite engine with **FTS5 (Full-Text Search)** virtual tables and SHA-256 deduplication.
-- `extractors/`:
-  - `parser.py`: Clean article body extraction via `trafilatura` and fallback HTML parsers.
-  - `quote_miner.py`: Natural Language / regex rules identifying direct speech quotes attributed to candidates and speakers.
-  - `classifier.py`: Automatically classifies articles into candidate, historical era, and thematic category.
-- `scrapers/`:
-  - `targeted_engine.py`: Multi-source crawler querying historical era keywords across selected domains.
-  - `broadcast_engine.py`: Targeted scraper for TV broadcast bulletins and news hours.
-  - `wayback_engine.py`: Scrapes archived 1999–2014 newspaper snapshots.
-- `analysis/dossier_generator.py`: Generates the complete documentary script and comparative balance sheet markdown report.
-- `web/`:
-  - `dashboard.html`: Interactive dark-mode web application for browsing quotes, timeline milestones, and full-text searches.
-  - `server.py`: Built-in zero-dependency HTTP server with JSON REST API.
+### 2. Silicon Valley's African Trauma Factory: The Human Cost of AI Moderation
+* **Overview:** In-depth investigation into Big Tech outsourcing toxic content moderation and AI data labeling to African workers in Nairobi.
+* **Topics Covered:**
+  - HumAngle's October 2026 exposé on Nigerian university graduates trapped inside Meta's moderation operations.
+  - Factory conditions: 50-second timer per ticket, $1.50/hour wages, and inadequate psychological support.
+  - OpenAI / ChatGPT toxic text training data labeling scandal.
+  - Landmark Kenyan Court of Appeal rulings rejecting Meta's corporate immunity claims and the $1.6 Billion compensation suit.
+* **Master Dossier:** [`investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md`](investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md)
 
 ---
 
-## 🚀 Quickstart & Usage Guide
-
-### 1. Initialize and Seed Curated Archive
-Seed the database with verified judicial milestones, investigative records, and historical quotes:
-```powershell
-python cli.py init
-```
-
-### 2. Run Deep Multi-Source Scraping
-Scrape live Nigerian news outlets (Premium Times, Punch, Vanguard, Channels TV, TVC, BBC):
-```powershell
-# Scrape both candidates
-python cli.py scrape --candidate both --max-results 5
-
-# Scrape specific candidate
-python cli.py scrape --candidate tinubu
-python cli.py scrape --candidate obi
-
-# Enable Wayback Machine deep historical harvesting (1999–2014 snapshots)
-python cli.py scrape --candidate both --deep
-```
-
-### 3. Check Database Stats
-```powershell
-python cli.py stats
-```
-
-### 4. Search Indexed Records (Instant SQLite FTS5)
-Search by policy keywords, controversies, or phrases:
-```powershell
-python cli.py search "subsidy"
-python cli.py search "strike"
-python cli.py search "Alpha Beta"
-python cli.py search "Pandora"
-python cli.py search "SABMiller"
-python cli.py search "Ezu River"
-```
-
-### 5. Inspect Direct Quotes and Verbatim Statements
-Browse candidate statements extracted from media reports:
-```powershell
-# All quotes from Bola Ahmed Tinubu
-python cli.py quotes --candidate tinubu
-
-# All quotes from Peter Gregory Obi
-python cli.py quotes --candidate obi
-
-# Filter quotes by keyword
-python cli.py quotes --keyword "money"
-```
-
-### 6. View Chronological Investigative Timeline
-```powershell
-python cli.py timeline
-```
-
-### 7. Generate Full Documentary Dossier
-Compiles the latest database contents into a comprehensive investigative report:
-```powershell
-python cli.py dossier
-```
-The output is saved to: `dossiers/NIGERIA_POLITICAL_INVESTIGATIVE_DOSSIER.md`.
-
-### 8. Launch Interactive Web Dashboard
-Run the built-in dashboard server:
-```powershell
-python cli.py serve --port 8080
-```
-Then open your browser to: **`http://localhost:8080`** to interactively search quotes, filter candidate eras, view the timeline, and explore articles.
+## Interactive Web Portal for Scriptwriters:
+Open [`index.html`](index.html) in any browser (or view via GitHub Pages) to access:
+- **Dossier Switcher:** Toggle seamlessly between both investigations.
+- **Plain Text Mode:** Distraction-free reading view for writers.
+- **One-Click Copy:** Copy individual scene beats and quotes directly into your scriptwriting software.
+- **Fact Search:** Real-time filter across all evidence cards and dates.
