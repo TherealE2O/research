@@ -29,19 +29,28 @@ This dossier provides an exhaustive forensic investigation into the policies, ma
 
 ## 1. THE DAY-ONE ECONOMIC SHOCKWAVES
 
+```mermaid
+flowchart LR
+    classDef shock fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+    classDef fx fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef fallout fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#0f172a;
+
+    S1["<b>May 29, 2023 (11:20 AM)</b><br>Tinubu: 'The fuel subsidy is gone.'<br><i>Pump price: ₦195 → ₦550 → ₦1,050/L</i>"]
+    S2["<b>June 14, 2023</b><br>CBN FX Windows Collapsed<br><i>Naira floated: ₦460 → ₦1,650/$</i>"]
+    S3["<b>Macroeconomic Fallout</b><br>• Inflation peaks at 34.2%<br>• Food inflation peaks at 40.9%<br>• Corporate exits: GSK, P&G"]
+
+    S1 --> S2 --> S3
+
+    class S1 shock;
+    class S2 fx;
+    class S3 fallout;
 ```
-+----------------------------------------------------------------------------------------------------+
-|                               THE MAY 29 - JUNE 14 SHOCK TRAJECTORY                                 |
-+----------------------------------------------------------------------------------------------------+
-|  May 29, 2023 (11:20 AM): Tinubu declares off-script: "The fuel subsidy is gone."                  |
-|  May 30 - June 1, 2023:   NNPC officially revises pump price from ₦195/L to ₦488 - ₦557/L.         |
-|  June 9, 2023:            Suspension and arrest of CBN Governor Godwin Emefiele by DSS.           |
-|  June 14, 2023:           CBN abolishes official peg (₦461/$); collapses windows into I&E pool.    |
-|  July 2023:               NNPC hikes pump price to ₦617/L.                                         |
-|  January - Feb 2024:      Naira drops past ₦1,600/$; CBN under Cardoso initiates orthodox hikes.  |
-|  September - Oct 2024:    NNPC admits ₦6 Trillion debt; fuel price crosses ₦1,030/L nationwide.     |
-+----------------------------------------------------------------------------------------------------+
-```
+
+| Date & Policy Directives | Implementation Action | Direct Macroeconomic & Consumer Impact |
+| :--- | :--- | :--- |
+| **May 29, 2023 (Inaugural Speech)** | Off-script declaration: *"The fuel subsidy is gone."* | NNPC pump price jumped immediately from ₦195/L to ₦488–₦557/L, later exceeding ₦1,050/L. |
+| **June 14, 2023 (FX Floatation)** | Central Bank of Nigeria collapsed all exchange rate tiers into a single market-determined window. | Official Naira rate devalued from ~₦461/$ to over ₦1,650/$, causing historic imported inflation. |
+| **August 2023 – July 2024** | Cost-of-living crisis, transport fare hikes of 250%+, extreme purchasing power erosion. | Triggered the #EndBadGovernance nationwide protests in August 2024. |
 
 ### 1.1 The Inaugural Pronouncement: "The Subsidy is Gone"
 - **The Event:** On Monday, May 29, 2023, during his inaugural address at Eagle Square, Abuja, President Bola Ahmed Tinubu deviated from his prepared written text to issue the fateful declaration:
@@ -75,18 +84,14 @@ Over the subsequent 18 months, the pump price of PMS underwent repeated shocks, 
 
 ## 2. THE HUMAN AND MACROECONOMIC CRISIS
 
-```
-+----------------------------------------------------------------------------------------------------+
-|                                    MACROECONOMIC CRISIS METRICS                                    |
-+----------------------------------------------------------------------------------------------------+
-|  Headline Inflation:       Peaked at 34.19% (June 2024) [from 22.41% in May 2023]                  |
-|  Food Inflation:           Peaked at 40.87% (June 2024) [from 24.82% in May 2023]                  |
-|  Exchange Rate:            ₦461/$ (May 2023)  ->  ₦1,650/$ (Late 2024)                             |
-|  PMS Fuel Price:           ₦195/L (May 2023)  ->  ₦1,030+/L (October 2024)                         |
-|  Real Minimum Wage:        $83/month (2019)   ->  $43/month (July 2024 at ₦70,000)                 |
-|  Multinational Exits:      GSK, Sanofi, Procter & Gamble, Kimberly-Clark, Equinor                 |
-+----------------------------------------------------------------------------------------------------+
-```
+| Economic Metric | May 2023 Baseline (Inherited) | Peak Crisis Level (2024) | Direction & Systemic Impact |
+| :--- | :--- | :--- | :--- |
+| **Headline Inflation** | 22.41% | **34.19%** (June 2024) | +1,178 bps surge driven by transport & energy costs |
+| **Food Inflation** | 24.82% | **40.87%** (June 2024) | Severe calorie deficit; staple prices surged 200–300% |
+| **Official Exchange Rate** | ₦461 / $1 | **₦1,660 / $1** (Feb 2024) | Over 70% currency depreciation; massive FX losses |
+| **National Debt Burden** | ₦87.38 Trillion | **₦134.3 Trillion** (Q2 2024) | Devaluation inflated foreign-currency debt components |
+| **Corporate Divestments** | Operating multinationals | **GSK, Sanofi, P&G exit** | Major pharmaceutical & consumer goods operations shut |
+| **Statutory Minimum Wage** | ₦30,000 / month (~$65) | **₦70,000 / month** (~$42) | Higher nominal wage, but purchasing power fell by ~35% |
 
 ### 2.1 The Hyper-Inflationary Surge & Poverty Explosion
 - **NBS Statistical Reality:** According to the National Bureau of Statistics (NBS), headline consumer inflation surged from 22.41% in May 2023 to an official peak of **34.19% in June 2024**—the highest rate recorded in 28 years.
@@ -137,16 +142,26 @@ Faced with acute FX illiquidity, inability to repatriate trapped capital, massiv
 
 Despite severe macroeconomic dislocation, the Tinubu administration executed four fundamental structural reforms with long-term institutional significance:
 
+```mermaid
+flowchart TD
+    classDef reform fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+    classDef judicial fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+
+    R1["<b>1. NELFUND Student Loans Act (2024)</b><br>₦372.6B+ disbursed to 1.65M+ tertiary applicants"]
+    R2["<b>2. Supreme Court LGA Financial Autonomy (July 2024)</b><br>Direct allocations bypass State Governors' Joint Accounts"]
+    R3["<b>3. Oyedele Tax Reforms Committee</b><br>Single-digit tax consolidation, zero VAT on essential food & medicine"]
+    R4["<b>4. Domestic Crude Sales in Naira</b><br>Dangote & local refineries purchase feedstock in domestic currency"]
+
+    class R1,R3,R4 reform;
+    class R2 judicial;
 ```
-+----------------------------------------------------------------------------------------------------+
-|                                 MAJOR STRUCTURAL REFORMS OVERVIEW                                  |
-+----------------------------------------------------------------------------------------------------+
-|  1. NELFUND:              ₦372.6B+ disbursed; 1.65M+ applicants; 319 tertiary institutions.        |
-|  2. LGA Autonomy:         Supreme Court ruling (July 11, 2024) ends Governors' Joint Account grip. |
-|  3. Tax Modernization:    Oyedele Committee: 0% VAT on essentials; personal exemption thresholds.  |
-|  4. Crude in Naira:       FEC mandate (Oct 2024) for domestic refineries (Dangote); saves FX.      |
-+----------------------------------------------------------------------------------------------------+
-```
+
+| Reform Pillar | Statutory Basis & Milestone | Operational & Fiscal Impact |
+| :--- | :--- | :--- |
+| **NELFUND Student Loans** | Student Loans (Access to Higher Education) Act 2024 | Disburses interest-free tuition and stipends across 319 tertiary institutions. |
+| **LGA Direct Financial Autonomy** | Supreme Court ruling (*SC/CV/343/2024*, July 11, 2024) | Prohibits state governments from withholding allocations belonging to 774 Local Councils. |
+| **Fiscal Policy & Tax Reforms** | Presidential Committee chaired by Taiwo Oyedele | Proposes single-digit tax streamlining, zero VAT on essential food/health goods, ₦800K income exemption. |
+| **Dangote Crude in Naira** | Federal Executive Council directive (Oct 2024) | Eliminates bilateral FX pressures for domestic refinery feedstock purchases. |
 
 ### 3.1 Higher Education Democratization: The Student Loans Act & NELFUND
 - **The Legislative Overhaul:** After an initial poorly drafted Act signed on June 12, 2023 (which imposed unworkable family income ceilings of <₦500,000/yr and required level-12 civil servant guarantors), Tinubu signed the **Student Loans (Access to Higher Education) (Repeal and Re-enactment) Act, 2024** on April 3, 2024.
@@ -199,17 +214,12 @@ In October 2024, the administration submitted four sweeping tax reform bills to 
 
 While President Tinubu and his cabinet ministers consistently admonished citizens to "make sacrifices", endure austerity, and accept economic misery as "unavoidable medicine", the presidency engaged in an unprecedented spree of luxury expenditures and opaque capital contracts:
 
-```
-+----------------------------------------------------------------------------------------------------+
-|                                    PROFLIGACY & SCANDAL AUDIT                                      |
-+----------------------------------------------------------------------------------------------------+
-|  Airbus A330 Jet:          ₦150 Billion ($100M+) luxury jet purchased during August 2024 protests. |
-|  VP Abuja Residence:       ₦21 Billion renovation completed; remained unoccupied for months.       |
-|  Lagos-Calabar Highway:    ₦15 Trillion (700km) sole-sourced to Gilbert Chagoury's Hitech.         |
-|  Landmark Demolition:      $100M+ tourism hub demolished without environmental impact assessment.  |
-|  Bloated Executive:        48 Ministers; hundreds of aides; armored SUV convoys costing billions.  |
-+----------------------------------------------------------------------------------------------------+
-```
+| Expenditure Item | Public Cost | Context & Public Outrage |
+| :--- | :--- | :--- |
+| **Airbus A330 Presidential Jet** | **₦150 Billion ($100M+)** | Acquired secretly during nationwide #EndBadGovernance economic hardship protests in August 2024. |
+| **VP Abuja Residence Renovation** | **₦21 Billion** | Massive renovation bill for Vice President's lodge amidst calls for severe government austerity. |
+| **Lagos–Calabar Coastal Highway** | **₦15 Trillion** | Awarded to Hitech Construction (owned by Gilbert Chagoury) without competitive open bidding; demolished Landmark Beach. |
+| **Expansion of Federal Cabinet** | **48 Ministers** | Largest cabinet in Nigeria's Fourth Republic history, contradicting official austerity rhetoric. |
 
 ### 4.1 The ₦150 Billion ($100M+) Flying Palace: Airbus A330-200
 - **The Purchase:** In August 2024—the exact month security forces were shooting anti-hunger protesters in Northern Nigeria—President Tinubu took delivery of a newly acquired luxury **Airbus A330-200 presidential aircraft** (registration: **5N-FGA**, formerly VP-CAC).
@@ -247,16 +257,24 @@ While President Tinubu and his cabinet ministers consistently admonished citizen
 
 Confronted with public outrage and macroeconomic shocks, President Tinubu, Finance Minister Wale Edun, CBN Governor Olayemi Cardoso, and presidential spokesmen (Ajuri Ngelale, Bayo Onanuga) consistently deployed four core structural defenses:
 
+```mermaid
+flowchart TD
+    classDef excuse fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+
+    D1["<b>1. 'Near-Bankrupt Economy' Defense</b><br>The ₦30 Trillion CBN Ways & Means overdraft deficit left behind by Buhari"]
+    D2["<b>2. 'Biting the Bullet' Insolvency Prevention</b><br>Preventing sovereign default; debt service was devouring 97% of federal revenues"]
+    D3["<b>3. Smuggling Elimination</b><br>Halting the subsidization of fuel smuggled across West Africa (savings 28M L/day)"]
+    D4["<b>4. Long-Term Structural Medicine</b><br>Short-term reform pain will unlock sustainable foreign direct investment"]
+
+    class D1,D2,D3,D4 excuse;
 ```
-+----------------------------------------------------------------------------------------------------+
-|                                  THE VILLA'S 4 DEFENSE PILLARS                                     |
-+----------------------------------------------------------------------------------------------------+
-|  1. "Near-Bankrupt Economy" - The ₦30 Trillion CBN Ways & Means hole left by Buhari.               |
-|  2. "Biting the Bullet"     - Preventing sovereign default; debt service was 97% of revenue.      |
-|  3. "Smashing the Cartel"   - Cross-border fuel smuggling fell by 20M+ litres/day.                 |
-|  4. "Surgery vs Disease"    - Enduring intense short-term pain for generational economic health.   |
-+----------------------------------------------------------------------------------------------------+
-```
+
+| Villa Defense Line | Official Administration Argument | Counter-Criticism & Scrutiny |
+| :--- | :--- | :--- |
+| **1. Ways & Means Overdraft Deficit** | Buhari regime printed ₦30 Trillion illegally via CBN overdrafts, destroying monetary stability. | Tinubu supported Buhari's fiscal agenda for 8 years and appointed many same officials. |
+| **2. Sovereign Insolvency Avoidance** | Without subsidy removal, debt servicing (97% of revenue) would have triggered sovereign default. | Timing of twin shocks without functional safety nets plunged 30M+ citizens into deep poverty. |
+| **3. Anti-Smuggling Rationale** | Subsidized fuel was illicitly smuggled to Benin, Togo, and Cameroon at Nigerian expense. | Price hikes penalized domestic consumers rather than addressing border policing failures. |
+| **4. Structural Medicine Rationale** | Painful reforms are necessary foundations for sustainable long-term economic growth. | Elite political profligacy (jets, yachts, mansions) directly contradicts sacrifices demanded from citizens. |
 
 ### 5.1 The "Near-Bankrupt Economy" Narrative & The ₦30 Trillion Ways & Means Deficit
 - **The Argument:** The administration repeatedly asserted that it inherited an economic wasteland brought to the verge of insolvency by eight years of the Buhari administration's reckless fiscal and monetary distortions.

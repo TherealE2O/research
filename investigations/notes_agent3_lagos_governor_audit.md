@@ -21,29 +21,35 @@ The dossier analyzes two inextricably linked realities:
 
 ## 1. 1999 ELECTION & POLITICAL EMERGENCE: NADECO CAPITAL TO STATE POWER
 
+```mermaid
+flowchart TD
+    classDef exile fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef primary fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#0f172a;
+    classDef victory fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    EXILE["<b>NADECO & PRO-DEMOCRACY RESISTANCE (1994–1998)</b><br>Tinubu in exile (London / USA) as financial & operational anchor<br><i>Returns to Nigeria in October 1998</i>"]
+
+    PRIMARY["<b>DECEMBER 1998 AD PRIMARIES</b><br>Fierce contest: Bola Tinubu vs. Engr. Funsho Williams<br><i>Afenifere elders award ticket to Tinubu citing frontline sacrifices</i>"]
+
+    EXILE --> PRIMARY
+
+    subgraph ELECTIONS["HISTORIC GUBERNATORIAL MANDATES"]
+        E1999["<b>JAN 9, 1999 GENERAL ELECTION</b><br>• Bola Tinubu (AD): <b>841,732 votes (70.6%) [WINNER]</b><br>• Dapo Sarumi (PDP): 184,900 votes<br>• Nosirudeen Kekere-Ekun (APP): 122,742 votes"]
+        E2003["<b>APR 19, 2003 RE-ELECTION ('LAST MAN STANDING')</b><br>• Bola Tinubu (AD): <b>911,613 votes (54.5%) [WINNER]</b><br>• Funsho Williams (PDP): 740,506 votes<br><i>Only AD Governor to survive Obasanjo's Southwest PDP tsunami</i>"]
+    end
+
+    PRIMARY --> E1999 --> E2003
+
+    class EXILE exile;
+    class PRIMARY primary;
+    class E1999,E2003 victory;
 ```
-                         ┌────────────────────────────────────────┐
-                         │   NADECO & PRO-DEMOCRACY RESISTANCE    │
-                         │   Tinubu in Exile (London / USA)       │
-                         │   Financial backer of anti-Abacha camp │
-                         └───────────────────┬────────────────────┘
-                                             │ Returns Oct 1998
-                                             ▼
-                         ┌────────────────────────────────────────┐
-                         │   DECEMBER 1998 AD PRIMARIES           │
-                         │   Battle: Tinubu vs. Funsho Williams   │
-                         │   Afenifere elders overturn results    │
-                         └───────────────────┬────────────────────┘
-                                             │
-                      ┌──────────────────────┴──────────────────────┐
-                      ▼                                             ▼
-    ┌───────────────────────────────────┐         ┌───────────────────────────────────┐
-    │     JAN 9, 1999 GUBER ELECTION    │         │     APR 19, 2003 GUBER ELECTION   │
-    │  Tinubu (AD): 841,732 (70.6%)     │         │  Tinubu (AD): 911,613 (54.5%)     │
-    │  Dapo Sarumi (PDP): 184,900       │         │  Funsho Williams (PDP): 740,506   │
-    │  Kekere-Ekun (APP): 122,742       │         │  "Last Man Standing" in SW         │
-    └───────────────────────────────────┘         └───────────────────────────────────┘
-```
+
+| Gubernatorial Contest | Candidates & Vote Figures | Strategic Outcome & Historical Significance |
+| :--- | :--- | :--- |
+| **Dec 1998 AD Primary** | Bola Tinubu vs. Engr. Funsho Williams | Disputed count overturned by Abraham Adesanya / Ayo Adebanjo elders, citing NADECO frontline sacrifices. |
+| **Jan 9, 1999 Election** | **Bola Tinubu (AD): 841,732 (70.6%)**<br>Dapo Sarumi (PDP): 184,900<br>Nosirudeen Kekere-Ekun (APP): 122,742 | Landslide victory; inaugurates Fourth Republic governance in Lagos State. |
+| **Apr 19, 2003 Election** | **Bola Tinubu (AD): 911,613 (54.5%)**<br>Funsho Williams (PDP): 740,506 | **'Last Man Standing'**: Obasanjo swept Ogun, Oyo, Osun, Ondo, Ekiti; Tinubu alone survived to preserve the opposition redoubt. |
 
 ### A. The Fierce Alliance for Democracy (AD) Primary (December 1998)
 Upon his return to Nigeria from exile in October 1998 following the death of military dictator General Sani Abacha, Bola Ahmed Tinubu entered the gubernatorial race under the banner of the **Alliance for Democracy (AD)**, the dominant progressive Yoruba political party.
@@ -91,20 +97,36 @@ When Tinubu assumed office on May 29, 1999, Lagos was on the verge of fiscal and
 
 Tinubu’s administration responded with an aggressive modernization doctrine, convening the **Ehingbeti Lagos Economic Summit** in 2000 to formulate a 10-point economic agenda and long-term masterplan.
 
+```mermaid
+flowchart TD
+    classDef core fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef agency fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    GOV["<b>GOVERNOR BOLA TINUBU (1999–2007)</b><br>Institutional Modernization & Regulatory Architecture"]
+
+    LASTMA["<b>LASTMA (2000)</b><br>Lagos State Traffic Management Authority<br><i>Dedicated civil traffic enforcement</i>"]
+    LAMATA["<b>LAMATA (2002)</b><br>Lagos Metropolitan Area Transport Authority<br><i>World Bank-backed transit masterplan / BRT</i>"]
+    LAWMA["<b>LAWMA / PSP (2000)</b><br>Private Sector Participation Waste System<br><i>Commercialized solid waste logistics</i>"]
+    KAI["<b>KAI Brigade (2003)</b><br>Kick Against Indiscipline<br><i>Paramilitary environmental enforcement</i>"]
+    LASAA["<b>LASAA (2006)</b><br>Signage and Advertisement Agency<br><i>Commercial billboard monetization monopoly</i>"]
+
+    GOV --> LASTMA
+    GOV --> LAMATA
+    GOV --> LAWMA
+    GOV --> KAI
+    GOV --> LASAA
+
+    class GOV core;
+    class LASTMA,LAMATA,LAWMA,KAI,LASAA agency;
 ```
-                  ┌────────────────────────────────────────────────────────┐
-                  │           TINUBU'S INSTITUTION-BUILDING ENGINE          │
-                  └──────────────────────────┬─────────────────────────────┘
-                                             │
-      ┌─────────────────┬────────────────────┼───────────────────┬──────────────────┐
-      ▼                 ▼                    ▼                   ▼                  ▼
-┌───────────┐     ┌───────────┐        ┌───────────┐       ┌───────────┐      ┌───────────┐
-│  LASTMA   │     │   LAWMA   │        │  LAMATA   │       │    KAI    │      │   LASAA   │
-│ Traffic   │     │ PSP Waste │        │ BRT Trans-│       │ Environ.  │      │ Billboard │
-│ Mgmt      │     │ Concession│        │ port Hub  │       │ Discipline│      │ Regulat.  │
-│ (Jul 2000)│     │ (2000-04) │        │ (Dec 2002)│       │ (Nov 2003)│      │ (2006)    │
-└───────────┘     └───────────┘        └───────────┘       └───────────┘      └───────────┘
-```
+
+| Regulatory Institution | Year Established | Statutory Mandate & Institutional Legacy |
+| :--- | :--- | :--- |
+| **LASTMA** | 2000 | Created under Lagos State Law No. 9 to de-link traffic control from the corrupt Federal Police; empowered civil wardens to impound and fine offenders. |
+| **LAMATA** | 2002 | Founded with World Bank technical backing to plan multi-modal transport; designed and executed Africa's first Bus Rapid Transit (BRT) corridor. |
+| **LAWMA Modernization** | 2000 | Overhauled the state refuse disposal board into a modern waste regulator; franchised collection to 350+ private PSP operators. |
+| **KAI Brigade** | 2003 | Enforced public health edicts, banned street hawking on expressways, and reclaimed pedestrian bridges from vagrants. |
+| **LASAA** | 2006 | Centralized outdoor advertising; banned unauthorized street banners and generated billions annually in corporate signage royalties. |
 
 ### A. The Internally Generated Revenue (IGR) Trajectory
 The core engine of Tinubu's governance model was the fiscal transformation of the tax collection machinery.
@@ -156,21 +178,33 @@ The core engine of Tinubu's governance model was the fiscal transformation of th
 ### C. The Judicial Revolution: The Osinbajo-Led Reforms (1999–2007)
 The appointment of **Prof. Yemi Osinbajo (SAN)**, an academic and human rights advocate, as Attorney General and Commissioner for Justice was universally regarded as the most transformative cabinet appointment of the Tinubu administration.
 
+```mermaid
+flowchart TD
+    classDef core fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef pillar fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    OSINBAJO["<b>ATTORNEY GENERAL PROF. YEMI OSINBAJO (1999–2007)</b><br>Comprehensive Judicial Restructuring"]
+
+    SALARY["<b>Judicial Welfare Overhaul</b><br>Judges' salaries & allowances raised by 300%<br>Official vehicles, housing, and pension security to eradicate graft"]
+    LMDC["<b>Lagos Multi-Door Courthouse (2002)</b><br>First court-connected Alternative Dispute Resolution (ADR) centre in Africa"]
+    CDR["<b>Citizens' Rights Directorate (1999)</b><br>Free legal aid, Office of the Public Defender (OPD), Mediation Centres"]
+    LAND["<b>Land Registry Automation</b><br>Digitization of title documents & electronic search to curb fraudulent conveyancing"]
+
+    OSINBAJO --> SALARY
+    OSINBAJO --> LMDC
+    OSINBAJO --> CDR
+    OSINBAJO --> LAND
+
+    class OSINBAJO core;
+    class SALARY,LMDC,CDR,LAND pillar;
 ```
-                  ┌────────────────────────────────────────────────────────┐
-                  │             THE OSINBAJO JUDICIAL REVOLUTION           │
-                  └──────────────────────────┬─────────────────────────────┘
-                                             │
-      ┌────────────────────────┬─────────────┴────────────┬────────────────────────┐
-      ▼                        ▼                          ▼                        ▼
-┌───────────────────┐    ┌───────────────────┐      ┌───────────────────┐    ┌───────────────────┐
-│   JUDICIAL PAY    │    │  CITIZENS' RIGHTS │      │    MULTI-DOOR     │    │  CIVIL PROCEDURE  │
-│  & INTEGRITY      │    │    DIRECTORATE    │      │    COURTHOUSE     │    │   RULES (2004)    │
-│ Raised salaries,  │    │ OPD: Free legal   │      │ LMDC: 1st ADR     │    │ "Frontloading"    │
-│ cars/houses to    │    │ aid for indigent; │      │ court in Africa   │    │ revolutionized    │
-│ stop corruption   │    │ Mediation Centre  │      │ (June 2002)       │    │ litigation speed  │
-└───────────────────┘    └───────────────────┘      └───────────────────┘    └───────────────────┘
-```
+
+| Judicial Reform Pillar | Implementation Architecture | Systemic Impact & National Emulation |
+| :--- | :--- | :--- |
+| **Anti-Corruption & Welfare** | 300% judicial pay increase, provision of official SUVs and houses | Dramatically reduced bribery; institutionalized strict vetting and disciplinary actions. |
+| **Multi-Door Courthouse (LMDC)** | Established in 2002 as Africa's premier court-connected ADR centre | Diverted commercial disputes from congested court dockets into binding mediation. |
+| **Citizens' Rights Directorate & OPD** | Created in 1999 to provide free legal representation for poor citizens | Defended thousands of indigent accused persons and handled domestic violence mediation. |
+| **Electronic Land Registry** | Digital scanning and indexing of over 100 years of land deeds | Slashed title search duration from months to hours and reduced fraudulent double-allocations. |
 
 #### 1. Eradication of Judicial Corruption & Wage Overhaul
 Prior to 1999, Lagos magistrates and judges earned meager salaries, conducted court proceedings in dilapidated rooms without electricity, and were notorious for bribe solicitation.
@@ -194,19 +228,30 @@ Prior to 1999, Lagos magistrates and judges earned meager salaries, conducted co
 ### D. The Independent Power Project (IPP): Enron / AES Barge Experiment
 In 1999, Lagos experienced catastrophic national grid failure under the National Electric Power Authority (NEPA). In December 1999, Tinubu signed a landmark agreement with multinational energy conglomerate **Enron Nigeria Power Holdings Ltd**.
 
+```mermaid
+flowchart LR
+    classDef state fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef enron fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+    classDef fed fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+
+    LASG["<b>Lagos State Government</b><br>Gov. Bola Tinubu"]
+    ENRON["<b>Enron / AES Power</b><br>9 Barge Turbines (270MW)<br>at Egbin Power Station"]
+    NEPA["<b>Federal Govt & NEPA</b><br>Pres. Olusegun Obasanjo<br>Minister Bola Ige"]
+
+    LASG <-->|"Power Purchase Agreement (PPA)"| ENRON
+    NEPA -.->|"Refused Direct Lagos Grid Access"| LASG
+    NEPA -->|"Forced Federal Grid Pooling"| ENRON
+
+    class LASG state;
+    class ENRON enron;
+    class NEPA fed;
 ```
-    ┌─────────────────────────┐          Power Purchase          ┌─────────────────────────┐
-    │ LAGOS STATE GOVERNMENT  │ ◄────────── Agreement ─────────► │      ENRON / AES        │
-    │  Governor Bola Tinubu   │                                  │ 9 Barge Turbines: 270MW │
-    └───────────┬─────────────┘                                  └────────────┬────────────┘
-                │                                                             │
-                │ Clashed over PPA validity                                   │ Barges docked
-                ▼                                                             ▼ at Egbin
-    ┌─────────────────────────┐                                  ┌─────────────────────────┐
-    │   FEDERAL GOVT / NEPA   │ ◄─────── Forced Integration ─────┤  ELECTRICITY INJECTION  │
-    │ Pres. Olusegun Obasanjo │          into National Grid      │ Diverted from Lagosians │
-    └─────────────────────────┘                                  └─────────────────────────┘
-```
+
+| Project Dimension | Initial Enron Agreement (1999) | Final AES Compromise & Federal Bottleneck |
+| :--- | :--- | :--- |
+| **Original Blueprint** | $800M deal for 270MW emergency barge power + 540MW combined-cycle plant dedicated 100% to Lagos industry. | Scaled down to 270MW emergency barge turbines operating at Egbin. |
+| **Federal Opposition** | President Obasanjo and World Bank argued Lagos sovereign guarantee violated national debt policies. | Federal Government blocked direct transmission into Lagos distribution circuits. |
+| **Outcome** | AES power was forcibly fed into the national NEPA grid, diluting Lagos' exclusive energy dividend. | Laid early technical precedent for independent power production (IPP) in Nigeria. |
 
 * **The Hardware:** The project consisted of **9 combustion turbines mounted on barges** stationed adjacent to the Egbin Power Station in Ikorodu, Lagos, with a combined capacity of **270–290 Megawatts (MW)**.
 * **The Federal Clash:** The federal government, through President Olusegun Obasanjo and the management of NEPA, declared the Power Purchase Agreement (PPA) "inoperative" and unconstitutional. The federal government argued that power generation, transmission, and tariff regulation were strictly federal monopolies under the Exclusive Legislative List.
@@ -219,36 +264,42 @@ In 1999, Lagos experienced catastrophic national grid failure under the National
 
 The fiercest constitutional confrontation in Nigeria’s Fourth Republic was sparked by Tinubu’s creation of new local councils and President Olusegun Obasanjo’s retaliation.
 
+```mermaid
+flowchart TD
+    classDef state fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef fed fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+    classDef court fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    CREATION["<b>2003: Lagos Creates 37 LCDAs</b><br>Lagos State Law expands councils from 20 to 57"]
+    OBJ_BAN["<b>2004: Obasanjo Freezes Statutory Funds</b><br>President seizes all LGA federal allocations to Lagos State (~₦34 Billion)"]
+    SC_DUEL["<b>Supreme Court Landmark Ruling (SC 70/2004)</b><br><i>AG Lagos v. AG Federation</i>"]
+
+    CREATION --> OBJ_BAN --> SC_DUEL
+
+    subgraph RULING["SUPREME COURT HOLDING"]
+        H1["1. State has constitutional power to create councils"]
+        H2["2. BUT councils remain 'inchoate' pending National Assembly listing"]
+        H3["3. PRESIDENT HAS ZERO CONSTITUTIONAL POWER TO SEIZE STATE/LGA FUNDS!"]
+        H4["<b>ORDER: Release all seized statutory allocations immediately!</b>"]
+        H1 --- H2 --- H3 --- H4
+    end
+
+    SC_DUEL --> RULING
+
+    SURVIVAL["<b>Lagos Fiscal Survival on IGR (2004–2007)</b><br>Obasanjo defies Supreme Court for 3 years; funds released by Yar'Adua in 2007"]
+    RULING --> SURVIVAL
+
+    class CREATION state;
+    class OBJ_BAN fed;
+    class SC_DUEL,RULING,SURVIVAL court;
 ```
-                    ┌───────────────────────────────────────────────┐
-                    │      2003: LAGOS STATE CREATES 37 LCDAs       │
-                    │      Expands from 20 to 57 Council Units      │
-                    └───────────────────────┬───────────────────────┘
-                                            │
-                                            ▼
-                    ┌───────────────────────────────────────────────┐
-                    │    APRIL 2004: OBASANJO SEIZES STATUTORY      │
-                    │    LOCAL GOVERNMENT ALLOCATIONS (₦10.8B+)     │
-                    └───────────────────────┬───────────────────────┘
-                                            │
-                                            ▼
-                    ┌───────────────────────────────────────────────┐
-                    │  SUPREME COURT OF NIGERIA: SC 70/2004         │
-                    │  AG Lagos State v. AG of the Federation       │
-                    │                                               │
-                    │  1. LCDA creation valid under state law       │
-                    │  2. BUT creation is "INCHOATE" pending NASS   │
-                    │  3. PRESIDENT HAS NO POWER TO SEIZE FUNDS!    │
-                    │     Order: Release allocations immediately!   │
-                    └───────────────────────┬───────────────────────┘
-                                            │
-                                            ▼
-                    ┌───────────────────────────────────────────────┐
-                    │  OBASANJO DEFIES SUPREME COURT UNTIL 2007     │
-                    │  Lagos survives exclusively on IGR.           │
-                    │  President Yar'Adua releases funds in 2007.   │
-                    └───────────────────────────────────────────────┘
-```
+
+| Constitutional Stage | Legal Claim & Judicial Disposition | Constitutional Significance |
+| :--- | :--- | :--- |
+| **Creation of 37 LCDAs (2003)** | Lagos Assembly enacts Local Government Creation Law 2003, creating 37 LCDAs from 20 LGAs. | Exercised Section 7 & 8(3) powers of the 1999 Constitution. |
+| **Federal Allocation Seizure (2004)** | President Obasanjo directs Minister of Finance to withhold all statutory LGA allocations to Lagos. | Over ₦34 Billion in council revenue frozen for over 24 months. |
+| **Supreme Court Judgment (*SC 70/2004*)** | Unanimous 7-man bench rules President acted unconstitutionally, orders immediate fund release. | Landmark precedent: Executive cannot impound statutory allocations without court order. |
+| **Executive Defiance (2004–2007)** | Obasanjo refused to comply; President Umaru Musa Yar'Adua finally released ₦34B in July 2007. | Demonstrated Lagos' fiscal ability to run civil governance solely on internally generated revenue. |
 
 ### A. The Creation of 37 LCDAs (2002–2003)
 Under Sections 7 and 8 of the 1999 Constitution, the Lagos State House of Assembly passed the **Creation of New Local Government Areas Law No. 5 of 2002 (amended in 2004)**.
@@ -284,30 +335,41 @@ In a display of executive impunity, President Obasanjo refused to comply with th
 
 While the narrative of "The Last Man Standing" and the "Lagos Masterplan" solidified Tinubu's national reputation as an administrative visionary, forensic examination reveals that this institutional architecture was accompanied by entrenched financial extraction, opacity, and state capture.
 
+```mermaid
+flowchart TD
+    classDef rev fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef mono fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+    classDef whistle fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#0f172a;
+
+    STATE["<b>Lagos State Internally Generated Revenue (IGR)</b><br>Personal income tax, land use charge, stamp duties (₦50B+/month)"]
+
+    CONCESSION["<b>Alpha-Beta Consulting Concession (2000–Present)</b><br>Exclusive, perpetual software concession to calculate, monitor & collect IGR<br><b>Commission: 10% of total state revenue collected</b>"]
+
+    STATE -->|"10% Commission Extraction"| CONCESSION
+
+    subgraph ALLEGATIONS["DAPO APARA WHISTLEBLOWER WRIT (2018 / 2020)"]
+        A1["<b>Allegation 1: 70% Secret Proxy Equity</b><br>Claimed 70% shareholding held by Olumide Ogunmola & Adegboyega Oyetola for Tinubu"]
+        A2["<b>Allegation 2: Billions in Diverted Funds</b><br>Claimed ₦1B to Vintage Press (The Nation), ₦550M to Ocean Trust, transfers to offshore accounts"]
+        A3["<b>Allegation 3: Money Laundering & Tax Evasion</b><br>Petitions filed to EFCC & Lagos High Court (Suit No. LD/7330GCM/2020)"]
+    end
+
+    CONCESSION --> ALLEGATIONS
+
+    SETTLEMENT["<b>Out-of-Court Settlement (2022)</b><br>Whistleblower suit withdrawn following private settlement before 2023 elections"]
+    ALLEGATIONS --> SETTLEMENT
+
+    class STATE rev;
+    class CONCESSION mono;
+    class ALLEGATIONS,A1,A2,A3 whistle;
+    class SETTLEMENT rev;
 ```
-                    ┌──────────────────────────────────────────────────┐
-                    │       THE ALPHA-BETA EXTRACTION ARCHITECTURE     │
-                    └─────────────────────────┬────────────────────────┘
-                                              │
-                         Assigned exclusive, perpetual concession
-                         to calculate, track & collect Lagos IGR
-                                              │
-                                              ▼
-                    ┌──────────────────────────────────────────────────┐
-                    │    COMMISSION: 10% OF ALL STATE REVENUES         │
-                    │    Estimated ₦100B - ₦150B+ in commissions       │
-                    └─────────────────────────┬────────────────────────┘
-                                              │
-                      Whistleblower Dapo Apara's Allegations (2018 / 2020)
-                                              │
-             ┌────────────────────────────────┴───────────────────────────────┐
-             ▼                                                               ▼
-┌──────────────────────────────┐                               ┌──────────────────────────────┐
-│  70% EQUITY TO TINUBU PROXIES │                               │   DIVERSION TO FRONT COS     │
-│  - Olumide Ogunmola          │                               │  - ₦1B: Vintage Press        │
-│  - Adegboyega Oyetola        │                               │  - ₦550M: Ocean Trust Ltd    │
-└──────────────────────────────┘                               └──────────────────────────────┘
-```
+
+| Dimension | Concession Agreement Terms | Whistleblower Allegations & Litigated Record |
+| :--- | :--- | :--- |
+| **Statutory Concession** | Exclusive tax-monitoring concession awarded in 2000; formalized under Lagos Revenue Administration Law. | Whistleblower Dapo Apara alleged the procurement breached competitive bidding laws. |
+| **Revenue Commission** | 10% commission on all state revenue collected above baseline thresholds. | Over ₦150B – ₦250B+ in cumulative commissions estimated over 20+ years. |
+| **Ownership Controversy** | Tinubu publicly denied ownership, describing firm as independent technocratic consultant. | Apara's 2020 High Court writ claimed Tinubu controlled 70% beneficial ownership through proxies. |
+| **Judicial Outcome** | Whistleblower petition filed with EFCC (2018) and Lagos High Court writ (2020). | Suit abruptly withdrawn and resolved via confidential out-of-court terms in 2022. |
 
 ### A. The Alpha-Beta Consulting Monopoly
 
@@ -341,32 +403,17 @@ The internal mechanics of Alpha-Beta were brought into public view by **Oladapo 
 
 ### B. The 2019 Bourdillon Bullion Vans Incident
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│              EVE OF 2019 PRESIDENTIAL ELECTION (FEB 22, 2019)          │
-│       Two Armored Bullion Vans Enter 26 Bourdillon Road, Ikoyi         │
-├────────────────────────────────────────────────────────────────────────┤
-│   TINUBU'S ON-CAMERA VERBATIM STATEMENT (FEBRUARY 23, 2019):           │
-│                                                                        │
-│   "Excuse me, is it my money or government money?                      │
-│    I don’t work for the government... I am not an agency of            │
-│    government. I have been in the private sector since 2007.           │
-│    What is your headache? If I like, if it is my money,                │
-│    if I want to give it to the people free of charge,                  │
-│    what is your headache? Are they ballot papers?                      │
-│    If I have money, if I like, I give it to the people                 │
-│    free of charge. I haven’t done any government contract,            │
-│    and I didn’t take any government money since 2007."                 │
-├────────────────────────────────────────────────────────────────────────┤
-│   STATUTORY VIOLATION:                                                 │
-│   Section 1, Money Laundering (Prohibition) Act 2011:                  │
-│   Prohibits cash payments exceeding ₦5M for individuals and ₦10M      │
-│   for corporate bodies outside financial institutions.                │
-├────────────────────────────────────────────────────────────────────────┤
-│   PETITIONS: Deji Adeyanju / Concerned Nigerians filed Oct 2019.       │
-│   OUTCOME: Zero investigation or prosecution by EFCC (Magu / Bawa).   │
-└────────────────────────────────────────────────────────────────────────┘
-```
+> **THE 2019 BOURDILLON BULLION VANS: PRIMARY AUDIT & ON-CAMERA ADMISSION**
+> 
+> * **Date & Location:** Eve of 2019 Presidential Election (February 22, 2019), 26 Bourdillon Road, Ikoyi, Lagos.
+> * **The Incident:** Two armored bank bullion vans belonging to a commercial bank entered Bola Tinubu's private compound in broad daylight, captured on video by citizens.
+> 
+> **Verbatim On-Camera Statement by Bola Tinubu (February 23, 2019):**
+> > *"Excuse me, is it my money or government money? I don’t work for the government... I am not an agency of government. I have been in the private sector since 2007. What is your headache? If I like, if it is my money, if I want to give it to the people free of charge, what is your headache? Are they ballot papers? If I have money, if I like, I give it to the people free of charge. I haven’t done any government contract, and I didn’t take any government money since 2007."*
+> 
+> **Statutory Framework & Enforcement Outcome:**
+> * **Money Laundering Act Violation:** Section 1 of the Money Laundering (Prohibition) Act 2011 explicitly prohibits cash payments exceeding ₦5 Million for individuals and ₦10 Million for corporate entities outside a financial institution.
+> * **EFCC Action:** Despite formal petitions submitted by Deji Adeyanju and civil society coalitions in October 2019, the EFCC (under Ibrahim Magu and Abdulrasheed Bawa) initiated zero prosecution or asset seizure.
 
 #### 1. The Incident
 On Friday, February 22, 2019, on the eve of the rescheduled 2019 presidential election between Muhammadu Buhari and Atiku Abubakar, viral photographs and videos captured **two armored bullion vans from a commercial cash-in-transit firm driving through the gates of Bola Tinubu’s private residence at 26 Bourdillon Road, Ikoyi, Lagos**.
@@ -413,22 +460,41 @@ Investigative reports by civic organizations and opposition dossiers documented 
 
 Tinubu operated an unforgiving patronage system that demanded absolute fealty. Any deputy governor or successor who displayed independent ambition was systematically removed.
 
+```mermaid
+flowchart TD
+    classDef godfather fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef dep fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+    classDef gov fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    BAT["<b>BOLA AHMED TINUBU: LAGOS PATRON-IN-CHIEF</b><br>Apex authority via Governance Advisory Council (GAC)"]
+
+    subgraph DEPUTIES["DEPUTIES SUBJUGATED (1999–2007)"]
+        BUCKNOR["<b>Kofo Bucknor-Akerele (2002)</b><br>Resigned under threat of impeachment"]
+        PEDRO["<b>Femi Pedro (2007)</b><br>Impeached for running on rival Labour Party platform"]
+    end
+
+    subgraph SUCCESSION["GUBERNATORIAL SUCCESSION"]
+        FASHOLA["<b>Babatunde Fashola (2007–2015)</b><br>Technocratic modernization<br>Tensions over succession in 2015"]
+        AMBODE["<b>Akinwunmi Ambode (2015–2019)</b><br>Challenged PSP waste & party patronage<br>Guillotined in 2018 direct primaries"]
+        SANWO["<b>Babajide Sanwo-Olu (2019–Present)</b><br>Total alignment with Bourdillon machinery<br>Re-elected in 2023 with party backing"]
+    end
+
+    BAT --> DEPUTIES
+    BAT --> FASHOLA
+    BAT --> AMBODE
+    BAT --> SANWO
+
+    class BAT godfather;
+    class BUCKNOR,PEDRO dep;
+    class FASHOLA,AMBODE,SANWO gov;
 ```
-                      ┌────────────────────────────────────────┐
-                      │    BOLA TINUBU'S SUCCESSION DYNASTY    │
-                      └───────────────────┬────────────────────┘
-                                          │
-       ┌────────────────────────┬─────────┴─────────┬────────────────────────┐
-       ▼                        ▼                   ▼                        ▼
-┌──────────────┐         ┌──────────────┐    ┌──────────────┐         ┌──────────────┐
-│  DEPUTIES    │         │ FASHOLA ERA  │    │  AMBODE ERA  │         │ SANWO-OLU    │
-│  ELIMINATED  │         │ (2007-2015)  │    │ (2015-2019)  │         │ (2019-PRES)  │
-│ Bucknor (02) │         │ Technocrat   │    │ Challenged   │         │ Complete     │
-│ Pedro (07)   │         │ monitored by │    │ patronage    │         │ submission   │
-│ crushed for  │         │ Bourdillon   │    │ Guillotined  │         │ to GAC &     │
-│ disobedience │         │ machinery    │    │ in primaries │         │ Bourdillon   │
-└──────────────┘         └──────────────┘    └──────────────┘         └──────────────┘
-```
+
+| Succession Era | Governor / Deputy | Conflict Dynamics & Political Outcome |
+| :--- | :--- | :--- |
+| **Deputies Clash** | Kofoworola Bucknor-Akerele (2002) / Femi Pedro (2007) | Both deputies attempted independent political posturing; both were stripped of official duties and removed. |
+| **Fashola Era (2007–2015)** | Babatunde Raji Fashola, SAN | Built mega-city infrastructure; survived friction with Bourdillon patronage demands and completed 8 years. |
+| **Ambode Fall (2015–2019)** | Akinwunmi Ambode | Displaced party-aligned PSP waste operators with Visionscape; denied second-term ticket at 2018 APC direct primaries. |
+| **Sanwo-Olu Era (2019–Pres)** | Babajide Olusola Sanwo-Olu | Restored traditional patronage channels; operates under full consensus of the Governance Advisory Council (GAC). |
 
 ### A. The Elimination of Deputy Governors
 

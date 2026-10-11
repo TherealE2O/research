@@ -21,32 +21,34 @@ This dossier reconstructs with forensic chronology, archival documentation, legi
 
 ---
 
+```mermaid
+timeline
+    title 1992–1999 RESISTANCE & TRANSITION TIMELINE
+    1992 : Elected Lagos West Senator (400K+ votes) : Chairman, Senate Banking Committee
+    1993 : June 12 election annulled : Gen. Sani Abacha military coup
+    1994 : NADECO formed : Senate reconvened in defiance : Tinubu arrested at Alagbon Close : Escapes into exile
+    1995 : Pa Alfred Rewane assassinated : Ken Saro-Wiwa executed : Global sanctions lobby
+    1996 : Kudirat Abiola assassinated : Radio Kudirat launches on 11540 kHz
+    1997 : IPU adopts Resolution NIG/46 condemning military persecution
+    1998 : Gen. Abacha dies : Abiola dies in custody : Tinubu returns from exile
+    1999 : Wins Lagos Governorship (844,389 votes) : Sworn in as 12th Governor
 ```
-                                CHRONOLOGICAL TIMELINE (1992–1998)
-====================================================================================================
-1992 (July 4)       Elected Senator for Lagos West (SDP) with national record >400,000 votes.
-1992–1993           Serves as Chairman, Senate Committee on Banking, Finance, Appropriations & Currency.
-1993 (March 27-29)  SDP Jos Convention: Brokers alliance; Yar'Adua camp steps down for M.K.O. Abiola.
-1993 (June 12)      Chief M.K.O. Abiola wins presidential election; annulled by Babangida on June 23.
-1993 (Nov 10)       Lagos High Court (Justice Akinsanya) declares Shonekan's Interim Govt illegal.
-1993 (Nov 17)       General Sani Abacha seizes power; dissolves National Assembly (Decree 107).
-1994 (May 15)       NADECO formed at Gen. Adebayo's residence; issues ultimatum to Abacha.
-1994 (May 30-Jun 1) Disbanded Senate reconvenes in Lagos; declares Abacha illegal; demands Abiola.
-1994 (June 2)       Tinubu and fellow senators arrested; charged June 14 with treasonable felony.
-1994 (July 22)      Released on bail after ~50 days at FIIB Alagbon Close; framed for oil pipeline sabotage.
-1994 (Autumn)       Escapes into exile via the "NADECO route" through Benin Republic (Cotonou).
-1995 (Oct 6)        Pa Alfred Rewane, primary domestic NADECO financier, assassinated in Ikoyi.
-1995 (Nov 10)       Ken Saro-Wiwa executed; Commonwealth suspends Nigeria; NADECO intensifies sanctions lobby.
-1996 (June 4)       Alhaja Kudirat Abiola assassinated by Abacha's Strike Force (Sergeant Rogers).
-1996 (June 12)      Radio Freedom rechristened "Radio Kudirat Nigeria" (shortwave 11540 kHz); Tinubu finances.
-1997 (Sept 16)      Inter-Parliamentary Union (IPU) adopts Resolution Case NIG/46 condemning Tinubu's persecution.
-1998 (June 8)       General Sani Abacha dies suddenly at Aso Rock Villa; Abdulsalami Abubakar succeeds him.
-1998 (July 7)       Chief M.K.O. Abiola dies tragically in military detention.
-1998 (Oct 6)        Tinubu returns triumphantly to Nigeria from exile; lands at Murtala Muhammed Airport.
-1998 (Dec)          Wins fiercely contested Alliance for Democracy (AD) Lagos gubernatorial primary.
-1999 (Jan 9)        Elected Executive Governor of Lagos State; sworn in May 29, 1999.
-====================================================================================================
-```
+
+| Date / Milestone | Historical Event | Key Actors & Investigative Significance |
+| :--- | :--- | :--- |
+| **July 4, 1992** | Lagos West Senatorial Election | Tinubu records highest tally in Nigeria (>400,000 votes); appointed Senate Banking Committee Chairman. |
+| **June 12, 1993** | Presidential Election & Annulment | M.K.O. Abiola wins historic mandate; annulled by Gen. Ibrahim Babangida on June 23. |
+| **Nov 17, 1993** | Abacha Military Coup | Sani Abacha dissolves Third Republic Senate and democratic institutions. |
+| **May 15, 1994** | NADECO Formed in Lagos | Coalition founded by Ajasin, Enahoro, Adesanya, Rewane, Tinubu, and Dan Suleiman. |
+| **June 2, 1994** | Treason Arrest of Tinubu | Detained at Alagbon Close for reconvening Senate; charged with treasonable felony. |
+| **Sept 1994** | Escape through 'NADECO Route' | Jumps bail following assassination threat; crosses Benin border into exile (London / DC). |
+| **Oct 6, 1995** | Assassination of Pa Alfred Rewane | Primary domestic NADECO financier shot dead in his Ikeja home by military hit squad. |
+| **June 4, 1996** | Assassination of Kudirat Abiola | Gunned down by Abacha Strike Force (Sergeant Rogers) near 7-Up toll gate, Lagos. |
+| **June 12, 1996** | Radio Kudirat Transmission | Clandestine shortwave broadcast begins (11540 kHz); financially underwritten by Tinubu. |
+| **Sept 16, 1997** | IPU Resolution NIG/46 | Inter-Parliamentary Union condemns treason charges and execution warrants against Tinubu. |
+| **June 8, 1998** | Death of General Sani Abacha | Junta collapses; Gen. Abdulsalami Abubakar assumes power and pledges civilian transition. |
+| **Oct 6, 1998** | Triumphant Return from Exile | Lands at Murtala Muhammed Airport after 4 years in exile; received by thousands. |
+| **Jan 9, 1999** | Lagos Gubernatorial Victory | Elected Governor with 844,389 votes; sworn into office on May 29, 1999. |
 
 ---
 
@@ -65,30 +67,48 @@ Tinubu entered the political arena during General Ibrahim Babangida’s tightly 
    * Although the party fielded a compromise candidate, Yomi Edu (backed by the Primrose faction), disgruntled Jakande loyalists broke ranks and voted for Sir Michael Otedola of the rival National Republican Convention (NRC), leading to an upset SDP defeat.
    * This brutal primary baptism cemented Tinubu's reputation as a ruthless political organizer, master fundraiser, and fearless operator who could challenge entrenched political oligarchies.
 
+```mermaid
+flowchart TD
+    classDef party fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef psp fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#0f172a;
+    classDef pfn fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+    classDef outcome fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+
+    SDP["<b>Social Democratic Party (SDP) Lagos (1991)</b><br>Dominant progressive political vehicle in the Southwest"]
+
+    subgraph PSP["PEOPLES SOCIALIST PARTY (PSP) FACTION"]
+        JAKANDE["<b>Leader: Alhaji Lateef Jakande</b><br>Former Civilian Governor (1979–1983)<br>Base: Traditional Old-Guard Awoists"]
+        AGBALAJOBI["<b>Gubernatorial Candidate: Prof. Femi Agbalajobi</b>"]
+        JAKANDE --> AGBALAJOBI
+    end
+
+    subgraph PFN["PEOPLES FRONT OF NIGERIA (PFN / PRIMROSE)"]
+        YARADUA["<b>National Patron: Gen. Shehu Musa Yar'Adua</b><br>Lagos Leader: Dapo Sarumi<br>Rising Cadre: Bola Ahmed Tinubu, Yomi Edu"]
+        SARUMI["<b>Gubernatorial Candidate: Dapo Sarumi</b>"]
+        YARADUA --> SARUMI
+    end
+
+    SDP --> PSP
+    SDP --> PFN
+
+    DISQUAL["<b>Electoral Commission (NEC) Disqualification</b><br>Fierce primary disputes lead junta to disqualify Agbalajobi & Sarumi"]
+    PSP --> DISQUAL
+    PFN --> DISQUAL
+
+    NRC["<b>Sir Michael Otedola (NRC) Wins Governorship</b><br>Bitter PSP protest votes enable minority conservative party to win Lagos"]
+    DISQUAL --> NRC
+
+    class SDP party;
+    class JAKANDE,AGBALAJOBI psp;
+    class YARADUA,SARUMI pfn;
+    class DISQUAL,NRC outcome;
 ```
-                  LAGOS SDP FACTIONAL SCHISM (1991–1992)
-     +-----------------------------------------------------------+
-     |             Social Democratic Party (SDP)                 |
-     +-----------------------------+-----------------------------+
-                                   |
-         +-------------------------+-------------------------+
-         |                                                   |
-         v                                                   v
-  [PSP Faction]                                       [PFN Faction / Primrose]
-  Leader: Lateef Jakande                              Leader: Shehu Musa Yar'Adua
-  Aspirant: Prof. Femi Agbalajobi                     Lagos Patriarch: Dapo Sarumi
-  Base: Old-Guard Awoists                             Cadre: Bola Tinubu, Yomi Edu
-         |                                                   |
-         +--------------------+------------------------------+
-                              |
-                              v
-                 NEC Disqualifies Both Men
-                 Yomi Edu runs for Governor
-                 Jakande loyalists protest
-                              v
-                 Sir Michael Otedola (NRC)
-                 Wins Lagos Governorship (1991)
-```
+
+| Faction | Leadership & Strategic Base | Candidate | Outcome & Fallback |
+| :--- | :--- | :--- | :--- |
+| **PSP (Peoples Socialist Party)** | Lateef Jakande; grassroots Awoist old-guard | Prof. Femi Agbalajobi | Disqualified by NEC; faction refused to back Primrose candidate. |
+| **PFN / Primrose Group** | Shehu Musa Yar'Adua, Dapo Sarumi, Bola Tinubu | Dapo Sarumi | Disqualified by NEC; replaced by Yomi Edu, but lost due to PSP boycott. |
+| **National Republican Convention (NRC)** | Sir Michael Otedola (Minority conservative party) | Sir Michael Otedola | Won 1991 Lagos Governorship due to SDP fratricide. |
 
 ---
 
@@ -221,19 +241,14 @@ In May 1994, democratic resistance inside Nigeria reached a boiling point. The n
    * This relentless state persecution is permanently recorded in the official archives of the **Inter-Parliamentary Union (IPU)** under **Resolution Case No. NIG/46 - Bola Ahmed Tinubu** (adopted at the 161st Inter-Parliamentary Council session in Cairo, September 16, 1997):
      > *"Recalling that Senators Ebute, Okorafor, Nwulu, Nwite, Ibrahim and Tinubu were arrested on 2 June 1994 and charged with treasonable felony and conspiring with others to overthrow the Government because they had met on 30 May 1994 and urged General Sani Abacha to step down as Head of State; that, on 22 July 1994, they were released on bail and that in December 1995 their cases were closed with the exception of that of Senator Tinubu, who was subsequently also charged with sabotaging oil installations and went into exile for fear of his life..."*
 
-```
-                     IPU DOSSIER EXTRACT: CASE NO. NIG/46
-+-------------------------------------------------------------------------+
-| INTER-PARLIAMENTARY UNION (Geneva / Cairo Session, 16 Sept 1997)        |
-| Case No: NIG/46 - BOLA AHMED TINUBU (Nigeria)                           |
-| Initial Arrest: 2 June 1994 | Primary Charge: Treasonable Felony        |
-| Secondary Charge: Sabotage of National Oil Installations                |
-| Status: Exiled Prisoner of Conscience / Target of State Execution Warrants|
-| Findings: Regime dropped charges against collaborating senators (Ebute, |
-| Nwite) while sustaining capital charges and arrest warrants against     |
-| Senator Bola Ahmed Tinubu.                                              |
-+-------------------------------------------------------------------------+
-```
+> **INTER-PARLIAMENTARY UNION (IPU) OFFICIAL DOSSIER EXTRACT**
+> 
+> * **Jurisdiction & Session:** IPU Committee on the Human Rights of Parliamentarians (Geneva / 101st Session, Cairo, 16 September 1997)
+> * **Case Number:** Case No: NIG/46 — **BOLA AHMED TINUBU (Nigeria)**
+> * **Initial Arrest:** 2 June 1994 | **Detention Facility:** Alagbon Close Criminal Investigation Department, Ikoyi
+> * **Charges by Military Tribunal:** Treasonable Felony & Alleged Sabotage of National Oil Installations
+> * **Official Determination:** Recognized as an exiled parliamentarian subjected to arbitrary arrest, death threats, and persecution for defending the democratic mandate of June 12, 1993.
+> * **Critical Finding:** The Abacha junta selectively dropped treason charges against collaborating senators who accepted military co-optation, while sustaining capital arrest warrants against Senator Bola Ahmed Tinubu.
 
 ---
 
@@ -264,19 +279,44 @@ The National Democratic Coalition (NADECO) was formally birthed on **May 15, 199
 * **Committee for Unity and Understanding (CUU):** Retired military commanders representing the Middle Belt and Eastern zones: Air Commodore Dan Suleiman, Commodore Ebitu Ukiwe, Rear Admiral Ndubuisi Kanu, General Alani Akinrinade.
 * **Legislators & Civil Society:** Senator Bola Ahmed Tinubu, Senator Ameh Ebute, Chief Ralph Obioha, Dr. Beko Ransome-Kuti (Campaign for Democracy), Chief Frank Kokori (NUPENG), Chief Ayo Opadokun (National General Secretary/Spokesman), Pa Alfred Ogbeyiwa Rewane (Patron and Chief Financier).
 
+```mermaid
+flowchart TD
+    classDef domestic fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+    classDef exile fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef joint fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    NADECO["<b>NATIONAL DEMOCRATIC COALITION (NADECO)</b><br>Formed May 15, 1994 to reclaim June 12 mandate"]
+
+    subgraph DOMESTIC["DOMESTIC PILLAR (UNDER SIEGE IN NIGERIA)"]
+        AJASIN["<b>National Leader: Pa Michael Adekunle Ajasin</b>"]
+        ADESANYA["<b>Deputy Leader: Chief Abraham Adesanya</b>"]
+        REWANE["<b>Chief Domestic Financier: Pa Alfred Rewane</b> (Assassinated 1995)"]
+        KUDIRAT["<b>Underground Mobilizer: Alhaja Kudirat Abiola</b> (Assassinated 1996)"]
+        OPADOKUN["<b>General Secretary: Chief Ayo Opadokun</b>"]
+        AJASIN --> ADESANYA --> REWANE --> KUDIRAT --> OPADOKUN
+    end
+
+    subgraph EXILE["DIASPORA / EXILE PILLAR (LONDON, WASHINGTON, OTTAWA)"]
+        ENAHORO["<b>Overseas Leader: Chief Anthony Enahoro</b>"]
+        SULEIMAN["<b>Overseas Chairman: Air Cdre Dan Suleiman</b>"]
+        AKINRINADE["<b>Strategic Defense: Gen. Alani Akinrinade</b>"]
+        TINUBU["<b>Mobilization & Operations Finance: Senator Bola Tinubu</b>"]
+        SOYINKA["<b>Revolutionary Front (NALICON): Prof. Wole Soyinka</b>"]
+        ENAHORO --> SULEIMAN --> AKINRINADE --> TINUBU --> SOYINKA
+    end
+
+    NADECO --> DOMESTIC
+    NADECO --> EXILE
+
+    class NADECO joint;
+    class AJASIN,ADESANYA,REWANE,KUDIRAT,OPADOKUN domestic;
+    class ENAHORO,SULEIMAN,AKINRINADE,TINUBU,SOYINKA exile;
 ```
-                            NADECO DUAL-PILLAR STRUCTURE
-====================================================================================================
-           DOMESTIC PILLAR (Under Siege)        |       DIASPORA / EXILE PILLAR (Abroad)
-------------------------------------------------+---------------------------------------------------
-- National Leader: Pa Michael Adekunle Ajasin   | - Overseas Leader: Chief Anthony Enahoro
-- Deputy Leader: Chief Abraham Adesanya         | - Overseas Chairman: Air Commodore Dan Suleiman
-- Chief Financier: Pa Alfred Rewane (Ikoyi)     | - Strategic Defense Head: Gen. Alani Akinrinade
-- Secretariat: Chief Ayo Opadokun               | - Mobilization & Finance: Senator Bola Tinubu
-- Grassroots Engine: Afenifere, CD, NUPENG      | - Revolutionary Wing (NALICON): Prof. Wole Soyinka
-- Underground Operatives: Kudirat Abiola        | - International Diplomatic Hub: London, DC, Ottawa
-====================================================================================================
-```
+
+| Operating Pillar | Key Leadership Figures | Core Responsibilities & Operational Risks |
+| :--- | :--- | :--- |
+| **Domestic Pillar** *(Nigeria)* | Pa Michael Ajasin, Chief Abraham Adesanya, Pa Alfred Rewane, Ayo Opadokun, Kudirat Abiola | Civil disobedience, strike coordination with NUPENG, mass demonstrations; faced assassination and torture by Strike Force. |
+| **Exile Pillar** *(London / US / Canada)* | Chief Anthony Enahoro, Air Cdre Dan Suleiman, Gen. Alani Akinrinade, Bola Tinubu, Wole Soyinka | Diplomatic lobbying at UN/Commonwealth, sanctions advocacy, financing clandestine networks, operating Radio Kudirat. |
 
 ---
 
@@ -351,19 +391,27 @@ To penetrate this totalitarian blackout, the external resistance recognized that
 ### 4.3 Technical Architecture, Transmission Frequencies & Logistics
 Operating a clandestine international radio station in the mid-1990s without state sovereignty or a permanent physical transmission territory was an audacious feat of technical and guerrilla engineering.
 
+```mermaid
+flowchart LR
+    classDef step fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef beam fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+
+    NWS["<b>1. Underground Newsroom</b><br>• Dapo Olorunyomi<br>• Kayode Fayemi<br>• Sola Adeyeye<br><i>Audio recorded in Lagos & London</i>"]
+    TAPE["<b>2. Secure Audio Tapes</b><br>• Smuggled via diplomatic pouches<br>• Encrypted couriers to London<br>• Broadcast reels assembled"]
+    TRANS["<b>3. Leased Transmitters</b><br>• High-power shortwave stations<br>• Norway, Sweden, UK, South Africa<br>• Funded via diaspora network"]
+    BEAM["<b>4. Broadcast Target</b><br>• <b>11540 kHz</b> (Primary / 25m band)<br>• 6205 kHz & 7125 kHz<br><i>Audible across Nigeria & military barracks</i>"]
+
+    NWS --> TAPE --> TRANS --> BEAM
+
+    class NWS,TAPE,TRANS step;
+    class BEAM beam;
 ```
-                    TECHNICAL & OPERATIONAL BROADCAST CHAIN
-====================================================================================================
-[UNDERGROUND NEWSROOM] ---> [SECURE AUDIO TAPES] ---> [TRANSMITTER HUBS] ---> [SHORTWAVE BEAM]
-- Journalists: Dapo          - Smuggled out via       - Leased high-power     - Primary: 11540 kHz
-  Olorunyomi, Kayode           diplomatic pouches       transmitters in         (25-meter band)
-  Fayemi, Sola Adeyeye         and couriers to          Norway, Sweden,       - Secondary: 6205 kHz
-- Speeches: Wole Soyinka,      London/Geneva.           UK, South Africa.       (49m), 7125 kHz (41m)
-  Anthony Enahoro,                                                            - Reach: All 36 States,
-  Tinubu, taped voice                                                           West Africa, Baracks
-  of Kudirat Abiola.
-====================================================================================================
-```
+
+| Broadcast Chain Phase | Operational Architecture | Key Agents & Infrastructure |
+| :--- | :--- | :--- |
+| **Content Production** | Underground newsroom recording speeches, investigative leaks, and field reports | Dapo Olorunyomi, Kayode Fayemi, Sola Adeyeye; speeches by Soyinka, Enahoro, Tinubu. |
+| **Logistics & Transmission** | Smuggled audiotapes converted for leased shortwave transmitters in Europe | Transmitters in Norway, Sweden, South Africa; monthly leasing costs funded by exile backers. |
+| **Target Frequencies** | 11540 kHz (25-meter band); 6205 kHz (49m band); 7125 kHz (41m band) | Reached all 36 Nigerian states, border territories, and military barracks, bypassing Abacha radio censors. |
 
 * **Shortwave Frequencies:** 
   * The station broadcast primarily on **11540 kHz** (in the 25-meter international shortwave band), as well as alternating frequencies on **6205 kHz** (49-meter band) and **7125 kHz** (41-meter band) to evade electronic jamming orchestrated by military intelligence engineers in Abuja and Lagos.
@@ -404,31 +452,54 @@ Radio Kudirat smashed General Abacha’s aura of invincibility:
 ### 5.1 The Abacha State Terror Machine: Structure of the Strike Force
 To suppress pro-democracy agitation, General Sani Abacha constructed a covert assassination and terror infrastructure operating directly out of the Presidential Villa (Aso Rock) in Abuja.
 
+```mermaid
+flowchart TD
+    classDef junta fill:#eff6ff,stroke:#1d4ed8,stroke-width:2px,color:#0f172a;
+    classDef security fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#0f172a;
+    classDef squad fill:#fef2f2,stroke:#b91c1c,stroke-width:2px,color:#0f172a;
+    classDef victims fill:#f8fafc,stroke:#475569,stroke-width:1px,color:#0f172a;
+
+    ABACHA["<b>HEAD OF STATE & COMMANDER-IN-CHIEF</b><br>General Sani Abacha (Aso Rock Villa)"]
+
+    subgraph COMMAND["SECURITY APPARATUS & BLACK OPS COMMAND"]
+        GWARZO["<b>National Security Adviser</b><br>Alhaji Ismaila Gwarzo<br><i>Financed black ops, surveillance, weapons</i>"]
+        MUSTAPHA["<b>Chief Security Officer (CSO)</b><br>Major Hamza Al-Mustapha<br><i>Created & tasked the extermination unit</i>"]
+    end
+
+    ABACHA --> GWARZO
+    ABACHA --> MUSTAPHA
+
+    subgraph HIT_SQUAD["THE STRIKE FORCE (SF) & K-SQUAD"]
+        ROGERS["<b>Commander: Sgt. Barnabas Jabila Mshelia ('Sergeant Rogers')</b><br>Logistics: CSP Rabo Lawal (OC MOPOL Villa)<br><i>Operations: Sniper assassinations, firebombings, torture bunkers</i>"]
+    end
+
+    GWARZO --> ROGERS
+    MUSTAPHA --> ROGERS
+
+    subgraph TARGETS["VERIFIED OPERATIONS & TARGETS"]
+        T1["<b>Pa Alfred Rewane</b> (Assassinated Oct 6, 1995, Ikeja)"]
+        T2["<b>Alhaja Kudirat Abiola</b> (Assassinated June 4, 1996, Lagos)"]
+        T3["<b>Alex Ibru</b> (Guardian Publisher; Shot & survived Feb 2, 1996)"]
+        T4["<b>Gen. Alani Akinrinade & Bola Tinubu</b> (Homes firebombed; exile targets)"]
+    end
+
+    ROGERS --> T1
+    ROGERS --> T2
+    ROGERS --> T3
+    ROGERS --> T4
+
+    class ABACHA junta;
+    class GWARZO,MUSTAPHA security;
+    class ROGERS squad;
+    class T1,T2,T3,T4 victims;
 ```
-                   ABACHA STATE TERROR APPARATUS (1993–1998)
-====================================================================================================
-                        HEAD OF STATE & COMMANDER-IN-CHIEF
-                              General Sani Abacha
-                                       |
-    +----------------------------------+----------------------------------+
-    |                                                                     |
-    v                                                                     v
-[NATIONAL SECURITY ADVISER]                                 [CHIEF SECURITY OFFICER (CSO)]
-Alhaji Ismaila Gwarzo                                       Major Hamza Al-Mustapha
-(Financed black ops, state sabotage,                         (Created & commanded the hit squad;
-weapons procurement, surveillance)                          selected targets for extermination)
-    |                                                                     |
-    +----------------------------------+----------------------------------+
-                                       |
-                                       v
-                             [THE STRIKE FORCE (SF)]
-                   Commander: Sergeant Barnabas Jabila Mshelia 
-                                (alias "Sergeant Rogers")
-                   Logistics & Support: CSP Rabo Lawal (OC MOPOL Villa)
-                   Operations: Targeted assassinations, sniper hits, firebombings,
-                   abductions, and torture at "Inter-Center" detention bunkers.
-====================================================================================================
-```
+
+| Hit Squad Operation | Date & Location | Target & Outcome | Judicial & Oputa Panel Finding |
+| :--- | :--- | :--- | :--- |
+| **Pa Alfred Rewane** | Oct 6, 1995 (Ikeja, Lagos) | Murdered in his bedroom by gunmen. | Sergeant Rogers confessed before Justice Chukwudifu Oputa panel to state squad involvement. |
+| **Alex Ibru** | Feb 2, 1996 (Falomo, Ikoyi) | Shot in the face; survived with permanent injuries. | Hamza Al-Mustapha, Rabo Lawal, and Lateef Shofolahan tried for attempted murder. |
+| **Kudirat Abiola** | June 4, 1996 (7-Up Toll Gate, Lagos) | Shot at point-blank range with 9mm submachine gun. | Sergeant Rogers confessed to pulling the trigger on Al-Mustapha's orders. |
+| **Gen. Alani Akinrinade** | May 1996 (Opebi, Ikeja) | Residence firebombed with military explosives. | Akinrinade had escaped abroad; family evacuated. |
 
 ---
 
@@ -499,22 +570,13 @@ On **October 6, 1998**—exactly three years to the day after Pa Alfred Rewane w
   * Escorted through a massive motorcade that paralyzed Lagos traffic, Tinubu and the returning chieftains traveled directly from the airport to the **Ikeja residence of the late Chief M.K.O. Abiola**.
   * They paid emotional homage at the graveside of **Alhaja Kudirat Abiola** and consoled the bereaved Abiola family, dedicating their survival and safe return to the martyrs of June 12.
 
-```
-                    FROM EXILE TO GOVERNORSHIP (1998–1999)
-====================================================================================================
-1998 (October 6)    Returns from exile to euphoric reception at Murtala Muhammed Airport.
-1998 (October)      Joins Afenifere/NADECO leadership in birthing the Alliance for Democracy (AD).
-1998 (December)     Contests the fiercely divided AD Lagos Gubernatorial Primary:
-                    - Initial disputed announcement favored Engineer Funsho Williams.
-                    - Party elders (Abraham Adesanya, Ayo Adebanjo) rule on election irregularities
-                      and NADECO frontline sacrifices; declare Bola Ahmed Tinubu legitimate nominee.
-1999 (January 9)    Contests Lagos Gubernatorial Election:
-                    - Bola Ahmed Tinubu (Alliance for Democracy - AD): 844,389 votes (WINNER)
-                    - Dapo Sarumi (People's Democratic Party - PDP): 184,900 votes
-                    - Nosirudeen Kekere-Ekun (All People's Party - APP): 102,544 votes
-1999 (May 29)       Sworn in as the 12th Executive Governor of Lagos State.
-====================================================================================================
-```
+| Milestone Date | Political Development | Electoral Figures & Investigative Significance |
+| :--- | :--- | :--- |
+| **October 6, 1998** | Return from Exile | Thousands receive Tinubu at Murtala Muhammed Airport after 4 years abroad. |
+| **October 1998** | Formation of Alliance for Democracy (AD) | Afenifere, NADECO, and progressive Yoruba elders form AD to contest 1999 transition polls. |
+| **December 1998** | Fiercely Contested Lagos Primary | Disputed initial result favored Engr. Funsho Williams; Afenifere leadership (Abraham Adesanya, Ayo Adebanjo) intervenes, citing Tinubu's frontline exile sacrifices, awarding him the ticket. |
+| **January 9, 1999** | Lagos State Gubernatorial Election | **Bola Ahmed Tinubu (AD): 844,389 votes (74.6% - WINNER)**<br>Dapo Sarumi (PDP): 184,900 votes (16.3%)<br>Nosirudeen Kekere-Ekun (APP): 102,544 votes (9.1%) |
+| **May 29, 1999** | Inauguration | Sworn in as the 12th Executive Governor of Lagos State, initiating his 8-year reign. |
 
 ---
 

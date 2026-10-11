@@ -23,69 +23,46 @@ This dossier documents the sixteen-year political chess game across five distinc
 
 ### Master Chronology: The 16-Year Trajectory (2007–2023)
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        CHRONOLOGY OF TINUBU'S ASCENT (2007–2023)                       │
-├─────────────────┬──────────────────────────────────────────────────────────────────────┤
-│ May 29, 2007    │ Tinubu hands over Lagos to Babatunde Raji Fashola SAN; stands as the │
-│                 │ sole opposition stronghold in the Southwest against the PDP monolith.│
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ March 20, 2008  │ Edo Tribunal unseats PDP's Osunbor; Court of Appeal affirms Adams    │
-│ & Nov 11, 2008  │ Oshiomhole (AC) on Nov 11, opening the South-South corridor.         │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Oct 15, 2010    │ Court of Appeal Ilorin declares Kayode Fayemi (ACN) Governor of      │
-│                 │ Ekiti after a 42-month tribunal and rerun marathon.                   │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Nov 26, 2010    │ Court of Appeal Ibadan sacks PDP's Oyinlola; declares Rauf Aregbesola │
-│                 │ (ACN) Governor of Osun following forensic call-log revelations.       │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ April 2011      │ ACN sweeps Southwest in general elections: Ibikunle Amosun (Ogun)    │
-│                 │ and Abiola Ajimobi (Oyo) win. ACN controls 5 of 6 SW states.         │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Feb 6, 2013     │ Four opposition parties (ACN, CPC, ANPP, APGA faction) announce the  │
-│                 │ historic merger agreement in Abuja to form the APC.                  │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ July 31, 2013   │ INEC formally registers the All Progressives Congress (APC).         │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Nov 26, 2013    │ Five "nPDP" rebel governors (Amaechi, Kwankwaso, Wamakko, Nyako,     │
-│                 │ Ahmed) officially defect to the APC, breaking the PDP's back.        │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Dec 10–11, 2014 │ Teslim Balogun Stadium APC Presidential Primary: Buhari defeats      │
-│                 │ Kwankwaso and Atiku with total Southwest delegate backing.           │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Dec 17, 2014    │ Tinubu withdraws personal VP bid; nominates Prof. Yemi Osinbajo SAN. │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ March 28, 2015  │ Buhari/Osinbajo defeat Goodluck Jonathan; first democratic unseating  │
-│                 │ of an incumbent head of state in Nigerian history.                   │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ June 9, 2015    │ National Assembly Coup: Bukola Saraki and Yakubu Dogara defeat       │
-│                 │ Tinubu-backed candidates (Lawan & Gbajabiamila) with PDP backing.    │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ June 23, 2018   │ Adams Oshiomhole elected APC National Chairman backed by Tinubu.     │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ June 25, 2020   │ Buhari Villa NEC meeting dissolves Oshiomhole NWC; installs Governor │
-│                 │ Mai Mala Buni as Caretaker Committee Chairman.                       │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ June 2, 2022    │ The Abeokuta Declaration: Tinubu utters "Èmi L'ókàn", recounts saving│
-│                 │ Buhari after 2011 tears, and dresses down Dapo Abiodun ("Eleyi").    │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ June 6, 2022    │ Abdullahi Adamu's "Ahmad Lawan consensus" ambush rejected by         │
-│                 │ Northern APC governors insisting on power shift to the South.        │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ June 7–8, 2022  │ APC Presidential Primary, Eagle Square: Tinubu wins in a landslide   │
-│                 │ with 1,271 votes after 7 rivals step down on live television.        │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ July 10, 2022   │ Tinubu announces Senator Kashim Shettima as running mate in Daura.   │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Jan–Feb 2023    │ Naira Redesign and Cash Crunch crisis: Tinubu decries sabotage at    │
-│                 │ Abeokuta rally; Northern Governors sue FG in the Supreme Court.      │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Feb 25, 2023    │ Presidential Election: Tinubu declared winner with 8,794,726 votes.  │
-├─────────────────┼──────────────────────────────────────────────────────────────────────┤
-│ Oct 26, 2023    │ Supreme Court panel led by Justice Inyang Okoro unanimously dismisses │
-│                 │ appeals by Atiku Abubakar and Peter Obi, sealing Tinubu's victory.   │
-└─────────────────┴──────────────────────────────────────────────────────────────────────┘
-```
+### CHRONOLOGY OF TINUBU'S ASCENT (2007–2023)
+
+| May 29, 2007 | Tinubu hands over Lagos to Babatunde Raji Fashola SAN; stands as the |
+| :--- | :--- |
+|  | sole opposition stronghold in the Southwest against the PDP monolith. |
+| March 20, 2008 | Edo Tribunal unseats PDP's Osunbor; Court of Appeal affirms Adams |
+| & Nov 11, 2008 | Oshiomhole (AC) on Nov 11, opening the South-South corridor. |
+| Oct 15, 2010 | Court of Appeal Ilorin declares Kayode Fayemi (ACN) Governor of |
+|  | Ekiti after a 42-month tribunal and rerun marathon. |
+| Nov 26, 2010 | Court of Appeal Ibadan sacks PDP's Oyinlola; declares Rauf Aregbesola |
+|  | (ACN) Governor of Osun following forensic call-log revelations. |
+| April 2011 | ACN sweeps Southwest in general elections: Ibikunle Amosun (Ogun) |
+|  | and Abiola Ajimobi (Oyo) win. ACN controls 5 of 6 SW states. |
+| Feb 6, 2013 | Four opposition parties (ACN, CPC, ANPP, APGA faction) announce the |
+|  | historic merger agreement in Abuja to form the APC. |
+| July 31, 2013 | INEC formally registers the All Progressives Congress (APC). |
+| Nov 26, 2013 | Five "nPDP" rebel governors (Amaechi, Kwankwaso, Wamakko, Nyako, |
+|  | Ahmed) officially defect to the APC, breaking the PDP's back. |
+| Dec 10–11, 2014 | Teslim Balogun Stadium APC Presidential Primary: Buhari defeats |
+|  | Kwankwaso and Atiku with total Southwest delegate backing. |
+| Dec 17, 2014 | Tinubu withdraws personal VP bid; nominates Prof. Yemi Osinbajo SAN. |
+| March 28, 2015 | Buhari/Osinbajo defeat Goodluck Jonathan; first democratic unseating |
+|  | of an incumbent head of state in Nigerian history. |
+| June 9, 2015 | National Assembly Coup: Bukola Saraki and Yakubu Dogara defeat |
+|  | Tinubu-backed candidates (Lawan & Gbajabiamila) with PDP backing. |
+| June 23, 2018 | Adams Oshiomhole elected APC National Chairman backed by Tinubu. |
+| June 25, 2020 | Buhari Villa NEC meeting dissolves Oshiomhole NWC; installs Governor |
+|  | Mai Mala Buni as Caretaker Committee Chairman. |
+| June 2, 2022 | The Abeokuta Declaration: Tinubu utters "Èmi L'ókàn", recounts saving |
+|  | Buhari after 2011 tears, and dresses down Dapo Abiodun ("Eleyi"). |
+| June 6, 2022 | Abdullahi Adamu's "Ahmad Lawan consensus" ambush rejected by |
+|  | Northern APC governors insisting on power shift to the South. |
+| June 7–8, 2022 | APC Presidential Primary, Eagle Square: Tinubu wins in a landslide |
+|  | with 1,271 votes after 7 rivals step down on live television. |
+| July 10, 2022 | Tinubu announces Senator Kashim Shettima as running mate in Daura. |
+| Jan–Feb 2023 | Naira Redesign and Cash Crunch crisis: Tinubu decries sabotage at |
+|  | Abeokuta rally; Northern Governors sue FG in the Supreme Court. |
+| Feb 25, 2023 | Presidential Election: Tinubu declared winner with 8,794,726 votes. |
+| Oct 26, 2023 | Supreme Court panel led by Justice Inyang Okoro unanimously dismisses |
+|  | appeals by Atiku Abubakar and Peter Obi, sealing Tinubu's victory. |
 
 ---
 
@@ -96,15 +73,10 @@ In the 2003 general elections, President Olusegun Obasanjo led a federal elector
 
 Realizing that AD was structurally immobilized by ideological puritanism and gerontocratic control by the Afenifere leadership (Chief Abraham Adesanya, Chief Ayo Adebanjo, Sir Olaniwun Ajayi), Tinubu initiated a two-phase structural transformation:
 
-```
-┌─────────────────┐       ┌─────────────────┐       ┌──────────────────────┐
-│  Alliance for   │  ──>  │ Action Congress │  ──>  │ Action Congress of   │
-│ Democracy (AD)  │ 2006  │     (AC)        │ 2010  │    Nigeria (ACN)     │
-│ (1998–2006)     │       │   (2006–2010)   │       │     (2010–2013)      │
-└─────────────────┘       └─────────────────┘       └──────────────────────┘
-  Regional Yoruba           Multi-tendency            National Opposition
-  Ideological Party         Anti-Obasanjo Front       Expansion Engine
-```
+| Alliance for | → | Action Congress | → | Action Congress of |
+| :--- | :--- | :--- | :--- | :--- |
+| Democracy (AD) | 2006 | (AC) | 2010 | Nigeria (ACN) |
+| (1998–2006) |  | (2006–2010) |  | (2010–2013) |
 
 #### The Internal Schism and Birth of the AC (2006)
 - **The Split:** The AD fractured into two factions: the conservative Afenifere-backed faction led by Chief Michael Mojisoluwa Akinfenwa, and the reformist, pro-Tinubu faction led by Chief Bisi Akande.
@@ -120,24 +92,18 @@ Following the heavily flawed April 14, 2007 gubernatorial elections conducted by
 
 Tinubu did not accept the status quo. Instead, he pioneered an unprecedented legal-forensic machine. He established a legal war room in Lagos, financing high-powered legal teams led by Nigeria's foremost Senior Advocates of Nigeria (SANs) and introducing **forensic biometric ballot paper analysis** into Nigerian election jurisprudence.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        THE TINUBU LEGAL-FORENSIC APPARATUS                             │
-├─────────────────────┬──────────────────────────────────────────────────────────────────┤
-│ Lead Legal SANs     │ Chief Wole Olanipekun SAN, Lateef Fagbemi SAN, Rotimi Akeredolu  │
-│                     │ SAN, Yusuf Ali SAN, Kola Awodein SAN, Niyi Akintola SAN.         │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Forensic Experts    │ Professor Adrian Forty (UK forensic analyst), Dr. Charles        │
-│                     │ Pateman, and British biometric document examiners.              │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Forensic Methodology│ Biometric fingerprint scanning of millions of ballot papers;     │
-│                     │ proving serial numbers were stamped in bulk by single hands;    │
-│                     │ proving voters were disenfranchised via non-voting units.        │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Strategic Impact    │ Annulled fraudulent PDP votes, computed lawful valid votes, and  │
-│                     │ secured direct appellate declarations without needing reruns.    │
-└─────────────────────┴──────────────────────────────────────────────────────────────────┘
-```
+### THE TINUBU LEGAL-FORENSIC APPARATUS
+
+| Lead Legal SANs | Chief Wole Olanipekun SAN, Lateef Fagbemi SAN, Rotimi Akeredolu |
+| :--- | :--- |
+|  | SAN, Yusuf Ali SAN, Kola Awodein SAN, Niyi Akintola SAN. |
+| Forensic Experts | Professor Adrian Forty (UK forensic analyst), Dr. Charles |
+|  | Pateman, and British biometric document examiners. |
+| Forensic Methodology | Biometric fingerprint scanning of millions of ballot papers; |
+|  | proving serial numbers were stamped in bulk by single hands; |
+|  | proving voters were disenfranchised via non-voting units. |
+| Strategic Impact | Annulled fraudulent PDP votes, computed lawful valid votes, and |
+|  | secured direct appellate declarations without needing reruns. |
 
 #### Detailed Breakdown of the Tribunal Battles
 
@@ -209,27 +175,17 @@ Individually, each opposition party was a regional nuisance. Unified, they forme
 
 On **February 6, 2013**, ten opposition governors and leaders of four political parties met in Abuja and issued a joint declaration announcing an agreement to merge into a single entity: the **All Progressives Congress (APC)**.
 
-```
-                               ┌──────────────────────────────────────────────────────────┐
-                               │           ALL PROGRESSIVES CONGRESS (APC)                │
-                               │                Formed: February 2013                     │
-                               └────────────────────────────┬─────────────────────────────┘
-                                                            │
-         ┌──────────────────────────┬───────────────────────┴───────────────────────┬──────────────────────────┐
-         │                          │                                               │                          │
-         ▼                          ▼                                               ▼                          ▼
-┌──────────────────┐      ┌──────────────────┐                            ┌──────────────────┐       ┌──────────────────┐
-│   ACN FACTION    │      │   CPC FACTION    │                            │   ANPP FACTION   │       │   APGA FACTION   │
-│ Led by:          │      │ Led by:          │                            │ Led by:          │       │ Led by:          │
-│ • Bola Tinubu    │      │ • Muhammadu      │                            │ • Ogbonnaya Onu  │       │ • Rochas         │
-│ • Bisi Akande    │      │   Buhari         │                            │ • Ibrahim        │       │   Okorocha       │
-│ • Babatunde      │      │ • Tony Momoh     │                            │   Shekarau       │       │ • Annie Okonkwo  │
-│   Fashola        │      │ • Nasir El-Rufai │                            │ • George Moghalu │       │                  │
-├──────────────────┤      ├──────────────────┤                            ├──────────────────┤       ├──────────────────┤
-│ Base: Southwest  │      │ Base: Northwest/ │                            │ Base: Borno,     │       │ Base: Imo State, │
-│ & Edo State      │      │ Northeast        │                            │ Yobe, Zamfara    │       │ Southeast        │
-└──────────────────┘      └──────────────────┘                            └──────────────────┘       └──────────────────┘
-```
+| ALL PROGRESSIVES CONGRESS (APC) |  |  |  |  |  |  |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Formed: February 2013 |  |  |  |  |  |  |
+| ACN FACTION |  | CPC FACTION |  | ANPP FACTION |  | APGA FACTION |
+| Led by: |  | Led by: |  | Led by: |  | Led by: |
+| • Bola Tinubu |  | • Muhammadu |  | • Ogbonnaya Onu |  | • Rochas |
+| • Bisi Akande |  | Buhari |  | • Ibrahim |  | Okorocha |
+| • Babatunde |  | • Tony Momoh |  | Shekarau |  | • Annie Okonkwo |
+| Fashola |  | • Nasir El-Rufai |  | • George Moghalu |  |  |
+| Base: Southwest |  | Base: Northwest/ |  | Base: Borno, |  | Base: Imo State, |
+| & Edo State |  | Northeast |  | Yobe, Zamfara |  | Southeast |
 
 #### Strategic Assets Brought by Each Bloc:
 1. **The ACN (Tinubu Bloc):** 
@@ -278,28 +234,22 @@ The decisive shift that destroyed the PDP’s numerical hegemony occurred on **A
 
 Protesting the high-handedness of PDP National Chairman Alhaji Bamanga Tukur and President Goodluck Jonathan's second-term maneuvers, seven sitting governors walked out of the convention hall, led by former Vice President Atiku Abubakar and Alhaji Abubakar Kawu Baraje. They formed the **"New PDP" (nPDP)**.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        THE nPDP WALKOUT & DEFECTION TO APC                             │
-├─────────────────────┬──────────────────────────────────────────────────────────────────┤
-│ The Date            │ November 26, 2013 (Defection formally signed at Kano State       │
-│                     │ Governor's Lodge, Asokoro, Abuja).                               │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ The 5 Defecting     │ 1. Rotimi Amaechi (Rivers State - Chairman, NGF)                 │
-│ Governors           │ 2. Rabiu Musa Kwankwaso (Kano State)                             │
-│                     │ 3. Aliyu Magatakarda Wamakko (Sokoto State)                      │
-│                     │ 4. Abdulfatah Ahmed (Kwara State)                                │
-│                     │ 5. Murtala Nyako (Adamawa State)                                 │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Legislative Titans  │ • Senator Bukola Saraki (Kwara Central)                          │
-│                     │ • Rt. Hon. Aminu Waziri Tambuwal (Speaker, House of Reps)        │
-│                     │ • Alhaji Kawu Baraje (nPDP Chairman)                             │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Strategic Shift     │ APC expanded overnight from 11 states to 16 states. In the House │
-│                     │ of Representatives, 37 PDP lawmakers crossed the floor, giving  │
-│                     │ APC an interim numerical majority for the first time.            │
-└─────────────────────┴──────────────────────────────────────────────────────────────────┘
-```
+### THE nPDP WALKOUT & DEFECTION TO APC
+
+| The Date | November 26, 2013 (Defection formally signed at Kano State |
+| :--- | :--- |
+|  | Governor's Lodge, Asokoro, Abuja). |
+| The 5 Defecting | 1. Rotimi Amaechi (Rivers State - Chairman, NGF) |
+| Governors | 2. Rabiu Musa Kwankwaso (Kano State) |
+|  | 3. Aliyu Magatakarda Wamakko (Sokoto State) |
+|  | 4. Abdulfatah Ahmed (Kwara State) |
+|  | 5. Murtala Nyako (Adamawa State) |
+| Legislative Titans | • Senator Bukola Saraki (Kwara Central) |
+|  | • Rt. Hon. Aminu Waziri Tambuwal (Speaker, House of Reps) |
+|  | • Alhaji Kawu Baraje (nPDP Chairman) |
+| Strategic Shift | APC expanded overnight from 11 states to 16 states. In the House |
+|  | of Representatives, 37 PDP lawmakers crossed the floor, giving |
+|  | APC an interim numerical majority for the first time. |
 
 #### The June 2014 Elective National Convention: Oyegun vs. Ikimi
 At the first National Convention held on June 13–14, 2014, at Eagle Square:
@@ -315,20 +265,16 @@ At the first National Convention held on June 13–14, 2014, at Eagle Square:
 
 The 2014 APC Presidential Primary was conducted at the **Teslim Balogun Stadium in Surulere, Lagos**, before more than 7,000 delegates. It was widely regarded as the most transparent primary election in Nigerian history, broadcast live nationwide.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│             2014 APC PRESIDENTIAL PRIMARY RESULTS (TESLIM BALOGUN STADIUM)             │
-├────────────────────────────┬─────────────────────────────┬─────────────────────────────┤
-│ Candidate                  │ Vote Tally                  │ Percentage of Votes         │
-├────────────────────────────┼─────────────────────────────┼─────────────────────────────┤
-│ Gen. Muhammadu Buhari      │ 3,430                       │ 56.9% (WINNER)              │
-│ Engr. Rabiu Musa Kwankwaso │ 974                         │ 16.2%                       │
-│ Alhaji Atiku Abubakar      │ 954                         │ 15.8%                       │
-│ Owelle Rochas Okorocha     │ 624                         │ 10.3%                       │
-│ Mr. Sam Nda-Isaiah         │ 10                          │ 0.2%                        │
-│ Invalid / Void Votes       │ 16                          │ -                           │
-└────────────────────────────┴─────────────────────────────┴─────────────────────────────┘
-```
+### 2014 APC PRESIDENTIAL PRIMARY RESULTS (TESLIM BALOGUN STADIUM)
+
+| Candidate | Vote Tally | Percentage of Votes |
+| :--- | :--- | :--- |
+| Gen. Muhammadu Buhari | 3,430 | 56.9% (WINNER) |
+| Engr. Rabiu Musa Kwankwaso | 974 | 16.2% |
+| Alhaji Atiku Abubakar | 954 | 15.8% |
+| Owelle Rochas Okorocha | 624 | 10.3% |
+| Mr. Sam Nda-Isaiah | 10 | 0.2% |
+| Invalid / Void Votes | 16 | - |
 
 #### Tinubu's Decisive Role:
 - **Atiku’s Financial Muscle:** Atiku Abubakar deployed massive campaign resources to capture delegates across the North and Southwest.
@@ -363,17 +309,13 @@ The 2015 election was fought under the revolutionary slogan **"Change"** (*Chang
 2. **The Southwest Turnout Engine:** Tinubu’s organizational dominance ensuring high turnout and flipping critical states from the PDP.
 3. **The Financial Warchest:** Backed by Lagos commercial capital, Rivers State oil-wealth patronage under Rotimi Amaechi, and Kano State revenues under Kwankwaso.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                       MARCH 28, 2015 PRESIDENTIAL ELECTION RESULTS                     │
-├────────────────────────────┬─────────────────────────────┬─────────────────────────────┤
-│ Candidate / Party          │ Total Popular Vote          │ Percentage                  │
-├────────────────────────────┼─────────────────────────────┼─────────────────────────────┤
-│ Muhammadu Buhari (APC)     │ 15,424,921                  │ 53.96% (WINNER)             │
-│ Goodluck Jonathan (PDP)    │ 12,853,162                  │ 44.96%                      │
-│ Margin of Victory          │ 2,571,759                   │ 9.00%                       │
-└────────────────────────────┴─────────────────────────────┴─────────────────────────────┘
-```
+### MARCH 28, 2015 PRESIDENTIAL ELECTION RESULTS
+
+| Candidate / Party | Total Popular Vote | Percentage |
+| :--- | :--- | :--- |
+| Muhammadu Buhari (APC) | 15,424,921 | 53.96% (WINNER) |
+| Goodluck Jonathan (PDP) | 12,853,162 | 44.96% |
+| Margin of Victory | 2,571,759 | 9.00% |
 
 #### Historical Significance:
 - For the first time since Nigeria achieved independence in 1960, an opposition party defeated a sitting democratic incumbent president.
@@ -386,26 +328,20 @@ The 2015 election was fought under the revolutionary slogan **"Change"** (*Chang
 
 The victory of March 2015 marked the beginning of an eight-year asymmetric war of attrition between Bola Ahmed Tinubu and an entrenched Northern palace aristocracy known as the **"Aso Rock Cabal."** Once Buhari was safely installed in power, the northern ruling circle moved rapidly to clip Tinubu's wings and prevent him from using federal power to build an unstoppable presidential succession machine.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        THE ASO ROCK CABAL POWER PYRAMID                                │
-├─────────────────────┬──────────────────────────────────────────────────────────────────┤
-│ Mallam Mamman Daura │ Buhari's octogenarian nephew; intellectual powerhouse and chief  │
-│                     │ consigliere; lived inside the Glass House at the Presidential    │
-│                     │ Villa; controlled appointments, oil acreage, and DSS directorate.│
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Mallam Abba Kyari   │ Chief of Staff to the President (2015–2020); Cambridge-educated  │
-│                     │ bureaucratic gatekeeper; issued the presidential decree that     │
-│                     │ all ministers and agency heads must report exclusively via him.  │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Mallam Ismaila Isa  │ Billionaire media mogul (Democrat, Bulet Construction); Buhari   │
-│ Funtua              │ confidant and back-channel handler of northern business elite.   │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Babachir David Lawal│ Secretary to the Government of the Federation (2015–2017);       │
-│                     │ initially allied with Tinubu, later operated cabal maneuvers     │
-│                     │ until sacked over the "grass-cutting" corruption scandal.        │
-└─────────────────────┴──────────────────────────────────────────────────────────────────┘
-```
+### THE ASO ROCK CABAL POWER PYRAMID
+
+| Mallam Mamman Daura | Buhari's octogenarian nephew; intellectual powerhouse and chief |
+| :--- | :--- |
+|  | consigliere; lived inside the Glass House at the Presidential |
+|  | Villa; controlled appointments, oil acreage, and DSS directorate. |
+| Mallam Abba Kyari | Chief of Staff to the President (2015–2020); Cambridge-educated |
+|  | bureaucratic gatekeeper; issued the presidential decree that |
+|  | all ministers and agency heads must report exclusively via him. |
+| Mallam Ismaila Isa | Billionaire media mogul (Democrat, Bulet Construction); Buhari |
+| Funtua | confidant and back-channel handler of northern business elite. |
+| Babachir David Lawal | Secretary to the Government of the Federation (2015–2017); |
+|  | initially allied with Tinubu, later operated cabal maneuvers |
+|  | until sacked over the "grass-cutting" corruption scandal. |
 
 ---
 
@@ -482,25 +418,19 @@ Governor Mai Mala Buni’s caretaker committee was given a 6-month mandate to co
 #### The Late 2022 / Early 2023 Naira Redesign Weapon
 On **October 26, 2022**, four months before the presidential election, Central Bank of Nigeria (CBN) Governor **Godwin Emefiele** announced the immediate redesign of the N200, N500, and N1,000 banknotes, mandating that old notes would cease to be legal tender on January 31, 2023 (later moved to February 10, 2023).
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        THE EMERGENCE OF THE NAIRA REDESIGN CRISIS                      │
-├─────────────────────┬──────────────────────────────────────────────────────────────────┤
-│ The Stated Goal     │ Curb illicit currency hoarding, fight ransom payments to        │
-│                     │ bandits, reduce inflation, and prevent vote buying.              │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ The Reality         │ The CBN printed less than 10% of the replacement cash needed.    │
-│                     │ Over N2.1 trillion was mopped up from the banking system; less   │
-│                     │ than N300 billion in new notes was disbursed.                    │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ The Human Toll      │ Commercial paralysis across Nigeria; riots at banking halls;     │
-│                     │ small businesses collapsed; massive fuel queues paralyzed roads. │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ The Political       │ Designed by Villa operatives to spark massive public rage against│
-│ Target              │ the ruling party, starve Tinubu's campaign of operational funds, │
-│                     │ and force an election postponement or an Interim National Gov.   │
-└─────────────────────┴──────────────────────────────────────────────────────────────────┘
-```
+### THE EMERGENCE OF THE NAIRA REDESIGN CRISIS
+
+| The Stated Goal | Curb illicit currency hoarding, fight ransom payments to |
+| :--- | :--- |
+|  | bandits, reduce inflation, and prevent vote buying. |
+| The Reality | The CBN printed less than 10% of the replacement cash needed. |
+|  | Over N2.1 trillion was mopped up from the banking system; less |
+|  | than N300 billion in new notes was disbursed. |
+| The Human Toll | Commercial paralysis across Nigeria; riots at banking halls; |
+|  | small businesses collapsed; massive fuel queues paralyzed roads. |
+| The Political | Designed by Villa operatives to spark massive public rage against |
+| Target | the ruling party, starve Tinubu's campaign of operational funds, |
+|  | and force an election postponement or an Interim National Gov. |
 
 #### Nasir El-Rufai Blows the Whistle (February 1, 2023)
 On February 1, 2023, during an explosive live interview on Channels Television’s *Sunrise Daily*, Kaduna State Governor Nasir El-Rufai confirmed the internal sabotage:
@@ -521,34 +451,27 @@ By late May 2022, intelligence reached Tinubu’s inner circle that the Villa Ca
 
 On **June 2, 2022**, during a consultation with APC delegates at the Presidential Lodge in Abeokuta, Ogun State, Bola Ahmed Tinubu abandoned conventional diplomatic etiquette. Speaking in raw, unfiltered, colloquial Yoruba, Tinubu delivered the most famous political oration in modern Nigerian history.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                   THE RAW STATEMENTS: TINUBU AT ABEOKUTA (JUNE 2, 2022)                │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 1. Buhari Weeping on National Television:                                              │
-│    "If not for me standing before you today, Buhari would not have become president.   │
-│    He contested the first time, he failed. Second time, he failed. Third time, he      │
-│    failed. He even wept on national television and swore he would never run again.     │
-│    I went to him in Katsina and told him: 'You will run again, and I will stand by     │
-│    you. You will contest, and you will win!'"                                          │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 2. The VP Sacrifices:                                                                  │
-│    "He offered me the Vice Presidency. But they raised an uproar: 'A Muslim-Muslim     │
-│    ticket cannot stand!' I saw the danger. I said: let us bring a Christian. I had     │
-│    the right to nominate, and I gave him Osinbajo. I sacrificed my own ambition."      │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 3. The Humiliation of Governor Dapo Abiodun ("Eleyi"):                                 │
-│    Turning directly to Ogun Governor Dapo Abiodun sitting nervously on the podium:     │
-│    "Eleyi to wa l'ehin mi, Dapo, ko le di gomina lai si emi!"                          │
-│    ("This one sitting behind me, Dapo, he couldn't have become governor without me!    │
-│    They snatched the party ticket from him; I was the one who fought and gave it back  │
-│    to him!")                                                                           │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 4. The Historic Cry: "Èmi L'ókàn":                                                     │
-│    "It has been over 25 years that I have been serving them. Now, it is the turn of   │
-│    the Yoruba! And in Yorubaland, IT IS MY TURN! ÈMI L'ÓKÀN! Bring it to me!"          │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+| THE RAW STATEMENTS: TINUBU AT ABEOKUTA (JUNE 2, 2022) |
+| :--- |
+| 1. Buhari Weeping on National Television: |
+| "If not for me standing before you today, Buhari would not have become president. |
+| He contested the first time, he failed. Second time, he failed. Third time, he |
+| failed. He even wept on national television and swore he would never run again. |
+| I went to him in Katsina and told him: 'You will run again, and I will stand by |
+| you. You will contest, and you will win!'" |
+| 2. The VP Sacrifices: |
+| "He offered me the Vice Presidency. But they raised an uproar: 'A Muslim-Muslim |
+| ticket cannot stand!' I saw the danger. I said: let us bring a Christian. I had |
+| the right to nominate, and I gave him Osinbajo. I sacrificed my own ambition." |
+| 3. The Humiliation of Governor Dapo Abiodun ("Eleyi"): |
+| Turning directly to Ogun Governor Dapo Abiodun sitting nervously on the podium: |
+| "Eleyi to wa l'ehin mi, Dapo, ko le di gomina lai si emi!" |
+| ("This one sitting behind me, Dapo, he couldn't have become governor without me! |
+| They snatched the party ticket from him; I was the one who fought and gave it back |
+| to him!") |
+| 4. The Historic Cry: "Èmi L'ókàn": |
+| "It has been over 25 years that I have been serving them. Now, it is the turn of |
+| the Yoruba! And in Yorubaland, IT IS MY TURN! ÈMI L'ÓKÀN! Bring it to me!" |
 
 The speech sent shockwaves across Nigeria. The phrase **"Èmi L'ókàn"** (*It is my turn*) and the label **"Eleyi"** (*This one*) instantly entered global political folklore, transforming Tinubu from a cautious kingmaker into a defiant, uncompromising warrior taking on the entire Nigerian state apparatus.
 
@@ -572,48 +495,39 @@ Adamu’s proclamation collapsed within three hours:
 
 The Special Presidential Convention at Eagle Square, Abuja, became a masterclass in political mobilization and psychological intimidation.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        THE EAGLE SQUARE DOMINO STEP-DOWNS                              │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ In a pre-arranged sequence executed on live television before balloting began, seven   │
-│ heavyweight aspirants stepped up to the podium and withdrew in favor of Tinubu:       │
-│                                                                                        │
-│ 1. Senator Godswill Akpabio (Former Akwa Ibom Gov / Minister of Niger Delta)           │
-│ 2. Senator Ibikunle Amosun (Former Ogun State Governor)                                │
-│ 3. Dr. Kayode Fayemi (Governor of Ekiti State / Chairman, Nigeria Governors' Forum)   │
-│ 4. Rt. Hon. Dimeji Bankole (Former Speaker, House of Representatives)                  │
-│ 5. Senator Robert Ajayi Boroffice (Ondo North)                                         │
-│ 6. Alhaji Abubakar Badaru (Governor of Jigawa State)                                   │
-│ 7. Nicholas Felix (Youngest presidential aspirant)                                     │
-│ *(Mrs. Uju Kennedy Ohanenye also stepped down for Tinubu).*                            │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+| THE EAGLE SQUARE DOMINO STEP-DOWNS |
+| :--- |
+| In a pre-arranged sequence executed on live television before balloting began, seven |
+| heavyweight aspirants stepped up to the podium and withdrew in favor of Tinubu: |
+| 1. Senator Godswill Akpabio (Former Akwa Ibom Gov / Minister of Niger Delta) |
+| 2. Senator Ibikunle Amosun (Former Ogun State Governor) |
+| 3. Dr. Kayode Fayemi (Governor of Ekiti State / Chairman, Nigeria Governors' Forum) |
+| 4. Rt. Hon. Dimeji Bankole (Former Speaker, House of Representatives) |
+| 5. Senator Robert Ajayi Boroffice (Ondo North) |
+| 6. Alhaji Abubakar Badaru (Governor of Jigawa State) |
+| 7. Nicholas Felix (Youngest presidential aspirant) |
+| *(Mrs. Uju Kennedy Ohanenye also stepped down for Tinubu).* |
 
 Those who refused to step down—most notably Vice President **Prof. Yemi Osinbajo**, former Rivers Governor **Rotimi Amaechi**, and Senate President **Ahmad Lawan**—faced a unified, devastating Southwest-Northwest delegate steamroller.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                 OFFICIAL RESULTS: 2022 APC PRESIDENTIAL PRIMARY ELECTION               │
-├───────────────────────────────────┬──────────────────────┬─────────────────────────────┤
-│ Aspirant                          │ Votes Scored         │ Status                      │
-├───────────────────────────────────┼──────────────────────┼─────────────────────────────┤
-│ Asiwaju Bola Ahmed Tinubu         │ 1,271                │ WINNER (56.1%)              │
-│ Rt. Hon. Chibuike Rotimi Amaechi  │ 316                  │ 2nd Place                   │
-│ Prof. Yemi Osinbajo SAN           │ 235                  │ 3rd Place                   │
-│ Senator Ahmad Lawan               │ 152                  │ 4th Place                   │
-│ Governor Yahaya Bello             │ 47                   │ -                           │
-│ Governor Dave Umahi               │ 38                   │ -                           │
-│ Governor Ben Ayade                │ 14                   │ -                           │
-│ Senator Ahmed Sani Yerima         │ 4                    │ -                           │
-│ Dr. Ogbonnaya Onu                 │ 1                    │ -                           │
-│ Pastor Tunde Bakare               │ 0                    │ -                           │
-│ Senator Rochas Okorocha           │ 0                    │ -                           │
-│ Chief Ikeobasi Mokelu             │ 0                    │ -                           │
-│ Void / Invalid Votes              │ 13                   │ -                           │
-│ TOTAL ACCREDITED VOTES            │ 2,322                │ -                           │
-└───────────────────────────────────┴──────────────────────┴─────────────────────────────┘
-```
+### OFFICIAL RESULTS: 2022 APC PRESIDENTIAL PRIMARY ELECTION
+
+| Aspirant | Votes Scored | Status |
+| :--- | :--- | :--- |
+| Asiwaju Bola Ahmed Tinubu | 1,271 | WINNER (56.1%) |
+| Rt. Hon. Chibuike Rotimi Amaechi | 316 | 2nd Place |
+| Prof. Yemi Osinbajo SAN | 235 | 3rd Place |
+| Senator Ahmad Lawan | 152 | 4th Place |
+| Governor Yahaya Bello | 47 | - |
+| Governor Dave Umahi | 38 | - |
+| Governor Ben Ayade | 14 | - |
+| Senator Ahmed Sani Yerima | 4 | - |
+| Dr. Ogbonnaya Onu | 1 | - |
+| Pastor Tunde Bakare | 0 | - |
+| Senator Rochas Okorocha | 0 | - |
+| Chief Ikeobasi Mokelu | 0 | - |
+| Void / Invalid Votes | 13 | - |
+| TOTAL ACCREDITED VOTES | 2,322 | - |
 
 Tinubu demolished the combined votes of Amaechi, Osinbajo, and Lawan combined by a margin of nearly 2-to-1.
 
@@ -644,30 +558,23 @@ The 2023 presidential election was the most fiercely contested four-horse race i
 - **Peter Gregory Obi** (Labour Party - LP)
 - **Engr. Rabiu Musa Kwankwaso** (New Nigeria Peoples Party - NNPP)
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│               OFFICIAL RESULTS: FEBRUARY 25, 2023 PRESIDENTIAL ELECTION               │
-├─────────────────────────┬──────────────┬────────────┬──────────────────────────────────┤
-│ Candidate / Party       │ Total Votes  │ Percentage │ States Won                       │
-├─────────────────────────┼──────────────┼────────────┼──────────────────────────────────┤
-│ Bola Ahmed Tinubu (APC) │ 8,794,726    │ 36.61%     │ 12 States (Oyo, Ogun, Ondo,      │
-│                         │              │            │ Ekiti, Kwara, Kogi, Benue,       │
-│                         │              │            │ Niger, Borno, Jigawa, Zamfara,   │
-│                         │              │            │ Rivers)                          │
-├─────────────────────────┼──────────────┼────────────┼──────────────────────────────────┤
-│ Atiku Abubakar (PDP)    │ 6,984,520    │ 29.07%     │ 12 States (Osun, Katsina, Kebbi, │
-│                         │              │            │ Sokoto, Kaduna, Gombe, Yobe,     │
-│                         │              │            │ Bauchi, Adamawa, Taraba, Bayelsa,│
-│                         │              │            │ Akwa Ibom)                       │
-├─────────────────────────┼──────────────┼────────────┼──────────────────────────────────┤
-│ Peter Obi (LP)          │ 6,101,533    │ 25.40%     │ 11 States + FCT (Lagos, Abuja,   │
-│                         │              │            │ Anambra, Enugu, Abia, Imo,       │
-│                         │              │            │ Ebonyi, Edo, Delta, Cross River, │
-│                         │              │            │ Plateau, Nasarawa)               │
-├─────────────────────────┼──────────────┼────────────┼──────────────────────────────────┤
-│ Rabiu Kwankwaso (NNPP)  │ 1,496,687    │ 6.23%      │ 1 State (Kano)                   │
-└─────────────────────────┴──────────────┴────────────┴──────────────────────────────────┘
-```
+### OFFICIAL RESULTS: FEBRUARY 25, 2023 PRESIDENTIAL ELECTION
+
+| Candidate / Party | Total Votes | Percentage | States Won |
+| :--- | :--- | :--- | :--- |
+| Bola Ahmed Tinubu (APC) | 8,794,726 | 36.61% | 12 States (Oyo, Ogun, Ondo, |
+|  |  |  | Ekiti, Kwara, Kogi, Benue, |
+|  |  |  | Niger, Borno, Jigawa, Zamfara, |
+|  |  |  | Rivers) |
+| Atiku Abubakar (PDP) | 6,984,520 | 29.07% | 12 States (Osun, Katsina, Kebbi, |
+|  |  |  | Sokoto, Kaduna, Gombe, Yobe, |
+|  |  |  | Bauchi, Adamawa, Taraba, Bayelsa, |
+|  |  |  | Akwa Ibom) |
+| Peter Obi (LP) | 6,101,533 | 25.40% | 11 States + FCT (Lagos, Abuja, |
+|  |  |  | Anambra, Enugu, Abia, Imo, |
+|  |  |  | Ebonyi, Edo, Delta, Cross River, |
+|  |  |  | Plateau, Nasarawa) |
+| Rabiu Kwankwaso (NNPP) | 1,496,687 | 6.23% | 1 State (Kano) |
 
 #### The Shock Loss of Lagos State:
 In a stunning development that proved the election was not monolithic, Peter Obi won Lagos State—Tinubu's personal fortress for 24 years:
@@ -683,33 +590,28 @@ Despite losing Lagos, Osun, Katsina, and Kano, Tinubu’s distributed geographic
 
 Atiku Abubakar and Peter Obi filed petitions challenging the election before the Presidential Election Petition Court (PEPC) at the Court of Appeal in Abuja.
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                   THE PRESIDENTIAL ELECTION PETITION COURT (PEPC)                      │
-├─────────────────────┬──────────────────────────────────────────────────────────────────┤
-│ The Bench           │ 5-Justice Panel: Justice Haruna Tsammani (Presiding), Justice    │
-│                     │ Stephen Adah, Justice Monsurat Bolaji-Yusuf, Justice Moses Ugo,  │
-│                     │ and Justice Abba Mohammed.                                       │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Judgment Date       │ September 6, 2023 (Marathon 12-hour televised ruling).           │
-├─────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ Key Rulings         │ 1. 25% in the FCT: The court ruled that the FCT does not possess │
-│                     │    special status or veto power; Section 134(2) treats FCT as    │
-│                     │    the 37th state.                                               │
-│                     │ 2. INEC IReV Portal: The court ruled that Section 60 and 64 of  │
-│                     │    Electoral Act 2022 give INEC discretion on transmission mode; │
-│                     │    IReV is a public viewing portal, not an electronic collation  │
-│                     │    system. Failure to upload immediately did not invalidate      │
-│                     │    manual polling unit results on Form EC8A.                     │
-│                     │ 3. US Forfeiture ($460,000): The court held that civil asset      │
-│                     │    forfeiture under US law was not a criminal conviction within  │
-│                     │    the meaning of Section 137(1)(e) of the 1999 Constitution,   │
-│                     │    and had exceeded the 10-year constitutional bar.              │
-│                     │ 4. CSU Qualification: Petitions regarding dual citizenship and   │
-│                     │    certificate issues were dismissed for lack of legal standing  │
-│                     │    and absence of credible evidence.                             │
-└─────────────────────┴──────────────────────────────────────────────────────────────────┘
-```
+### THE PRESIDENTIAL ELECTION PETITION COURT (PEPC)
+
+| The Bench | 5-Justice Panel: Justice Haruna Tsammani (Presiding), Justice |
+| :--- | :--- |
+|  | Stephen Adah, Justice Monsurat Bolaji-Yusuf, Justice Moses Ugo, |
+|  | and Justice Abba Mohammed. |
+| Judgment Date | September 6, 2023 (Marathon 12-hour televised ruling). |
+| Key Rulings | 1. 25% in the FCT: The court ruled that the FCT does not possess |
+|  | special status or veto power; Section 134(2) treats FCT as |
+|  | the 37th state. |
+|  | 2. INEC IReV Portal: The court ruled that Section 60 and 64 of |
+|  | Electoral Act 2022 give INEC discretion on transmission mode; |
+|  | IReV is a public viewing portal, not an electronic collation |
+|  | system. Failure to upload immediately did not invalidate |
+|  | manual polling unit results on Form EC8A. |
+|  | 3. US Forfeiture ($460,000): The court held that civil asset |
+|  | forfeiture under US law was not a criminal conviction within |
+|  | the meaning of Section 137(1)(e) of the 1999 Constitution, |
+|  | and had exceeded the 10-year constitutional bar. |
+|  | 4. CSU Qualification: Petitions regarding dual citizenship and |
+|  | certificate issues were dismissed for lack of legal standing |
+|  | and absence of credible evidence. |
 
 #### The Supreme Court Final Affirmation (October 26, 2023)
 The appeals were escalated to the Supreme Court of Nigeria before a 7-member panel chaired by **Justice Inyang Okoro** (alongside Justices Uwani Abba-Aji, Lawal Garba, Ibrahim Saulawa, Adamu Jauro, Tijjani Abubakar, and Emmanuel Agim):
@@ -720,52 +622,39 @@ The appeals were escalated to the Supreme Court of Nigeria before a 7-member pan
 
 ## SECTION 6: DRAMATIS PERSONAE & TACTICAL DOSSIER
 
-```
-┌──────────────────────────────┬──────────────────────────────┬──────────────────────────────┐
-│ ACTOR                        │ ROLE (2007–2023)             │ STRATEGIC ALIGNMENT / IMPACT │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Bola Ahmed Tinubu            │ Governor of Lagos (1999-07), │ Master Strategist; funded    │
-│                              │ ACN/APC National Leader,     │ opposition legal battles;    │
-│                              │ President of Nigeria (2023+) │ engineered 2013 merger; won  │
-│                              │                              │ 2023 election against state. │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Muhammadu Buhari             │ CPC Leader, President of     │ Provided 12M Northern base;  │
-│                              │ Nigeria (2015–2023)          │ maintained hands-off posture;│
-│                              │                              │ allowed cabal cold war.      │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Prof. Yemi Osinbajo SAN      │ Lagos AG (1999-07), VP of    │ Tinubu protégé turned rival; │
-│                              │ Nigeria (2015–2023)          │ nominated for VP by Tinubu;  │
-│                              │                              │ contested 2022 primary (3rd).│
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Dr. Bukola Saraki            │ Kwara Gov, nPDP Leader,      │ Engineered 2015 NASS Coup;   │
-│                              │ Senate President (2015–2019) │ blocked Muslim-Muslim ticket │
-│                              │                              │ in 2014; major tactical foe. │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Mallam Abba Kyari            │ Chief of Staff to President  │ Villa Cabal gatekeeper;      │
-│                              │ Buhari (2015–2020)           │ neutralized Tinubu's federal │
-│                              │                              │ influence until death (2020).│
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Comrade Adams Oshiomhole     │ Edo Gov (2008-16), APC       │ Tinubu's enforcement weapon; │
-│                              │ National Chairman (2018-20)  │ fought anti-Tinubu governors;│
-│                              │                              │ sacked in 2020 Villa coup.   │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Mai Mala Buni                │ Yobe Gov, APC Caretaker      │ Cabal instrument; dragged    │
-│                              │ Committee Chair (2020–2022)  │ convention for 2 years to    │
-│                              │                              │ plot consensus succession.   │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Godwin Emefiele              │ Central Bank Governor        │ Architect of 2022/23 Naira   │
-│                              │ (2014–2023)                  │ Redesign; viewed as sabotage │
-│                              │                              │ weapon against Tinubu camp.  │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Nasir Ahmad El-Rufai         │ Kaduna Gov (2015–2023),      │ CPC intellectual; led 2022   │
-│                              │ APC Northern Governors Bloc  │ Northern Governors' revolt;  │
-│                              │                              │ blew whistle on Villa cabal. │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ Senator Kashim Shettima      │ Borno Gov (2011-19), Senator,│ Vice-Presidential pick;      │
-│                              │ Vice President (2023+)       │ secured Northeast/Northwest  │
-│                              │                              │ core Muslim voter firewall.  │
-└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
-```
+| ACTOR | ROLE (2007–2023) | STRATEGIC ALIGNMENT / IMPACT |
+| :--- | :--- | :--- |
+| Bola Ahmed Tinubu | Governor of Lagos (1999-07), | Master Strategist; funded |
+|  | ACN/APC National Leader, | opposition legal battles; |
+|  | President of Nigeria (2023+) | engineered 2013 merger; won |
+|  |  | 2023 election against state. |
+| Muhammadu Buhari | CPC Leader, President of | Provided 12M Northern base; |
+|  | Nigeria (2015–2023) | maintained hands-off posture; |
+|  |  | allowed cabal cold war. |
+| Prof. Yemi Osinbajo SAN | Lagos AG (1999-07), VP of | Tinubu protégé turned rival; |
+|  | Nigeria (2015–2023) | nominated for VP by Tinubu; |
+|  |  | contested 2022 primary (3rd). |
+| Dr. Bukola Saraki | Kwara Gov, nPDP Leader, | Engineered 2015 NASS Coup; |
+|  | Senate President (2015–2019) | blocked Muslim-Muslim ticket |
+|  |  | in 2014; major tactical foe. |
+| Mallam Abba Kyari | Chief of Staff to President | Villa Cabal gatekeeper; |
+|  | Buhari (2015–2020) | neutralized Tinubu's federal |
+|  |  | influence until death (2020). |
+| Comrade Adams Oshiomhole | Edo Gov (2008-16), APC | Tinubu's enforcement weapon; |
+|  | National Chairman (2018-20) | fought anti-Tinubu governors; |
+|  |  | sacked in 2020 Villa coup. |
+| Mai Mala Buni | Yobe Gov, APC Caretaker | Cabal instrument; dragged |
+|  | Committee Chair (2020–2022) | convention for 2 years to |
+|  |  | plot consensus succession. |
+| Godwin Emefiele | Central Bank Governor | Architect of 2022/23 Naira |
+|  | (2014–2023) | Redesign; viewed as sabotage |
+|  |  | weapon against Tinubu camp. |
+| Nasir Ahmad El-Rufai | Kaduna Gov (2015–2023), | CPC intellectual; led 2022 |
+|  | APC Northern Governors Bloc | Northern Governors' revolt; |
+|  |  | blew whistle on Villa cabal. |
+| Senator Kashim Shettima | Borno Gov (2011-19), Senator, | Vice-Presidential pick; |
+|  | Vice President (2023+) | secured Northeast/Northwest |
+|  |  | core Muslim voter firewall. |
 
 ---
 
