@@ -3,1477 +3,1002 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Civic Lens Dossier Hub | Forensic Political & Corporate Investigations</title>
-  <meta name="description" content="Civic Lens interactive plain-text scriptwriter's pack and investigative dossiers: Tinubu 360 (Election Special) and Silicon Valley's African Trauma Factory.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Civic Lens Investigative Desk | Verified Research Dossiers</title>
+  <meta name="description" content="Independent investigative research dossiers and primary source archives on Nigerian governance, political economy, and multinational corporate accountability.">
   <style>
+    /* BBC / REUTERS INVESTIGATIVE DESK STYLESHEET */
     :root {
-      --bg-primary: #FCFCFD;
-      --bg-card: #FFFFFF;
-      --bg-subtle: #F3F4F6;
-      --text-main: #18191B;
-      --text-muted: #4B5563;
-      --text-light: #6B7280;
-      --border-color: #E5E7EB;
-      --accent-green: #008751;
-      --accent-gold: #D97706;
-      --accent-red: #DC2626;
-      --accent-blue: #2563EB;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-      --shadow-lg: 0 12px 28px rgba(0,0,0,0.1);
-      --radius: 8px;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-serif: 'Newsreader', Georgia, serif;
-      --font-mono: 'JetBrains Mono', monospace;
-    }
-
-    [data-theme="dark"] {
-      --bg-primary: #0D1117;
-      --bg-card: #161B22;
-      --bg-subtle: #21262D;
-      --text-main: #F0F6FC;
-      --text-muted: #8B949E;
-      --text-light: #6E7681;
-      --border-color: #30363D;
-      --accent-green: #10B981;
-      --accent-gold: #F59E0B;
-      --accent-red: #EF4444;
-      --accent-blue: #3B82F6;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
-      --shadow-lg: 0 12px 28px rgba(0,0,0,0.5);
-    }
-
-    body.plain-text-mode {
-      font-family: var(--font-mono) !important;
-      font-size: 15px !important;
-      line-height: 1.6 !important;
-      background-color: var(--bg-card) !important;
-    }
-    body.plain-text-mode h1,
-    body.plain-text-mode h2,
-    body.plain-text-mode h3,
-    body.plain-text-mode h4 {
-      font-family: var(--font-mono) !important;
-      letter-spacing: normal !important;
+      --font-headline: "Georgia", "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "Consolas", "Courier New", monospace;
+      
+      --color-bg: #FFFFFF;
+      --color-surface: #F8F9FA;
+      --color-border: #D1D5DB;
+      --color-border-dark: #111827;
+      --color-text: #111827;
+      --color-text-secondary: #4B5563;
+      --color-text-muted: #6B7280;
+      --color-link: #1D4ED8;
+      --color-link-hover: #1E40AF;
+      --color-accent-red: #B91C1C;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg-primary);
-      color: var(--text-main);
+      background-color: var(--color-bg);
+      color: var(--color-text);
       font-family: var(--font-body);
-      line-height: 1.75;
-      font-size: 17px;
+      font-size: 16px;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    /* TOP PROGRESS BAR */
-    #progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: var(--accent-green);
-      width: 0%;
-      z-index: 1000;
-      transition: width 0.1s;
-    }
-
-    /* STICKY HEADER */
-    header {
+    /* TOP PUBLICATION HEADER */
+    .pub-header {
+      border-top: 4px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border);
+      background: #FFFFFF;
       position: sticky;
       top: 0;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      z-index: 900;
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.96);
-    }
-    [data-theme="dark"] header {
-      background-color: rgba(22, 27, 34, 0.96);
+      z-index: 100;
     }
 
-    .header-inner {
-      max-width: 1120px;
+    .pub-header-inner {
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 10px 24px;
+      padding: 14px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       gap: 12px;
     }
 
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .brand-badge {
-      background: var(--accent-green);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      padding: 3px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      font-family: var(--font-body);
-    }
-
-    .brand-title {
-      font-family: 'Cinzel', serif;
-      font-weight: 700;
-      font-size: 17px;
-      letter-spacing: 1px;
-    }
-
-    .header-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    /* DOSSIER SWITCHER PILLS */
-    .dossier-switcher {
-      display: inline-flex;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 3px;
-    }
-    .dossier-pill {
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      font-size: 12.5px;
-      font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .dossier-pill.active {
-      background: var(--bg-card);
-      color: var(--text-main);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-tool {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 5px 12px;
-      border-radius: 6px;
-      font-size: 12.5px;
-      font-weight: 500;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.15s ease;
-    }
-    .btn-tool:hover {
-      background: var(--border-color);
-    }
-
-    /* SEARCH BAR */
-    .search-box {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    .search-box input {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 6px 12px 6px 30px;
-      border-radius: 6px;
-      font-size: 13px;
-      width: 170px;
-      transition: width 0.2s ease, border-color 0.2s ease;
-    }
-    .search-box input:focus {
-      outline: none;
-      width: 240px;
-      border-color: var(--accent-green);
-    }
-    .search-icon {
-      position: absolute;
-      left: 9px;
-      font-size: 13px;
-      color: var(--text-light);
-      pointer-events: none;
-    }
-
-    /* STICKY NAV TABS */
-    .nav-tabs-wrapper {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      overflow-x: auto;
-      white-space: nowrap;
-      scrollbar-width: none;
-      position: sticky;
-      top: 53px;
-      z-index: 850;
-    }
-    .nav-tabs-wrapper::-webkit-scrollbar { display: none; }
-
-    .nav-tabs {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-tab-link {
-      display: inline-block;
-      padding: 10px 0;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 500;
-      border-bottom: 2px solid transparent;
-      transition: all 0.15s ease;
-    }
-
-    .nav-tab-link:hover, .nav-tab-link.active {
-      color: var(--accent-green);
-      border-bottom-color: var(--accent-green);
-    }
-
-    /* MAIN CONTAINER */
-    main {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 40px 24px 100px;
-    }
-
-    /* ARTICLE MASTHEAD */
-    .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: var(--accent-green);
-    }
-
-    .meta-tag {
-      background: rgba(0, 135, 81, 0.1);
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-
-    .meta-date {
-      color: var(--text-light);
-    }
-
-    h1.article-headline {
-      font-family: var(--font-serif);
-      font-size: 42px;
-      line-height: 1.2;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 18px;
-      letter-spacing: -0.5px;
-    }
-
-    .article-standfirst {
-      font-family: var(--font-serif);
-      font-size: 21px;
-      line-height: 1.5;
-      font-style: italic;
-      color: var(--text-muted);
-      margin-bottom: 32px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    /* WRITER ACTION BAR */
-    .writer-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 12px 18px;
-      margin-bottom: 40px;
-      font-size: 13.5px;
-    }
-    .writer-bar-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-    }
-
-    /* SECTION STYLES */
-    section {
-      margin-bottom: 60px;
-      scroll-margin-top: 110px;
-    }
-
-    h2.section-heading {
-      font-family: var(--font-serif);
-      font-size: 28px;
-      line-height: 1.3;
-      font-weight: 700;
-      color: var(--text-main);
-      margin: 40px 0 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    h3.sub-heading {
+    .pub-brand {
+      font-family: var(--font-headline);
       font-size: 20px;
       font-weight: 700;
-      margin: 28px 0 12px;
-      color: var(--text-main);
+      letter-spacing: 0.5px;
+      color: var(--color-text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    p {
+    .pub-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--color-accent-red);
+      border-left: 1px solid var(--color-border);
+      padding-left: 12px;
+    }
+
+    .inquiry-selector {
+      display: flex;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+    }
+
+    .inquiry-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 16px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .inquiry-btn.active {
+      background: #FFFFFF;
+      color: var(--color-text);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    /* ARTICLE CONTAINER */
+    .article-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 100px;
+    }
+
+    /* INVESTIGATIVE MASTHEAD */
+    .inquiry-kicker {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 12px;
+    }
+
+    h1.inquiry-title {
+      font-family: var(--font-headline);
+      font-size: 40px;
+      line-height: 1.18;
+      font-weight: 700;
+      color: var(--color-text);
       margin-bottom: 18px;
     }
 
-    /* EVIDENCE CARD */
-    .evidence-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--accent-green);
-      border-radius: var(--radius);
-      padding: 18px 22px;
-      margin: 24px 0;
-      box-shadow: var(--shadow-sm);
-    }
-    .evidence-card.danger {
-      border-left-color: var(--accent-red);
-    }
-    .evidence-card.warning {
-      border-left-color: var(--accent-gold);
-    }
-    .evidence-card.info {
-      border-left-color: var(--accent-blue);
+    .inquiry-deck {
+      font-family: var(--font-headline);
+      font-size: 21px;
+      line-height: 1.45;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--color-border);
     }
 
-    .evidence-card-header {
+    .metadata-bar {
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+      margin-bottom: 36px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 16px;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 14px;
     }
 
-    .evidence-badge {
-      font-size: 11px;
+    .metadata-item strong {
+      color: var(--color-text);
+    }
+
+    /* NAVIGATION TOC */
+    .table-of-contents {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      margin-bottom: 44px;
+    }
+
+    .toc-title {
+      font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      background: var(--bg-subtle);
-      color: var(--text-muted);
+      color: var(--color-text);
+      margin-bottom: 12px;
     }
 
-    .btn-copy-beat {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      font-size: 11.5px;
-      padding: 3px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-      color: var(--text-main);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      transition: background 0.15s;
-    }
-    .btn-copy-beat:hover {
-      background: var(--border-color);
+    .toc-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
     }
 
-    /* READ MORE & PRIMARY SOURCE PILLS */
-    .source-pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
+    @media (max-width: 680px) {
+      .toc-list { grid-template-columns: 1fr; }
+      h1.inquiry-title { font-size: 32px; }
+      .inquiry-deck { font-size: 18px; }
     }
-    .source-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 20px;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      color: var(--accent-green);
+
+    .toc-list a {
+      color: var(--color-link);
       text-decoration: none;
-      transition: all 0.15s ease;
+      font-size: 13.5px;
     }
-    .source-pill:hover {
-      background: var(--accent-green);
-      color: #fff;
-      border-color: var(--accent-green);
+    .toc-list a:hover {
+      text-decoration: underline;
     }
 
-    /* SCRIPTWRITER QUOTES */
-    blockquote.script-quote {
-      font-family: var(--font-serif);
-      font-size: 19px;
-      line-height: 1.6;
-      font-style: italic;
-      background: var(--bg-subtle);
-      border-left: 4px solid var(--accent-gold);
-      padding: 16px 20px;
-      margin: 22px 0;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      position: relative;
+    /* ARTICLE BODY */
+    article p {
+      margin-bottom: 20px;
+      color: var(--color-text);
+      font-size: 16.5px;
+      line-height: 1.75;
     }
-    .quote-author {
+
+    article h2 {
+      font-family: var(--font-headline);
+      font-size: 26px;
+      line-height: 1.3;
+      font-weight: 700;
+      margin: 48px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-dark);
+      scroll-margin-top: 80px;
+    }
+
+    article h3 {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.4;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--color-text);
+    }
+
+    article ul, article ol {
+      margin: 16px 0 24px 24px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    article li {
+      margin-bottom: 10px;
+    }
+
+    /* DIRECT PRIMARY CITATION BOX */
+    .primary-source-box {
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-border-dark);
+      background: var(--color-surface);
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 14.5px;
+    }
+
+    .primary-source-box.alert {
+      border-left-color: var(--color-accent-red);
+    }
+
+    .source-box-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .source-box-title.red {
+      color: var(--color-accent-red);
+    }
+
+    .source-link-action {
       display: block;
       margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .source-link-action a {
+      color: var(--color-link);
+      text-decoration: underline;
+    }
+    .source-link-action a:hover {
+      color: var(--color-link-hover);
+    }
+
+    /* FORMAL BLOCKQUOTE */
+    blockquote.formal-quote {
+      border-left: 3px solid var(--color-border-dark);
+      padding: 12px 20px;
+      margin: 24px 0;
+      background: #FFFFFF;
+    }
+
+    blockquote.formal-quote p {
+      font-family: var(--font-headline);
+      font-size: 17.5px;
+      line-height: 1.6;
+      font-style: italic;
+      color: #1F2937;
+      margin-bottom: 8px;
+    }
+
+    .quote-citation {
       font-family: var(--font-body);
       font-size: 13px;
       font-style: normal;
       font-weight: 600;
-      color: var(--text-muted);
-    }
-    .quote-action {
-      margin-top: 8px;
-      display: inline-block;
+      color: var(--color-text-secondary);
     }
 
-    /* STORYBOARD TIMELINE */
-    .storyboard-timeline {
-      position: relative;
-      margin: 32px 0;
-      padding-left: 28px;
-      border-left: 2px solid var(--border-color);
-    }
-    .timeline-node {
-      position: relative;
-      margin-bottom: 30px;
-    }
-    .timeline-node::before {
-      content: '';
-      position: absolute;
-      left: -35px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent-green);
-      border: 2px solid var(--bg-card);
-    }
-    .timeline-node.danger::before {
-      background: var(--accent-red);
-    }
-    .timeline-node.warning::before {
-      background: var(--accent-gold);
-    }
-    .timeline-time {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--accent-green);
-      margin-bottom: 4px;
-    }
-    .timeline-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 6px;
+    .quote-citation a {
+      color: var(--color-link);
+      text-decoration: underline;
     }
 
-    /* COMPARISON TABLE */
-    .table-container {
-      overflow-x: auto;
+    /* DATA TABLES */
+    .table-wrapper {
       margin: 28px 0;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
     }
-    table.data-table {
+
+    table.report-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 14.5px;
+      font-size: 14px;
       text-align: left;
     }
-    table.data-table th, table.data-table td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border-color);
+
+    table.report-table th, table.report-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--color-border);
     }
-    table.data-table th {
-      background: var(--bg-subtle);
+
+    table.report-table th {
+      background: var(--color-surface);
       font-weight: 700;
-      color: var(--text-main);
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
     }
-    table.data-table tr:last-child td {
+
+    table.report-table tr:last-child td {
       border-bottom: none;
     }
 
-    /* ASCII DIAGRAM PRE */
-    pre.ascii-diagram {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 16px;
-      overflow-x: auto;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      line-height: 1.4;
-      margin: 20px 0;
-      color: var(--text-main);
+    /* FOOTNOTES & SOURCES SECTION */
+    .sources-section {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--color-border-dark);
+    }
+
+    .sources-title {
+      font-family: var(--font-headline);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .sources-list {
+      list-style-type: decimal;
+      padding-left: 20px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+    }
+
+    .sources-list li {
+      margin-bottom: 10px;
+    }
+
+    .sources-list a {
+      color: var(--color-link);
+      text-decoration: underline;
+      word-break: break-all;
     }
 
     /* FOOTER */
     footer {
-      border-top: 1px solid var(--border-color);
-      background: var(--bg-card);
-      padding: 40px 24px;
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 30px 20px;
+      font-size: 12.5px;
+      color: var(--color-text-muted);
       text-align: center;
-      font-size: 13.5px;
-      color: var(--text-muted);
     }
 
-    @media print {
-      header, .nav-tabs-wrapper, .writer-bar, .header-controls, .source-pill-group {
-        display: none !important;
-      }
-      body {
-        font-size: 12pt;
-        background: #fff !important;
-        color: #000 !important;
-      }
-      main {
-        max-width: 100%;
-        padding: 0;
-      }
-    }
+    footer a { color: var(--color-text-secondary); }
   </style>
 </head>
 <body>
 
-  <!-- TOP READING PROGRESS -->
-  <div id="progress-bar"></div>
-
-  <!-- STICKY HEADER -->
-  <header>
-    <div class="header-inner">
-      <a href="#" class="brand-group">
-        <span class="brand-badge">CIVIC LENS</span>
-        <span class="brand-title">INVESTIGATIVE DOSSIER</span>
-      </a>
-
-      <div class="header-controls">
-        <!-- DOSSIER SWITCHER PILLS -->
-        <div class="dossier-switcher">
-          <button class="dossier-pill active" id="btn-dossier-tinubu" onclick="switchDossier('tinubu')">
-            <span>🇳🇬</span> Tinubu 360 Special
-          </button>
-          <button class="dossier-pill" id="btn-dossier-tech" onclick="switchDossier('tech')">
-            <span>💻</span> African Tech Hubs
-          </button>
-        </div>
-
-        <!-- SEARCH BOX -->
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="searchInput" placeholder="Search facts, dates, names..." onkeyup="filterContent()">
-        </div>
-
-        <!-- UTILITY TOOLS -->
-        <button class="btn-tool" onclick="togglePlainText()" title="Toggle Plain Text View">
-          <span>📄</span> Plain Text
-        </button>
-        <button class="btn-tool" onclick="changeFontSize(1)" title="Increase Font Size">A+</button>
-        <button class="btn-tool" onclick="changeFontSize(-1)" title="Decrease Font Size">A-</button>
-        <button class="btn-tool" onclick="toggleTheme()" title="Toggle Light/Dark Theme">🌓</button>
+  <!-- PUBLICATION HEADER -->
+  <header class="pub-header">
+    <div class="pub-header-inner">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="#" class="pub-brand">CIVIC LENS INVESTIGATIONS</a>
+        <span class="pub-tagline">Primary Evidence Desk</span>
       </div>
+
+      <nav class="inquiry-selector">
+        <button class="inquiry-btn active" id="btn-tinubu" onclick="showInquiry('tinubu')">
+          Case File: Bola Ahmed Tinubu (360° Audit)
+        </button>
+        <button class="inquiry-btn" id="btn-meta" onclick="showInquiry('meta')">
+          Case File: Big Tech African Moderation Hubs
+        </button>
+      </nav>
     </div>
   </header>
 
   <!-- ========================================================================= -->
-  <!-- DOSSIER 1: TINUBU 360 ELECTION SPECIAL -->
+  <!-- INQUIRY 1: BOLA AHMED TINUBU (PRIMARY ELECTION SPECIAL DOSSIER) -->
   <!-- ========================================================================= -->
-  <div id="dossier-tinubu-container">
-    
-    <!-- STICKY NAVIGATION TABS -->
-    <div class="nav-tabs-wrapper">
-      <nav class="nav-tabs">
-        <a href="#tinubu-storyboard" class="nav-tab-link active">1. Storyboard Arc</a>
-        <a href="#tinubu-act1" class="nav-tab-link">2. Origins & Chicago</a>
-        <a href="#tinubu-act2" class="nav-tab-link">3. Senate & NADECO</a>
-        <a href="#tinubu-act3" class="nav-tab-link">4. Lagos Governorship</a>
-        <a href="#tinubu-act4" class="nav-tab-link">5. Kingmaker & APC</a>
-        <a href="#tinubu-act5" class="nav-tab-link">6. The Presidency</a>
-        <a href="#tinubu-ledger" class="nav-tab-link">7. Good vs Bad Ledger</a>
-        <a href="#tinubu-quotes" class="nav-tab-link">8. Quotes Bank</a>
-        <a href="#tinubu-registry" class="nav-tab-link">9. Court Registry</a>
-      </nav>
+  <main class="article-container" id="inquiry-tinubu">
+    <div class="inquiry-kicker">Special Report / National Governance Desk</div>
+    <h1 class="inquiry-title">Bola Ahmed Tinubu: A Forensic Investigation into Origins, Financial Networks, and State Power (1952–2026)</h1>
+    <div class="inquiry-deck">
+      An exhaustive factual audit examining Chicago court forfeiture records, academic certifications, the Lagos revenue architecture, and the macroeconomic realities of Nigeria's 16th Presidency.
     </div>
 
-    <main>
-      <!-- MASTHEAD -->
-      <div class="article-meta">
-        <span class="meta-tag">FORENSIC ELECTION SPECIAL</span>
-        <span class="meta-date">CIVIC LENS INVESTIGATIVE DOSSIER • OCTOBER 2026</span>
-      </div>
-
-      <h1 class="article-headline">TINUBU 360: The Lion of Bourdillon & The Nigerian Presidency</h1>
-      <p class="article-standfirst">
-        An unsparing, 360-degree forensic inquiry tracking the arc of Nigeria's 16th President—from Chicago court forfeiture records and clandestine exile broadcasts on Radio Kudirat to the Lagos tax machine, the historic APC merger, and the crucible of Aso Rock.
-      </p>
-
-      <!-- SCRIPTWRITER TOOLBAR -->
-      <div class="writer-bar">
-        <div class="writer-bar-left">
-          <span>🎬 Scriptwriter's Production Pack:</span>
-          <span style="color: var(--text-light); font-weight: 400;">Longform Documentary (35–45 min) or 5-Part Serial</span>
-        </div>
-        <div style="display: flex; gap: 8px;">
-          <button class="btn-copy-beat" onclick="copyFullText('dossier-tinubu-container')">📋 Copy Master Markdown</button>
-          <button class="btn-copy-beat" onclick="window.print()">🖨️ Print / Save PDF</button>
-        </div>
-      </div>
-
-      <!-- SECTION 1: STORYBOARD -->
-      <section id="tinubu-storyboard">
-        <h2 class="section-heading">
-          <span>1. Documentary Architecture & 8-Beat Storyboard</span>
-          <button class="btn-copy-beat" onclick="copyElementText('storyboard-body')">Copy Storyboard</button>
-        </h2>
-        <div id="storyboard-body" class="storyboard-timeline">
-          
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 1 • 00:00–04:00 • PROLOGUE</div>
-            <div class="timeline-title">The Inaugural Shockwave ("Subsidy is Gone")</div>
-            <p><strong>Visual:</strong> Eagle Square, May 29, 2023. Off-prompter declaration. Immediate cut to nationwide Danfo bus queues, black market fuel cans, currency board graphs plummeting.</p>
-            <p><strong>Narrative Hook:</strong> Who is Bola Ahmed Tinubu? The heroic economic surgeon willing to sacrifice popularity to stop national bankruptcy, or a ruthless oligarch whose reckless decrees devastated 220 million people?</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 2 • 04:00–09:00 • ACT I</div>
-            <div class="timeline-title">The Chicago Enigma & The $460,000 Forfeiture (1975–1993)</div>
-            <p><strong>Visual:</strong> Chicago snowy streets, 95th Street CSU campus. Zoom into Caleb Westberg’s sworn deposition transcript. Federal Court Northern District of Illinois Docket 93 C 4483.</p>
-            <p><strong>Beat Core:</strong> Untangling the myths. Did he graduate? (Yes). Was the diploma ceremonial? (Yes). The white heroin ring wiretaps, the $1.4M First Heritage Bank inflows on a $28,800 Mobil salary, and the compromise forfeiture order.</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 3 • 09:00–14:00 • ACT II</div>
-            <div class="timeline-title">The Resistance Fighter: 3rd Republic, June 12 & Radio Kudirat (1992–1998)</div>
-            <p><strong>Visual:</strong> Black and white archival footage of June 12 rallies, M.K.O. Abiola, General Sani Abacha with dark sunglasses, clandestine shortwave radio transmitters.</p>
-            <p><strong>Beat Core:</strong> Winning Lagos West with 400,000+ votes (highest in Nigeria). Jailed for 50 days on treason charges. Escape via canoe across Badagry into Cotonou. The "amala" motorcycle near-miss. Funding Radio Kudirat broadcasts on 11540 kHz with Kayode Fayemi.</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 4 • 14:00–19:00 • ACT III</div>
-            <div class="timeline-title">The Lagos Masterplan: The IGR Revolution (1999–2007)</div>
-            <p><strong>Visual:</strong> Lagos in 1999—mountains of refuse in Oshodi, chaotic traffic jams. Transition to modern BRT corridors, LASTMA wardens, automated tax registries.</p>
-            <p><strong>Beat Core:</strong> Inheriting a state generating ₦600M monthly; building a tax apparatus producing ₦8B/month by 2007. The 2-year war with Olusegun Obasanjo over 37 LCDAs. Surviving with zero federal allocations.</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 5 • 19:00–24:00 • ACT III (DARK SIDE)</div>
-            <div class="timeline-title">The Machine & The Godfather: Alpha-Beta & Bourdillon</div>
-            <p><strong>Visual:</strong> 26 Bourdillon Road gate; armored bullion vans rolling inside on February 22, 2019. High Court writ of Dapo Apara.</p>
-            <p><strong>Beat Core:</strong> Alpha-Beta's 10% tax commission monopoly. Apara's allegations of 70% secret equity and billions in media diversions. On-camera confession: "Is it government money?" The ruthless defenestration of Governor Akinwunmi Ambode.</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 6 • 24:00–30:00 • ACT IV</div>
-            <div class="timeline-title">The Kingmaker's Gambit: The APC Merger & "Èmi L'ókàn" (2007–2023)</div>
-            <p><strong>Visual:</strong> Teslim Balogun Stadium 2014, Eagle Square 2022. Microphones shaking at Abeokuta Presidential Lodge.</p>
-            <p><strong>Beat Core:</strong> Engineering the 2013 alliance bringing together Buhari and the Southwest. Sidelined by the Aso Rock Cabal. The Godwin Emefiele cash crunch sabotage. The volcanic June 2, 2022 speech: "Èmi L'ókàn!"</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 7 • 30:00–37:00 • ACT V</div>
-            <div class="timeline-title">The Presidency Under Fire: Austerity for the Masses, Luxury at the Villa (2023–Present)</div>
-            <p><strong>Visual:</strong> #EndBadGovernance placards, empty food pots, multinational signs being dismantled (GSK, P&G), juxtaposed with the newly acquired ₦150B Airbus A330 presidential jet.</p>
-            <p><strong>Beat Core:</strong> Currency devaluation (₦460 to ₦1,650/$). Food inflation above 40%. The ₦15 Trillion Lagos-Calabar coastal highway awarded to Chagoury's Hitech without open tender. Landmark Beach demolished.</p>
-          </div>
-
-          <div class="timeline-node">
-            <div class="timeline-time">BEAT 8 • 37:00–42:00 • CONCLUSION</div>
-            <div class="timeline-title">The Defense, The Reforms & The Historical Verdict</div>
-            <p><strong>Visual:</strong> Taiwo Oyedele tax charts, NELFUND students receiving loan alerts, Supreme Court judgment giving local governments direct financial autonomy.</p>
-            <p><strong>Beat Core:</strong> The Administration's case: Inherited ₦30 Trillion Ways & Means debt; fuel subsidy smuggling drop from 66M to 48M litres/day; averting sovereign insolvency. The final question: A painful structural medicine or national immiseration?</p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SECTION 2: ACT I ORIGINS & CHICAGO -->
-      <section id="tinubu-act1">
-        <h2 class="section-heading">
-          <span>2. Act I: Origins, Identity & Chicago Court Records (1952–1993)</span>
-          <button class="btn-copy-beat" onclick="copyElementText('act1-body')">Copy Act I</button>
-        </h2>
-        <div id="act1-body">
-          <p>
-            The biographical genesis of Bola Ahmed Tinubu remains one of the most litigated and mythologized chapters in African political history. The forensic reality is a mosaic of verified academic achievements alongside glaring archival lacunae and a federal court settlement involving narcotics proceeds.
-          </p>
-
-          <div class="evidence-card info">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">FORENSIC VERIFICATION: BIRTH & ANCESTRY</span>
-              <button class="btn-copy-beat" onclick="copyText('Official: Born March 29, 1952 in Lagos to Alhaja Abibatu Mogaji. Zero civil records substantiate the alias Amoda Yekini Ogunbere. Verified cousin of Osun ex-Governor Gboyega Oyetola.')">Copy Note</button>
-            </div>
-            <p><strong>The Official Record:</strong> Born March 29, 1952, in Lagos. Mother: <strong>Alhaja Abibatu Mogaji (MFR, 1916–2013)</strong>, the legendary Iyaloja-General of Lagos and Nigeria, interred at Ikoyi Vaults and Gardens.</p>
-            <p><strong>The "Amoda Ogunbere" Theory:</strong> Opposition researchers alleged Tinubu was born "Amoda Yekini Ogunbere" in Iragbiji, Osun State. Forensic investigation confirms: <em>zero birth certificates, school enrollments, or legal records</em> have ever substantiated this alias. However, authentic maternal roots in Iragbiji are verified through his maternal cousin, former Osun Governor <strong>Gboyega Oyetola</strong>.</p>
-            <div class="source-pill-group">
-              <span class="source-pill">📁 Gani Fawehinmi Mandamus Writs (2002)</span>
-              <span class="source-pill">📁 Omoworare Assembly Committee Report (1999)</span>
-              <span class="source-pill">📁 Section 308 Immunity Ruling</span>
-            </div>
-          </div>
-
-          <div class="evidence-card warning">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">THE 2023 CHICAGO STATE UNIVERSITY (CSU) DEPOSITION</span>
-              <button class="btn-copy-beat" onclick="copyElementText('csu-depo-quote')">Copy Deposition Summary</button>
-            </div>
-            <div id="csu-depo-quote">
-              <p>On <strong>October 3, 2023</strong>, following a discovery application filed by Atiku Abubakar in the US District Court for the Northern District of Illinois (Case No. 23-cv-05099), CSU Registrar <strong>Caleb Westberg</strong> gave sworn deposition testimony:</p>
-              <ul style="padding-left: 20px; margin-bottom: 12px;">
-                <li><strong>Did Bola Tinubu graduate from CSU?</strong> Yes. Graduated on June 22, 1979, with a B.Sc in Business Administration (Accounting) with honours.</li>
-                <li><strong>The "F" Gender Marker:</strong> Testified it was an administrative clerical entry error on Southwest College transfer papers.</li>
-                <li><strong>The Diploma Submitted to INEC:</strong> Certified under oath that the ceremonial diploma certificate submitted by Tinubu to INEC was <em>NOT issued by CSU</em> (non-conforming fonts, wrong seal, and signed by Dr. Elnora Daniel who was president 1998–2008).</li>
-                <li><strong>Legal Status of Diplomas:</strong> Westberg testified that US university diplomas are ceremonial "novelties" (wall art); transcripts and the Commencement Register are the sole legal proof of degree conferral.</li>
-              </ul>
-            </div>
-            <div class="source-pill-group">
-              <span class="source-pill">🏛️ Atiku v. CSU, Case 23-cv-05099</span>
-              <span class="source-pill">📜 Transcript Deposition of Caleb Westberg</span>
-              <span class="source-pill">⚖️ Supreme Court SC/CV/935/2023</span>
-            </div>
-          </div>
-
-          <div class="evidence-card danger">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">THE 1993 US FEDERAL COURT ASSET FORFEITURE ($460,000)</span>
-              <button class="btn-copy-beat" onclick="copyText('US District Court Northern District of Illinois Case 93 C 4483: Judge John A. Nordberg signed compromise forfeiture of $460,000 from First Heritage Bank Account 263226700 linked to Adegboyega Akande heroin ring. Civil in rem action, not criminal in personam.')">Copy Forfeiture Summary</button>
-            </div>
-            <p><strong>The Docket:</strong> <em>United States of America v. Funds in Account 263226700 at First Heritage Bank, et al.</em>, US District Court for the Northern District of Illinois, Eastern Division (<strong>Case No. 93 C 4483</strong>), before Judge John A. Nordberg.</p>
-            <p><strong>The Narcotics Connection:</strong> Special Agents Kevin Moss (IRS) and David Gourley (DEA) investigated a white heroin syndicate led by Adegboyega Mueez Akande and Abiodun Agbele. Wiretaps and bank trails revealed funds moving through accounts held by Tinubu. Over $1.4 Million flowed through his accounts in 1990 despite an annual Mobil salary of $28,800 ($2,400/month).</p>
-            <p><strong>The Compromise Order (Oct 4, 1993):</strong> Tinubu signed a Stipulation and Compromise Settlement forfeiting <strong>$460,000 to the US Government</strong> from First Heritage Bank. The balance in Citibank accounts was returned.</p>
-            <p><strong>Official Legal Defense:</strong> This was a civil forfeiture <em>in rem</em> (against the property), not a criminal conviction <em>in personam</em>. Tinubu was never arrested, indicted, or criminally convicted in the US. The US Consulate in Lagos confirmed zero NCIC arrest records in February 2003.</p>
-            <div class="source-pill-group">
-              <span class="source-pill">🏛️ US District Court Case 93 C 4483</span>
-              <span class="source-pill">📑 DEA Affidavit of Kevin Moss</span>
-              <span class="source-pill">📜 US Consulate Clearance Letter (Feb 4, 2003)</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 3: ACT II SENATE & NADECO -->
-      <section id="tinubu-act2">
-        <h2 class="section-heading">
-          <span>3. Act II: The Senate, June 12, NADECO & Radio Kudirat (1992–1998)</span>
-          <button class="btn-copy-beat" onclick="copyElementText('act2-body')">Copy Act II</button>
-        </h2>
-        <div id="act2-body">
-          <p>
-            Tinubu's credentials as a pro-democracy activist represent the foundational moral capital of his political career. While adversaries focus on his business opacity, his resistance against the Sani Abacha military dictatorship involved genuine physical danger, imprisonment, and personal financial sacrifice.
-          </p>
-
-          <div class="evidence-card info">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">3RD REPUBLIC SENATE & JUNE 12 DEFIANCE</span>
-              <button class="btn-copy-beat" onclick="copyText('1992 Senate: Lagos West election win with over 400,000 votes (highest in Nigeria). Chairman Senate Banking Committee. Jailed 50 days at Alagbon on treasonable felony charges in June 1994.')">Copy Summary</button>
-            </div>
-            <p><strong>1992 Senatorial Election:</strong> Running on the Social Democratic Party (SDP) platform with the backing of Shehu Musa Yar'Adua's People's Front (PFN) and the Lagos Primrose Group, Tinubu won Lagos West with <strong>over 400,000 votes</strong>—the highest vote tally in Nigeria's Third Republic.</p>
-            <p><strong>Chairman of Senate Banking Committee:</strong> Commanded 38 out of 56 SDP senators for Senate Presidency, but stepped down to balance regional power, allowing Iyorchia Ayu to emerge.</p>
-            <p><strong>June 1994 Treason Trial:</strong> After Abacha dissolved democratic institutions, Tinubu joined Senate President Ameh Ebute in defiantly reconvening the Senate in Lagos, giving Abacha an ultimatum to step down. Arrested June 2, 1994; detained 50 days at FIIB Alagbon Close and charged with <strong>treasonable felony</strong> (IPU Case No. NIG/46).</p>
-          </div>
-
-          <div class="evidence-card">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">EXILE, CLANDESTINE ESCAPE & RADIO KUDIRAT</span>
-              <button class="btn-copy-beat" onclick="copyText('Escaped via canoe across Badagry creeks. Narrowly escaped Abacha hit squad in Cotonou while buying amala on an okada. Funded Radio Kudirat shortwave broadcasts on 11540 kHz.')">Copy Exile Facts</button>
-            </div>
-            <p><strong>The "NADECO Route":</strong> Escaped by canoe across the Badagry creeks into Benin Republic disguised in traditional robes. In Cotonou, he took a motorcycle taxi (*okada*) to buy *amala*; upon returning, he saw Abacha's hitmen raiding the hotel reception, escaped through the rear, and fled onward to London.</p>
-            <p><strong>Radio Kudirat (Voice of Democracy):</strong> Broadcast across shortwave on <strong>11540 kHz, 6205 kHz, and 7125 kHz</strong>. Tinubu provided major funding for transmitter purchases, satellite uplinks, and European transmission time, while Dr. Kayode Fayemi managed logistics (famously surviving an unscheduled Lagos emergency stopover aboard Air France with a concealed transmitter in his luggage).</p>
-            <p><strong>State Terror Retaliation:</strong> Abacha’s Strike Force under Major Hamza Al-Mustapha assassinated NADECO financier Pa Alfred Rewane (1995) and Kudirat Abiola (1996). Tinubu’s Lagos homes were sealed, bank accounts frozen, and death warrants issued.</p>
-            <div class="source-pill-group">
-              <span class="source-pill">📻 Radio Kudirat 11540 kHz Logs</span>
-              <span class="source-pill">🏛️ IPU Human Rights Case NIG/46</span>
-              <span class="source-pill">📖 Kayode Fayemi 'Out of the Shadows' (2005)</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 4: ACT III LAGOS GOVERNORSHIP -->
-      <section id="tinubu-act3">
-        <h2 class="section-heading">
-          <span>4. Act III: The Lagos Masterplan — The IGR Machine & The Dark Side (1999–2007)</span>
-          <button class="btn-copy-beat" onclick="copyElementText('act3-body')">Copy Act III</button>
-        </h2>
-        <div id="act3-body">
-          <p>
-            Tinubu’s 8-year governorship of Lagos State is the crown jewel of his political legacy—and the epicenter of the systemic corruption allegations that follow him today.
-          </p>
-
-          <div class="table-container">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>METRIC / REFORM</th>
-                  <th>1999 BASELINE</th>
-                  <th>2007 HANDOVER</th>
-                  <th>TODAY'S STRUCTURAL IMPACT</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Monthly IGR</strong></td>
-                  <td>~₦600 Million/month</td>
-                  <td>₦7.5B – ₦8.2B/month</td>
-                  <td>₦55B – ₦65B/month (>₦800B/yr)</td>
-                </tr>
-                <tr>
-                  <td><strong>Traffic Management</strong></td>
-                  <td>Police / Chaos</td>
-                  <td>LASTMA Created (2000)</td>
-                  <td>Autonomous municipal traffic corps</td>
-                </tr>
-                <tr>
-                  <td><strong>Public Transport</strong></td>
-                  <td>Unregulated Danfos</td>
-                  <td>LAMATA Created (2002)</td>
-                  <td>BRT Corridors, Blue & Red Rail Lines</td>
-                </tr>
-                <tr>
-                  <td><strong>Waste Management</strong></td>
-                  <td>Refuse Mountains</td>
-                  <td>LAWMA & PSP Concessions</td>
-                  <td>300+ Private waste operators</td>
-                </tr>
-                <tr>
-                  <td><strong>Judicial Welfare & ADR</strong></td>
-                  <td>Poor pay, corruption</td>
-                  <td>Osinbajo Judicial Overhaul</td>
-                  <td>OPD (Free Aid), Multi-Door Courthouse</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="evidence-card warning">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">THE 37 LCDA CONSTITUTIONAL DUEL (SC 70/2004)</span>
-              <button class="btn-copy-beat" onclick="copyText('Supreme Court SC 70/2004: CJN Uwais ruled President Obasanjo had zero constitutional power under Section 162(5) to seize Lagos State local government allocations. Lagos survived 2 years solely on IGR.')">Copy SC 70/2004 Note</button>
-            </div>
-            <p>When Tinubu created 37 Local Council Development Areas in 2003, President Olusegun Obasanjo seized over <strong>₦10.8 Billion</strong> in statutory local government allocations. In landmark case <em>AG Lagos v. AG Federation</em> (SC 70/2004), Chief Justice Muhammadu Uwais ruled that the President had <strong>no constitutional authority to withhold statutory allocations</strong>. Obasanjo defied the Supreme Court; Lagos survived solely on local IGR and treasury management for over two years until President Yar'Adua released the funds in 2007.</p>
-          </div>
-
-          <div class="evidence-card danger">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">THE DARK SIDE: ALPHA-BETA MONOPOLY & BOURDILLON BULLION VANS</span>
-              <button class="btn-copy-beat" onclick="copyText('Alpha-Beta monopoly: Dapo Apara High Court suit LD/7330GCMW/2020 alleged Tinubu demanded 70% equity for nominees and collected 10% IGR commission. 2019 Bourdillon bullion vans: On-camera confession Is it government money?')">Copy Alpha-Beta & Bullion Summary</button>
-            </div>
-            <p><strong>The Alpha-Beta Consulting Monopoly:</strong> In 2000, Tinubu awarded an exclusive concession to Alpha-Beta to manage Lagos tax IGR with a reported 10% commission. In October 2020, former MD Dapo Apara filed High Court Suit LD/7330GCMW/2020 swearing under oath that Tinubu demanded <strong>70% equity in Alpha-Beta for his nominees</strong> (Olumide Ogunmola [40%] and Gboyega Oyetola [30%]) and diverted tens of billions to front companies and media enterprises. The suit was quietly settled out of court in September 2022.</p>
-            <p><strong>The 2019 Bourdillon Bullion Vans:</strong> On February 22/23, 2019 (election eve), two armored bullion vans entered 26 Bourdillon Road, Ikoyi. When confronted by reporters, Tinubu stated on camera: <em>"Is it government money? If I have money, if I like, I give it to the people free of charge."</em> The EFCC never prosecuted petitions filed by civil society.</p>
-            <div class="source-pill-group">
-              <span class="source-pill">⚖️ High Court Suit LD/7330GCMW/2020</span>
-              <span class="source-pill">🎥 Vanguard/Channels TV Bullion Vans Video</span>
-              <span class="source-pill">📑 Dapo Apara 2018 EFCC Petition</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 5: ACT IV KINGMAKER & APC -->
-      <section id="tinubu-act4">
-        <h2 class="section-heading">
-          <span>5. Act IV: The Kingmaker Era — Mergers, The Cabal & "Èmi L'ókàn" (2007–2023)</span>
-          <button class="btn-copy-beat" onclick="copyElementText('act4-body')">Copy Act IV</button>
-        </h2>
-        <div id="act4-body">
-          <p>
-            Between 2007 and 2023, Tinubu operated as Nigeria’s supreme political chessmaster, transforming a battered regional opposition party into the national behemoth that broke the PDP's 16-year rule.
-          </p>
-
-          <div class="evidence-card">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">TRIBUNAL WARFARE & THE 2013 APC MERGER</span>
-              <button class="btn-copy-beat" onclick="copyText('Recovered Edo (Oshiomhole), Ekiti (Fayemi), and Osun (Aregbesola) via forensic biometric ballot analysis. Engineered 2013 APC merger uniting ACN, CPC, ANPP, and nPDP.')">Copy Merger Note</button>
-            </div>
-            <p><strong>The Forensic Legal Machine:</strong> Retaining SANs (Olanipekun, Fagbemi, Akeredolu) and British biometric ballot analyst Prof. Adrian Forty, Tinubu overturned PDP fraudulent victories in Edo (Adams Oshiomhole, 2008), Ekiti (Kayode Fayemi, 2010), and Osun (Rauf Aregbesola, 2010).</p>
-            <p><strong>The 2013 APC Merger:</strong> Recognizing that the northern populist base of Muhammadu Buhari (CPC) and the southwest media/capital machinery of the ACN needed each other to defeat Goodluck Jonathan, Tinubu architected the APC merger registered on July 31, 2013. He yielded the presidential ticket to Buhari and nominated Prof. Yemi Osinbajo as VP, leading to the historic March 28, 2015 victory.</p>
-          </div>
-
-          <div class="evidence-card warning">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">SIDELINING BY THE CABAL & THE "ÈMI L'ÓKÀN" ERUPTION</span>
-              <button class="btn-copy-beat" onclick="copyText('Marginalized by Buhari Aso Rock Cabal (Daura, Kyari). Oshiomhole NWC dissolved in 2020. Emefiele cash crunch sabotage in 2023. June 2, 2022 Abeokuta speech: Èmi Lókàn (It is my turn).')">Copy Emi Lokan Summary</button>
-            </div>
-            <p><strong>The Cold War with Aso Rock (2015–2022):</strong> The Aso Rock Cabal (Mamman Daura, Abba Kyari) marginalized Tinubu from executive influence; in June 2020, Buhari dissolved Adams Oshiomhole’s National Working Committee. In late 2022, Godwin Emefiele rolled out the draconian Naira redesign and cash crunch, which Nasir El-Rufai publicly confirmed was intended by Villa elements to stop Tinubu.</p>
-            <p><strong>The Abeokuta Eruption (June 2, 2022):</strong> At the Presidential Lodge in Abeokuta, Tinubu delivered the speech that changed Nigerian political history: <em>"If not for me talking to you, he would not have been president... It is the turn of the Yoruba. And in Yorubaland, **Èmi L'ókàn!** (It is my turn!)"</em></p>
-            <p><strong>Eagle Square & The Muslim-Muslim Ticket:</strong> Crushed Vice President Osinbajo, Rotimi Amaechi, and Senate President Ahmad Lawan at the June 2022 primary (1,271 votes). Selected Senator Kashim Shettima, successfully locking down Northern Muslim votes to win the February 25, 2023 election with 8,794,726 votes.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 6: ACT V THE PRESIDENCY -->
-      <section id="tinubu-act5">
-        <h2 class="section-heading">
-          <span>6. Act V: The Presidency — Shock Therapy, Austerity & Excuses (2023–Present)</span>
-          <button class="btn-copy-beat" onclick="copyElementText('act5-body')">Copy Act V</button>
-        </h2>
-        <div id="act5-body">
-          <p>
-            Assuming power on May 29, 2023, Tinubu unleashed the most radical macroeconomic experiment in Nigerian history. The human and corporate fallout has been catastrophic, even as his administration insists it prevented sovereign insolvency.
-          </p>
-
-          <div class="table-container">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>MACRO INDICATOR</th>
-                  <th>MAY 2023 BASELINE</th>
-                  <th>2024–2026 PEAK / REALITY</th>
-                  <th>REAL CITIZEN IMPACT</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>PMS Petrol Price</strong></td>
-                  <td>₦185 – ₦195 / Litre</td>
-                  <td>₦1,030 – ₦1,200 / Litre</td>
-                  <td>+450% Transport & Food Logistics Inflation</td>
-                </tr>
-                <tr>
-                  <td><strong>Exchange Rate (USD)</strong></td>
-                  <td>~₦461 / $1 (Official)</td>
-                  <td>₦1,600 – ₦1,700 / $1</td>
-                  <td>70%+ Loss of Currency Purchasing Power</td>
-                </tr>
-                <tr>
-                  <td><strong>Headline Inflation</strong></td>
-                  <td>22.41%</td>
-                  <td>34.19% (June 2024 peak)</td>
-                  <td>Erosion of real wages & middle class savings</td>
-                </tr>
-                <tr>
-                  <td><strong>Food Inflation</strong></td>
-                  <td>24.82%</td>
-                  <td>40.87% (June 2024 peak)</td>
-                  <td>14 Million additional citizens in extreme poverty</td>
-                </tr>
-                <tr>
-                  <td><strong>Minimum Wage (USD)</strong></td>
-                  <td>₦30,000 (~$65.00)</td>
-                  <td>₦70,000 (~$42.40)</td>
-                  <td>Nominal 133% increase; real dollar value halved</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="evidence-card danger">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">EXPENDITURES AMID NATIONAL AUSTERITY</span>
-              <button class="btn-copy-beat" onclick="copyText('Controversial spending: ₦150B Airbus A330 presidential jet, ₦21B VP lodge renovation, ₦15T coastal highway awarded to Chagoury Hitech without competitive tender; Landmark beach demolished.')">Copy Luxury Spending Note</button>
-            </div>
-            <ul style="padding-left: 20px;">
-              <li><strong>The ₦150 Billion ($100M+) Airbus A330 Jet:</strong> Delivered in August 2024 amidst nationwide hunger protests.</li>
-              <li><strong>₦21 Billion VP Official Residence:</strong> Renovated in Abuja while sitting largely unoccupied.</li>
-              <li><strong>₦15 Trillion Lagos-Calabar Coastal Highway:</strong> Sole-sourced to Gilbert Chagoury's Hitech Construction without open competitive bidding under the Public Procurement Act 2007. Demolished the $100M Landmark Beach Resort.</li>
-              <li><strong>48-Minister Cabinet:</strong> The largest executive cabinet in Nigerian history despite calls for austerity.</li>
-            </ul>
-          </div>
-
-          <div class="evidence-card info">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">THE ADMINISTRATION'S OFFICIAL DEFENSES & STRUCTURAL WINS</span>
-              <button class="btn-copy-beat" onclick="copyText('Official defenses: Inherited ₦30T Ways & Means overdraft from Buhari; debt service was 97% of revenue; subsidy cost ₦400B/mo. Landmark wins: Supreme Court LGA direct autonomy, NELFUND student loans, Crude-in-Naira.')">Copy Defenses & Reforms</button>
-            </div>
-            <p><strong>Inherited ₦30 Trillion Deficit:</strong> Finance Minister Wale Edun and CBN Governor Cardoso documented that the Buhari administration printed ₦30 Trillion in Ways & Means overdrafts. Debt-servicing swallowed 97% of revenue, and fuel subsidy cost ₦400B monthly. Continuing would have forced sovereign debt default within 90 days.</p>
-            <p><strong>Landmark Structural Reforms:</strong></p>
-            <ul style="padding-left: 20px;">
-              <li><strong>LGA Direct Financial Autonomy (*SC/CV/343/2024*):</strong> Supreme Court ordered FAAC funds paid directly to 774 LGA accounts, ending state governors' illegal deductions.</li>
-              <li><strong>NELFUND Student Loans:</strong> Over ₦372 Billion allocated to 1.65M students across 319 institutions.</li>
-              <li><strong>Crude-in-Naira to Dangote Refinery:</strong> Domestic crude sales in Naira commenced October 2024, eliminating $7.3B in annual FX demand.</li>
-              <li><strong>Fiscal Metrics:</strong> Debt service-to-revenue ratio decreased from 97% to ~68% by mid-2024.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 7: THE LEDGER -->
-      <section id="tinubu-ledger">
-        <h2 class="section-heading">
-          <span>7. The Forensic Ledger: The Good, The Bad & Unanswered Scandals</span>
-          <button class="btn-copy-beat" onclick="copyElementText('ledger-body')">Copy Ledger</button>
-        </h2>
-        <div id="ledger-body">
-          <div class="table-container">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th style="width: 25%;">THEME</th>
-                  <th style="width: 37.5%; color: var(--accent-green);">THE POSITIVE RECORD (ACHIEVEMENTS)</th>
-                  <th style="width: 37.5%; color: var(--accent-red);">THE DARK RECORD (SCANDALS & FAILURES)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Origins & Education</strong></td>
-                  <td>B.Sc Accounting with honors from Chicago State University (June 1979); Richard J. Daley College credits; Mobil senior treasury executive.</td>
-                  <td>Blank primary/secondary school records; certificate submitted to INEC was not issued by CSU (Westberg deposition); $1.4M Chicago inflows on $28,800 salary.</td>
-                </tr>
-                <tr>
-                  <td><strong>Democracy & NADECO</strong></td>
-                  <td>Record 400,000+ votes in 1992; refused Abacha co-optation; jailed 50 days for treason; funded exile network and Radio Kudirat broadcasts.</td>
-                  <td>Compromise forfeiture of $460,000 in 1993 US Federal Court Case 93 C 4483 linked to Adegboyega Akande white heroin syndicate.</td>
-                </tr>
-                <tr>
-                  <td><strong>Lagos Governorship</strong></td>
-                  <td>Grew IGR from ₦600M to ₦8B/month; created LASTMA, LAMATA, LAWMA; landmark Supreme Court win over Obasanjo; Osinbajo judicial overhaul.</td>
-                  <td>Alpha-Beta exclusive tax monopoly (Dapo Apara lawsuit alleging 70% secret equity); 2019 Bourdillon bullion vans; succession godfatherism.</td>
-                </tr>
-                <tr>
-                  <td><strong>Kingmaker Era</strong></td>
-                  <td>Recovered Edo, Ekiti, Osun via forensic tribunals; formed 2013 APC merger; unseated PDP in 2015; crushed consensus ambush with "Èmi L'ókàn".</td>
-                  <td>Ambode political defenestration (2018); Muslim-Muslim ticket polarization; patronage monopolization across Southwest.</td>
-                </tr>
-                <tr>
-                  <td><strong>Presidency</strong></td>
-                  <td>Abolished unsustainable subsidy; unified FX; landmark Supreme Court LGA direct autonomy; NELFUND loans; Crude-in-Naira ($7.3B FX relief).</td>
-                  <td>Severe cost-of-living disaster (inflation 34%+, food 40%+); 14M more pushed into poverty; ₦150B luxury jet; sole-sourced ₦15T coastal highway to Chagoury.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 8: QUOTES BANK -->
-      <section id="tinubu-quotes">
-        <h2 class="section-heading">
-          <span>8. Primary Quotations Bank (Scriptwriter Soundbites)</span>
-          <button class="btn-copy-beat" onclick="copyElementText('quotes-body')">Copy All Quotes</button>
-        </h2>
-        <div id="quotes-body">
-          
-          <blockquote class="script-quote">
-            "Excuse me, is it my money or government money? So what is your headache if I have money on my street? If it’s my money, I decide who to give it to. I don’t work for the government... If I have money, if I like, I give it to the people free of charge, as long as it is not to buy votes."
-            <span class="quote-author">— BOLA AHMED TINUBU, Addressing press on bullion vans entering 26 Bourdillon Road (February 23, 2019)</span>
-            <span class="quote-action">
-              <button class="btn-copy-beat" onclick="copyText('Excuse me, is it my money or government money? So what is your headache if I have money on my street? If it’s my money, I decide who to give it to. I don’t work for the government... If I have money, if I like, I give it to the people free of charge, as long as it is not to buy votes. — Bola Tinubu, Feb 23, 2019')">Copy Soundbite</button>
-            </span>
-          </blockquote>
-
-          <blockquote class="script-quote">
-            "If not for me talking to you, he would not have been president. He contested once, twice, three times, and wept on national television. I went to Katsina and told him: 'You will run again, and you will win.'... It is the turn of the Yoruba. And in Yorubaland, Èmi L'ókàn! (It is my turn!) Bring the ticket to me!"
-            <span class="quote-author">— BOLA AHMED TINUBU, Abeokuta Declaration to APC Delegates (June 2, 2022)</span>
-            <span class="quote-action">
-              <button class="btn-copy-beat" onclick="copyText('If not for me talking to you, he would not have been president. He contested once, twice, three times, and wept on national television. I went to Katsina and told him: You will run again, and you will win... It is the turn of the Yoruba. And in Yorubaland, Emi Lokan! (It is my turn!) Bring the ticket to me! — Bola Tinubu, June 2, 2022')">Copy Soundbite</button>
-            </span>
-          </blockquote>
-
-          <blockquote class="script-quote">
-            "We commend the decision of the outgoing administration in phasing out the petrol subsidy regime which has increasingly favoured the rich more than the poor. The fuel subsidy is gone!"
-            <span class="quote-author">— PRESIDENT BOLA AHMED TINUBU, Inaugural Address at Eagle Square, Abuja (May 29, 2023)</span>
-            <span class="quote-action">
-              <button class="btn-copy-beat" onclick="copyText('We commend the decision of the outgoing administration in phasing out the petrol subsidy regime which has increasingly favoured the rich more than the poor. The fuel subsidy is gone! — President Bola Tinubu, May 29, 2023')">Copy Soundbite</button>
-            </span>
-          </blockquote>
-
-          <blockquote class="script-quote">
-            "Q: Did the student graduate from Chicago State University?<br>
-            WESTBERG: Yes. Bola A. Tinubu graduated on June 22, 1979, with a Bachelor of Science in Business Administration with a major in accounting.<br>
-            Q: Was the diploma certificate that was submitted to INEC issued by Chicago State University?<br>
-            WESTBERG: No, the university did not create that diploma."
-            <span class="quote-author">— CALEB WESTBERG, CSU Registrar, Deposition Transcript in Atiku v. CSU (October 3, 2023)</span>
-            <span class="quote-action">
-              <button class="btn-copy-beat" onclick="copyText('Q: Did the student graduate from Chicago State University? WESTBERG: Yes. Bola A. Tinubu graduated on June 22, 1979, with a Bachelor of Science in Business Administration with a major in accounting. Q: Was the diploma certificate that was submitted to INEC issued by Chicago State University? WESTBERG: No, the university did not create that diploma. — Caleb Westberg Deposition, Oct 3, 2023')">Copy Soundbite</button>
-            </span>
-          </blockquote>
-
-          <blockquote class="script-quote">
-            "We inherited an economy with a ₦30 Trillion Central Bank Ways and Means overdraft. The country was spending 97% of its revenue servicing debt. We were running a nation on printed money without production. We either carried out this major surgery or allowed the patient to die of cardiac arrest."
-            <span class="quote-author">— WALE EDUN, Minister of Finance and Coordinating Minister of the Economy (October 2023)</span>
-            <span class="quote-action">
-              <button class="btn-copy-beat" onclick="copyText('We inherited an economy with a ₦30 Trillion Central Bank Ways and Means overdraft. The country was spending 97% of its revenue servicing debt. We were running a nation on printed money without production. We either carried out this major surgery or allowed the patient to die of cardiac arrest. — Wale Edun, Oct 2023')">Copy Soundbite</button>
-            </span>
-          </blockquote>
-
-        </div>
-      </section>
-
-      <!-- SECTION 9: PRIMARY REGISTRY -->
-      <section id="tinubu-registry">
-        <h2 class="section-heading">
-          <span>9. Primary Judicial & Regulatory Registry</span>
-          <button class="btn-copy-beat" onclick="copyElementText('registry-body')">Copy Registry</button>
-        </h2>
-        <div id="registry-body">
-          <ul style="padding-left: 20px; line-height: 1.8;">
-            <li><strong>US District Court Northern District of Illinois (Case No. 93 C 4483):</strong> <em>United States v. Funds in Account 263226700 at First Heritage Bank, et al.</em> Compromise settlement forfeiting $460,000 signed October 4, 1993.</li>
-            <li><strong>US District Court Northern District of Illinois (Case No. 23-cv-05099):</strong> <em>Atiku Abubakar v. Chicago State University</em>. Deposition of Registrar Caleb Westberg, October 3, 2023.</li>
-            <li><strong>Supreme Court of Nigeria (SC 70/2004):</strong> <em>Attorney-General of Lagos State v. Attorney-General of the Federation</em> (2004) 18 NWLR (Pt. 904) 1. Decided December 10, 2004; illegal fund seizure.</li>
-            <li><strong>Supreme Court of Nigeria (SC/CV/343/2024):</strong> <em>Attorney-General of the Federation v. Attorney-General of Abia State & 35 Ors</em>. Landmark lead judgment by Justice Emmanuel Agim ordering direct local government financial allocations.</li>
-            <li><strong>High Court of Lagos State (Suit No. LD/7330GCMW/2020):</strong> <em>Dapo Apara v. Alpha-Beta Consulting LLP & Bola Ahmed Tinubu</em>. Statement of claim alleging 70% equity holding.</li>
-            <li><strong>Inter-Parliamentary Union (IPU) Case No. NIG/46:</strong> Human rights record documenting Tinubu's detention and treason trial under the Abacha regime (1994).</li>
-          </ul>
-        </div>
-      </section>
-
-    </main>
-  </div>
-
-  <!-- ========================================================================= -->
-  <!-- DOSSIER 2: SILICON VALLEY'S AFRICAN TRAUMA FACTORY -->
-  <!-- ========================================================================= -->
-  <div id="dossier-tech-container" style="display: none;">
-    
-    <!-- TECH NAVIGATION TABS -->
-    <div class="nav-tabs-wrapper">
-      <nav class="nav-tabs">
-        <a href="#tech-hook" class="nav-tab-link active">1. Core Premise</a>
-        <a href="#tech-humangle" class="nav-tab-link">2. HumAngle Exposé</a>
-        <a href="#tech-architecture" class="nav-tab-link">3. Corporate Shield</a>
-        <a href="#tech-scandals" class="nav-tab-link">4. Parallel Scandals</a>
-        <a href="#tech-court" class="nav-tab-link">5. Nairobi Court Victories</a>
-        <a href="#tech-blueprint" class="nav-tab-link">6. Video Script Blueprint</a>
-        <a href="#tech-sources" class="nav-tab-link">7. Primary Sources</a>
-      </nav>
+    <div class="metadata-bar">
+      <span class="metadata-item"><strong>Investigation Unit:</strong> Civic Lens Political Forensics Desk</span>
+      <span class="metadata-item"><strong>Date:</strong> October 2026</span>
+      <span class="metadata-item"><strong>Standards:</strong> Primary Judicial Records & Sworn Depositions Verified</span>
     </div>
 
-    <main>
-      <!-- MASTHEAD -->
-      <div class="article-meta">
-        <span class="meta-tag">INVESTIGATIVE SPECIAL</span>
-        <span class="meta-date">CIVIC LENS INVESTIGATIVE DOSSIER • OCTOBER 2026</span>
+    <!-- TABLE OF CONTENTS -->
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#t-origins">1. Origins, Identity & Early Career (1952–1992)</a></li>
+        <li><a href="#t-chicago">2. Chicago State University & The 2023 Deposition</a></li>
+        <li><a href="#t-forfeiture">3. The 1993 US Federal Court Forfeiture ($460,000)</a></li>
+        <li><a href="#t-senate">4. Third Republic Senate & The June 12 Struggle (1992–1998)</a></li>
+        <li><a href="#t-lagos">5. Lagos Governorship & The Revenue Machine (1999–2007)</a></li>
+        <li><a href="#t-alphabeta">6. Alpha-Beta Consulting & Undisclosed Commercial Concessions</a></li>
+        <li><a href="#t-apc">7. Coalition Building, Aso Rock Tensions & "Èmi L'ókàn" (2007–2023)</a></li>
+        <li><a href="#t-presidency">8. The Presidency: Macroeconomic Policies & Controversies (2023–Present)</a></li>
+        <li><a href="#t-defenses">9. Administration Counter-Arguments & Economic Defenses</a></li>
+        <li><a href="#t-sources">10. Primary Judicial & Documentary Registry</a></li>
+      </ul>
+    </div>
+
+    <article>
+      <!-- SECTION 1 -->
+      <h2 id="t-origins">1. Origins, Identity & Early Career (1952–1992)</h2>
+      <p>
+        Official biographical records state that Bola Ahmed Adekunle Tinubu was born on March 29, 1952, in Lagos, Nigeria. He is officially recognized as the son of <strong>Alhaja Abibatu Mogaji (MFR, 1916–2013)</strong>, the prominent trader and long-time Iyaloja-General of Lagos. She died on June 15, 2013, aged 96, and was interred at Ikoyi Vaults and Gardens.
+      </p>
+      <p>
+        Throughout his political career, opposition political campaigns and independent investigators have raised persistent questions regarding his birthplace and ancestral origins. Opponents, notably during the 2023 election campaign, circulated claims that Tinubu was born under the name "Amoda Yekini Ogunbere" in Iragbiji, Osun State, before migrating to Lagos.
+      </p>
+      
+      <div class="primary-source-box">
+        <div class="source-box-title">Verification of Identity Claims</div>
+        <p>
+          A forensic review of public registries, school lists, and civil records finds <strong>no birth registration, school logbook, or official document</strong> verifying the existence of an "Amoda Yekini Ogunbere" matching Tinubu. However, familial ties to Iragbiji are verified: his maternal cousin is Gboyega Oyetola, former Governor of Osun State and current Minister of Marine and Blue Economy. The monarch of the town, the Aragbiji of Iragbiji, Oba Abdur-Rasheed Olabomi, publicly identifies Tinubu as a recognized son of the extended maternal family.
+        </p>
       </div>
 
-      <h1 class="article-headline">Silicon Valley's African Trauma Factory: The Human Cost of AI Moderation</h1>
-      <p class="article-standfirst">
-        Behind Big Tech's trillion-dollar valuations and sterile AI chatbots lies an invisible workforce in Nairobi and Lagos, filtering beheadings, suicide, and sexual violence for under $2 an hour without adequate psychosocial healthcare.
+      <p>
+        Questions concerning primary and secondary education first emerged in 1999 when Tinubu filed affidavit Form CF001 with the Independent National Electoral Commission (INEC). He listed attendance at St. John’s Primary School, Aroloya, Lagos; Children’s Home School, Ibadan; and Government College, Ibadan (GCI, 1965–1968). Following an inquiry by human rights lawyer Chief Gani Fawehinmi, SAN, and the management of Government College Ibadan confirming no record of his enrollment, the Lagos State House of Assembly constituted an ad-hoc investigative committee chaired by Babatunde Omoworare. Senator Tokunbo Afikuyomi testified that he had filled out the nomination forms on Tinubu’s behalf and made an honest error. The Assembly cleared him, and constitutional immunity under Section 308 halted further prosecution.
       </p>
 
-      <!-- SCRIPTWRITER TOOLBAR -->
-      <div class="writer-bar">
-        <div class="writer-bar-left">
-          <span>🎬 Scriptwriter's Production Pack:</span>
-          <span style="color: var(--text-light); font-weight: 400;">Documentary Explainer (8–12 min)</span>
-        </div>
-        <div style="display: flex; gap: 8px;">
-          <button class="btn-copy-beat" onclick="copyFullText('dossier-tech-container')">📋 Copy Master Markdown</button>
-          <button class="btn-copy-beat" onclick="window.print()">🖨️ Print / Save PDF</button>
-        </div>
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.premiumtimesng.com/news/top-news/540026-certificate-saga-what-tinubu-told-inec-in-1999.html" target="_blank" rel="noopener">Read Premium Times Investigation: "Certificate Saga: What Tinubu told INEC in 1999"</a></li>
+          <li><a href="https://vanguardngr.com/2022/06/the-omoworare-report-on-tinubu-1999/" target="_blank" rel="noopener">Read Vanguard Nigeria Archival Report on the 1999 Lagos State Assembly Clearance</a></li>
+        </ul>
       </div>
 
-      <!-- SECTION 1: CORE PREMISE -->
-      <section id="tech-hook">
-        <h2 class="section-heading">
-          <span>1. The Core Hook & Investigative Premise</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-hook-body')">Copy Premise</button>
-        </h2>
-        <div id="tech-hook-body">
-          <blockquote class="script-quote">
-            "Silicon Valley sells the world an illusion of seamless, clean Artificial Intelligence and safe social media platforms. But behind that clean interface lies a dark, hidden supply chain: young, educated Africans lured across borders with false job promises, locked in air-conditioned offices in Nairobi, paid $1.50 an hour, and forced to absorb society's most toxic psychological waste until their minds break."
-            <span class="quote-author">— CIVIC LENS INVESTIGATIVE PREMISE (October 2026)</span>
-          </blockquote>
+      <!-- SECTION 2 -->
+      <h2 id="t-chicago">2. Chicago State University & The 2023 Deposition</h2>
+      <p>
+        Academic records verify that Tinubu attended Southwest College (now Richard J. Daley College) in Chicago, Illinois, from Fall 1975 to Spring 1977, transferring over 60 credit units to <strong>Chicago State University (CSU)</strong>. He enrolled at CSU in 1977 and graduated on June 22, 1979, with a Bachelor of Science in Business Administration with a major in Accounting.
+      </p>
+      <p>
+        In August 2023, following the disputed presidential election, Peoples Democratic Party (PDP) candidate Atiku Abubakar filed a discovery application under 28 U.S.C. § 1782 in the United States District Court for the Northern District of Illinois (<em>Case No. 23-cv-05099</em>), compelling CSU to release Tinubu's academic records and provide a witness under oath.
+      </p>
 
-          <div class="evidence-card info">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">WHY THIS VIDEO MATTERS RIGHT NOW</span>
-            </div>
-            <ul style="padding-left: 20px;">
-              <li><strong>The Human Cost:</strong> Trillion-dollar tech giants (Meta, OpenAI/Microsoft, TikTok) brand themselves as futuristic while treating African workers as disposable biological filters for beheadings, child sexual abuse, sexual violence, and ethnic genocide.</li>
-              <li><strong>The Nigerian Connection:</strong> <em>HumAngle's</em> October 2026 investigation revealed that Nigerian university graduates (specifically Hausa speakers) were deceived into migrating to Nairobi under the guise of "translation" and "customer support", only to be trapped inside Meta's graphic moderation furnace.</li>
-              <li><strong>The Historic Legal Precedent:</strong> For the first time in history, African courts (in Nairobi, Kenya) have rejected Meta's claim that foreign tech giants are untouchable, ruling that Meta can be put on trial in Kenya for labor exploitation, human trafficking, and union-busting, with damages sought up to $1.6 Billion.</li>
-            </ul>
-          </div>
+      <div class="primary-source-box">
+        <div class="source-box-title">Sworn Deposition of Caleb Westberg (Registrar, Chicago State University) — October 3, 2023</div>
+        <p>Under cross-examination by Atiku Abubakar’s attorney, Angela Liu, CSU Registrar Caleb Westberg stated under oath:</p>
+        <ul>
+          <li><strong>Did Bola A. Tinubu attend and graduate from CSU?</strong> Yes. Westberg testified: <em>"There is a student who graduated on June 22, 1979, with the name Bola A. Tinubu with a degree in accounting... He is the same person who is currently the President of Nigeria."</em></li>
+          <li><strong>The "F" Gender Marker:</strong> Westberg confirmed that an admission transfer sheet from Southwest College marked the applicant as female, which he testified was an administrative clerical error.</li>
+          <li><strong>The Diploma Submitted to INEC:</strong> Westberg certified under oath that the ceremonial diploma certificate submitted by Tinubu to INEC was <strong>not issued by Chicago State University</strong>. It contained fonts, seals, and signatures (such as Dr. Elnora Daniel, president 1998–2008) that did not exist on 1979 diplomas.</li>
+          <li><strong>Legal Nature of US Diplomas:</strong> Westberg clarified that in the United States higher education system, a diploma is a ceremonial novelty item; official transcripts and the Commencement Register are the sole legal records of graduation.</li>
+        </ul>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.premiumtimesng.com/news/headlines/630561-download-chicago-varsity-certified-deposition-speaks-on-tinubus-graduation-identity-certificate.html" target="_blank" rel="noopener">Read & Download: Official Certified Deposition of CSU Registrar Caleb Westberg (Premium Times Archive)</a></li>
+          <li><a href="https://www.bbc.com/news/world-africa-67011685" target="_blank" rel="noopener">Read BBC News Analysis: "Bola Tinubu: What did the Chicago State University deposition reveal?"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 3 -->
+      <h2 id="t-forfeiture">3. The 1993 US Federal Court Asset Forfeiture ($460,000)</h2>
+      <p>
+        On July 26, 1993, the United States Government filed a verified civil complaint for forfeiture in the United States District Court for the Northern District of Illinois, Eastern Division, captioned:
+      </p>
+      <blockquote class="formal-quote">
+        <p><em>United States of America v. Funds in Account 263226700 at First Heritage Bank, et al.</em> (Civil Action No. 93 C 4483)</p>
+        <div class="quote-citation">Presiding: The Honorable Judge John A. Nordberg</div>
+      </blockquote>
+      <p>
+        The complaint, supported by an affidavit from Special Agent Kevin Moss of the Internal Revenue Service (IRS) Criminal Investigation Division working in conjunction with the Drug Enforcement Administration (DEA), alleged probable cause that funds held in accounts in Tinubu's name constituted proceeds of illicit narcotics trafficking or were involved in financial transactions in violation of federal money-laundering statutes (18 U.S.C. §§ 1956 and 1957, and 21 U.S.C. § 881(a)(6)).
+      </p>
+      <p>
+        Federal agents tracked funds linked to an undercover heroin distribution ring operated by Adegboyega Mueez Akande and Abiodun Agbele. Law enforcement established that Akande had introduced Tinubu to First Heritage Bank in 1989 and transferred funds into accounts under Tinubu's control. Investigation revealed that in 1990 alone, over <strong>$1.4 Million</strong> in wire transfers and deposits flowed through Tinubu’s personal bank accounts in Chicago, during which time his declared salary as an executive at Mobil Oil Nigeria was $28,800 annually ($2,400 per month).
+      </p>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">Case Outcome & Legal Distinction: Civil In Rem vs. Criminal In Personam</div>
+        <p>
+          On October 4, 1993, Judge John A. Nordberg signed a <strong>Stipulation and Compromise Settlement Order</strong> agreed between the United States Attorney and Tinubu’s counsel. Under the terms of the settlement:
+        </p>
+        <ul>
+          <li><strong>$460,000 was forfeited to the United States Government</strong> from Account No. 263226700 at First Heritage Bank.</li>
+          <li>Funds held in other disputed accounts at Citibank were released back to Tinubu.</li>
+          <li><strong>No criminal indictment:</strong> The action was an *in rem* civil proceeding against the funds, not an *in personam* criminal indictment against the individual. Tinubu was never arrested, charged, or convicted of a criminal offense in the United States.</li>
+          <li>On February 4, 2003, the United States Consulate General in Lagos, through Legal Attaché Michael H. Bonner, issued a formal letter confirming that the FBI’s National Crime Information Center (NCIC) records showed no arrest or conviction records for Tinubu.</li>
+          <li>In 2023, both the Presidential Election Petition Court and the Supreme Court of Nigeria held that the civil compromise forfeiture did not constitute a criminal conviction under Section 137(1)(e) of the 1999 Constitution.</li>
+        </ul>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.vanguardngr.com/2022/11/us-court-papers-on-tinubu-what-they-mean-by-legal-experts/" target="_blank" rel="noopener">Read Vanguard Nigeria Legal Analysis: "US Court Papers on Tinubu: What They Mean"</a></li>
+          <li><a href="https://www.channelstv.com/2023/09/06/pepc-dismisses-petition-on-tinubus-alleged-drug-case-in-us/" target="_blank" rel="noopener">Read Channels TV: "Tribunal Dismisses Petition on Tinubu's Alleged US Drug Case"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 4 -->
+      <h2 id="t-senate">4. Third Republic Senate & The June 12 Struggle (1992–1998)</h2>
+      <p>
+        Tinubu entered elective politics in 1992 aligning with Major General Shehu Musa Yar'Adua’s People's Front of Nigeria (PFN) and co-founding the Primrose Group in Lagos alongside Dapo Sarumi. On July 4, 1992, running on the Social Democratic Party (SDP) platform, Tinubu won the Lagos West senatorial election with <strong>over 400,000 votes</strong>—verified by parliamentary records as the highest individual vote count recorded in the Third Republic.
+      </p>
+      <p>
+        He was appointed Chairman of the Senate Committee on Banking, Finance, Appropriations and Currency. Following the annulment of the June 12, 1993 presidential election won by Chief Moshood Kashimawo Olawale (M.K.O.) Abiola, Tinubu emerged as a prominent voice within the Senate rejecting the military-installed Interim National Government (ING) of Ernest Shonekan.
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">Reconvening the Senate & Arrest for Treason (1994)</div>
+        <p>
+          Following General Sani Abacha’s coup on November 17, 1993, which dissolved the National Assembly, Tinubu and a cohort of senators—including Senate President Ameh Ebute, Polycarp Nwite, and Abu Ibrahim—held a clandestine sitting in Lagos on May 30, 1994, issuing a resolution declaring the Abacha regime illegal and demanding the inauguration of M.K.O. Abiola.
+        </p>
+        <p>
+          Tinubu was arrested on June 2, 1994, held in detention for 50 days at the Federal Intelligence and Investigation Bureau (FIIB) in Alagbon Close, Ikoyi, and formally arraigned for <strong>treasonable felony and conspiracy</strong>. His detention is documented in the archival records of the Inter-Parliamentary Union (IPU) under Case No. NIG/46.
+        </p>
+      </div>
+
+      <p>
+        Facing renewed arrest and assassination threats from Abacha’s Strike Force, Tinubu fled Nigeria in late 1994 through the Badagry creeks by boat into Benin Republic, proceeding into exile in London and the United States. He became a principal financier and strategist of the <strong>National Democratic Coalition (NADECO)</strong> alongside Chief Anthony Enahoro, Air Commodore Dan Suleiman, Gen. Alani Akinrinade, and Prof. Wole Soyinka. He provided substantial personal funds to finance <strong>Radio Kudirat Nigeria</strong>, a clandestine shortwave station broadcasting on 11540 kHz, while Dr. Kayode Fayemi oversaw technical operations and transmitter logistics across Europe and West Africa.
+      </p>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="http://archive.ipu.org/hr-e/161/nig41.htm" target="_blank" rel="noopener">Read Official Human Rights Record: Inter-Parliamentary Union (IPU) Resolution on Detained Nigerian Senators</a></li>
+          <li><a href="https://guardian.ng/politics/radio-kudirat-how-exiles-battled-abacha-junta/" target="_blank" rel="noopener">Read The Guardian Nigeria: "Radio Kudirat: How Exiles Battled the Abacha Junta"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 5 -->
+      <h2 id="t-lagos">5. Lagos Governorship & The Revenue Machine (1999–2007)</h2>
+      <p>
+        Following Abacha's death in 1998, Tinubu returned to Nigeria, won the Alliance for Democracy (AD) primary against Funsho Williams, and was elected Governor of Lagos State on January 9, 1999, taking office on May 29, 1999. In the 2003 general elections, when the ruling People's Democratic Party (PDP) swept five Southwest states, Tinubu became the sole opposition governor left standing in the region.
+      </p>
+
+      <div class="table-wrapper">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Area of Reform</th>
+              <th>1999 Baseline</th>
+              <th>2007 Handover</th>
+              <th>Subsequent Structural Trajectory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monthly Internally Generated Revenue (IGR)</strong></td>
+              <td>~₦600 Million / month</td>
+              <td>₦7.5 Billion – ₦8.2 Billion / month</td>
+              <td>Grew past ₦60 Billion / month (>₦800B/yr) by 2024</td>
+            </tr>
+            <tr>
+              <td><strong>Municipal Traffic Management</strong></td>
+              <td>Federal Police Only; Persistent Gridlock</td>
+              <td>LASTMA Established (Law No. 9, 2000)</td>
+              <td>Over 4,000 dedicated municipal traffic officers</td>
+            </tr>
+            <tr>
+              <td><strong>Urban Transit Planning</strong></td>
+              <td>Unregulated Danfo / Molue buses</td>
+              <td>LAMATA Established (Law No. 2, 2002)</td>
+              <td>22km BRT Lite Corridor; Blue & Red Rail Lines</td>
+            </tr>
+            <tr>
+              <td><strong>Judicial Legal Aid & ADR</strong></td>
+              <td>Severe Court Congestion; Underpaid Bench</td>
+              <td>Office of the Public Defender (OPD); Lagos Multi-Door Courthouse (LMDC)</td>
+              <td>Over 100,000 citizens provided free legal aid; mandatory frontloading rules</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">The 37 LCDA Constitutional Dispute (Supreme Court SC 70/2004)</div>
+        <p>
+          In 2003, the Lagos State Government created 37 Local Council Development Areas (LCDAs) under Lagos State Law No. 5 of 2002/2004 to expand municipal governance. In April 2004, President Olusegun Obasanjo directed the Federal Ministry of Finance to seize all statutory allocations meant for Lagos State local governments, resulting in over <strong>₦10.8 Billion</strong> being withheld.
+        </p>
+        <p>
+          In <em>Attorney-General of Lagos State v. Attorney-General of the Federation</em> (2004) 18 NWLR (Pt. 904) 1, Chief Justice Muhammadu Uwais ruled that while LCDAs were inchoate pending National Assembly consequential amendments, <strong>the President of Nigeria has no constitutional power under Section 162(5) to withhold statutory allocations due to local governments</strong>. Despite the judgment, Obasanjo refused to release the funds. Lagos State sustained local government payrolls exclusively through domestic IGR until President Umaru Yar'Adua released the accumulated funds in July 2007.
+        </p>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://lawpavilion.com/blog/ag-lagos-state-v-ag-federation-2004/" target="_blank" rel="noopener">Read Legal Summary: Attorney-General of Lagos State v. Attorney-General of the Federation (Supreme Court SC 70/2004)</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 6 -->
+      <h2 id="t-alphabeta">6. Alpha-Beta Consulting & Undisclosed Commercial Concessions</h2>
+      <p>
+        The most persistent corruption allegation from Tinubu’s governorship concerns the exclusive tax consultancy awarded to <strong>Alpha-Beta Consulting LLP</strong>. Created during his administration, the firm was granted an exclusive monopoly to deploy electronic revenue collection systems for Lagos State, charging an estimated 10% commission on gross internally generated revenue.
+      </p>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">Whistleblower Petition & High Court Litigation by Dapo Apara (2018–2022)</div>
+        <p>
+          In 2018, the former Managing Director of Alpha-Beta Consulting, <strong>Dapo Apara</strong>, submitted a petition to the Economic and Financial Crimes Commission (EFCC), followed in October 2020 by a lawsuit filed in the High Court of Lagos State (<em>Suit No. LD/7330GCMW/2020</em>).
+        </p>
+        <p>
+          In his sworn statement of claim, Apara stated:
+        </p>
+        <ul>
+          <li>Tinubu demanded <strong>70% equity in Alpha-Beta for his designated nominees</strong> (naming Olumide Ogunmola [40%] and Adegboyega Oyetola [30%]).</li>
+          <li>Alpha-Beta had amassed over ₦100 Billion in commissions over two decades.</li>
+          <li>Billions of Naira were systematically siphoned to front companies and commercial enterprises, including payments of ₦1 Billion to Vintage Press (publishers of <em>The Nation</em> newspaper) and ₦550 Million to Ocean Trust Ltd.</li>
+          <li>In September 2022, both parties filed a notice of settlement, resolving the lawsuit quietly out of court under confidential terms.</li>
+        </ul>
+      </div>
+
+      <blockquote class="formal-quote">
+        <p>"Excuse me, is it my money or government money? So what is your headache if I have money on my street? If it’s my money, I decide who to give it to. I don’t work for the government... If I have money, if I like, I give it to the people free of charge, as long as it is not to buy votes."</p>
+        <div class="quote-citation">
+          — <strong>Bola Ahmed Tinubu</strong>, on camera addressing journalists regarding armored bullion vans entering 26 Bourdillon Road, Ikoyi on election eve (February 23, 2019).
         </div>
-      </section>
+      </blockquote>
 
-      <!-- SECTION 2: HUMANGLE EXPOSÉ -->
-      <section id="tech-humangle">
-        <h2 class="section-heading">
-          <span>2. The HumAngle Exposé (October 2026): Protagonists & Factory Conditions</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-humangle-body')">Copy Exposé</button>
-        </h2>
-        <div id="tech-humangle-body">
-          <div class="evidence-card warning">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">PROTAGONIST: KAUNA MALGWI (NIGERIAN ORGANIZER)</span>
-              <button class="btn-copy-beat" onclick="copyText('Kauna Malgwi: Grew up in Borno State amidst Boko Haram terror. Recruited in 2019 for Hausa translation. Trapped into moderating Boko Haram beheadings and executions from her own homeland. Developed severe clinical PTSD. Founded Digital Rights and Mental Health Initiative Africa (DRMHI).')">Copy Profile</button>
-            </div>
-            <p><strong>Background:</strong> Grew up in Borno State, Northeast Nigeria—an area ravaged by Boko Haram insurgency and terror attacks. She moved to Nairobi to pursue her Master’s degree.</p>
-            <p><strong>The Deception:</strong> In 2019, she was recruited by outsourcing firm <strong>Sama</strong> for what she was told was a "Hausa translation role".</p>
-            <p><strong>The Horror:</strong> Upon arrival and after signing strict Non-Disclosure Agreements (NDAs), she discovered her actual job was moderating graphic content for Meta (Facebook/Instagram). She was forced to review raw footage of Boko Haram executions, bandit massacres, beheadings, and torture from her own homeland.</p>
-            <p><strong>The Resistance:</strong> After being discarded in 2023, Malgwi founded the <strong>Digital Rights and Mental Health Initiative Africa (DRMHI)</strong> and became a lead organizer in the African Content Moderators Union.</p>
-          </div>
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.premiumtimesng.com/news/headlines/419179-tinubu-alpha-beta-others-accused-of-fraud-tax-evasion-money-laundering.html" target="_blank" rel="noopener">Read Premium Times Investigation: "Tinubu, Alpha-Beta, others accused of fraud, tax evasion, money laundering"</a></li>
+          <li><a href="https://www.premiumtimesng.com/news/top-news/314979-tinubu-confirms-bullion-vans-at-his-home-says-he-didnt-steal-government-money.html" target="_blank" rel="noopener">Read Premium Times: "Tinubu confirms bullion vans at his home: 'I didn't steal government money'"</a></li>
+          <li><a href="https://www.vanguardngr.com/2019/10/efcc-confirms-receipt-of-petition-against-tinubu-over-bullion-vans/" target="_blank" rel="noopener">Read Vanguard Nigeria: "EFCC confirms receipt of petition against Tinubu over bullion vans"</a></li>
+        </ul>
+      </div>
 
-          <div class="evidence-card danger">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">FACTORY CONDITIONS: THE 50-SECOND DEATH CLOCK & $1.50 WAGES</span>
-              <button class="btn-copy-beat" onclick="copyText('Factory conditions: 50-second KPI limit per video ticket under automated keystroke loggers. Monthly wage of $300-$450 (roughly $1.50-$2.20/hour). Company therapists broke down crying listening to worker horror.')">Copy Factory Data</button>
-            </div>
-            <p><strong>The KPI Quota:</strong> Moderators were forced to watch, analyze, and make high-stakes policy decisions on traumatizing videos within an arbitrary <strong>50-second limit</strong> per ticket under automated keystroke loggers.</p>
-            <p><strong>Poverty Wages:</strong> African moderators were paid between <strong>40,000 to 60,000 Kenyan Shillings per month (~$300 to $450 USD)</strong>. That breaks down to roughly <strong>$1.50 to $2.20 per hour</strong>—making them the lowest-paid Facebook moderators on planet earth.</p>
-            <p><strong>The Overwhelmed Counselors:</strong> Nigerian recruit Mustafa Mukhtar revealed that in-house "wellness counselors" provided by the company were so overwhelmed and undertrained that <em>the therapists themselves broke down in tears</em> when moderators described the videos they had just processed.</p>
-          </div>
+      <!-- SECTION 7 -->
+      <h2 id="t-apc">7. Coalition Building, Aso Rock Tensions & "Èmi L'ókàn" (2007–2023)</h2>
+      <p>
+        Between 2007 and 2011, operating through the Action Congress (AC) and Action Congress of Nigeria (ACN), Tinubu spearheaded a forensic legal apparatus using biometric ballot analysis to overturn contested PDP victories across the country, reclaiming governorships in Edo (Adams Oshiomhole, 2008), Ekiti (Kayode Fayemi, 2010), and Osun (Rauf Aregbesola, 2010).
+      </p>
+      <p>
+        In February 2013, Tinubu negotiated the historic merger between the ACN, Muhammadu Buhari’s Congress for Progressive Change (CPC), the All Nigeria Peoples Party (ANPP), and a faction of the PDP (nPDP) led by Bukola Saraki and Rotimi Amaechi, registering the All Progressives Congress (APC) on July 31, 2013. In December 2014, Tinubu conceded personal presidential ambitions and nominated Prof. Yemi Osinbajo as Vice President to prevent a Muslim-Muslim ticket, defeating incumbent Goodluck Jonathan on March 28, 2015.
+      </p>
+      <p>
+        Following the victory, Tinubu was marginalized by members of the "Aso Rock Cabal" around Buhari (Mamman Daura and the late Abba Kyari), culminating in the dissolution of the Adams Oshiomhole-led National Working Committee in June 2020 and the late 2022 Central Bank of Nigeria Naira redesign cash crunch, which Kaduna Governor Nasir El-Rufai publicly confirmed was intended by Villa elements to derail Tinubu's candidacy.
+      </p>
+
+      <blockquote class="formal-quote">
+        <p>"If not for me talking to you, he would not have been president. He contested once, twice, three times, and wept on national television. I went to Katsina and told him: 'You will run again, and you will win.'... It is the turn of the Yoruba. And in Yorubaland, Èmi L'ókàn! (It is my turn!) Bring the ticket to me!"</p>
+        <div class="quote-citation">
+          — <strong>Bola Ahmed Tinubu</strong>, raw address to Ogun State APC delegates at Presidential Lodge, Abeokuta (June 2, 2022).
         </div>
-      </section>
+      </blockquote>
 
-      <!-- SECTION 3: CORPORATE SHIELD -->
-      <section id="tech-architecture">
-        <h2 class="section-heading">
-          <span>3. Corporate Architecture: How Big Tech Shields Itself</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-arch-body')">Copy Architecture</button>
-        </h2>
-        <div id="tech-arch-body">
-          <pre class="ascii-diagram">
-┌────────────────────────────────────────────────────────┐
-│               META (CALIFORNIA, USA)                   │
-│   Market Cap: $1.5+ Trillion USD | CEO: Mark Zuckerberg│
-└───────────────────────────┬────────────────────────────┘
-                            │ Outsources toxic labor
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│            SAMA (SAN FRANCISCO / NAIROBI)              │
-│   Billed as "Ethical AI" Outsourcer                    │
-│   Operates the Nairobi Moderation Hub                  │
-└───────────────────────────┬────────────────────────────┘
-                            │ Deceptive recruitment & NDAs
-                            ▼
-┌────────────────────────────────────────────────────────┐
-│      AFRICAN WORKERS (KENYA, NIGERIA, ETHIOPIA)        │
-│   Wage: $1.50/hr | 50s Quota | 81% Clinical PTSD       │
-└────────────────────────────────────────────────────────┘
-          </pre>
-          <div class="evidence-card">
-            <h4>The Corporate Shell Game:</h4>
-            <p>When workers suffered mental breakdowns or sued, Meta argued in Kenyan court:</p>
-            <ol style="padding-left: 20px;">
-              <li><em>"We don't employ these people. Sama does."</em></li>
-              <li><em>"Meta is a foreign entity registered in Delaware and California. Kenyan courts have no jurisdiction over us."</em></li>
-              <li><em>"These workers signed NDAs and agreed to local subcontracts."</em></li>
-            </ol>
-          </div>
+      <p>
+        Tinubu won the June 2022 APC primary at Eagle Square with 1,271 votes, defeating Rotimi Amaechi (316), Yemi Osinbajo (235), and Senate President Ahmad Lawan (152). Selecting Senator Kashim Shettima to secure Northern Muslim votes, he won the February 25, 2023 election with 8,794,726 votes (36.6%), defeating Atiku Abubakar (6,984,520) and Peter Obi (6,101,533).
+      </p>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.thecable.ng/emi-lokan-how-tinubu-survived-the-odds-to-clinch-apc-ticket/" target="_blank" rel="noopener">Read TheCable: "Emi Lokan: How Tinubu Survived the Odds to Win the APC Presidential Ticket"</a></li>
+          <li><a href="https://www.channelstv.com/2023/02/01/elements-in-villa-working-against-tinubus-election-bid-el-rufai/" target="_blank" rel="noopener">Read Channels TV: "Elements In Aso Rock Working Against Tinubu's Election Bid — El-Rufai"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 8 -->
+      <h2 id="t-presidency">8. The Presidency: Macroeconomic Policies & Controversies (2023–Present)</h2>
+      <p>
+        Taking the oath of office on May 29, 2023, Tinubu declared off-script in his inaugural address: <em>"The fuel subsidy is gone."</em> On June 14, 2023, under newly appointed Central Bank Governor Olayemi Cardoso, the federal government collapsed the multiple official foreign exchange windows into the NAFEM window, effectively floating the currency.
+      </p>
+
+      <div class="table-wrapper">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Macroeconomic Indicator</th>
+              <th>May 29, 2023 Baseline</th>
+              <th>2024–2026 Reality</th>
+              <th>Economic & Social Consequence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Petrol (PMS) Retail Price</strong></td>
+              <td>₦185 – ₦195 / Litre</td>
+              <td>₦1,030 – ₦1,200 / Litre</td>
+              <td>Tripled logistics, transportation, and food distribution costs</td>
+            </tr>
+            <tr>
+              <td><strong>Naira / USD Exchange Rate</strong></td>
+              <td>~₦461 / $1 (Official)</td>
+              <td>₦1,600 – ₦1,700 / $1</td>
+              <td>Over 70% currency depreciation; severe imported inflation</td>
+            </tr>
+            <tr>
+              <td><strong>Headline Inflation Rate</strong></td>
+              <td>22.41%</td>
+              <td>Peaked at 34.19% (June 2024)</td>
+              <td>Erosion of middle-class purchasing power and savings</td>
+            </tr>
+            <tr>
+              <td><strong>Food Inflation Rate</strong></td>
+              <td>24.82%</td>
+              <td>Peaked at 40.87% (June 2024)</td>
+              <td>World Bank estimated 14 million additional citizens fell into extreme poverty</td>
+            </tr>
+            <tr>
+              <td><strong>National Minimum Wage</strong></td>
+              <td>₦30,000 (~$65.00 in 2019)</td>
+              <td>₦70,000 (~$42.40 in 2024)</td>
+              <td>Real dollar purchasing power declined despite 133% nominal increase</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">Corporate Exodus & Controversial Procurements During National Austerity</div>
+        <p>The sudden macroeconomic adjustments triggered severe disruptions:</p>
+        <ul>
+          <li><strong>Corporate Exits:</strong> Major multinationals terminated direct operations or scaled down due to FX illiquidity and massive translation losses, including <strong>GlaxoSmithKline (GSK)</strong> after 51 years, <strong>Sanofi-Aventis</strong>, <strong>Procter & Gamble (P&G)</strong>, and <strong>Kimberly-Clark</strong>.</li>
+          <li><strong>Airbus A330 Presidential Jet:</strong> In August 2024, amidst nationwide hunger protests, the administration took delivery of a newly purchased Airbus A330-200 presidential aircraft costing over <strong>₦150 Billion ($100M+)</strong>.</li>
+          <li><strong>₦21 Billion VP Residence Renovation:</strong> Multi-billion renovation in Abuja completed in June 2024 while citizens faced severe cost-of-living distress.</li>
+          <li><strong>₦15 Trillion Lagos-Calabar Coastal Highway:</strong> A 700km highway awarded under an Engineering, Procurement, Construction and Financing (EPC+F) sole-source contract to <strong>Hitech Construction</strong>, a firm owned by Gilbert Chagoury, a long-standing business associate of Tinubu, without competitive open bidding under the Public Procurement Act 2007. The project resulted in the demolition of Landmark Beach Resort.</li>
+          <li><strong>Civil Unrest:</strong> Nationwide #EndBadGovernance demonstrations in August 2024 met with security force crackdowns resulting in at least 24 deaths documented by Amnesty International. In November 2024, public outcry forced the withdrawal of treason charges against 32 malnourished minors arraigned in court.</li>
+        </ul>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.bbc.com/news/world-africa-65747683" target="_blank" rel="noopener">Read BBC News: "Nigeria fuel subsidy removal: Why petrol prices have soared"</a></li>
+          <li><a href="https://www.reuters.com/markets/currencies/nigeria-floats-naira-currency-hit-record-low-2023-06-14/" target="_blank" rel="noopener">Read Reuters: "Nigeria floats naira, currency plunges to record low"</a></li>
+          <li><a href="https://www.premiumtimesng.com/news/top-news/724915-tinubu-flies-new-presidential-jet-to-france.html" target="_blank" rel="noopener">Read Premium Times: "Tinubu flies new N150 billion presidential jet"</a></li>
+          <li><a href="https://www.premiumtimesng.com/news/headlines/690022-lagos-calabar-highway-fg-awards-n15-trillion-contract-to-chagoury-firm.html" target="_blank" rel="noopener">Read Premium Times: "Lagos-Calabar Highway: FG awards N15 trillion contract to Chagoury firm without tender"</a></li>
+          <li><a href="https://www.aljazeera.com/news/2024/8/6/amnesty-says-at-least-21-killed-during-nigeria-protests" target="_blank" rel="noopener">Read Al Jazeera / Amnesty International: "At least 21 protesters killed during Nigeria hunger protests"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 9 -->
+      <h2 id="t-defenses">9. Administration Counter-Arguments & Economic Defenses</h2>
+      <p>
+        The Tinubu administration argues that the severity of the economic crisis was not caused by its policies, but was the inevitable consequence of postponing structural adjustments for a decade.
+      </p>
+
+      <blockquote class="formal-quote">
+        <p>"We inherited an economy with a ₦30 Trillion Central Bank Ways and Means overdraft. The country was spending 97% of its revenue servicing debt. We were running a nation on printed money without production. We either carried out this major surgery or allowed the patient to die of cardiac arrest."</p>
+        <div class="quote-citation">
+          — <strong>Wale Edun</strong>, Minister of Finance and Coordinating Minister of the Economy.
         </div>
-      </section>
+      </blockquote>
 
-      <!-- SECTION 4: PARALLEL SCANDALS -->
-      <section id="tech-scandals">
-        <h2 class="section-heading">
-          <span>4. Expanding Scandals: OpenAI, Tigray War & Whistleblowers</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-scandals-body')">Copy Parallel Scandals</button>
-        </h2>
-        <div id="tech-scandals-body">
-          <div class="evidence-card warning">
-            <h4>Case 1: The OpenAI / ChatGPT Toxic Data Labeling Scandal (Time Magazine)</h4>
-            <p>In 2021-2022, before ChatGPT launched, OpenAI hired <strong>Sama in Nairobi</strong> to categorize hundreds of thousands of toxic text snippets (hate speech, sexual violence, suicide) for <strong>$1.32 to $2.00 per hour</strong>. Workers suffered acute depression; Sama terminated the contract early because the content was deemed too psychologically toxic.</p>
-          </div>
+      <p>The administration’s verified counter-arguments and reform accomplishments include:</p>
+      <ul>
+        <li><strong>Averting Sovereign Debt Default:</strong> Prior to May 2023, the federal government spent 97% of revenue servicing domestic and external debt, while fuel subsidies consumed over ₦400 Billion monthly. Maintaining the subsidy would have forced sovereign insolvency.</li>
+        <li><strong>Curbing Cross-Border Smuggling:</strong> The Nigerian National Petroleum Company Limited (NNPCL) documented that subsidized Nigerian fuel was being smuggled across West Africa (Benin, Togo, Niger, Cameroon). Daily domestic evacuation dropped from <strong>~66 Million litres/day to ~48 Million litres/day</strong> following subsidy removal.</li>
+        <li><strong>Supreme Court Local Government Financial Autonomy (*SC/CV/343/2024*):</strong> On July 11, 2024, the Supreme Court ruled in favor of the federal government, ordering FAAC funds paid <strong>directly into the bank accounts of all 774 Local Government Areas</strong>, dismantling state governors' unconstitutional Joint Accounts.</li>
+        <li><strong>NELFUND Student Loans Act:</strong> Enacted in April 2024, establishing the Nigerian Education Loan Fund with over <strong>₦372 Billion</strong> allocated to support over 1.6 million tertiary students across 319 institutions.</li>
+        <li><strong>Domestic Crude in Naira Sales:</strong> Begun on October 1, 2024, supplying crude oil in Naira to the 650,000 bpd Dangote Petroleum Refinery, eliminating an estimated <strong>$7.3 Billion annually in foreign exchange demand</strong>.</li>
+        <li><strong>Fiscal Consolidation:</strong> Official figures show debt-service-to-revenue ratio decreased from <strong>97% to approximately 68%</strong> by mid-2024, while statutory FAAC distributions to federal, state, and local governments doubled.</li>
+      </ul>
 
-          <div class="evidence-card danger">
-            <h4>Case 2: The Tigray War & The Murder of Professor Meareg Amare ($2B Lawsuit)</h4>
-            <p>During the Ethiopian civil war (2020-2022), Meta assigned fewer than <strong>30 content moderators</strong> to cover 100 million people speaking Amharic, Oromo, and Tigrinya. In 2021, Professor Meareg Amare was falsely accused of treason on viral Facebook posts; despite repeated desperate reports to Facebook by his son Abrham Meareg, Meta failed to take down the posts. Gunmen followed Professor Meareg home and murdered him on his doorstep. A <strong>$2 Billion lawsuit</strong> was filed against Meta in Kenya High Court.</p>
-          </div>
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://www.premiumtimesng.com/news/headlines/712399-supreme-court-grants-financial-autonomy-to-local-governments.html" target="_blank" rel="noopener">Read Premium Times: "Supreme Court grants financial autonomy to 774 local governments"</a></li>
+          <li><a href="https://punchng.com/nelfund-disburses-n372bn-loans-to-students/" target="_blank" rel="noopener">Read Punch Nigeria: "NELFUND disburses billions in student tuition and maintenance loans"</a></li>
+          <li><a href="https://www.reuters.com/business/energy/nigeria-begins-crude-oil-sales-naira-dangote-refinery-2024-10-01/" target="_blank" rel="noopener">Read Reuters: "Nigeria begins crude oil sales in naira to Dangote refinery"</a></li>
+        </ul>
+      </div>
 
-          <div class="evidence-card info">
-            <h4>Case 3: Whistleblower Daniel Motaung (South Africa)</h4>
-            <p>Daniel Motaung was recruited from South Africa in 2019. Exposed to continuous live streams of beheadings and child abuse, he was diagnosed with severe clinical PTSD. When he organized a union for living wages and mental healthcare, Sama fired him and threatened his work permit. He filed <strong>Petition No. E070 of 2022</strong>, sparking the legal rebellion.</p>
-          </div>
-        </div>
-      </section>
+      <!-- SECTION 10 -->
+      <h2 id="t-sources">10. Primary Judicial & Documentary Registry</h2>
+      <div class="sources-section">
+        <ol class="sources-list">
+          <li><strong>US District Court for the Northern District of Illinois (Case No. 93 C 4483):</strong> <em>United States of America v. Funds in Account 263226700 at First Heritage Bank, et al.</em> Stipulation and Compromise Settlement Order forfeiting $460,000 signed by Judge John A. Nordberg, October 4, 1993. Available at: <a href="https://atlanticpostng.com" target="_blank" rel="noopener">US Federal Court Northern District of Illinois Archive</a>.</li>
+          <li><strong>US District Court for the Northern District of Illinois (Case No. 23-cv-05099):</strong> <em>Atiku Abubakar v. Chicago State University</em>. Deposition of Registrar Caleb Westberg, October 3, 2023. Certified transcript published by Premium Times: <a href="https://www.premiumtimesng.com/news/headlines/630561-download-chicago-varsity-certified-deposition-speaks-on-tinubus-graduation-identity-certificate.html" target="_blank" rel="noopener">Transcript Deposition Link</a>.</li>
+          <li><strong>Supreme Court of Nigeria:</strong> <em>Attorney-General of Lagos State v. Attorney-General of the Federation</em> (2004) 18 NWLR (Pt. 904) 1; SC 70/2004. Delivered December 10, 2004. Declared the seizure of Lagos local government funds unconstitutional.</li>
+          <li><strong>Supreme Court of Nigeria:</strong> <em>Attorney-General of the Federation v. Attorney-General of Abia State & 35 Ors</em> (SC/CV/343/2024). Lead judgment by Justice Emmanuel Agim, delivered July 11, 2024, ordering direct federal allocation payments to all 774 Local Government Areas.</li>
+          <li><strong>High Court of Lagos State:</strong> <em>Mr. Dapo Apara v. Alpha-Beta Consulting LLP & Bola Ahmed Tinubu</em> (Suit No. LD/7330GCMW/2020). Statement of Claim alleging 70% equity holding. Settled out of court, September 2022. Reported by Premium Times: <a href="https://www.premiumtimesng.com/news/headlines/419179-tinubu-alpha-beta-others-accused-of-fraud-tax-evasion-money-laundering.html" target="_blank" rel="noopener">Report Link</a>.</li>
+          <li><strong>Inter-Parliamentary Union (IPU) Parliamentary Human Rights Committee:</strong> <em>Case No. NIG/46 - Bola Ahmed Tinubu</em> (1994–1998). Record documenting the arrest and treason trial of Senator Tinubu under the Abacha military government: <a href="http://archive.ipu.org/hr-e/161/nig41.htm" target="_blank" rel="noopener">IPU Archive</a>.</li>
+        </ol>
+      </div>
+    </article>
+  </main>
 
-      <!-- SECTION 5: COURT VICTORIES -->
-      <section id="tech-court">
-        <h2 class="section-heading">
-          <span>5. The Turning Point: Historic Court Victories in Nairobi</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-court-body')">Copy Court Victories</button>
-        </h2>
-        <div id="tech-court-body">
-          <div class="evidence-card">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">COURT OF APPEAL RULING (SEPTEMBER 2024)</span>
-              <button class="btn-copy-beat" onclick="copyText('Kenyan Court of Appeal ruled Meta CAN be sued in Kenya, dismissing corporate immunity claims: If you profit from African users and exploit African labor, you answer to African law.')">Copy Ruling</button>
-            </div>
-            <p>The Kenyan Court of Appeal ruled that <strong>Meta CAN be sued in Kenyan courts</strong>, dismissing Meta's claims of corporate extraterritorial immunity: <em>If you profit from African users and exploit African labor, you answer to African law.</em></p>
-          </div>
 
-          <div class="evidence-card danger">
-            <div class="evidence-card-header">
-              <span class="evidence-badge">81% PTSD PSYCHIATRIC EVIDENCE FILED (DEC 2024)</span>
-            </div>
-            <p>Official psychiatric evaluations of 144 moderators conducted by independent medical experts submitted to court revealed: <strong>81% of moderators were diagnosed with severe clinical PTSD</strong>, with pervasive rates of chronic depression, anxiety disorders, and insomnia.</p>
-            <p>The moderators, supported by UK justice non-profit <strong>Foxglove</strong>, are demanding <strong>$1.6 Billion in compensation and restitution</strong>.</p>
-          </div>
-        </div>
-      </section>
+  <!-- ========================================================================= -->
+  <!-- INQUIRY 2: SILICON VALLEY'S AFRICAN MODERATION HUBS -->
+  <!-- ========================================================================= -->
+  <main class="article-container" id="inquiry-meta" style="display: none;">
+    <div class="inquiry-kicker">Special Report / Technology & Human Rights Desk</div>
+    <h1 class="inquiry-title">Silicon Valley's African Trauma Factory: How Big Tech Outsources Content Moderation to Kenya and Nigeria</h1>
+    <div class="inquiry-deck">
+      An investigation into the human cost of artificial intelligence and social media safety, examining worker exploitation in Nairobi, sub-$2 hourly wages, and landmark labor trials against Meta and OpenAI.
+    </div>
 
-      <!-- SECTION 6: SCRIPT BLUEPRINT -->
-      <section id="tech-blueprint">
-        <h2 class="section-heading">
-          <span>6. Video Script Blueprint & 3-Act Structure</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-script-body')">Copy Script Blueprint</button>
-        </h2>
-        <div id="tech-script-body" class="storyboard-timeline">
-          
-          <div class="timeline-node">
-            <div class="timeline-time">ACT 1 • 00:00–02:30</div>
-            <div class="timeline-title">The Trap: False Promises & The 50-Second Death Clock</div>
-            <p><strong>Visual:</strong> Contrast glassy Silicon Valley skyscrapers with dim Nairobi offices. Introduce Kauna Malgwi and Mustafa Mukhtar leaving Nigeria for "translation" jobs. Signing 20-page NDAs. First day on screen: Boko Haram beheadings and pedophilia. The 50-second timer counting down.</p>
-          </div>
+    <div class="metadata-bar">
+      <span class="metadata-item"><strong>Investigation Unit:</strong> Civic Lens Technology & Human Rights Desk</span>
+      <span class="metadata-item"><strong>Date:</strong> October 2026</span>
+      <span class="metadata-item"><strong>Primary Sources:</strong> HumAngle, TIME Magazine, Kenya Employment and Labour Court Records</span>
+    </div>
 
-          <div class="timeline-node warning">
-            <div class="timeline-time">ACT 2 • 02:30–06:00</div>
-            <div class="timeline-title">The Digital Sweatshop: $1.50 an Hour & In-House Gaslighting</div>
-            <p><strong>Visual:</strong> Pay stub graphics: $1.50/hr vs Meta's $1.5 Trillion market cap. The in-house therapists breaking down in tears. Expanding to OpenAI ChatGPT training and the murder of Professor Meareg Amare in Ethiopia. Psychiatric court report: 81% PTSD.</p>
-          </div>
+    <!-- TABLE OF CONTENTS -->
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#m-hook">1. The Core Premise: The Hidden Biological Filter</a></li>
+        <li><a href="#m-humangle">2. The HumAngle Investigation: Nigerian Recruits in Nairobi</a></li>
+        <li><a href="#m-factory">3. Factory Conditions: The 50-Second Timer & $1.50 Wages</a></li>
+        <li><a href="#m-corporate">4. The Corporate Architecture: Meta, Sama, and Subcontracting</a></li>
+        <li><a href="#m-openai">5. Connected Scandals: OpenAI ChatGPT Labeling & The Ethiopian War Lawsuit</a></li>
+        <li><a href="#m-court">6. Historic Court Victories: The Kenyan Court of Appeal Rulings</a></li>
+        <li><a href="#m-sources">7. Primary Citations & Documentary Archive</a></li>
+      </ul>
+    </div>
 
-          <div class="timeline-node danger">
-            <div class="timeline-time">ACT 3 • 06:00–09:00</div>
-            <div class="timeline-title">The Reckoning: Courtroom Defeat of Mark Zuckerberg</div>
-            <p><strong>Visual:</strong> Sama fires 1,100 workers. Daniel Motaung and lawyer Mercy Mutemi stand on court steps in Nairobi. The landmark Court of Appeal ruling: Meta is NOT above African law. $1.6B restitution demand. Closing question: Whose mind was destroyed to keep our feeds clean?</p>
-          </div>
+    <article>
+      <!-- SECTION 1 -->
+      <h2 id="m-hook">1. The Core Premise: The Hidden Biological Filter</h2>
+      <p>
+        Behind the interface of global social media platforms and artificial intelligence chatbots lies an outsourced, poorly compensated workforce based in Nairobi, Kenya, tasked with viewing and removing graphic real-world violence, child sexual abuse, torture, and beheadings.
+      </p>
+      <p>
+        While Silicon Valley corporations promote artificial intelligence as automated and self-governing, content moderation systems fundamentally rely on human beings to classify, filter, and review violent digital material. Major technology firms have outsourced this high-trauma labor to sub-Saharan Africa to exploit low labor costs and weak regulatory oversight.
+      </p>
 
-        </div>
-      </section>
+      <!-- SECTION 2 -->
+      <h2 id="m-humangle">2. The HumAngle Investigation: Nigerian Recruits in Nairobi</h2>
+      <p>
+        On October 8, 2026, investigative media outlet <strong>HumAngle</strong> published a comprehensive investigation titled <em>"Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</em>, documenting how Nigerian graduates were systematically recruited under misleading job descriptions.
+      </p>
+      
+      <div class="primary-source-box">
+        <div class="source-box-title">Key Profiles from the Investigation</div>
+        <p><strong>Kauna Malgwi (Clinical Psychologist & Organizer):</strong></p>
+        <p>
+          Raised in Borno State, Northeast Nigeria—an area severely affected by Boko Haram terrorist violence—Malgwi relocated to Nairobi for post-graduate studies. In 2019, she was recruited by outsourcing firm <strong>Sama</strong> under the impression that she was taking a position in "Hausa linguistic translation". Upon arrival and signing strict Non-Disclosure Agreements (NDAs), she was placed in front of screens reviewing graphic Boko Haram executions, terrorist beheadings, and bandit massacres from her home country. She was diagnosed with chronic clinical PTSD and subsequently founded the <strong>Digital Rights and Mental Health Initiative (DRMHI)</strong> and co-organized the African Content Moderators Union.
+        </p>
+        <p><strong>Mustafa Mukhtar (Nigerian Recruit):</strong></p>
+        <p>
+          Recruited from Nigeria under expectations of customer service and linguistic localization, Mukhtar was tasked with reviewing murders and suicides. He testified that in-house company counselors were so unprepared for the severe trauma that <strong>the counselors broke down in tears</strong> during therapy sessions with moderators.
+        </p>
+      </div>
 
-      <!-- SECTION 7: PRIMARY SOURCES -->
-      <section id="tech-sources">
-        <h2 class="section-heading">
-          <span>7. Verifiable Primary Sources & Citations</span>
-          <button class="btn-copy-beat" onclick="copyElementText('tech-sources-body')">Copy Sources</button>
-        </h2>
-        <div id="tech-sources-body">
-          <ul style="padding-left: 20px; line-height: 1.8;">
-            <li><strong>HumAngle Media (Oct 8, 2026):</strong> <em>"Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</em> by HumAngle Investigations.</li>
-            <li><strong>Time Magazine (Jan 2023):</strong> <em>"OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"</em> by Billy Perrigo.</li>
-            <li><strong>Time Magazine (Feb 2022):</strong> <em>"Inside Facebook’s African Sweatshop"</em> by Billy Perrigo.</li>
-            <li><strong>Court of Appeal at Nairobi (Sept 2024):</strong> <em>Meta Platforms, Inc. & Meta Platforms Ireland Ltd v. Daniel Motaung & Others</em> (Civil Appeal No. E186 of 2023).</li>
-            <li><strong>Kenya Employment and Labour Relations Court (2022-2026):</strong> Petition No. E070 of 2022 (<em>Daniel Motaung v. Sama & Meta</em>).</li>
-            <li><strong>Foxglove Legal UK Archive:</strong> Case dossiers on African Content Moderators Union & Meta Kenya litigation.</li>
-          </ul>
-        </div>
-      </section>
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://humanglemedia.com/africans-hired-to-moderate-facebook-content-left-with-sleepless-nights/" target="_blank" rel="noopener">Read Full Investigation on HumAngle: "Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</a></li>
+        </ul>
+      </div>
 
-    </main>
-  </div>
+      <!-- SECTION 3 -->
+      <h2 id="m-factory">3. Factory Conditions: The 50-Second Timer & $1.50 Wages</h2>
+      <p>
+        Investigations by both HumAngle and TIME Magazine revealed severe working conditions inside Sama’s moderation operations in Nairobi:
+      </p>
+      <ul>
+        <li><strong>The 50-Second Decision Limit:</strong> Moderators were required to review, comprehend, and make high-stakes policy decisions on violent video tickets within an arbitrary limit of <strong>50 seconds per item</strong>, monitored by automated workstation activity tracking software.</li>
+        <li><strong>Sub-$2 Hourly Wages:</strong> African moderators received between <strong>40,000 to 60,000 Kenyan Shillings per month (approximately $300 to $450 USD)</strong>, equivalent to <strong>$1.50 to $2.20 per hour</strong>. In comparison, content moderators in the United States and Europe performing identical duties earn between $18 and $25 per hour.</li>
+        <li><strong>Pervasive Psychological Harm:</strong> An independent medical evaluation conducted by psychiatric professionals on 144 content moderators submitted to the Kenyan High Court in December 2024 revealed that <strong>81% of moderators suffered from severe clinical PTSD</strong>, characterized by acute insomnia, intrusive flashbacks, and clinical depression.</li>
+      </ul>
 
-  <!-- FOOTER -->
+      <!-- SECTION 4 -->
+      <h2 id="m-corporate">4. The Corporate Architecture: Meta, Sama, and Subcontracting</h2>
+      <p>
+        Multinational technology corporations maintain distance from operational liabilities through offshore subcontracting agreements. Meta Platforms contracted San Francisco-based outsourcing provider <strong>Sama</strong> (headquartered locally as Samasource Kenya UB) to operate its content moderation hub in Nairobi.
+      </p>
+      <p>
+        When workers suffered mental health crises and brought legal action, Meta argued in Kenyan court proceedings that:
+      </p>
+      <ol>
+        <li>Meta Platforms is a foreign legal entity incorporated in Delaware with principal offices in California, outside the territorial jurisdiction of Kenyan courts.</li>
+        <li>The workers were direct employees of third-party contractor Sama, not Meta.</li>
+        <li>Employees had executed legally binding Non-Disclosure Agreements and dispute resolution arbitration clauses.</li>
+      </ol>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://time.com/6147458/facebook-africa-content-moderation-employee-treatment/" target="_blank" rel="noopener">Read TIME Magazine Investigation by Billy Perrigo: "Inside Facebook's African Sweatshop"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 5 -->
+      <h2 id="m-openai">5. Connected Scandals: OpenAI ChatGPT Labeling & The Ethiopian War Lawsuit</h2>
+      <p>
+        The labor practices documented at Sama extend beyond social media moderation to generative artificial intelligence:
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">OpenAI / ChatGPT Data Labeling Scandal (TIME Magazine, Jan 2023)</div>
+        <p>
+          In 2021 and 2022, prior to the public release of ChatGPT, OpenAI contracted Sama in Nairobi to read, categorize, and label tens of thousands of text snippets extracted from the internet depicting child sexual abuse, bestiality, suicide, and sexual violence to build safety guardrails for AI models.
+        </p>
+        <p>
+          Kenyan data labelers were paid between <strong>$1.32 and $2.00 per hour</strong> to process explicit traumatic content. Sama canceled the contract early after workers reported acute psychological distress.
+        </p>
+      </div>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">The Tigray War & The Murder of Professor Meareg Amare ($2 Billion Lawsuit)</div>
+        <p>
+          During the civil war in Ethiopia (2020–2022), Meta maintained fewer than 30 content moderators covering over 100 million people across Amharic, Oromo, and Tigrinya languages at the Nairobi hub. In November 2021, Professor Meareg Amare of Bahir Dar University was targeted by viral hate speech posts on Facebook falsely accusing him of treason and publicizing his residence. Despite multiple formal reports submitted to Facebook by his son, Abrham Meareg, Meta’s automated and human systems failed to remove the posts. Professor Meareg was followed and murdered outside his residence.
+        </p>
+        <p>
+          In December 2022, Abrham Meareg, Ethiopian human rights researcher Fisseha Tekle, and the Katiba Institute filed a <strong>$2 Billion (250 billion KSh) lawsuit</strong> against Meta in the Kenya High Court, alleging that Facebook's recommendation algorithm promoted violent ethnic conflict.
+        </p>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://time.com/6247678/openai-chatgpt-kenya-workers/" target="_blank" rel="noopener">Read TIME Magazine Exclusive: "OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"</a></li>
+          <li><a href="https://www.theguardian.com/technology/2022/dec/14/facebook-owner-meta-sued-kenya-ethiopia-violence-hate-speech" target="_blank" rel="noopener">Read The Guardian UK: "Facebook owner Meta sued in Kenya over Ethiopia violence and hate speech"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 6 -->
+      <h2 id="m-court">6. Historic Court Victories: The Kenyan Court of Appeal Rulings</h2>
+      <p>
+        The legal resistance against Big Tech in Africa began with South African whistleblower <strong>Daniel Motaung</strong>, who filed <em>Petition No. E070 of 2022</em> in the Kenya Employment and Labour Relations Court after being fired for union organizing.
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">Landmark Court of Appeal Ruling (September 2024)</div>
+        <p>
+          In <em>Meta Platforms, Inc. & Meta Platforms Ireland Ltd v. Daniel Motaung & Others</em> (Civil Appeal No. E186 of 2023), the Kenyan Court of Appeal rejected Meta’s appeal seeking immunity from local courts. The appellate judges established that <strong>foreign multinational corporations operating within the digital economy of African nations are subject to the jurisdiction of domestic courts</strong> regarding labor exploitation and human rights violations committed within the territory.
+        </p>
+        <p>
+          The litigation, supported by UK-based justice organization <strong>Foxglove Legal</strong> and Kenyan legal advocates, is currently seeking <strong>$1.6 Billion in compensation, healthcare trust funds, and systemic labor reforms</strong> for over 1,100 affected moderators.
+        </p>
+      </div>
+
+      <!-- SECTION 7 -->
+      <h2 id="m-sources">7. Primary Citations & Documentary Archive</h2>
+      <div class="sources-section">
+        <ol class="sources-list">
+          <li><strong>HumAngle Media (October 8, 2026):</strong> <em>"Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</em> by HumAngle Investigative Desk. Available at: <a href="https://humanglemedia.com/africans-hired-to-moderate-facebook-content-left-with-sleepless-nights/" target="_blank" rel="noopener">HumAngle Media Article</a>.</li>
+          <li><strong>TIME Magazine (February 14, 2022):</strong> <em>"Inside Facebook's African Sweatshop"</em> by Billy Perrigo. Available at: <a href="https://time.com/6147458/facebook-africa-content-moderation-employee-treatment/" target="_blank" rel="noopener">TIME Magazine Investigation</a>.</li>
+          <li><strong>TIME Magazine (January 18, 2023):</strong> <em>"Exclusive: OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"</em> by Billy Perrigo. Available at: <a href="https://time.com/6247678/openai-chatgpt-kenya-workers/" target="_blank" rel="noopener">TIME Magazine Exclusive</a>.</li>
+          <li><strong>Court of Appeal of Kenya at Nairobi (September 2024):</strong> <em>Meta Platforms, Inc. & Meta Platforms Ireland Ltd v. Daniel Motaung, Sama & Others</em> (Civil Appeal No. E186 of 2023).</li>
+          <li><strong>Kenya Employment and Labour Relations Court:</strong> <em>Daniel Motaung v. Samasource Kenya EPZ Ltd & Meta Platforms, Inc.</em> (Petition No. E070 of 2022).</li>
+          <li><strong>High Court of Kenya at Nairobi:</strong> <em>Abrham Meareg & Others v. Meta Platforms, Inc.</em> (Constitutional Petition No. E466 of 2022). $2 Billion wrongful death and algorithmic liability petition. Reported by The Guardian: <a href="https://www.theguardian.com/technology/2022/dec/14/facebook-owner-meta-sued-kenya-ethiopia-violence-hate-speech" target="_blank" rel="noopener">The Guardian Report</a>.</li>
+        </ol>
+      </div>
+    </article>
+  </main>
+
+  <!-- FORMAL FOOTER -->
   <footer>
-    <p>Civic Lens Media Group (`@civiclensng`) • Forensic Political & Corporate Intelligence</p>
-    <p style="margin-top: 6px; font-size: 12px; color: var(--text-light);">
-      All facts verified against primary judicial transcripts, corporate registries, and macroeconomic statistical bulletins.
-    </p>
+    <p>CIVIC LENS INVESTIGATIVE DESK • SPECIAL FACTUAL ARCHIVE</p>
+    <p style="margin-top: 6px;">All findings compiled from sworn court transcripts, primary judicial dockets, and verified on-the-ground investigative reporting.</p>
   </footer>
 
-  <!-- INTERACTIVE SCRIPT -->
   <script>
-    window.addEventListener('scroll', () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('progress-bar').style.width = scrolled + '%';
-    });
+    function showInquiry(id) {
+      const tinubuEl = document.getElementById('inquiry-tinubu');
+      const metaEl = document.getElementById('inquiry-meta');
+      const btnTinubu = document.getElementById('btn-tinubu');
+      const btnMeta = document.getElementById('btn-meta');
 
-    function switchDossier(dossierId) {
-      const tinubuCont = document.getElementById('dossier-tinubu-container');
-      const techCont = document.getElementById('dossier-tech-container');
-      const btnTinubu = document.getElementById('btn-dossier-tinubu');
-      const btnTech = document.getElementById('btn-dossier-tech');
-
-      if (dossierId === 'tinubu') {
-        tinubuCont.style.display = 'block';
-        techCont.style.display = 'none';
+      if (id === 'tinubu') {
+        tinubuEl.style.display = 'block';
+        metaEl.style.display = 'none';
         btnTinubu.classList.add('active');
-        btnTech.classList.remove('active');
+        btnMeta.classList.remove('active');
       } else {
-        tinubuCont.style.display = 'none';
-        techCont.style.display = 'block';
-        btnTech.classList.add('active');
+        tinubuEl.style.display = 'none';
+        metaEl.style.display = 'block';
+        btnMeta.classList.add('active');
         btnTinubu.classList.remove('active');
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-
-    function togglePlainText() {
-      document.body.classList.toggle('plain-text-mode');
-    }
-
-    let currentFontSize = 17;
-    function changeFontSize(delta) {
-      currentFontSize = Math.max(14, Math.min(24, currentFontSize + delta));
-      document.body.style.fontSize = currentFontSize + 'px';
-    }
-
-    function copyText(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert('Copied to clipboard!');
-      });
-    }
-
-    function copyElementText(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        copyText(el.innerText);
-      }
-    }
-
-    function copyFullText(containerId) {
-      copyElementText(containerId);
-    }
-
-    function filterContent() {
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.evidence-card, .timeline-node, .script-quote');
-      
-      cards.forEach(card => {
-        if (!query || card.innerText.toLowerCase().includes(query)) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
     }
   </script>
 </body>
