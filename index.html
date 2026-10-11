@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Civic Lens Dossier | Tinubu 360: The Lion of Bourdillon & The Presidency</title>
-  <meta name="description" content="In-depth, 360-degree forensic investigative dossier and documentary scriptwriter's pack on President Bola Ahmed Tinubu: Chicago records, NADECO resistance, Lagos IGR machine, APC rise, and presidential audits.">
+  <title>Civic Lens Dossier Hub | Forensic Political & Corporate Investigations</title>
+  <meta name="description" content="Civic Lens interactive plain-text scriptwriter's pack and investigative dossiers: Tinubu 360 (Election Special) and Silicon Valley's African Trauma Factory.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -93,14 +93,14 @@
       border-bottom: 1px solid var(--border-color);
       z-index: 900;
       backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.96);
     }
     [data-theme="dark"] header {
-      background-color: rgba(22, 27, 34, 0.95);
+      background-color: rgba(22, 27, 34, 0.96);
     }
 
     .header-inner {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 10px 24px;
       display: flex;
@@ -233,7 +233,7 @@
     .nav-tabs-wrapper::-webkit-scrollbar { display: none; }
 
     .nav-tabs {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 24px;
       display: flex;
@@ -337,7 +337,7 @@
 
     h2.section-heading {
       font-family: var(--font-serif);
-      font-size: 29px;
+      font-size: 28px;
       line-height: 1.3;
       font-weight: 700;
       color: var(--text-main);
@@ -493,6 +493,12 @@
       background: var(--accent-green);
       border: 2px solid var(--bg-card);
     }
+    .timeline-node.danger::before {
+      background: var(--accent-red);
+    }
+    .timeline-node.warning::before {
+      background: var(--accent-gold);
+    }
     .timeline-time {
       font-family: var(--font-mono);
       font-size: 12px;
@@ -534,30 +540,18 @@
       border-bottom: none;
     }
 
-    /* ACCORDION */
-    details.investigation-drawer {
+    /* ASCII DIAGRAM PRE */
+    pre.ascii-diagram {
+      background: var(--bg-subtle);
       border: 1px solid var(--border-color);
       border-radius: var(--radius);
-      margin: 16px 0;
-      background: var(--bg-card);
-      overflow: hidden;
-    }
-    details.investigation-drawer summary {
-      padding: 14px 18px;
-      cursor: pointer;
-      font-weight: 600;
-      background: var(--bg-subtle);
-      user-select: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    details.investigation-drawer summary:hover {
-      background: var(--border-color);
-    }
-    .drawer-content {
-      padding: 18px 20px;
-      border-top: 1px solid var(--border-color);
+      padding: 16px;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.4;
+      margin: 20px 0;
+      color: var(--text-main);
     }
 
     /* FOOTER */
@@ -570,7 +564,6 @@
       color: var(--text-muted);
     }
 
-    /* PRINT STYLES */
     @media print {
       header, .nav-tabs-wrapper, .writer-bar, .header-controls, .source-pill-group {
         display: none !important;
@@ -601,7 +594,7 @@
       </a>
 
       <div class="header-controls">
-        <!-- DOSSIER SWITCHER -->
+        <!-- DOSSIER SWITCHER PILLS -->
         <div class="dossier-switcher">
           <button class="dossier-pill active" id="btn-dossier-tinubu" onclick="switchDossier('tinubu')">
             <span>🇳🇬</span> Tinubu 360 Special
@@ -614,7 +607,7 @@
         <!-- SEARCH BOX -->
         <div class="search-box">
           <span class="search-icon">🔍</span>
-          <input type="text" id="searchInput" placeholder="Search facts, names, dates..." onkeyup="filterContent()">
+          <input type="text" id="searchInput" placeholder="Search facts, dates, names..." onkeyup="filterContent()">
         </div>
 
         <!-- UTILITY TOOLS -->
@@ -629,7 +622,7 @@
   </header>
 
   <!-- ========================================================================= -->
-  <!-- DOSSIER 1: TINUBU 360 ELECTION SPECIAL (DEFAULT ACTIVE) -->
+  <!-- DOSSIER 1: TINUBU 360 ELECTION SPECIAL -->
   <!-- ========================================================================= -->
   <div id="dossier-tinubu-container">
     
@@ -642,9 +635,9 @@
         <a href="#tinubu-act3" class="nav-tab-link">4. Lagos Governorship</a>
         <a href="#tinubu-act4" class="nav-tab-link">5. Kingmaker & APC</a>
         <a href="#tinubu-act5" class="nav-tab-link">6. The Presidency</a>
-        <a href="#tinubu-ledger" class="nav-tab-link">7. The Good vs Bad Ledger</a>
+        <a href="#tinubu-ledger" class="nav-tab-link">7. Good vs Bad Ledger</a>
         <a href="#tinubu-quotes" class="nav-tab-link">8. Quotes Bank</a>
-        <a href="#tinubu-registry" class="nav-tab-link">9. Primary Court Registry</a>
+        <a href="#tinubu-registry" class="nav-tab-link">9. Court Registry</a>
       </nav>
     </div>
 
@@ -667,7 +660,7 @@
           <span style="color: var(--text-light); font-weight: 400;">Longform Documentary (35–45 min) or 5-Part Serial</span>
         </div>
         <div style="display: flex; gap: 8px;">
-          <button class="btn-copy-beat" onclick="copyFullText()">📋 Copy Master Markdown</button>
+          <button class="btn-copy-beat" onclick="copyFullText('dossier-tinubu-container')">📋 Copy Master Markdown</button>
           <button class="btn-copy-beat" onclick="window.print()">🖨️ Print / Save PDF</button>
         </div>
       </div>
@@ -1163,41 +1156,249 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- DOSSIER 2: SILICON VALLEY TECH HUBS (TOGGLEABLE) -->
+  <!-- DOSSIER 2: SILICON VALLEY'S AFRICAN TRAUMA FACTORY -->
   <!-- ========================================================================= -->
   <div id="dossier-tech-container" style="display: none;">
+    
+    <!-- TECH NAVIGATION TABS -->
+    <div class="nav-tabs-wrapper">
+      <nav class="nav-tabs">
+        <a href="#tech-hook" class="nav-tab-link active">1. Core Premise</a>
+        <a href="#tech-humangle" class="nav-tab-link">2. HumAngle Exposé</a>
+        <a href="#tech-architecture" class="nav-tab-link">3. Corporate Shield</a>
+        <a href="#tech-scandals" class="nav-tab-link">4. Parallel Scandals</a>
+        <a href="#tech-court" class="nav-tab-link">5. Nairobi Court Victories</a>
+        <a href="#tech-blueprint" class="nav-tab-link">6. Video Script Blueprint</a>
+        <a href="#tech-sources" class="nav-tab-link">7. Primary Sources</a>
+      </nav>
+    </div>
+
     <main>
+      <!-- MASTHEAD -->
       <div class="article-meta">
-        <span class="meta-tag">INVESTIGATIVE DOSSIER</span>
-        <span class="meta-date">CIVIC LENS INVESTIGATION • OCTOBER 2026</span>
+        <span class="meta-tag">INVESTIGATIVE SPECIAL</span>
+        <span class="meta-date">CIVIC LENS INVESTIGATIVE DOSSIER • OCTOBER 2026</span>
       </div>
 
       <h1 class="article-headline">Silicon Valley's African Trauma Factory: The Human Cost of AI Moderation</h1>
       <p class="article-standfirst">
-        Behind Big Tech's trillion-dollar valuations lies an invisible workforce in Nairobi and Lagos, filtering beheadings, suicide, and sexual violence for under $2 an hour without adequate psychosocial healthcare.
+        Behind Big Tech's trillion-dollar valuations and sterile AI chatbots lies an invisible workforce in Nairobi and Lagos, filtering beheadings, suicide, and sexual violence for under $2 an hour without adequate psychosocial healthcare.
       </p>
 
-      <div class="evidence-card info">
-        <h3>HumAngle & TIME Investigations Overview</h3>
-        <p>Documenting Daniel Motaung’s unionization efforts at Sama (Meta contractor), landmark rulings in the Employment and Labour Relations Court of Kenya (ELRC), and Sama's transition into OpenAI ChatGPT training datasets.</p>
-        <div class="source-pill-group">
-          <a class="source-pill" href="investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md">📄 Read Complete African Tech Dossier (Markdown)</a>
+      <!-- SCRIPTWRITER TOOLBAR -->
+      <div class="writer-bar">
+        <div class="writer-bar-left">
+          <span>🎬 Scriptwriter's Production Pack:</span>
+          <span style="color: var(--text-light); font-weight: 400;">Documentary Explainer (8–12 min)</span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn-copy-beat" onclick="copyFullText('dossier-tech-container')">📋 Copy Master Markdown</button>
+          <button class="btn-copy-beat" onclick="window.print()">🖨️ Print / Save PDF</button>
         </div>
       </div>
+
+      <!-- SECTION 1: CORE PREMISE -->
+      <section id="tech-hook">
+        <h2 class="section-heading">
+          <span>1. The Core Hook & Investigative Premise</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-hook-body')">Copy Premise</button>
+        </h2>
+        <div id="tech-hook-body">
+          <blockquote class="script-quote">
+            "Silicon Valley sells the world an illusion of seamless, clean Artificial Intelligence and safe social media platforms. But behind that clean interface lies a dark, hidden supply chain: young, educated Africans lured across borders with false job promises, locked in air-conditioned offices in Nairobi, paid $1.50 an hour, and forced to absorb society's most toxic psychological waste until their minds break."
+            <span class="quote-author">— CIVIC LENS INVESTIGATIVE PREMISE (October 2026)</span>
+          </blockquote>
+
+          <div class="evidence-card info">
+            <div class="evidence-card-header">
+              <span class="evidence-badge">WHY THIS VIDEO MATTERS RIGHT NOW</span>
+            </div>
+            <ul style="padding-left: 20px;">
+              <li><strong>The Human Cost:</strong> Trillion-dollar tech giants (Meta, OpenAI/Microsoft, TikTok) brand themselves as futuristic while treating African workers as disposable biological filters for beheadings, child sexual abuse, sexual violence, and ethnic genocide.</li>
+              <li><strong>The Nigerian Connection:</strong> <em>HumAngle's</em> October 2026 investigation revealed that Nigerian university graduates (specifically Hausa speakers) were deceived into migrating to Nairobi under the guise of "translation" and "customer support", only to be trapped inside Meta's graphic moderation furnace.</li>
+              <li><strong>The Historic Legal Precedent:</strong> For the first time in history, African courts (in Nairobi, Kenya) have rejected Meta's claim that foreign tech giants are untouchable, ruling that Meta can be put on trial in Kenya for labor exploitation, human trafficking, and union-busting, with damages sought up to $1.6 Billion.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: HUMANGLE EXPOSÉ -->
+      <section id="tech-humangle">
+        <h2 class="section-heading">
+          <span>2. The HumAngle Exposé (October 2026): Protagonists & Factory Conditions</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-humangle-body')">Copy Exposé</button>
+        </h2>
+        <div id="tech-humangle-body">
+          <div class="evidence-card warning">
+            <div class="evidence-card-header">
+              <span class="evidence-badge">PROTAGONIST: KAUNA MALGWI (NIGERIAN ORGANIZER)</span>
+              <button class="btn-copy-beat" onclick="copyText('Kauna Malgwi: Grew up in Borno State amidst Boko Haram terror. Recruited in 2019 for Hausa translation. Trapped into moderating Boko Haram beheadings and executions from her own homeland. Developed severe clinical PTSD. Founded Digital Rights and Mental Health Initiative Africa (DRMHI).')">Copy Profile</button>
+            </div>
+            <p><strong>Background:</strong> Grew up in Borno State, Northeast Nigeria—an area ravaged by Boko Haram insurgency and terror attacks. She moved to Nairobi to pursue her Master’s degree.</p>
+            <p><strong>The Deception:</strong> In 2019, she was recruited by outsourcing firm <strong>Sama</strong> for what she was told was a "Hausa translation role".</p>
+            <p><strong>The Horror:</strong> Upon arrival and after signing strict Non-Disclosure Agreements (NDAs), she discovered her actual job was moderating graphic content for Meta (Facebook/Instagram). She was forced to review raw footage of Boko Haram executions, bandit massacres, beheadings, and torture from her own homeland.</p>
+            <p><strong>The Resistance:</strong> After being discarded in 2023, Malgwi founded the <strong>Digital Rights and Mental Health Initiative Africa (DRMHI)</strong> and became a lead organizer in the African Content Moderators Union.</p>
+          </div>
+
+          <div class="evidence-card danger">
+            <div class="evidence-card-header">
+              <span class="evidence-badge">FACTORY CONDITIONS: THE 50-SECOND DEATH CLOCK & $1.50 WAGES</span>
+              <button class="btn-copy-beat" onclick="copyText('Factory conditions: 50-second KPI limit per video ticket under automated keystroke loggers. Monthly wage of $300-$450 (roughly $1.50-$2.20/hour). Company therapists broke down crying listening to worker horror.')">Copy Factory Data</button>
+            </div>
+            <p><strong>The KPI Quota:</strong> Moderators were forced to watch, analyze, and make high-stakes policy decisions on traumatizing videos within an arbitrary <strong>50-second limit</strong> per ticket under automated keystroke loggers.</p>
+            <p><strong>Poverty Wages:</strong> African moderators were paid between <strong>40,000 to 60,000 Kenyan Shillings per month (~$300 to $450 USD)</strong>. That breaks down to roughly <strong>$1.50 to $2.20 per hour</strong>—making them the lowest-paid Facebook moderators on planet earth.</p>
+            <p><strong>The Overwhelmed Counselors:</strong> Nigerian recruit Mustafa Mukhtar revealed that in-house "wellness counselors" provided by the company were so overwhelmed and undertrained that <em>the therapists themselves broke down in tears</em> when moderators described the videos they had just processed.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CORPORATE SHIELD -->
+      <section id="tech-architecture">
+        <h2 class="section-heading">
+          <span>3. Corporate Architecture: How Big Tech Shields Itself</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-arch-body')">Copy Architecture</button>
+        </h2>
+        <div id="tech-arch-body">
+          <pre class="ascii-diagram">
+┌────────────────────────────────────────────────────────┐
+│               META (CALIFORNIA, USA)                   │
+│   Market Cap: $1.5+ Trillion USD | CEO: Mark Zuckerberg│
+└───────────────────────────┬────────────────────────────┘
+                            │ Outsources toxic labor
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│            SAMA (SAN FRANCISCO / NAIROBI)              │
+│   Billed as "Ethical AI" Outsourcer                    │
+│   Operates the Nairobi Moderation Hub                  │
+└───────────────────────────┬────────────────────────────┘
+                            │ Deceptive recruitment & NDAs
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│      AFRICAN WORKERS (KENYA, NIGERIA, ETHIOPIA)        │
+│   Wage: $1.50/hr | 50s Quota | 81% Clinical PTSD       │
+└────────────────────────────────────────────────────────┘
+          </pre>
+          <div class="evidence-card">
+            <h4>The Corporate Shell Game:</h4>
+            <p>When workers suffered mental breakdowns or sued, Meta argued in Kenyan court:</p>
+            <ol style="padding-left: 20px;">
+              <li><em>"We don't employ these people. Sama does."</em></li>
+              <li><em>"Meta is a foreign entity registered in Delaware and California. Kenyan courts have no jurisdiction over us."</em></li>
+              <li><em>"These workers signed NDAs and agreed to local subcontracts."</em></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: PARALLEL SCANDALS -->
+      <section id="tech-scandals">
+        <h2 class="section-heading">
+          <span>4. Expanding Scandals: OpenAI, Tigray War & Whistleblowers</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-scandals-body')">Copy Parallel Scandals</button>
+        </h2>
+        <div id="tech-scandals-body">
+          <div class="evidence-card warning">
+            <h4>Case 1: The OpenAI / ChatGPT Toxic Data Labeling Scandal (Time Magazine)</h4>
+            <p>In 2021-2022, before ChatGPT launched, OpenAI hired <strong>Sama in Nairobi</strong> to categorize hundreds of thousands of toxic text snippets (hate speech, sexual violence, suicide) for <strong>$1.32 to $2.00 per hour</strong>. Workers suffered acute depression; Sama terminated the contract early because the content was deemed too psychologically toxic.</p>
+          </div>
+
+          <div class="evidence-card danger">
+            <h4>Case 2: The Tigray War & The Murder of Professor Meareg Amare ($2B Lawsuit)</h4>
+            <p>During the Ethiopian civil war (2020-2022), Meta assigned fewer than <strong>30 content moderators</strong> to cover 100 million people speaking Amharic, Oromo, and Tigrinya. In 2021, Professor Meareg Amare was falsely accused of treason on viral Facebook posts; despite repeated desperate reports to Facebook by his son Abrham Meareg, Meta failed to take down the posts. Gunmen followed Professor Meareg home and murdered him on his doorstep. A <strong>$2 Billion lawsuit</strong> was filed against Meta in Kenya High Court.</p>
+          </div>
+
+          <div class="evidence-card info">
+            <h4>Case 3: Whistleblower Daniel Motaung (South Africa)</h4>
+            <p>Daniel Motaung was recruited from South Africa in 2019. Exposed to continuous live streams of beheadings and child abuse, he was diagnosed with severe clinical PTSD. When he organized a union for living wages and mental healthcare, Sama fired him and threatened his work permit. He filed <strong>Petition No. E070 of 2022</strong>, sparking the legal rebellion.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: COURT VICTORIES -->
+      <section id="tech-court">
+        <h2 class="section-heading">
+          <span>5. The Turning Point: Historic Court Victories in Nairobi</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-court-body')">Copy Court Victories</button>
+        </h2>
+        <div id="tech-court-body">
+          <div class="evidence-card">
+            <div class="evidence-card-header">
+              <span class="evidence-badge">COURT OF APPEAL RULING (SEPTEMBER 2024)</span>
+              <button class="btn-copy-beat" onclick="copyText('Kenyan Court of Appeal ruled Meta CAN be sued in Kenya, dismissing corporate immunity claims: If you profit from African users and exploit African labor, you answer to African law.')">Copy Ruling</button>
+            </div>
+            <p>The Kenyan Court of Appeal ruled that <strong>Meta CAN be sued in Kenyan courts</strong>, dismissing Meta's claims of corporate extraterritorial immunity: <em>If you profit from African users and exploit African labor, you answer to African law.</em></p>
+          </div>
+
+          <div class="evidence-card danger">
+            <div class="evidence-card-header">
+              <span class="evidence-badge">81% PTSD PSYCHIATRIC EVIDENCE FILED (DEC 2024)</span>
+            </div>
+            <p>Official psychiatric evaluations of 144 moderators conducted by independent medical experts submitted to court revealed: <strong>81% of moderators were diagnosed with severe clinical PTSD</strong>, with pervasive rates of chronic depression, anxiety disorders, and insomnia.</p>
+            <p>The moderators, supported by UK justice non-profit <strong>Foxglove</strong>, are demanding <strong>$1.6 Billion in compensation and restitution</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: SCRIPT BLUEPRINT -->
+      <section id="tech-blueprint">
+        <h2 class="section-heading">
+          <span>6. Video Script Blueprint & 3-Act Structure</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-script-body')">Copy Script Blueprint</button>
+        </h2>
+        <div id="tech-script-body" class="storyboard-timeline">
+          
+          <div class="timeline-node">
+            <div class="timeline-time">ACT 1 • 00:00–02:30</div>
+            <div class="timeline-title">The Trap: False Promises & The 50-Second Death Clock</div>
+            <p><strong>Visual:</strong> Contrast glassy Silicon Valley skyscrapers with dim Nairobi offices. Introduce Kauna Malgwi and Mustafa Mukhtar leaving Nigeria for "translation" jobs. Signing 20-page NDAs. First day on screen: Boko Haram beheadings and pedophilia. The 50-second timer counting down.</p>
+          </div>
+
+          <div class="timeline-node warning">
+            <div class="timeline-time">ACT 2 • 02:30–06:00</div>
+            <div class="timeline-title">The Digital Sweatshop: $1.50 an Hour & In-House Gaslighting</div>
+            <p><strong>Visual:</strong> Pay stub graphics: $1.50/hr vs Meta's $1.5 Trillion market cap. The in-house therapists breaking down in tears. Expanding to OpenAI ChatGPT training and the murder of Professor Meareg Amare in Ethiopia. Psychiatric court report: 81% PTSD.</p>
+          </div>
+
+          <div class="timeline-node danger">
+            <div class="timeline-time">ACT 3 • 06:00–09:00</div>
+            <div class="timeline-title">The Reckoning: Courtroom Defeat of Mark Zuckerberg</div>
+            <p><strong>Visual:</strong> Sama fires 1,100 workers. Daniel Motaung and lawyer Mercy Mutemi stand on court steps in Nairobi. The landmark Court of Appeal ruling: Meta is NOT above African law. $1.6B restitution demand. Closing question: Whose mind was destroyed to keep our feeds clean?</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 7: PRIMARY SOURCES -->
+      <section id="tech-sources">
+        <h2 class="section-heading">
+          <span>7. Verifiable Primary Sources & Citations</span>
+          <button class="btn-copy-beat" onclick="copyElementText('tech-sources-body')">Copy Sources</button>
+        </h2>
+        <div id="tech-sources-body">
+          <ul style="padding-left: 20px; line-height: 1.8;">
+            <li><strong>HumAngle Media (Oct 8, 2026):</strong> <em>"Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</em> by HumAngle Investigations.</li>
+            <li><strong>Time Magazine (Jan 2023):</strong> <em>"OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"</em> by Billy Perrigo.</li>
+            <li><strong>Time Magazine (Feb 2022):</strong> <em>"Inside Facebook’s African Sweatshop"</em> by Billy Perrigo.</li>
+            <li><strong>Court of Appeal at Nairobi (Sept 2024):</strong> <em>Meta Platforms, Inc. & Meta Platforms Ireland Ltd v. Daniel Motaung & Others</em> (Civil Appeal No. E186 of 2023).</li>
+            <li><strong>Kenya Employment and Labour Relations Court (2022-2026):</strong> Petition No. E070 of 2022 (<em>Daniel Motaung v. Sama & Meta</em>).</li>
+            <li><strong>Foxglove Legal UK Archive:</strong> Case dossiers on African Content Moderators Union & Meta Kenya litigation.</li>
+          </ul>
+        </div>
+      </section>
+
     </main>
   </div>
 
   <!-- FOOTER -->
   <footer>
-    <p>Civic Lens Media Group (`@civiclensng`) • Forensic Political & Economic Intelligence</p>
+    <p>Civic Lens Media Group (`@civiclensng`) • Forensic Political & Corporate Intelligence</p>
     <p style="margin-top: 6px; font-size: 12px; color: var(--text-light);">
       All facts verified against primary judicial transcripts, corporate registries, and macroeconomic statistical bulletins.
     </p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- INTERACTIVE SCRIPT -->
   <script>
-    // READING PROGRESS BAR
     window.addEventListener('scroll', () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1205,7 +1406,6 @@
       document.getElementById('progress-bar').style.width = scrolled + '%';
     });
 
-    // SWITCH DOSSIERS
     function switchDossier(dossierId) {
       const tinubuCont = document.getElementById('dossier-tinubu-container');
       const techCont = document.getElementById('dossier-tech-container');
@@ -1223,9 +1423,9 @@
         btnTech.classList.add('active');
         btnTinubu.classList.remove('active');
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // THEME TOGGLE
     function toggleTheme() {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -1236,19 +1436,16 @@
       document.documentElement.setAttribute('data-theme', 'dark');
     }
 
-    // PLAIN TEXT MODE
     function togglePlainText() {
       document.body.classList.toggle('plain-text-mode');
     }
 
-    // FONT SIZE ADJUSTMENT
     let currentFontSize = 17;
     function changeFontSize(delta) {
       currentFontSize = Math.max(14, Math.min(24, currentFontSize + delta));
       document.body.style.fontSize = currentFontSize + 'px';
     }
 
-    // COPY HELPER
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {
         alert('Copied to clipboard!');
@@ -1262,11 +1459,10 @@
       }
     }
 
-    function copyFullText() {
-      copyElementText('dossier-tinubu-container');
+    function copyFullText(containerId) {
+      copyElementText(containerId);
     }
 
-    // SEARCH FILTER
     function filterContent() {
       const query = document.getElementById('searchInput').value.toLowerCase();
       const cards = document.querySelectorAll('.evidence-card, .timeline-node, .script-quote');
