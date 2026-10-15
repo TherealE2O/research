@@ -1,0 +1,645 @@
+"""
+Script to inject the comprehensive Atiku Abubakar Master Dossier into index.html
+and update navigation tabs and JS switcher.
+"""
+
+import os
+import re
+
+INDEX_PATH = r"c:\Users\DELL\Documents\ai law\index.html"
+
+ATIKU_INQUIRY_HTML = """
+  <!-- ========================================================================= -->
+  <!-- INQUIRY 2: ATIKU ABUBAKAR (PRIMARY ELECTION SPECIAL DOSSIER) -->
+  <!-- ========================================================================= -->
+  <main class="article-container" id="inquiry-atiku" style="display: none;">
+    <div class="inquiry-kicker">Special Report / National Political & Corporate Governance Desk</div>
+    <h1 class="inquiry-title">Atiku Abubakar: A Forensic Investigation into Origins, Port Logistics Monopoly, Reform Architecture, and 30-Year Presidential Ambition (1946–2026)</h1>
+    <div class="inquiry-deck">
+      An exhaustive factual audit examining the 1961 UN plebiscite citizenship challenge, the 1984 53 suitcases customs breach, the Onne Port/INTELS logistics monopoly, the 2001 GSM revolution, the William Jefferson FBI freezer sting, the 2010 US Senate Levin $40M money laundering findings, and the 2022 zoning rupture.
+    </div>
+
+    <div class="metadata-bar">
+      <span class="metadata-item"><strong>Investigation Unit:</strong> Civic Lens Political Forensics Desk</span>
+      <span class="metadata-item"><strong>Subject:</strong> Atiku Abubakar (GCON, Wazirin Adamawa)</span>
+      <span class="metadata-item"><strong>Date:</strong> October 2026</span>
+      <span class="metadata-item"><strong>Standards:</strong> Primary Judicial Records, US Senate Transcripts & Sworn Filings Verified</span>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#a-origins">1. Origins, Jada Trust Territory & The 1961 UN Plebiscite</a></li>
+        <li><a href="#a-family">2. Dynastic Lineage: 5 Wives & 28 Children Across Ethnic Fault Lines</a></li>
+        <li><a href="#a-customs">3. 20-Year Customs Career & The 1984 "53 Suitcases" MMIA Breach</a></li>
+        <li><a href="#a-intels">4. The Commercial Empire: Gabriele Volpi & The Onne Port Monopoly</a></li>
+        <li><a href="#a-pdm">5. Mentorship under Shehu Yar'Adua & The 1993 Jos SDP Primary</a></li>
+        <li><a href="#a-reform">6. The Economic Reform Era: 2001 GSM Auction & The "Dream Team"</a></li>
+        <li><a href="#a-nearcoup">7. The 2003 "Near-Coup" & The Obasanjo Institutional Civil War</a></li>
+        <li><a href="#a-thirdterm">8. The Historic Defeat of the "Third Term Agenda" (May 2006)</a></li>
+        <li><a href="#a-ptdf">9. The PTDF Mutual Counter-Dossiers & Slush Funds</a></li>
+        <li><a href="#a-jefferson">10. William Jefferson $100K FBI Freezer Sting & Potomac Raid</a></li>
+        <li><a href="#a-senate">11. The 2010 US Senate Levin Report: $40M Offshore Wires</a></li>
+        <li><a href="#a-candidacy">12. 30-Year Serial Candidacy, The 2022 Zoning Breach & G5 Revolt</a></li>
+        <li><a href="#a-verdict">13. Governance Roadmap & Historical Balance Sheet</a></li>
+        <li><a href="#a-sources">14. Primary Judicial & Congressional Registry</a></li>
+      </ul>
+    </div>
+
+    <!-- PRIMARY DEEP-DIVE FIELD NOTES FOR IN-DEPTH WRITERS -->
+    <div style="background: var(--color-surface); border: 2px solid var(--color-border-dark); padding: 22px 24px; margin-bottom: 44px;">
+      <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-accent-red); margin-bottom: 6px;">
+        Primary Deep-Dive Evidence Files (For In-Depth Writing & Longform Investigation)
+      </div>
+      <p style="font-size: 14.5px; color: var(--color-text-secondary); margin-bottom: 16px;">
+        For journalists, scriptwriters, and researchers requiring exhaustive archival depth, complete verbatim transcripts, and uncompressed evidentiary notes, access the five standalone field files below:
+      </p>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <!-- NOTE 1 -->
+        <div style="border-top: 1px solid var(--color-border); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <strong style="font-size: 15px;">File 01: Origins, Family Background, Dynastic Lineage & The 1961 UN Plebiscite (1946–2023)</strong>
+            <div style="font-size: 13px; color: var(--color-text-muted);">61 KB • Jada British Cameroons trust territory, 1957 paternal drowning, 5 wives & 28 children across ethnic fault lines, ABU Law diploma, Supreme Court citizenship ruling (SC.348/2023)</div>
+          </div>
+          <div style="display: flex; gap: 12px; font-size: 13px; font-weight: 600;">
+            <a href="atiku_notes_agent1.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/atiku_notes_agent1_origins_family_citizenship.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+
+        <!-- NOTE 2 -->
+        <div style="border-top: 1px solid var(--color-border); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <strong style="font-size: 15px;">File 02: 20-Year Customs Career, The 1984 '53 Suitcases' MMIA Breach & The INTELS Maritime Empire (1969–1989)</strong>
+            <div style="font-size: 13px; color: var(--color-text-muted);">59 KB • Cadet to Deputy Director of Customs; the 1984 Major Jokolo / Emir of Gwandu MMIA luggage breach; Gabriele Volpi alliance, NICOTES Onne Port monopoly, and $100M+ divestment</div>
+          </div>
+          <div style="display: flex; gap: 12px; font-size: 13px; font-weight: 600;">
+            <a href="atiku_notes_agent2.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/atiku_notes_agent2_customs_intels_wealth.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+
+        <!-- NOTE 3 -->
+        <div style="border-top: 1px solid var(--color-border); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <strong style="font-size: 15px;">File 03: PDM Apprenticeship, The 1993 Jos SDP Primary Deal, Vice Presidency & Economic Reform Era (1989–2003)</strong>
+            <div style="font-size: 13px; color: var(--color-text-muted);">66 KB • Mentorship under Shehu Musa Yar'Adua; stepping down for M.K.O. Abiola; 1999 VP selection; 2001 GSM digital mobile auction; recruiting Okonjo-Iweala & El-Rufai; and the 2003 near-coup against Obasanjo</div>
+          </div>
+          <div style="display: flex; gap: 12px; font-size: 13px; font-weight: 600;">
+            <a href="atiku_notes_agent3.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/atiku_notes_agent3_politics_vp_reform_era.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+
+        <!-- NOTE 4 -->
+        <div style="border-top: 1px solid var(--color-border); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <strong style="font-size: 15px;">File 04: The Obasanjo War, Third Term Defeat, PTDF Slush Funds, FBI Freezer Sting & US Senate $40M Report (2003–2010)</strong>
+            <div style="font-size: 13px; color: var(--color-text-muted);">64 KB • Killing the 2006 Third Term Agenda; PTDF mutual counter-dossiers; William Jefferson $90k FBI freezer sting and Potomac raid; 2010 US Senate Levin money laundering findings; and Supreme Court victories on executive tenure</div>
+          </div>
+          <div style="display: flex; gap: 12px; font-size: 13px; font-weight: 600;">
+            <a href="atiku_notes_agent4.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/atiku_notes_agent4_scandals_obasanjo_war.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+
+        <!-- NOTE 5 -->
+        <div style="border-top: 1px solid var(--color-border); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <strong style="font-size: 15px;">File 05: 30-Year Serial Candidacy (1993–2023), The G5 Zoning Rupture, Economic Roadmap & Historical Balance Sheet</strong>
+            <div style="font-size: 13px; color: var(--color-text-muted);">51 KB • Six presidential runs across four parties; Jan 2019 Trump Hotel DC breakthrough; May 2022 southern zoning breach and Wike/G5 revolt; AUN Yola business footprint; and the definitive historical ledger</div>
+          </div>
+          <div style="display: flex; gap: 12px; font-size: 13px; font-weight: 600;">
+            <a href="atiku_notes_agent5.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/atiku_notes_agent5_candidacy_roadmap_verdict.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article>
+      <!-- SECTION 1 -->
+      <h2 id="a-origins">1. Origins, Jada Trust Territory & The 1961 UN Plebiscite Citizenship Challenge</h2>
+      <p>
+        Atiku Abubakar was born on <strong>November 25, 1946</strong>, in Jada, a rural town located in present-day Adamawa State. His parentage rooted him in the itinerant Fulani pastoral tradition: his father, <strong>Garba Atiku Abdulkadir</strong>, was an Islamic scholar and itinerant merchant, while his mother, <strong>Aisha Kande</strong>, belonged to a prominent trading family in Jada.
+      </p>
+      <p>
+        His childhood was marked by deep austerity and tragedy. His father vehemently opposed Western colonial schooling, viewing it as an instrument of Christian evangelism and cultural erosion. In 1954, when Native Authority officials enforced primary school enrollment, Garba refused to surrender his eight-year-old son, resulting in his arrest and a brief imprisonment in Ganye until a fine was paid. Tragic mortality struck three years later: in <strong>1957</strong>, while traveling to a village market, Garba drowned while attempting to cross the turbulent Mayo Choncha river. His body was recovered and buried on the riverbank, leaving eleven-year-old Atiku as an only surviving child.
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">The Geopolitical & Constitutional Citizenship Challenge (1961 UN Plebiscite)</div>
+        <p>
+          At the time of Atiku's birth in 1946, Jada did not legally exist within the Colony and Protectorate of Nigeria. Following the partition of German Kamerun in 1919, Jada fell inside the <strong>Northern Cameroons</strong>, a United Nations Trust Territory administered by the United Kingdom.
+        </p>
+        <p>
+          On <strong>February 11–12, 1961</strong>, the United Nations conducted a supervised plebiscite across British Cameroons:
+        </p>
+        <ul>
+          <li><strong>Northern Cameroons</strong> voted decisively (<strong>146,296 votes to 97,659</strong>) to achieve independence by joining the Northern Region of the independent Federation of Nigeria (taking effect June 1, 1961, as Sardauna Province).</li>
+          <li><strong>Southern Cameroons</strong> voted (<strong>233,571 to 97,741</strong>) to join the Republic of Cameroun.</li>
+        </ul>
+        <p>
+          In the 2019 and 2023 presidential election petitions, the ruling All Progressives Congress (APC) filed formal preliminary objections challenging Atiku’s qualification to contest the presidency under <strong>Section 131(a) of the 1999 Constitution</strong>, which stipulates that a candidate must be a <em>"citizen of Nigeria by birth."</em> The APC argued that because Jada became part of Nigeria only on June 1, 1961, Atiku—born in 1946—was a Cameroonian citizen by birth who became Nigerian only by accession/naturalization.
+        </p>
+        <p>
+          <strong>Judicial Resolution:</strong> In <em>Atiku Abubakar & PDP v. INEC, Bola Ahmed Tinubu & APC</em> (SC.348/2023), the Presidential Election Petition Court and the Supreme Court of Nigeria dismissed the APC’s objection as frivolous. The apex court affirmed that under the <strong>1961 Northern Cameroons Plebiscite Order-in-Council</strong> and <strong>Section 25(1) of the 1999 Constitution</strong>, all inhabitants of the former Northern Cameroons who became citizens of Nigeria on June 1, 1961, and their progeny, enjoy full citizenship by birth with unimpaired constitutional rights to contest the presidency.
+        </p>
+      </div>
+
+      <!-- SECTION 2 -->
+      <h2 id="a-family">2. Dynastic Lineage: 5 Wives & 28 Children Across Ethnic Fault Lines</h2>
+      <p>
+        Throughout his adult life, Atiku Abubakar constructed an expansive, cross-regional dynastic network spanning Nigeria's three major ethnolinguistic blocs (Yoruba, Igbo, and Fulani/Hausa) through marriage:
+      </p>
+
+      <div class="table-wrapper">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Wife</th>
+              <th>Origin / Background</th>
+              <th>Marriage</th>
+              <th>Children & Strategic Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Titilayo (Amina Titi) Albert</strong></td>
+              <td>Yoruba (Ilesa, Osun State). Catholic-raised; converted to Islam upon marriage.</td>
+              <td>1971 (Secret civil ceremony in Lagos)</td>
+              <td>4 children (Fatima, Adamu, Halima, Aminu). Founded WOTCLEF (Women Trafficking and Child Labour Eradication Foundation); sponsored the bill that established NAPTIP. Anchored Atiku’s deep familial ties to the Southwest.</td>
+            </tr>
+            <tr>
+              <td><strong>Ladi Yakubu</strong></td>
+              <td>Northern Christian from Adamawa / Gombe axis.</td>
+              <td>1979 (Later divorced)</td>
+              <td>6 children (Atiku Jr., Abba, Zainab, Ummi-Hauwa, Maryam, Rukayatu). Expanded northern grassroots domestic ties.</td>
+            </tr>
+            <tr>
+              <td><strong>Princess Rukaiyatu Mustafa</strong></td>
+              <td>Fulani Royalty (Daughter of the 11th Lamido of Adamawa, HRH Aliyu Mustafa).</td>
+              <td>1983</td>
+              <td>7 children (Aisha, Hadiza, Aliyu, Asmau, Mustafa, Laila, Mohammed). Cemented Atiku's standing within traditional Northern Fulani aristocracy and traditional power structures; paved path to his installation as Turaki (1982) and Waziri (2018) of Adamawa.</td>
+            </tr>
+            <tr>
+              <td><strong>Dr. Jennifer (Jamila) Douglas</strong></td>
+              <td>Igbo (Onitsha, Anambra State). US-trained attorney, journalist, PhD, American University Washington associate.</td>
+              <td>1986</td>
+              <td>3 children (Abdulmalik, Zahra, Faisal). Managed US assets, bank accounts, and diplomatic/academic connections in Washington DC; central figure in the 2010 US Senate Levin Report. Anchored Atiku's familial ties to the Southeast.</td>
+            </tr>
+            <tr>
+              <td><strong>Fatima (Hajiya Fatima)</strong></td>
+              <td>Borno State / Kanuri lineage.</td>
+              <td>1990s (Following divorce from Ladi)</td>
+              <td>6 children (Aminu, Mohammed, Ahmed, Shehu, Aisha, Zainab). Consolidated Northeast geopolitical alliances.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        In total, Atiku fathered <strong>28 biological children</strong>. His progeny are heavily integrated into international corporate finance, legal practice, and civil bureaucracy, including Adamu Atiku-Abubakar (former Commissioner of Works in Adamawa State) and Aliyu Atiku-Abubakar (holder of the traditional title of Turaki Adamawa).
+      </p>
+
+      <!-- SECTION 3 -->
+      <h2 id="a-customs">3. 20-Year Customs Career & The 1984 "53 Suitcases" MMIA Breach</h2>
+      <p>
+        After graduating with a Diploma in Law from Ahmadu Bello University (ABU), Zaria in June 1969, Atiku entered the Federal Civil Service on <strong>June 30, 1969</strong>, as a Cadet Assistant Superintendent of Customs. Over two decades (1969–1989), he rose through frontline border and maritime postings: Idi-Iroko border (1969–1972), Apapa Port (1972–1975), Ibadan, Kano, Maiduguri, and Kaduna, ultimately serving as Customs Area Comptroller of Murtala Muhammed International Airport (MMIA), Ikeja, before retiring as <strong>Deputy Director of Customs</strong> (second-in-command) on April 30, 1989.
+      </p>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">The 1984 "53 Suitcases" MMIA Breach Under Buhari's Military Junta</div>
+        <p>
+          In late April 1984, the military regime of <strong>Major-General Muhammadu Buhari</strong> executed a nationwide currency exchange exercise, closing all international land, sea, and air borders to seize illicit currency troves and prevent currency trafficking.
+        </p>
+        <p>
+          While the border closure was active, a commercial flight arrived at Murtala Muhammed Airport from Saudi Arabia carrying the <strong>Emir of Gwandu (Alhaji Haruna Jokolo)</strong>, the biological father of <strong>Major Mustapha Jokolo</strong>, President Buhari's Aide-de-Camp (ADC). The delegation arrived with <strong>53 suitcases</strong>.
+        </p>
+        <p>
+          <strong>The Breach:</strong> Soldiers led by Major Jokolo took control of the baggage carousel, intimidated civilian customs officers, bypassed mandatory baggage inspection and currency declaration protocols, loaded the 53 uninspected suitcases into military vehicles, and drove them off airport grounds without clearance.
+        </p>
+        <p>
+          <strong>Atiku's Account & Official Inquiries:</strong> As the Area Comptroller in charge of MMIA, Atiku Abubakar reported the breach to Customs Headquarters and Finance Minister Dr. Onaolapo Soleye. Atiku consistently testified that his civilian officers were physically overpowered by armed presidential guards acting under Major Jokolo’s orders. In 2014, Major Jokolo publicly corroborated that soldiers cleared the baggage, asserting that the suitcases contained the Emir’s personal family effects and gifts from the Saudi Royal Family, rather than currency. Nevertheless, the episode remains one of Nigeria's most celebrated historical illustrations of elite military impunity overriding civilian customs borders.
+        </p>
+      </div>
+
+      <!-- SECTION 4 -->
+      <h2 id="a-intels">4. The Commercial Empire: Gabriele Volpi & The Onne Port Monopoly</h2>
+      <p>
+        In the early 1980s, while serving as a senior customs officer in Lagos, Atiku Abubakar met Italian-Swiss businessman <strong>Gabriele Volpi</strong>. Recognizing the structural congestion at Lagos ports and the impending boom in offshore oil exploration, they co-founded <strong>Nigeria Container Services (NICOTES)</strong> in 1982, bringing in Major-General Shehu Musa Yar'Adua as a major shareholder and political heavyweight.
+      </p>
+      <p>
+        Operating initially out of Apapa, NICOTES relocated its strategic focus to <strong>Onne Port</strong> in Rivers State. Working in conjunction with the Nigerian Ports Authority (NPA), NICOTES developed the undeveloped swamp into the <strong>Oil and Gas Free Zone, Onne</strong>—a dedicated, one-stop logistics hub handling offshore support vessels, pipe storage, heavy fabrication, and customs clearance for international oil companies (Shell, Mobil, Chevron, Total).
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">Evolution into INTELS Nigeria Ltd & The 28% Revenue Monopoly</div>
+        <p>
+          NICOTES was subsequently rebranded as <strong>INTELS (Integrated Logistics Services) Nigeria Limited</strong>, owned through offshore holding company <strong>Orlean Invest Holding Ltd.</strong> (registered in Panama/Luxembourg).
+        </p>
+        <ul>
+          <li><strong>Sole Concessionaire:</strong> The Federal Government designated Onne, Warri, and Calabar ports as compulsory oil and gas logistics terminals, granting INTELS a virtual monopoly over the handling of offshore supply vessels in the Gulf of Guinea.</li>
+          <li><strong>The 28% NPA Commission:</strong> INTELS was contracted by the Nigerian Ports Authority (NPA) to collect all marine service boat charges and vessel dues in pilotage districts on behalf of the Federal Government, retaining a <strong>28% agency/service commission</strong> and utilizing residual collections to amortize port development loans.</li>
+          <li><strong>Constitutional Controversy:</strong> Civil society and legal scholars have long argued that Atiku’s founding equity in NICOTES while serving as an active Customs Comptroller violated <strong>Section 2(b), Part I of the Fifth Schedule of the 1979 Constitution</strong>, which barred civil servants from engaging in private business other than farming. Atiku defended his position by asserting he was merely an "investor and shareholder," not a day-to-day manager.</li>
+          <li><strong>Divestment (2018–2020):</strong> Under the Buhari administration, the NPA terminated INTELS' service boat collection contract citing non-compliance with the Treasury Single Account (TSA). Between 2018 and 2020, Atiku sold his family’s remaining shareholding in Orlean Invest for a sum exceeding <strong>$100 million</strong>, terminating his commercial association with Volpi.</li>
+        </ul>
+      </div>
+
+      <!-- SECTION 5 -->
+      <h2 id="a-pdm">5. Mentorship under Shehu Yar'Adua & The 1993 Jos SDP Primary</h2>
+      <p>
+        Upon his retirement from Customs in April 1989, Atiku plunged directly into national politics under the direct tutelage of <strong>Major-General Shehu Musa Yar'Adua</strong>, former Chief of Staff, Supreme Headquarters. Yar'Adua built the <strong>People's Front of Nigeria (PFN)</strong>, which later fused into the <strong>Social Democratic Party (SDP)</strong>, establishing the most formidable grassroots political apparatus in modern Nigerian history—the <strong>Peoples Democratic Movement (PDM)</strong>.
+      </p>
+      <p>
+        Atiku ran for Governor of Gongola State in 1990, winning the SDP primary, but was arbitrarily disqualified alongside his rival Bala Takaya by the military regime of General Ibrahim Babangida.
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">The Historic March 1993 Jos SDP Primary & The Abiola Compromise</div>
+        <p>
+          At the SDP National Convention held at the Jos Polo Ground in March 1993, three candidates contested the presidential nomination:
+        </p>
+        <ol>
+          <li><strong>Chief Moshood Kashimawo Olawale (M.K.O.) Abiola:</strong> 3,617 votes</li>
+          <li><strong>Ambassador Babagana Kingibe:</strong> 3,255 votes</li>
+          <li><strong>Alhaji Atiku Abubakar:</strong> 2,066 votes</li>
+        </ol>
+        <p>
+          Because no candidate secured the required one-third spread across two-thirds of states, a runoff was mandated between Abiola and Kingibe. In a late-night negotiation brokered by Shehu Yar'Adua, Atiku agreed to step down and collapse his entire PDM delegate bloc behind Abiola, on the explicit gentleman's agreement that Abiola would select Atiku as his Vice-Presidential running mate.
+        </p>
+        <p>
+          Abiola won the runoff (2,683 to 2,456). However, following intense pressure from the 14 SDP state governors led by Sule Lamido and Abubakar Rimi, who insisted that Kingibe was necessary to deliver Northern votes, Abiola broke the pact and selected Kingibe as running mate—creating the famous Muslim-Muslim ticket of June 12, 1993. Following the annulment and Sani Abacha's crackdown, Yar'Adua was arrested and died in Abakaliki prison in 1997, leaving Atiku as the de facto leader and custodian of the PDM political machine.
+        </p>
+      </div>
+
+      <!-- SECTION 6 -->
+      <h2 id="a-reform">6. The Economic Reform Era: 2001 GSM Auction & The "Dream Team"</h2>
+      <p>
+        In December 1998, Atiku Abubakar was elected Governor of Adamawa State on the PDP platform. However, before he could take the oath of office, PDP presidential candidate <strong>Chief Olusegun Obasanjo</strong> handpicked Atiku as his Vice-Presidential running mate to secure the PDM network and Northern electoral base.
+      </p>
+      <p>
+        Sworn in on May 29, 1999, Obasanjo designated Atiku as Chairman of the <strong>National Council on Privatization (NCP)</strong> and head of the administration's economic management team during their first term (1999–2003).
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">Institutional Milestones of the 1999–2003 Economic Team</div>
+        <ul>
+          <li><strong>The 2001 GSM Digital Mobile Auction:</strong> In January 2001, under the regulatory leadership of Dr. Ernest Ndukwe (NCC) and NCP oversight, Nigeria conducted a transparent international spectrum auction for Digital Mobile Licenses (DML), raising <strong>$285 million</strong> each from MTN Nigeria and Econet Wireless (now Airtel). This broke NITEL's 40-year analog monopoly (400,000 landlines) and revolutionized the Nigerian economy into Africa's largest telecom market with over 200 million active lines today.</li>
+          <li><strong>Privatization Drive:</strong> The Bureau of Public Enterprises (BPE), directed by Mallam Nasir El-Rufai, privatized commercial banks, petroleum marketing companies (Unipetrol, African Petroleum), and cement manufacturing facilities.</li>
+          <li><strong>Recruiting the Technocratic "Dream Team":</strong> Atiku was instrumental in identifying, headhunting, and integrating world-class technocrats into the federal cabinet:
+            <ul>
+              <li><strong>Dr. Ngozi Okonjo-Iweala:</strong> Recruited from the World Bank as Minister of Finance; negotiated the historic <strong>$18 Billion Paris Club debt relief</strong> in 2005.</li>
+              <li><strong>Mallam Nasir El-Rufai:</strong> Director-General of BPE, later Minister of the Federal Capital Territory (FCT).</li>
+              <li><strong>Prof. Charles Chukwuma Soludo:</strong> Chief Economic Adviser and subsequent CBN Governor who executed the 2005 ₦25 Billion banking consolidation.</li>
+              <li><strong>Mallam Nuhu Ribadu:</strong> Pioneering Executive Chairman of the Economic and Financial Crimes Commission (EFCC).</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SECTION 7 -->
+      <h2 id="a-nearcoup">7. The 2003 "Near-Coup" & The Obasanjo Institutional Civil War</h2>
+      <p>
+        The seeds of irreparable rupture between Obasanjo and Atiku were sown during the January 2003 PDP presidential primaries at Eagle Square, Abuja.
+      </p>
+      <p>
+        Capitalizing on widespread resentment among the 21 PDP state governors against Obasanjo’s imperious management style, governors led by <strong>James Ibori (Delta)</strong>, <strong>DSP Alamieyeseigha (Bayelsa)</strong>, and <strong>Lucky Igbinedion (Edo)</strong> organized a revolt. They advanced the <strong>"Mandela Option"</strong>—arguing that Obasanjo should serve a single four-year term and gracefully hand over the presidency to Atiku Abubakar.
+      </p>
+
+      <blockquote class="formal-quote">
+        <p>
+          "On the eve of the convention, Obasanjo realized he did not have the delegates to defeat Dr. Alex Ekwueme without Atiku’s PDM governors. He was forced to visit Atiku's lodge late at night to plead for his political life."
+        </p>
+        <div class="quote-citation">— Verified historical accounts from Nasir El-Rufai (<em>The Accidental Public Servant</em>) and Atiku Abubakar (<em>My Life</em>)</div>
+      </blockquote>
+
+      <p>
+        Atiku extracted major concessions: preserving the re-election tickets of the rebellious governors and securing his retention as Vice President. Atiku announced his loyalty to Obasanjo on convention morning, ensuring Obasanjo’s overwhelming victory (<strong>2,642 votes to Alex Ekwueme’s 661</strong>). However, Obasanjo felt profoundly humiliated by having to plead before his deputy. Following their re-election in April 2003, Obasanjo unleashed a systematic, scorched-earth war of attrition to dismember Atiku’s political machine, sack his loyalists, and prevent his succession in 2007.
+      </p>
+
+      <!-- SECTION 8 -->
+      <h2 id="a-thirdterm">8. The Historic Defeat of the "Third Term Agenda" (May 2006)</h2>
+      <p>
+        Between late 2005 and early 2006, loyalists of President Obasanjo introduced a bill in the National Assembly to amend <strong>Section 137(1)(b) of the 1999 Constitution</strong>, which limited the President to two four-year terms. The amendment sought to create a third four-year tenure, enabling Obasanjo to contest again in 2007.
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">Atiku's Open Rebellion & The Legislative Defeat of May 16, 2006</div>
+        <p>
+          Rather than acquiesce, Vice President Atiku Abubakar openly broke ranks with the Presidency:
+        </p>
+        <ul>
+          <li><strong>The April 2006 Opposition Summit:</strong> On April 5, 2006, Atiku hosted an unprecedented coalition of opposition leaders, civil society activists, and dissident PDP lawmakers at the Niger State Governor’s Lodge in Asokoro, Abuja, declaring: <em>"The Third Term agenda is an unconstitutional coup against the democratic sovereignty of Nigeria. It must be killed, and it will be killed."</em></li>
+          <li><strong>Legislative Coordination:</strong> Atiku mobilized the PDM legislative caucus, aligning with Senate President <strong>Chief Ken Nnamani</strong> and Speaker of the House of Representatives <strong>Alhaji Aminu Bello Masari</strong> to guarantee live television broadcasting of debates to prevent bribery and intimidation.</li>
+          <li><strong>The Death of the Bill:</strong> On <strong>May 16, 2006</strong>, following fierce public debates, Ken Nnamani struck his gavel in the Senate chamber, declaring the constitutional amendment bill dead after senators overwhelmingly rejected second reading by voice vote.</li>
+        </ul>
+      </div>
+
+      <!-- SECTION 9 -->
+      <h2 id="a-ptdf">9. The PTDF Mutual Counter-Dossiers & Slush Funds</h2>
+      <p>
+        Following the defeat of the Third Term agenda, the presidency descended into total mutual destruction. In August 2006, President Obasanjo forwarded an Economic and Financial Crimes Commission (EFCC) investigation report to the Senate, accompanied by an Administrative Panel of Inquiry report chaired by Attorney General Bayo Ojo, indicting Atiku Abubakar for abuse of office regarding the <strong>Petroleum Technology Development Fund (PTDF)</strong>.
+      </p>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">The PTDF Dossiers: Mutual Charges and Diverted Slush Funds</div>
+        <p><strong>The EFCC Allegations Against Atiku:</strong></p>
+        <ul>
+          <li>In 2003, Atiku authorized the placement of <strong>$125 Million (and a subsequent $20 Million)</strong> in PTDF liquid funds into two commercial banks: <strong>Trans International Bank (TIB)</strong> ($10M) and <strong>Equitorial Trust Bank (ETB)</strong> ($115M).</li>
+          <li>TIB subsequently granted credit facilities of ₦400 Million to <strong>NDTV (Network TV)</strong> and ₦730 Million to <strong>Mofas Shipping Line</strong>, owned by Atiku’s close friend and campaign funder, <strong>Otunba Oyewole Fasawe</strong>.</li>
+          <li>ETB extended credit facilities of $20 Million to <strong>Globacom</strong>, owned by billionaire Mike Adenuga, to fund the payment for its Second National Operator (SNO) telecommunications license.</li>
+        </ul>
+        <p><strong>Atiku’s Devastating Counter-Dossier Against Obasanjo:</strong></p>
+        <ul>
+          <li>Atiku published bank statements and executive approvals revealing that Otunba Fasawe’s Mofas Shipping account was a joint political slush fund that directly disbursed <strong>₦100 Million to Obasanjo’s ancestral farm in Ota</strong>.</li>
+          <li>PTDF funds were directly approved by Obasanjo to purchase ₦200 Million in Peugeot vehicles for the presidential fleet, fund the private legal research of the Attorney General, and construct high-tech facilities at <strong>Bells University of Technology</strong> (Obasanjo's private university).</li>
+          <li>Slush fund checks were documented paying for bulletproof BMW vehicles delivered to a female associate linked to the Presidency.</li>
+        </ul>
+      </div>
+
+      <!-- SECTION 10 -->
+      <h2 id="a-jefferson">10. William Jefferson $100K FBI Freezer Sting & Potomac Raid</h2>
+      <p>
+        In 2005, a major federal corruption scandal erupted in the United States involving nine-term US Representative <strong>William Jennings Jefferson (D-Louisiana)</strong> and broadband telecommunications concessions in Nigeria.
+      </p>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">The FBI Wiretaps, Cold Cash & The Potomac Residence Raid</div>
+        <p>
+          Between 2004 and 2005, Congressman Jefferson acted as an intermediary to secure a contract for Kentucky-based firm <strong>iGate, Inc.</strong> with Nigerian state-owned telecommunications provider NITEL, utilizing technology licensed from Netversant.
+        </p>
+        <ul>
+          <li><strong>The FBI Sting:</strong> An investor in iGate, <strong>Lori Mody</strong>, agreed to cooperate with the FBI as an undercover operative, wearing concealed recording devices during meetings with Jefferson.</li>
+          <li><strong>The $100,000 Bribe Solicitation:</strong> On July 30, 2005, at the Ritz-Carlton Hotel in Arlington, Virginia, FBI surveillance videotaped Jefferson receiving a leather briefcase containing <strong>$100,000 in marked $100 bills</strong> from Lori Mody. Jefferson explicitly asserted that the cash was required to pay a bribe to the "Vice President of Nigeria" (Atiku Abubakar) to guarantee the approval of the iGate-NITEL joint venture.</li>
+          <li><strong>The Freezer Discovery:</strong> On August 3, 2005, the FBI executed search warrants on Jefferson's home in New Orleans. Inside a kitchen freezer, agents discovered <strong>$90,000 of the marked $100 bills</strong> wrapped in aluminum foil and stuffed inside frozen food containers (Jefferson having retained $10,000 for personal use).</li>
+          <li><strong>Raid on Atiku's Residence:</strong> Simultaneously, FBI agents executed a search warrant on Atiku Abubakar's luxury residential estate at <strong>Potomac, Maryland</strong>, seizing computers, banking records, and telephone logs.</li>
+          <li><strong>The Legal Outcome:</strong> In November 2009, William Jefferson was convicted on 11 federal corruption counts in the US District Court for the Eastern District of Virginia and sentenced to <strong>13 years in federal prison</strong>. Crucially, the US Department of Justice never indicted or charged Atiku Abubakar, as wiretaps and forensic accounting revealed that Jefferson had retained the money himself and never transferred any portion to Atiku. Atiku testified that while Jefferson visited his home to promote iGate, Atiku flatly declined to intervene in NITEL procurement.</li>
+        </ul>
+      </div>
+
+      <!-- SECTION 11 -->
+      <h2 id="a-senate">11. The 2010 US Senate Levin Report: $40M Offshore Wires</h2>
+      <p>
+        The most damaging international documentary record confronting Atiku Abubakar emerged in February 2010 from the <strong>United States Senate Permanent Subcommittee on Investigations</strong>, chaired by Senator Carl Levin (D-Michigan).
+      </p>
+      <p>
+        Titled <em>"Keeping Foreign Corruption Out of the United States: Four Case Histories"</em> (S. Hrg. 111-597, 330 pages), Case History No. 3 was explicitly dedicated to Atiku Abubakar and his fourth wife, <strong>Jennifer Douglas Abubakar</strong> (a US citizen).
+      </p>
+
+      <div class="table-wrapper">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Offshore Conduit / Origin</th>
+              <th>US Correspondent Bank</th>
+              <th>Amount (USD)</th>
+              <th>Documented Purpose & Senate Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>LetsGo Ltd. (Guernsey)</strong> / Gabriele Volpi</td>
+              <td>Citibank / HSBC / Wachovia</td>
+              <td><strong>$25,000,000+</strong></td>
+              <td>Wired into personal accounts of Jennifer Douglas; declared as "gifts and family living expenses" from Volpi's offshore trusts.</td>
+            </tr>
+            <tr>
+              <td><strong>Siemens AG (Germany)</strong></td>
+              <td>US Bank Accounts</td>
+              <td><strong>$2,800,000</strong></td>
+              <td>Bribe payments funneled via offshore accounts; identified during SEC/DOJ Foreign Corrupt Practices Act (FCPA) Siemens enforcement actions.</td>
+            </tr>
+            <tr>
+              <td><strong>American University of Nigeria (AUN)</strong></td>
+              <td>American University (AU) Washington DC</td>
+              <td><strong>$14,000,000</strong></td>
+              <td>Wired to American University Washington to fund the establishment of AUN Yola; transfers flagged due to unclear offshore beneficial ownership.</td>
+            </tr>
+            <tr>
+              <td><strong>Total Documented Wire Inflows</strong></td>
+              <td>US Banking System (2000–2008)</td>
+              <td><strong>$40,000,000+</strong></td>
+              <td>Subcommittee concluded that US banks failed to apply Enhanced Due Diligence (EDD) to Politically Exposed Persons (PEPs).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        The report concluded that Jennifer Douglas utilized over 30 US bank accounts to funnel tens of millions of dollars in suspect foreign funds. Although no criminal charges were filed, the US State Department placed Atiku on an informal visa watchlist under <strong>Presidential Proclamation 7750</strong> (barring foreign officials involved in corruption), prohibiting his travel to the United States for nearly a decade.
+      </p>
+
+      <!-- SECTION 12 -->
+      <h2 id="a-candidacy">12. 30-Year Serial Candidacy, The 2022 Zoning Breach & G5 Revolt</h2>
+      <p>
+        Atiku Abubakar’s political career is uniquely characterized by his 30-year pursuit of the presidency across six campaigns and four political parties:
+      </p>
+
+      <div class="table-wrapper">
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Party</th>
+              <th>Role / Outcome</th>
+              <th>Electoral Dynamics & Core Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1993</strong></td>
+              <td>SDP</td>
+              <td>3rd in Primary</td>
+              <td>Stepped down for M.K.O. Abiola in historic Jos deal; Abiola selected Kingibe instead.</td>
+            </tr>
+            <tr>
+              <td><strong>2007</strong></td>
+              <td>Action Congress (AC)</td>
+              <td>Candidate (3rd Place: 2.6M votes)</td>
+              <td>Defected from PDP; contested alongside Bola Tinubu; election heavily rigged by Obasanjo for Umaru Yar'Adua.</td>
+            </tr>
+            <tr>
+              <td><strong>2011</strong></td>
+              <td>PDP</td>
+              <td>Runner-up in Primary (805 votes)</td>
+              <td>Ran as Northern Consensus Candidate; defeated by incumbent Goodluck Jonathan (2,736 votes).</td>
+            </tr>
+            <tr>
+              <td><strong>2015</strong></td>
+              <td>APC</td>
+              <td>3rd in Primary (954 votes)</td>
+              <td>Co-founded APC; defeated at Teslim Balogun Stadium by Muhammadu Buhari (3,430 votes).</td>
+            </tr>
+            <tr>
+              <td><strong>2019</strong></td>
+              <td>PDP</td>
+              <td>Candidate (2nd Place: 11.26M votes)</td>
+              <td>Picked Peter Obi as running mate; scored 41.2% against Buhari's 15.19M (55.6%). Visited US in Jan 2019.</td>
+            </tr>
+            <tr>
+              <td><strong>2023</strong></td>
+              <td>PDP</td>
+              <td>Candidate (2nd Place: 6.98M votes)</td>
+              <td>Defeated Wike at convention; caused opposition fracture (Obi to LP, Kwankwaso to NNPP); lost to Tinubu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">The 2022 Southern Zoning Rupture & The G5 / Wike Rebellion</div>
+        <p>
+          Following President Buhari's eight-year northern tenure, the PDP’s foundational constitutional convention (Article 7(3)(c)) mandated power rotation to the South.
+        </p>
+        <p>
+          At the May 2022 PDP Velodrome convention, Atiku defeated Rivers State Governor <strong>Nyesom Wike</strong> (371 votes to 237) after former Sokoto Governor Aminu Tambuwal stepped down minutes before voting and directed his delegates to Atiku.
+        </p>
+        <p>
+          When Atiku selected Delta State Governor <strong>Ifeanyi Okowa</strong> as running mate over Wike and refused to enforce the resignation of PDP National Chairman <strong>Iyorchia Ayu</strong> (which would have balanced northern presidential and party leadership), five sitting governors formed the <strong>G5 (Integrity Group)</strong>:
+        </p>
+        <ul>
+          <li><strong>Nyesom Wike (Rivers)</strong></li>
+          <li><strong>Seyi Makinde (Oyo)</strong></li>
+          <li><strong>Samuel Ortom (Benue)</strong></li>
+          <li><strong>Okezie Ikpeazu (Abia)</strong></li>
+          <li><strong>Ifeanyi Ugwuanyi (Enugu)</strong></li>
+        </ul>
+        <p>
+          The G5 actively sabotaged Atiku's campaign in their respective states, with Wike and Makinde directing state machinery to deliver votes for Bola Ahmed Tinubu. Simultaneously, <strong>Peter Obi’s</strong> defection to the Labour Party drained over 6.1 million former PDP voters in the Southeast and South-South, while <strong>Rabiu Musa Kwankwaso’s</strong> NNPP captured Kano State (nearly 1 million votes).
+        </p>
+        <p>
+          <strong>The Electoral Arithmetic:</strong> The combined opposition votes of Atiku (6,984,520), Peter Obi (6,101,533), and Rabiu Kwankwaso (1,496,687) totaled <strong>14.58 Million votes</strong>—surpassing Bola Ahmed Tinubu’s winning total of <strong>8,794,726 votes</strong> by over 5.7 million ballots. Atiku's refusal to concede zoning directly fragmented the opposition and handed Tinubu the presidency.
+        </p>
+      </div>
+
+      <!-- SECTION 13 -->
+      <h2 id="a-verdict">13. Governance Roadmap & Historical Balance Sheet</h2>
+      <p>
+        Atiku Abubakar’s economic philosophy represents unabashed, free-market neoliberalism:
+      </p>
+      <ul>
+        <li><strong>Total Deregulation & Privatization:</strong> Throughout his 2019 and 2023 campaigns, he pledged to sell Nigeria's moribund state-owned refineries and commercialize NNPC, famously declaring: <em>"Even if people threaten to crucify me, I will sell NNPC and privatize loss-making federal assets."</em></li>
+        <li><strong>Devolution of Powers & Restructuring:</strong> Since 2016, Atiku became the foremost Northern advocate for constitutional restructuring, state police, and fiscal federalism to diminish central federal dominance.</li>
+        <li><strong>Commercial & Educational Footprint:</strong> Founder of the <strong>American University of Nigeria (AUN)</strong> in Yola (2004), Adama Beverages (Faro Water), ABTI Printing Press, and Gotel Communications—standing as the largest private employer of labor in Northeast Nigeria.</li>
+      </ul>
+
+      <div class="visual-diagram-card">
+        <div class="diagram-kicker">Historical Ledger / Definitive Audit</div>
+        <h3 style="margin-top: 0; margin-bottom: 8px;">The Balanced Balance Sheet of Atiku Abubakar</h3>
+        <div class="table-wrapper">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th style="width: 50%;">Verifiable Institutional Achievements</th>
+                <th style="width: 50%;">Unresolved Controversies & Strategic Failures</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Economic Modernization:</strong> Led the 2001 GSM auction that revolutionized Nigerian commerce; successfully privatized non-performing state assets.</td>
+                <td><strong>Unexplained Customs Wealth:</strong> Acquired massive commercial shareholdings (NICOTES) and extensive real estate while serving as an active customs comptroller.</td>
+              </tr>
+              <tr>
+                <td><strong>Defeating the Third Term Agenda:</strong> Risked his personal and political safety in 2006 to mobilize lawmakers and preserve Nigeria's constitutional term limits.</td>
+                <td><strong>The $40M US Senate Levin Findings:</strong> Extensive international documentation of suspect offshore transfers funneled via foreign shells into US bank accounts.</td>
+              </tr>
+              <tr>
+                <td><strong>Headhunting Global Technocrats:</strong> Brought Ngozi Okonjo-Iweala, Nasir El-Rufai, and Charles Soludo into federal economic governance.</td>
+                <td><strong>The William Jefferson Sting:</strong> Taped wiretaps of a US Congressman soliciting $100K intended for the Nigerian Vice Presidency, leading to the Potomac raid.</td>
+              </tr>
+              <tr>
+                <td><strong>Constitutional Jurisprudence:</strong> Won historic Supreme Court rulings establishing that a President cannot sack a Vice President or declare the seat vacant.</td>
+                <td><strong>Opportunistic Party-Hopping:</strong> Jumped across PDP, AC, ACN, APC, and back to PDP, subordinating ideological consistency to presidential ambitions.</td>
+              </tr>
+              <tr>
+                <td><strong>Pan-Nigerian Bridge-Building:</strong> Maintained cross-ethnic matrimonial, commercial, and political ties spanning all geopolitical zones.</td>
+                <td><strong>Fatal 2022 Zoning Breach:</strong> Insisted on contesting after Buhari's 8-year northern rule, alienating Southern allies and fracturing the opposition.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 14 -->
+      <h2 id="a-sources">14. Primary Judicial & Congressional Registry</h2>
+      <div class="sources-section">
+        <ol class="sources-list">
+          <li><strong>Supreme Court of Nigeria:</strong> <em>Atiku Abubakar & Peoples Democratic Party (PDP) v. Independent National Electoral Commission (INEC), Bola Ahmed Tinubu & All Progressives Congress (APC)</em> (SC.348/2023; [2023] LPELR-61099(SC)). Affirming citizenship by birth under the 1961 Northern Cameroons Plebiscite.</li>
+          <li><strong>United States Senate Permanent Subcommittee on Investigations:</strong> <em>"Keeping Foreign Corruption Out of the United States: Four Case Histories"</em> (S. Hrg. 111-597, 330 pages, February 4, 2010). Chaired by Senator Carl Levin. Hearing transcript and exhibit documentation on $40M+ wire transfers: <a href="https://www.hsgac.senate.gov/subcommittees/investigations/hearings/keeping-foreign-corruption-out-of-the-united-states-four-case-histories/" target="_blank" rel="noopener">US Senate Hearing Docket</a>.</li>
+          <li><strong>United States District Court for the Eastern District of Virginia:</strong> <em>United States of America v. William J. Jefferson</em> (Criminal Case No. 1:07-cr-00209-TSE). Taped wiretaps, Lori Mody sting, and $90,000 cash recovery in freezer. Reported by The Washington Post: <a href="https://www.washingtonpost.com/wp-dyn/content/article/2009/11/13/AR2009111301980.html" target="_blank" rel="noopener">Washington Post Trial Coverage</a>.</li>
+          <li><strong>Supreme Court of Nigeria:</strong> <em>Attorney-General of the Federation & 2 Ors v. Alhaji Atiku Abubakar & 3 Ors</em> ([2007] 10 NWLR (Pt. 1041) 1; (2007) LPELR-SC.31/2007). Establishing security of tenure of the Vice President and voiding Obasanjo's declaration of vacancy.</li>
+          <li><strong>Supreme Court of Nigeria:</strong> <em>Action Congress (AC) & Alhaji Atiku Abubakar v. Independent National Electoral Commission (INEC)</em> ([2007] 12 NWLR (Pt. 1048) 220; (2007) LPELR-SC.69/2007). Nullifying INEC's power to disqualify candidates without a court order.</li>
+          <li><strong>Independent National Electoral Commission (INEC):</strong> <em>Official Declaration of Results of the 2023 Presidential Election</em> (Delivered by Prof. Mahmood Yakubu, March 1, 2023). Total valid votes: Tinubu (8,794,726), Atiku (6,984,520), Obi (6,101,533), Kwankwaso (1,496,687).</li>
+          <li><strong>Senate of the Federal Republic of Nigeria:</strong> <em>Ad-Hoc Committee Report on the Petroleum Technology Development Fund (PTDF)</em> (Senator Umaru Tsauri, Chairman; Senator Victor Ndoma-Egba Review Committee, May 2007).</li>
+        </ol>
+      </div>
+    </article>
+  </main>
+"""
+
+def update_index():
+    with open(INDEX_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # 1. Update navigation bar
+    nav_pattern = r'<nav class="inquiry-selector">[\s\S]*?</nav>'
+    new_nav = """<nav class="inquiry-selector">
+        <button class="inquiry-btn active" id="btn-tinubu" onclick="showInquiry('tinubu')">
+          Case File: Bola Ahmed Tinubu (360° Audit)
+        </button>
+        <button class="inquiry-btn" id="btn-atiku" onclick="showInquiry('atiku')">
+          Case File: Atiku Abubakar (360° Audit)
+        </button>
+        <button class="inquiry-btn" id="btn-meta" onclick="showInquiry('meta')">
+          Case File: Big Tech African Moderation Hubs
+        </button>
+      </nav>"""
+    content = re.sub(nav_pattern, new_nav, content, count=1)
+
+    # 2. Insert inquiry-atiku before inquiry-meta if not already present
+    if 'id="inquiry-atiku"' not in content:
+        insert_marker = '<!-- INQUIRY 2: SILICON VALLEY\'S AFRICAN MODERATION HUBS -->'
+        if insert_marker in content:
+            content = content.replace(insert_marker, ATIKU_INQUIRY_HTML + "\n\n  " + insert_marker)
+        else:
+            # Fallback before <main class="article-container" id="inquiry-meta"
+            content = content.replace('<main class="article-container" id="inquiry-meta"', ATIKU_INQUIRY_HTML + '\n\n  <main class="article-container" id="inquiry-meta"')
+        print("  [OK] Injected Atiku Inquiry into index.html")
+    else:
+        print("  [INFO] Atiku Inquiry already present in index.html, updating...")
+        # Replace existing inquiry-atiku
+        atiku_pattern = r'<main class="article-container" id="inquiry-atiku"[\s\S]*?</main>'
+        content = re.sub(atiku_pattern, ATIKU_INQUIRY_HTML.strip(), content, count=1)
+
+    # 3. Update JavaScript showInquiry function
+    js_pattern = r'function showInquiry\(id\) \{[\s\S]*?\}'
+    new_js = """function showInquiry(id) {
+      const tinubuEl = document.getElementById('inquiry-tinubu');
+      const atikuEl = document.getElementById('inquiry-atiku');
+      const metaEl = document.getElementById('inquiry-meta');
+      const btnTinubu = document.getElementById('btn-tinubu');
+      const btnAtiku = document.getElementById('btn-atiku');
+      const btnMeta = document.getElementById('btn-meta');
+
+      tinubuEl.style.display = (id === 'tinubu') ? 'block' : 'none';
+      if (atikuEl) atikuEl.style.display = (id === 'atiku') ? 'block' : 'none';
+      metaEl.style.display = (id === 'meta') ? 'block' : 'none';
+
+      btnTinubu.classList.toggle('active', id === 'tinubu');
+      if (btnAtiku) btnAtiku.classList.toggle('active', id === 'atiku');
+      btnMeta.classList.toggle('active', id === 'meta');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }"""
+    content = re.sub(js_pattern, new_js, content, count=1)
+
+    with open(INDEX_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+        
+    print(f"  [OK] Successfully updated index.html ({len(content):,} bytes)")
+
+if __name__ == "__main__":
+    update_index()

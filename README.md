@@ -26,7 +26,26 @@ For journalists, researchers, and scriptwriters requiring uncompressed archival 
 
 ---
 
-## 2. Technology & Human Rights: Big Tech African Moderation Hubs
+## 2. Election Special: Atiku Abubakar (360° Forensic Audit)
+
+### Master Synthesis:
+* **Interactive Web Reader:** [`index.html`](index.html) (Case File: Atiku Abubakar tab, broadsheet BBC-standard reader)
+* **Primary Source Registry:** Supreme Court rulings (*SC.348/2023*, *SC.31/2007*, *SC.69/2007*), US Senate Permanent Subcommittee on Investigations report (S. Hrg. 111-597), and Eastern District of Virginia criminal proceedings (*1:07-cr-00209*).
+
+### Primary Deep-Dive Field Notes & Evidentiary Archive:
+For journalists, researchers, and scriptwriters requiring uncompressed archival depth, case numbers, and primary quotes:
+
+| File Reference | Scope & Era Covered | Archival Depth | Direct Reading Links |
+| :--- | :--- | :--- | :--- |
+| **Field Note 01** | **Origins, Jada Trust Territory, Dynastic Tree & Plebiscite** (1946–2023)<br>• Jada British Northern Cameroons UN mandate & 1957 paternal drowning.<br>• Dynastic lineage: 5 wives & 28 children across ethnic fault lines.<br>• 1961 UN Plebiscite & Supreme Court citizenship ruling (*SC.348/2023*).<br>• ABU Zaria Diploma in Law foundation. | 61 KB<br>(530 lines) | • [Web Reader (HTML)](atiku_notes_agent1.html)<br>• [GitHub Markdown](investigations/atiku_notes_agent1_origins_family_citizenship.md) |
+| **Field Note 02** | **20-Year Customs Career, 1984 53 Suitcases & INTELS Empire** (1969–1989)<br>• From Idi-Iroko border cadet to Deputy Director of Customs.<br>• The 1984 Major Jokolo / Emir of Gwandu MMIA luggage breach.<br>• Gabriele Volpi alliance, NICOTES Onne Port concession monopoly.<br>• Constitutional conflict of interest & $100M+ divestment. | 59 KB<br>(475 lines) | • [Web Reader (HTML)](atiku_notes_agent2.html)<br>• [GitHub Markdown](investigations/atiku_notes_agent2_customs_intels_wealth.md) |
+| **Field Note 03** | **PDM Apprenticeship, 1993 Jos Deal & Economic Reform Era** (1989–2003)<br>• Mentorship under Shehu Musa Yar'Adua & PDM machine.<br>• Stepping down for M.K.O. Abiola in the March 1993 Jos SDP primary.<br>• 2001 GSM digital mobile auction & telecom revolution ($285M licenses).<br>• Assembling the "Dream Team" (Okonjo-Iweala, El-Rufai, Soludo, Ribadu).<br>• The January 2003 "Near-Coup" and midnight confrontation with Obasanjo. | 66 KB<br>(450 lines) | • [Web Reader (HTML)](atiku_notes_agent3.html)<br>• [GitHub Markdown](investigations/atiku_notes_agent3_politics_vp_reform_era.md) |
+| **Field Note 04** | **Obasanjo War, Third Term Defeat, FBI Probe & US Senate Report** (2003–2010)<br>• Defeating the 2006 Third Term Agenda alongside Ken Nnamani & Masari.<br>• PTDF mutual counter-dossiers (TIB/ETB vs. Bells University & Ota Farm).<br>• William Jefferson $100K FBI freezer sting and Potomac estate raid.<br>• 2010 US Senate Levin Report: $40M suspect wire transfers & visa ban.<br>• Supreme Court victories establishing VP security of tenure (*SC.31/2007*). | 64 KB<br>(500 lines) | • [Web Reader (HTML)](atiku_notes_agent4.html)<br>• [GitHub Markdown](investigations/atiku_notes_agent4_scandals_obasanjo_war.md) |
+| **Field Note 05** | **30-Year Serial Candidacy, 2022 Zoning Breach & Final Ledger** (1993–2023)<br>• Six presidential bids across four political parties (SDP, AC, APC, PDP).<br>• Jan 2019 Trump Hotel DC visit & Peter Obi vice-presidential ticket.<br>• 2022 southern zoning rupture, Wike/G5 revolt & opposition fracture.<br>• Unapologetic privatization roadmap (NNPC sale) & AUN Yola footprint.<br>• Definitive balanced balance sheet: Master bridge-builder vs. perpetual aspirant. | 51 KB<br>(440 lines) | • [Web Reader (HTML)](atiku_notes_agent5.html)<br>• [GitHub Markdown](investigations/atiku_notes_agent5_candidacy_roadmap_verdict.md) |
+
+---
+
+## 3. Technology & Human Rights: Big Tech African Moderation Hubs
 
 * **Master Factual Dossier:** [`investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md`](investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md)
 * **Summary:** An investigation into Big Tech outsourcing toxic content moderation and AI data labeling to African workers in Nairobi.
