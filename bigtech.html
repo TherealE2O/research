@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silicon Valley's African Trauma Factory — Civic Lens Investigative Desk</title>
+  <meta name="description" content="How Big Tech outsources graphic content moderation and AI data labeling to Kenya and Nigeria.">
+  <style>
+    :root {
+      --font-headline: "Georgia", "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "Consolas", "Courier New", monospace;
+      
+      --color-bg: #FFFFFF;
+      --color-surface: #F8F9FA;
+      --color-surface-subtle: #F1F5F9;
+      --color-border: #D1D5DB;
+      --color-border-dark: #111827;
+      --color-text: #111827;
+      --color-text-secondary: #374151;
+      --color-text-muted: #6B7280;
+      --color-link: #1D4ED8;
+      --color-link-hover: #1E40AF;
+      --color-accent-red: #B91C1C;
+      --color-accent-blue: #1D4ED8;
+      --color-accent-green: #15803d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pub-header {
+      border-top: 4px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border);
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .pub-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pub-brand {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pub-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--color-accent-red);
+      border-left: 1px solid var(--color-border);
+      padding-left: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      color: var(--color-link);
+      text-decoration: none;
+    }
+    .nav-link:hover { text-decoration: underline; }
+
+    .article-container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 36px 20px 100px;
+    }
+
+    .inquiry-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 10px;
+    }
+
+    h1.inquiry-title {
+      font-family: var(--font-headline);
+      font-size: 36px;
+      line-height: 1.22;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      color: var(--color-text);
+    }
+
+    .inquiry-deck {
+      font-family: var(--font-headline);
+      font-size: 20px;
+      line-height: 1.45;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .metadata-bar {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 14px;
+    }
+    .metadata-item strong { color: var(--color-text); }
+
+    .table-of-contents {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      margin-bottom: 44px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+    @media (max-width: 680px) {
+      .toc-list { grid-template-columns: 1fr; }
+    }
+
+    .toc-list a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: 13.5px;
+    }
+    .toc-list a:hover { text-decoration: underline; }
+
+    article p {
+      margin-bottom: 20px;
+      color: var(--color-text);
+      font-size: 16.5px;
+      line-height: 1.75;
+    }
+
+    article h2 {
+      font-family: var(--font-headline);
+      font-size: 26px;
+      line-height: 1.3;
+      font-weight: 700;
+      margin: 48px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-dark);
+      scroll-margin-top: 80px;
+    }
+
+    article h3 {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.4;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--color-text);
+    }
+
+    article ul, article ol {
+      margin: 16px 0 24px 24px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    article li { margin-bottom: 10px; }
+
+    .primary-source-box {
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-border-dark);
+      background: var(--color-surface);
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 14.5px;
+    }
+    .primary-source-box.alert {
+      border-left-color: var(--color-accent-red);
+    }
+    .source-box-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-secondary);
+      margin-bottom: 6px;
+    }
+    .source-box-title.red { color: var(--color-accent-red); }
+
+    .source-link-action {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    .source-link-action a {
+      color: var(--color-link);
+      text-decoration: underline;
+    }
+
+    blockquote.formal-quote {
+      border-left: 3px solid var(--color-border-dark);
+      padding: 12px 20px;
+      margin: 24px 0;
+      background: #FFFFFF;
+    }
+    blockquote.formal-quote p {
+      font-family: var(--font-headline);
+      font-size: 17.5px;
+      line-height: 1.6;
+      font-style: italic;
+      color: #1F2937;
+      margin-bottom: 8px;
+    }
+    .quote-citation {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+
+    .table-wrapper {
+      margin: 28px 0;
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
+    }
+    table.report-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+    table.report-table th, table.report-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    table.report-table th {
+      background: var(--color-surface);
+      font-weight: 700;
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .sources-section {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid var(--color-border-dark);
+    }
+    .sources-title {
+      font-family: var(--font-headline);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .sources-list {
+      list-style-type: decimal;
+      padding-left: 20px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+    }
+    .sources-list li { margin-bottom: 10px; }
+    .sources-list a {
+      color: var(--color-link);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    /* Diagram visual components */
+    .visual-diagram-card {
+      background: #FFFFFF;
+      border: 2px solid var(--color-border-dark);
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .diagram-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 6px;
+    }
+    .diagram-desc {
+      font-size: 14.5px;
+      color: var(--color-text-secondary);
+      margin-bottom: 20px;
+    }
+    .diagram-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .diagram-column {
+      padding: 18px;
+      border-width: 1.5px;
+      border-style: solid;
+    }
+    .diagram-node {
+      background: #FFFFFF;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      border-width: 1px;
+      border-style: solid;
+    }
+    .diagram-arrow {
+      text-align: center;
+      font-weight: bold;
+      font-size: 12px;
+      margin: 2px 0 8px;
+    }
+    .mermaid {
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border);
+      padding: 24px 16px;
+      margin: 24px 0;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      border-radius: 2px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="pub-header">
+    <div class="pub-header-inner">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="index.html" class="pub-brand">CIVIC LENS INVESTIGATIONS</a>
+        <span class="pub-tagline">Primary Evidence Desk</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">← Home (All Inquiries)</a>
+        <a href="https://github.com/TherealE2O/research/blob/main/investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md" target="_blank" rel="noopener" class="nav-link" style="color: var(--color-text-secondary);">GitHub Markdown ↗</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="article-container" id="inquiry-meta">
+    <div class="inquiry-kicker">Special Report / Technology & Human Rights Desk</div>
+    <h1 class="inquiry-title">Silicon Valley's African Trauma Factory: How Big Tech Outsources Content Moderation to Kenya and Nigeria</h1>
+    <div class="inquiry-deck">
+      An investigation into the human cost of artificial intelligence and social media safety, examining worker exploitation in Nairobi, sub-$2 hourly wages, and landmark labor trials against Meta and OpenAI.
+    </div>
+
+    <div class="metadata-bar">
+      <span class="metadata-item"><strong>Investigation Unit:</strong> Civic Lens Technology & Human Rights Desk</span>
+      <span class="metadata-item"><strong>Date:</strong> October 2026</span>
+      <span class="metadata-item"><strong>Primary Sources:</strong> HumAngle, TIME Magazine, Kenya Employment and Labour Court Records</span>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#m-hook">1. The Core Premise: The Hidden Biological Filter</a></li>
+        <li><a href="#m-humangle">2. The HumAngle Investigation: Nigerian Recruits in Nairobi</a></li>
+        <li><a href="#m-factory">3. Factory Conditions: The 50-Second Timer & $1.50 Wages</a></li>
+        <li><a href="#m-corporate">4. The Corporate Architecture: Meta, Sama, and Subcontracting</a></li>
+        <li><a href="#m-openai">5. Connected Scandals: OpenAI ChatGPT Labeling & The Ethiopian War Lawsuit</a></li>
+        <li><a href="#m-court">6. Historic Court Victories: The Kenyan Court of Appeal Rulings</a></li>
+        <li><a href="#m-sources">7. Primary Citations & Documentary Archive</a></li>
+      </ul>
+    </div>
+
+    <article>
+      <!-- SECTION 1 -->
+      <h2 id="m-hook">1. The Core Premise: The Hidden Biological Filter</h2>
+      <p>
+        Behind the interface of global social media platforms and artificial intelligence chatbots lies an outsourced, poorly compensated workforce based in Nairobi, Kenya, tasked with viewing and removing graphic real-world violence, child sexual abuse, torture, and beheadings.
+      </p>
+      <p>
+        While Silicon Valley corporations promote artificial intelligence as automated and self-governing, content moderation systems fundamentally rely on human beings to classify, filter, and review violent digital material. Major technology firms have outsourced this high-trauma labor to sub-Saharan Africa to exploit low labor costs and weak regulatory oversight.
+      </p>
+
+      <!-- SECTION 2 -->
+      <h2 id="m-humangle">2. The HumAngle Investigation: Nigerian Recruits in Nairobi</h2>
+      <p>
+        On October 8, 2026, investigative media outlet <strong>HumAngle</strong> published a comprehensive investigation titled <em>"Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</em>, documenting how Nigerian graduates were systematically recruited under misleading job descriptions.
+      </p>
+      
+      <div class="primary-source-box">
+        <div class="source-box-title">Key Profiles from the Investigation</div>
+        <p><strong>Kauna Malgwi (Clinical Psychologist & Organizer):</strong></p>
+        <p>
+          Raised in Borno State, Northeast Nigeria—an area severely affected by Boko Haram terrorist violence—Malgwi relocated to Nairobi for post-graduate studies. In 2019, she was recruited by outsourcing firm <strong>Sama</strong> under the impression that she was taking a position in "Hausa linguistic translation". Upon arrival and signing strict Non-Disclosure Agreements (NDAs), she was placed in front of screens reviewing graphic Boko Haram executions, terrorist beheadings, and bandit massacres from her home country. She was diagnosed with chronic clinical PTSD and subsequently founded the <strong>Digital Rights and Mental Health Initiative (DRMHI)</strong> and co-organized the African Content Moderators Union.
+        </p>
+        <p><strong>Mustafa Mukhtar (Nigerian Recruit):</strong></p>
+        <p>
+          Recruited from Nigeria under expectations of customer service and linguistic localization, Mukhtar was tasked with reviewing murders and suicides. He testified that in-house company counselors were so unprepared for the severe trauma that <strong>the counselors broke down in tears</strong> during therapy sessions with moderators.
+        </p>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://humanglemedia.com/africans-hired-to-moderate-facebook-content-left-with-sleepless-nights/" target="_blank" rel="noopener">Read Full Investigation on HumAngle: "Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 3 -->
+      <h2 id="m-factory">3. Factory Conditions: The 50-Second Timer & $1.50 Wages</h2>
+      <p>
+        Investigations by both HumAngle and TIME Magazine revealed severe working conditions inside Sama’s moderation operations in Nairobi:
+      </p>
+      <ul>
+        <li><strong>The 50-Second Decision Limit:</strong> Moderators were required to review, comprehend, and make high-stakes policy decisions on violent video tickets within an arbitrary limit of <strong>50 seconds per item</strong>, monitored by automated workstation activity tracking software.</li>
+        <li><strong>Sub-$2 Hourly Wages:</strong> African moderators received between <strong>40,000 to 60,000 Kenyan Shillings per month (approximately $300 to $450 USD)</strong>, equivalent to <strong>$1.50 to $2.20 per hour</strong>. In comparison, content moderators in the United States and Europe performing identical duties earn between $18 and $25 per hour.</li>
+        <li><strong>Pervasive Psychological Harm:</strong> An independent medical evaluation conducted by psychiatric professionals on 144 content moderators submitted to the Kenyan High Court in December 2024 revealed that <strong>81% of moderators suffered from severe clinical PTSD</strong>, characterized by acute insomnia, intrusive flashbacks, and clinical depression.</li>
+      </ul>
+
+      <!-- SECTION 4 -->
+      <h2 id="m-corporate">4. The Corporate Architecture: Meta, Sama, and Subcontracting</h2>
+      <p>
+        Multinational technology corporations maintain distance from operational liabilities through offshore subcontracting agreements. Meta Platforms contracted San Francisco-based outsourcing provider <strong>Sama</strong> (headquartered locally as Samasource Kenya UB) to operate its content moderation hub in Nairobi.
+      </p>
+      <p>
+        When workers suffered mental health crises and brought legal action, Meta argued in Kenyan court proceedings that:
+      </p>
+      <ol>
+        <li>Meta Platforms is a foreign legal entity incorporated in Delaware with principal offices in California, outside the territorial jurisdiction of Kenyan courts.</li>
+        <li>The workers were direct employees of third-party contractor Sama, not Meta.</li>
+        <li>Employees had executed legally binding Non-Disclosure Agreements and dispute resolution arbitration clauses.</li>
+      </ol>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://time.com/6147458/facebook-africa-content-moderation-employee-treatment/" target="_blank" rel="noopener">Read TIME Magazine Investigation by Billy Perrigo: "Inside Facebook's African Sweatshop"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 5 -->
+      <h2 id="m-openai">5. Connected Scandals: OpenAI ChatGPT Labeling & The Ethiopian War Lawsuit</h2>
+      <p>
+        The labor practices documented at Sama extend beyond social media moderation to generative artificial intelligence:
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">OpenAI / ChatGPT Data Labeling Scandal (TIME Magazine, Jan 2023)</div>
+        <p>
+          In 2021 and 2022, prior to the public release of ChatGPT, OpenAI contracted Sama in Nairobi to read, categorize, and label tens of thousands of text snippets extracted from the internet depicting child sexual abuse, bestiality, suicide, and sexual violence to build safety guardrails for AI models.
+        </p>
+        <p>
+          Kenyan data labelers were paid between <strong>$1.32 and $2.00 per hour</strong> to process explicit traumatic content. Sama canceled the contract early after workers reported acute psychological distress.
+        </p>
+      </div>
+
+      <div class="primary-source-box alert">
+        <div class="source-box-title red">The Tigray War & The Murder of Professor Meareg Amare ($2 Billion Lawsuit)</div>
+        <p>
+          During the civil war in Ethiopia (2020–2022), Meta maintained fewer than 30 content moderators covering over 100 million people across Amharic, Oromo, and Tigrinya languages at the Nairobi hub. In November 2021, Professor Meareg Amare of Bahir Dar University was targeted by viral hate speech posts on Facebook falsely accusing him of treason and publicizing his residence. Despite multiple formal reports submitted to Facebook by his son, Abrham Meareg, Meta’s automated and human systems failed to remove the posts. Professor Meareg was followed and murdered outside his residence.
+        </p>
+        <p>
+          In December 2022, Abrham Meareg, Ethiopian human rights researcher Fisseha Tekle, and the Katiba Institute filed a <strong>$2 Billion (250 billion KSh) lawsuit</strong> against Meta in the Kenya High Court, alleging that Facebook's recommendation algorithm promoted violent ethnic conflict.
+        </p>
+      </div>
+
+      <div class="source-link-action">
+        <p>Primary Source Reading:</p>
+        <ul>
+          <li><a href="https://time.com/6247678/openai-chatgpt-kenya-workers/" target="_blank" rel="noopener">Read TIME Magazine Exclusive: "OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"</a></li>
+          <li><a href="https://www.theguardian.com/technology/2022/dec/14/facebook-owner-meta-sued-kenya-ethiopia-violence-hate-speech" target="_blank" rel="noopener">Read The Guardian UK: "Facebook owner Meta sued in Kenya over Ethiopia violence and hate speech"</a></li>
+        </ul>
+      </div>
+
+      <!-- SECTION 6 -->
+      <h2 id="m-court">6. Historic Court Victories: The Kenyan Court of Appeal Rulings</h2>
+      <p>
+        The legal resistance against Big Tech in Africa began with South African whistleblower <strong>Daniel Motaung</strong>, who filed <em>Petition No. E070 of 2022</em> in the Kenya Employment and Labour Relations Court after being fired for union organizing.
+      </p>
+
+      <div class="primary-source-box">
+        <div class="source-box-title">Landmark Court of Appeal Ruling (September 2024)</div>
+        <p>
+          In <em>Meta Platforms, Inc. & Meta Platforms Ireland Ltd v. Daniel Motaung & Others</em> (Civil Appeal No. E186 of 2023), the Kenyan Court of Appeal rejected Meta’s appeal seeking immunity from local courts. The appellate judges established that <strong>foreign multinational corporations operating within the digital economy of African nations are subject to the jurisdiction of domestic courts</strong> regarding labor exploitation and human rights violations committed within the territory.
+        </p>
+        <p>
+          The litigation, supported by UK-based justice organization <strong>Foxglove Legal</strong> and Kenyan legal advocates, is currently seeking <strong>$1.6 Billion in compensation, healthcare trust funds, and systemic labor reforms</strong> for over 1,100 affected moderators.
+        </p>
+      </div>
+
+      <!-- SECTION 7 -->
+      <h2 id="m-sources">7. Primary Citations & Documentary Archive</h2>
+      <div class="sources-section">
+        <ol class="sources-list">
+          <li><strong>HumAngle Media (October 8, 2026):</strong> <em>"Africans Hired to Moderate Facebook Content Left With Sleepless Nights"</em> by HumAngle Investigative Desk. Available at: <a href="https://humanglemedia.com/africans-hired-to-moderate-facebook-content-left-with-sleepless-nights/" target="_blank" rel="noopener">HumAngle Media Article</a>.</li>
+          <li><strong>TIME Magazine (February 14, 2022):</strong> <em>"Inside Facebook's African Sweatshop"</em> by Billy Perrigo. Available at: <a href="https://time.com/6147458/facebook-africa-content-moderation-employee-treatment/" target="_blank" rel="noopener">TIME Magazine Investigation</a>.</li>
+          <li><strong>TIME Magazine (January 18, 2023):</strong> <em>"Exclusive: OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"</em> by Billy Perrigo. Available at: <a href="https://time.com/6247678/openai-chatgpt-kenya-workers/" target="_blank" rel="noopener">TIME Magazine Exclusive</a>.</li>
+          <li><strong>Court of Appeal of Kenya at Nairobi (September 2024):</strong> <em>Meta Platforms, Inc. & Meta Platforms Ireland Ltd v. Daniel Motaung, Sama & Others</em> (Civil Appeal No. E186 of 2023).</li>
+          <li><strong>Kenya Employment and Labour Relations Court:</strong> <em>Daniel Motaung v. Samasource Kenya EPZ Ltd & Meta Platforms, Inc.</em> (Petition No. E070 of 2022).</li>
+          <li><strong>High Court of Kenya at Nairobi:</strong> <em>Abrham Meareg & Others v. Meta Platforms, Inc.</em> (Constitutional Petition No. E466 of 2022). $2 Billion wrongful death and algorithmic liability petition. Reported by The Guardian: <a href="https://www.theguardian.com/technology/2022/dec/14/facebook-owner-meta-sued-kenya-ethiopia-violence-hate-speech" target="_blank" rel="noopener">The Guardian Report</a>.</li>
+        </ol>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>CIVIC LENS INVESTIGATIVE DESK • SPECIAL FACTUAL ARCHIVE</p>
+    <p style="margin-top: 6px;">All findings compiled from sworn court transcripts, primary judicial dockets, and verified on-the-ground investigative reporting.</p>
+  </footer>
+</body>
+</html>
