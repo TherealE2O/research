@@ -198,7 +198,7 @@ def get_font(size, bold=False):
     return ImageFont.load_default()
 
 
-def group_words_into_phrases(words, max_phrase_dur=3.0, max_words=6):
+def group_words_into_phrases(words, max_phrase_dur=3.2, max_words=7):
     """Groups individual Whisper word timestamps into natural subtitle phrase cards."""
     if not words:
         return []
@@ -230,20 +230,35 @@ def group_words_into_phrases(words, max_phrase_dur=3.0, max_words=6):
 def render_audiogram_frame(
     width, height, bars, bar_color, bg_color,
     phrase=None, current_time=0.0,
-    active_word_color=(255, 255, 255, 255),
-    inactive_word_color=(190, 190, 220, 210),
-    author_text=None
+    author_text=None, title_text=None, show_badge=True
 ):
-    """Renders a single frame with rounded waveform bars and active-word highlighted subtitles."""
+    """Renders a single frame with header, rounded waveform bars, and active-word highlighted subtitles."""
     img = Image.new("RGBA", (width, height), bg_color)
     draw = ImageDraw.Draw(img)
 
-    # 1. Draw Waveform Bars
+    # 1. Header Elements (Title top-left, Badge top-right)
+    if title_text:
+        font_title = get_font(22, bold=True)
+        draw.text((60, 48), title_text, font=font_title, fill=(255, 255, 255, 230))
+
+    if show_badge and bg_color[3] > 0:  # Only on solid background
+        font_badge = get_font(18, bold=True)
+        badge_text = "🎙️ AUDIOGRAM"
+        bw = draw.textlength(badge_text, font=font_badge)
+        bx = width - bw - 75
+        overlay = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+        odraw = ImageDraw.Draw(overlay)
+        odraw.rounded_rectangle([bx - 14, 42, width - 50, 82], radius=10, fill=(255, 255, 255, 30), outline=(255, 255, 255, 80), width=1)
+        odraw.text((bx, 50), badge_text, font=font_badge, fill=(255, 255, 255, 240))
+        img = Image.alpha_composite(img, overlay)
+        draw = ImageDraw.Draw(img)
+
+    # 2. Draw Waveform Bars
     num_bars = len(bars)
-    waveform_w = min(int(width * 0.85), 900)
+    waveform_w = min(int(width * 0.85), 920)
     waveform_h = int(height * 0.28)
     start_x = (width - waveform_w) // 2
-    base_y = height - 40
+    base_y = height - 45
 
     slot_w = waveform_w / num_bars
     bar_w = max(4, int(slot_w * 0.55))
@@ -255,9 +270,9 @@ def render_audiogram_frame(
         radius = bar_w // 2
         draw.rounded_rectangle([bx, by, bx + bar_w, base_y], radius=radius, fill=bar_color)
 
-    # 2. Draw Synchronized Subtitles (if phrase is active)
-    if phrase and phrase["start"] <= current_time <= phrase["end"] + 0.3:
-        font_sub = get_font(38, bold=True)
+    # 3. Draw Synchronized Subtitles (if phrase is active)
+    if phrase and phrase["start"] <= current_time <= phrase["end"] + 0.35:
+        font_sub = get_font(42, bold=True)
         words = phrase["words"]
         
         # Calculate full line width
@@ -271,19 +286,19 @@ def render_audiogram_frame(
         total_line_w -= space_w
 
         text_x = (width - total_line_w) / 2
-        text_y = height // 2 - 20
+        text_y = height // 2 - 35
 
         # Draw speaker label if provided
         if author_text:
-            font_author = get_font(20, bold=False)
+            font_author = get_font(22, bold=False)
             aw = draw.textlength(author_text, font=font_author)
-            draw.text(((width - aw) / 2, text_y - 45), author_text, font=font_author, fill=(200, 200, 220, 220))
+            draw.text(((width - aw) / 2, text_y - 48), author_text, font=font_author, fill=(255, 255, 255, 180))
 
         # Draw each word with active karaoke highlight
         curr_x = text_x
         for i, w in enumerate(words):
             is_active = (w["start"] <= current_time <= w["end"] + 0.08)
-            color = active_word_color if is_active else inactive_word_color
+            color = (255, 255, 255, 255) if is_active else (255, 255, 255, 125)
             draw.text((curr_x, text_y), w["word"], font=font_sub, fill=color)
             curr_x += word_widths[i] + space_w
 
@@ -326,6 +341,7 @@ def main():
     parser.add_argument("--whisper_model", type=str, default="base", help="Whisper model size: tiny, base, small, medium (default: base).")
     parser.add_argument("--whisper_json", type=str, default=None, help="Path to precomputed Whisper JSON to skip re-transcription.")
     
+    parser.add_argument("--title", type=str, default="", help="Optional title displayed in top-left corner.")
     parser.add_argument("--author", type=str, default="", help="Optional speaker name displayed above subtitles.")
     parser.add_argument("--bg_color", type=str, default="5c24ff", help="Background hex color for solid_mp4 (default: 5c24ff purple).")
     parser.add_argument("--bar_color", type=str, default="ffffff", help="Bar hex color (default: ffffff white).")
@@ -413,7 +429,7 @@ def main():
 
         active_phrase = None
         if phrases:
-            while curr_p_idx < len(phrases) - 1 and t > phrases[curr_p_idx]["end"] + 0.3:
+            while curr_p_idx < len(phrases) - 1 and t > phrases[curr_p_idx]["end"] + 0.35:
                 curr_p_idx += 1
             if curr_p_idx < len(phrases):
                 active_phrase = phrases[curr_p_idx]
@@ -421,7 +437,9 @@ def main():
         img = render_audiogram_frame(
             W, H, bars, bar_color, bg_color,
             phrase=active_phrase, current_time=t,
-            author_text=args.author if args.author else None
+            author_text=args.author if args.author else None,
+            title_text=args.title if args.title else None,
+            show_badge=(args.format == "solid_mp4")
         )
         pipe.stdin.write(img.tobytes())
 
