@@ -39,11 +39,12 @@
                 <audio id="audioEl" controls preload="metadata"></audio>
                 
                 <div class="custom-actions">
+                    <button class="btn demo-btn" id="demoVoiceBtn" style="background: #ffffff; color: #5c24ff; font-weight: 700;">🎙️ Play Walkthrough Audio & Karaoke</button>
                     <label class="btn upload-btn">
                         📂 Choose Audio File
                         <input type="file" id="fileInput" accept="audio/*">
                     </label>
-                    <button class="btn demo-btn" id="demoToneBtn">🎵 Play Synthetic Voice Beat</button>
+                    <button class="btn demo-btn" id="demoToneBtn">🎵 Play Synthetic Beat</button>
                 </div>
             </div>
         </main>
@@ -68,7 +69,21 @@ audioEl.onplay = () => visualizer.connectAudioElement(audioEl);</code></pre>
         const audioEl = document.getElementById('audioEl');
         const fileInput = document.getElementById('fileInput');
         const demoToneBtn = document.getElementById('demoToneBtn');
+        const demoVoiceBtn = document.getElementById('demoVoiceBtn');
         const subtitleBox = document.getElementById('subtitleBox');
+        const speakerTag = document.getElementById('speakerTag');
+
+        const DEMO_PHRASES = [
+            {"start": 0.0, "end": 2.16, "words": [{"word": "It'd", "start": 0.0, "end": 0.32}, {"word": "be", "start": 0.32, "end": 0.42}, {"word": "impossible", "start": 0.42, "end": 0.94}, {"word": "to", "start": 0.94, "end": 1.28}, {"word": "make", "start": 1.28, "end": 1.5}, {"word": "even", "start": 1.5, "end": 1.9}, {"word": "the", "start": 1.9, "end": 2.16}]},
+            {"start": 2.16, "end": 4.06, "words": [{"word": "simplest", "start": 2.16, "end": 2.44}, {"word": "of", "start": 2.44, "end": 2.72}, {"word": "this", "start": 2.72, "end": 2.82}, {"word": "game", "start": 2.82, "end": 3.28}, {"word": "if", "start": 3.28, "end": 3.88}, {"word": "you", "start": 3.88, "end": 3.96}, {"word": "were", "start": 3.96, "end": 4.06}]},
+            {"start": 4.06, "end": 6.48, "words": [{"word": "to", "start": 4.06, "end": 4.22}, {"word": "calculate", "start": 4.22, "end": 4.62}, {"word": "collision", "start": 4.62, "end": 5.42}, {"word": "for", "start": 5.42, "end": 5.8}, {"word": "all", "start": 5.8, "end": 6.14}, {"word": "the", "start": 6.14, "end": 6.34}, {"word": "old", "start": 6.34, "end": 6.48}]},
+            {"start": 6.48, "end": 9.44, "words": [{"word": "ghettons'", "start": 6.48, "end": 6.84}, {"word": "cream.", "start": 7.02, "end": 7.18}, {"word": "But", "start": 8.68, "end": 9.0}, {"word": "in", "start": 9.0, "end": 9.16}, {"word": "the", "start": 9.16, "end": 9.3}, {"word": "early", "start": 9.3, "end": 9.44}]},
+            {"start": 9.44, "end": 11.98, "words": [{"word": "2000s,", "start": 9.44, "end": 10.26}, {"word": "this", "start": 10.46, "end": 10.46}, {"word": "game", "start": 10.46, "end": 10.84}, {"word": "took", "start": 10.84, "end": 11.06}, {"word": "off", "start": 11.06, "end": 11.34}, {"word": "on", "start": 11.34, "end": 11.5}, {"word": "devices", "start": 11.5, "end": 11.98}]},
+            {"start": 11.98, "end": 14.06, "words": [{"word": "that", "start": 11.98, "end": 12.52}, {"word": "do", "start": 12.52, "end": 12.68}, {"word": "not", "start": 12.68, "end": 12.82}, {"word": "have", "start": 12.82, "end": 13.18}, {"word": "as", "start": 13.18, "end": 13.34}, {"word": "much", "start": 13.34, "end": 13.56}, {"word": "power", "start": 13.56, "end": 14.06}]},
+            {"start": 14.06, "end": 15.98, "words": [{"word": "as", "start": 14.06, "end": 14.56}, {"word": "a", "start": 14.56, "end": 14.66}, {"word": "modern", "start": 14.66, "end": 14.9}, {"word": "day", "start": 14.9, "end": 15.28}, {"word": "refrigerator.", "start": 15.28, "end": 15.98}]}
+        ];
+
+        let activePhrasesList = null;
 
         const visualizer = new AudiogramVisualizer(canvas, {
             numBars: 46,
@@ -89,10 +104,54 @@ audioEl.onplay = () => visualizer.connectAudioElement(audioEl);</code></pre>
 
         audioEl.addEventListener('play', ensureConnected);
 
+        // Real-time subtitle karaoke bolding up
+        function updateKaraokeSubtitles() {
+            if (!activePhrasesList || audioEl.paused) return;
+            const t = audioEl.currentTime;
+
+            const phrase = activePhrasesList.find(p => t >= p.start && t <= p.end + 0.35);
+            if (phrase) {
+                let html = '';
+                for (let i = 0; i < phrase.words.length; i++) {
+                    const w = phrase.words[i];
+                    const nextW = phrase.words[i + 1];
+                    const wEnd = nextW ? Math.min(w.end + 0.10, nextW.start) : w.end + 0.12;
+
+                    let cls = 'word';
+                    if (t >= w.start && t <= wEnd) {
+                        cls += ' active'; // bolded up!
+                    } else if (t > wEnd) {
+                        cls += ' past';
+                    }
+                    html += `<span class="${cls}">${w.word}</span> `;
+                }
+                subtitleBox.innerHTML = html;
+            }
+            requestAnimationFrame(updateKaraokeSubtitles);
+        }
+
+        audioEl.addEventListener('play', () => {
+            if (activePhrasesList) {
+                requestAnimationFrame(updateKaraokeSubtitles);
+            }
+        });
+
+        // Play Walkthrough Demo Voice
+        demoVoiceBtn.addEventListener('click', () => {
+            ensureConnected();
+            activePhrasesList = DEMO_PHRASES;
+            speakerTag.textContent = "Odiase Osas (Walkthrough Speech)";
+            audioEl.src = 'demo_voice.mp3';
+            audioEl.play();
+        });
+
         // File upload handler
         fileInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (file) {
+                ensureConnected();
+                activePhrasesList = null;
+                speakerTag.textContent = "Custom Audio Track";
                 audioEl.src = URL.createObjectURL(file);
                 audioEl.play();
                 subtitleBox.innerHTML = `<span class="word active">Playing:</span> <span class="word">${file.name}</span>`;

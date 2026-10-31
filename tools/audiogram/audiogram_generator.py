@@ -184,8 +184,8 @@ def compute_spectral_bands(pcm, sr, fps=30, num_bars=46, whisper_words=None):
 
 def get_font(size, bold=False):
     font_paths = [
-        "C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
         "C:/Windows/Fonts/segoeuib.ttf" if bold else "C:/Windows/Fonts/segoeui.ttf",
+        "C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
         "/System/Library/Fonts/Helvetica.ttc",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ]
@@ -272,35 +272,92 @@ def render_audiogram_frame(
 
     # 3. Draw Synchronized Subtitles (if phrase is active)
     if phrase and phrase["start"] <= current_time <= phrase["end"] + 0.35:
-        font_sub = get_font(42, bold=True)
         words = phrase["words"]
-        
-        # Calculate full line width
-        word_widths = []
-        space_w = draw.textlength(" ", font=font_sub)
-        total_line_w = 0.0
-        for w in words:
-            wl = draw.textlength(w["word"], font=font_sub)
-            word_widths.append(wl)
-            total_line_w += wl + space_w
-        total_line_w -= space_w
-
-        text_x = (width - total_line_w) / 2
-        text_y = height // 2 - 35
+        font_reg = get_font(38, bold=False)
+        font_bold = get_font(44, bold=True)
+        text_y = height // 2 - 25
 
         # Draw speaker label if provided
         if author_text:
-            font_author = get_font(22, bold=False)
+            font_author = get_font(20, bold=False)
             aw = draw.textlength(author_text, font=font_author)
-            draw.text(((width - aw) / 2, text_y - 48), author_text, font=font_author, fill=(255, 255, 255, 180))
+            draw.text(((width - aw) / 2, text_y - 48), author_text, font=font_author, fill=(255, 255, 255, 175))
 
-        # Draw each word with active karaoke highlight
-        curr_x = text_x
+        # Precompute stable word slots so text layout does not shift or jitter when words bold up
+        slot_data = []
+        gap = 14
+        for w in words:
+            w_reg = draw.textlength(w["word"], font=font_reg)
+            w_bold = draw.textlength(w["word"], font=font_bold)
+            slot_w = max(w_reg, w_bold) + 4
+            slot_data.append((slot_w, w_reg, w_bold))
+
+        total_line_w = sum(s[0] for s in slot_data) + gap * (len(words) - 1)
+        start_x = (width - total_line_w) / 2
+
+        # Identify which word is active at current_time
+        active_idx = None
         for i, w in enumerate(words):
-            is_active = (w["start"] <= current_time <= w["end"] + 0.08)
-            color = (255, 255, 255, 255) if is_active else (255, 255, 255, 125)
-            draw.text((curr_x, text_y), w["word"], font=font_sub, fill=color)
-            curr_x += word_widths[i] + space_w
+            w_start = w["start"]
+            w_end = min(w["end"] + 0.10, words[i + 1]["start"]) if i < len(words) - 1 else w["end"] + 0.12
+            if w_start <= current_time <= w_end:
+                active_idx = i
+                break
+
+        # Render frosted pill behind the active bold word
+        if active_idx is not None:
+            curr_x = start_x
+            for i in range(active_idx):
+                curr_x += slot_data[i][0] + gap
+            slot_w, w_reg, w_bold = slot_data[active_idx]
+            center_x = curr_x + slot_w / 2
+            word_x = center_x - w_bold / 2
+            word_y = text_y - 4  # Bolding UP: lifts 4px!
+
+            pad_x = 12
+            pad_y = 6
+            pill_rect = [
+                word_x - pad_x,
+                word_y - pad_y,
+                word_x + w_bold + pad_x,
+                word_y + 44 + pad_y
+            ]
+            pill_overlay = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+            pdraw = ImageDraw.Draw(pill_overlay)
+            pdraw.rounded_rectangle(
+                pill_rect, radius=10,
+                fill=(255, 255, 255, 45),
+                outline=(255, 255, 255, 110),
+                width=1
+            )
+            img = Image.alpha_composite(img, pill_overlay)
+            draw = ImageDraw.Draw(img)
+
+        # Draw each word
+        curr_x = start_x
+        for i, w in enumerate(words):
+            slot_w, w_reg, w_bold = slot_data[i]
+            center_x = curr_x + slot_w / 2
+
+            if i == active_idx:
+                # Active word bolds up with crisp stroke and lifted position
+                word_x = center_x - w_bold / 2
+                word_y = text_y - 4
+                draw.text(
+                    (word_x, word_y), w["word"],
+                    font=font_bold,
+                    fill=(255, 255, 255, 255),
+                    stroke_width=1,
+                    stroke_fill=(255, 255, 255, 255)
+                )
+            else:
+                word_x = center_x - w_reg / 2
+                word_y = text_y
+                is_past = (current_time > w["end"] + 0.10)
+                color = (255, 255, 255, 175) if is_past else (255, 255, 255, 105)
+                draw.text((word_x, word_y), w["word"], font=font_reg, fill=color)
+
+            curr_x += slot_w + gap
 
     return img
 
