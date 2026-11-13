@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinubu Manifestos (2023 vs. 2027): Promise Comparison &amp; 101-Pledge Delivery Audit (2023–2026) — Civic Lens Investigation</title>
+  <style>
+    :root {
+      --font-headline: "Georgia", "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "Consolas", "Courier New", monospace;
+
+      --color-bg: #FFFFFF;
+      --color-surface: #F8F9FA;
+      --color-surface-subtle: #F1F5F9;
+      --color-border: #D1D5DB;
+      --color-border-dark: #111827;
+      --color-text: #111827;
+      --color-text-secondary: #374151;
+      --color-text-muted: #6B7280;
+      --color-link: #1D4ED8;
+      --color-link-hover: #1E40AF;
+      --color-accent-red: #B91C1C;
+      --color-accent-blue: #1D4ED8;
+      --color-accent-green: #15803d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pub-header {
+      border-top: 4px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border);
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .pub-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pub-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pub-brand {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .pub-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--color-accent-red);
+      border-left: 1px solid var(--color-border);
+      padding-left: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-back-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-link);
+      text-decoration: none;
+    }
+    .nav-back-link:hover { text-decoration: underline; }
+
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 20px 100px;
+    }
+
+    .inquiry-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 10px;
+    }
+
+    h1.inquiry-title {
+      font-family: var(--font-headline);
+      font-size: 34px;
+      line-height: 1.24;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      color: var(--color-text);
+    }
+
+    .inquiry-deck {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.48;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin-bottom: 22px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .inquiry-meta-bar {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 0;
+      margin: 18px 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+
+    .inquiry-meta-bar strong { color: var(--color-text); }
+
+    .file-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 2px 8px;
+    }
+
+    .table-of-contents {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      margin: 0;
+    }
+    @media (max-width: 680px) {
+      .toc-list { grid-template-columns: 1fr; }
+      .pub-tagline { display: none; }
+    }
+
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: 13.5px;
+    }
+    .toc-list a:hover { text-decoration: underline; }
+
+    .evidence-box {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border-dark);
+      padding: 22px 24px;
+      margin-bottom: 40px;
+    }
+
+    .evidence-box-kicker {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-accent-red);
+      margin-bottom: 6px;
+    }
+
+    .evidence-box-desc {
+      font-size: 14.5px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .evidence-row {
+      border-top: 1px solid var(--color-border);
+      padding-top: 12px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .evidence-row-meta {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-top: 3px;
+    }
+
+    .evidence-row-links {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    h2 {
+      font-family: var(--font-headline);
+      font-size: 24px;
+      line-height: 1.35;
+      margin: 42px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-dark);
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h3 {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 28px 0 12px;
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--color-text);
+    }
+
+    p { margin-bottom: 16px; color: var(--color-text); }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+    }
+    li { margin-bottom: 8px; }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.87em;
+      background: var(--color-surface-subtle);
+      border: 1px solid #E2E8F0;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--color-text);
+    }
+
+    pre {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.45;
+    }
+    pre code {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    .mermaid {
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border);
+      padding: 24px 16px;
+      margin: 24px 0;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      border-radius: 2px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--color-border-dark);
+      padding: 14px 20px;
+      margin: 22px 0;
+      background: var(--color-surface);
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+    blockquote p { margin-bottom: 8px; color: var(--color-text-secondary); }
+    blockquote p:last-child, blockquote ul:last-child { margin-bottom: 0; }
+    blockquote ul { margin: 8px 0 4px 20px; }
+
+    a { color: var(--color-link); text-decoration: underline; word-break: break-word; }
+    a:hover { color: var(--color-link-hover); }
+
+    .table-wrapper {
+      margin: 24px 0;
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #FFFFFF;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 10px 13px;
+      border: 1px solid var(--color-border);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--color-surface-subtle);
+      font-weight: 700;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    tr:nth-child(even) td {
+      background: #FAFAFA;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--color-border);
+      margin: 34px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 26px 20px;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="pub-header">
+    <div class="pub-header-inner">
+      <div class="pub-brand-wrap">
+        <a href="index.html" class="pub-brand">CIVIC LENS INVESTIGATIONS</a>
+        <span class="pub-tagline">Primary Evidence Desk</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-back-link">← Home</a>
+        <a href="tinubu.html" class="nav-back-link">Tinubu 360° Dossier</a>
+        <a href="https://github.com/TherealE2O/research/blob/main/investigations/TINUBU_MANIFESTOS_2023_VS_2027_MASTER.md" target="_blank" rel="noopener" class="nav-back-link" style="color: var(--color-text-secondary);">GitHub Markdown ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="inquiry-kicker">Special Report / Presidential Platform &amp; Delivery Audit</div>
+    <h1 class="inquiry-title">Tinubu Manifestos (2023 vs. 2027): Promise Comparison &amp; 101-Pledge Delivery Audit (2023–2026)</h1>
+    <div class="inquiry-deck">A strictly neutral, page-cited comparison between the 2023 Renewed Hope Action Plan (80 pp., 8 Priority Areas) and the 2027 Agenda 2027–2031: From Reforms to Prosperity manifesto (109 pp., 4 Pillars), paired with an empirical audit of 101 measurable 2023 pledges over May 2023–November 2026.</div>
+    <div class="inquiry-meta-bar">
+      <div>Primary Field File: <span class="file-pill">TINUBU_MANIFESTOS_2023_VS_2027_MASTER.md</span></div>
+      <div>Editorial Standard: <strong>Neutral, Source-Attributed Broadsheet</strong></div>
+    </div>
+
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#primary-evidence-files">Primary Deep-Dive Evidence Files (Notes 01–05)</a></li>
+        <li><a href="#1-executive-overview-of-the-two-manifestos">1. Executive Overview of the Two Manifestos</a></li>
+        <li><a href="#2-core-similarities-continuities">2. Core Similarities &amp; Continuities</a></li>
+        <li><a href="#3-key-differences-strategic-shifts">3. Key Differences &amp; Strategic Shifts</a></li>
+        <li><a href="#4-how-much-of-the-2023-manifesto-did-tinubu-accomplish-may-29-2023-nov-13-2026">4. How Much of the 2023 Manifesto Did Tinubu Accomplish? (May 29, 2023 – Nov 13, 2026)</a></li>
+        <li><a href="#5-civic-lens-documentary-video-blueprint-pre-production">5. Civic Lens Documentary Video Blueprint (Pre-Production)</a></li>
+      </ul>
+    </div>
+    <div class="evidence-box" id="primary-evidence-files">
+      <div class="evidence-box-kicker">Primary Deep-Dive Evidence Files (Manifesto Inventories, Matrix &amp; 101-Pledge Audit)</div>
+      <p class="evidence-box-desc">
+        Access all five standalone research files—covering the full 2023 and 2027 page inventories, 30-sector comparison matrix, 101-pledge empirical audit, and independent quality-assurance log—in web reader or raw GitHub Markdown format:
+      </p>
+        <div class="evidence-row">
+          <div>
+            <strong style="font-size: 15px;">Manifesto Note 01: 2023 Renewed Hope Action Plan Inventory (80 PDF pp., 16 Chapters)</strong>
+            <div class="evidence-row-meta">46 KB • Full WinRT OCR + page-render inventory of the 80-page 2023 manifesto (PDF p. N = printed p. N−2): heterodox oil-decoupled fiscal doctrine, anti-rate-hike stance, managed FX, 10% GDP/$780.9B chart, and measurable targets.</div>
+          </div>
+          <div class="evidence-row-links">
+            <a href="manifesto_2023.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_01_2023_action_plan.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+        <div class="evidence-row">
+          <div>
+            <strong style="font-size: 15px;">Manifesto Note 02: 2027 Agenda 2027–2031 Inventory (109 PDF pp., 4 Pillars)</strong>
+            <div class="evidence-row-meta">87 KB • PyMuPDF + visual page-by-page breakdown of Agenda 2027–2031: 4 Pillars + 4 Foundations, 2031 KPI tables, Fiscal Federation matrix, First 100 Days checklist, Independent Validation claims, Glossary additions &amp; 9 internal variations.</div>
+          </div>
+          <div class="evidence-row-links">
+            <a href="manifesto_2027.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_02_2027_agenda.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+        <div class="evidence-row">
+          <div>
+            <strong style="font-size: 15px;">Manifesto Note 03: Side-by-Side 2023 vs. 2027 Comparison Matrix &amp; Documentary Map</strong>
+            <div class="evidence-row-meta">55 KB • Structural and doctrinal shifts (heterodox expansionism to orthodox consolidation), recalibrated targets, 15 dropped/replaced 2023 pledges, 11 new 2027 proposals, 30-row sector table &amp; 8 Civic Lens visual pairings.</div>
+          </div>
+          <div class="evidence-row-links">
+            <a href="manifesto_comparison.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_03_comparison_matrix.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+        <div class="evidence-row">
+          <div>
+            <strong style="font-size: 15px;">Manifesto Note 04: 2023–2026 Empirical Accomplishment Audit (101 Concrete Pledges)</strong>
+            <div class="evidence-row-meta">100 KB • Triangulated audit across 16 chapters (4 Implemented, 55 Partial, 11 Mixed/Disputed, 27 Not Achieved/Reversed, 4 Insufficient Data), plus 251 verified primary/independent citations and cross-checks of Section 4 2027 claims.</div>
+          </div>
+          <div class="evidence-row-links">
+            <a href="manifesto_audit_2023.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_04_accomplishment_audit.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+        <div class="evidence-row">
+          <div>
+            <strong style="font-size: 15px;">Manifesto Note 05: Independent Quality-Assurance &amp; Source Verification Report</strong>
+            <div class="evidence-row-meta">19 KB • Source-level verification log covering all 80 (2023) and 109 (2027) PDF pages, OCR recovery checks, 101-pledge reconciliation, 140 unique external URLs, 20+ empirical spot-checks &amp; PDF typography quirks.</div>
+          </div>
+          <div class="evidence-row-links">
+            <a href="manifesto_verification.html">Read Full File (HTML) →</a>
+            <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_05_verification_report.md" target="_blank" rel="noopener">GitHub Markdown</a>
+          </div>
+        </div>
+    </div>
+
+    <article>
+<blockquote>
+<p><strong>Primary Documents &amp; Attribution:</strong></p>
+<ul>
+<li><strong>2023 Manifesto:</strong> <em>Renewed Hope 2023: Action Plan for a Better Nigeria</em> (<code>RENEWED-HOPE_compressed.pdf</code>) (<code>80</code> PDF pages, modified Feb 15, 2023; <code>PDF p. N = printed p. N−2</code> for numbered pages <code>pp. 4–76</code>). Extracted &amp; catalogued in <a href="manifesto_2023.html">tinubu_manifesto_notes_01_2023_action_plan.md</a>.</li>
+<li><strong>2027 Manifesto:</strong> <em>APC Manifesto for the 2027 Presidential Election — From Reforms to Prosperity (Agenda 2027–2031)</em> (<code>249518a9-31af-4b8e-9457-23903981f412.pdf</code>) (<code>109</code> PDF pages, cover dated October 2026; <code>PDF p. N = printed p. N</code>). Extracted &amp; catalogued in <a href="manifesto_2027.html">tinubu_manifesto_notes_02_2027_agenda.md</a>.</li>
+<li><strong>Accomplishment Audit &amp; Verification:</strong> 101-pledge empirical audit (<code>May 29, 2023 – November 13, 2026</code>) in <a href="manifesto_audit_2023.html">tinubu_manifesto_notes_04_accomplishment_audit.md</a>, full 30-sector comparison in <a href="manifesto_comparison.html">tinubu_manifesto_notes_03_comparison_matrix.md</a>, and source-level verification log in <a href="manifesto_verification.html">tinubu_manifesto_notes_05_verification_report.md</a>.</li>
+<li><strong>Neutrality &amp; Scope Standard:</strong> All 2023–2026 outcomes are explicitly attributed to official records (CBN, NBS, DMO, NUPRC, NERC, NRS, FMINO, State House) alongside independent institutions and reporting (IMF, World Bank, SBM Intelligence, PLAC, TI, FIJ, Premium Times, The Punch, BusinessDay, Nairametrics). Self-reported 2023–2026 figures inside the 2027 manifesto are distinguished from independently verified records, and no arbitrary overall percentage score or partisan rating is assigned.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="1-executive-overview-of-the-two-manifestos">1. Executive Overview of the Two Manifestos</h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>2023 Manifesto (<em>Renewed Hope 2023</em>)</th>
+<th>2027 Manifesto (<em>From Reforms to Prosperity</em>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Format &amp; Length</strong></td>
+<td><code>80</code> PDF pages (image-only PDF; campaign slogan <em>"TRIED. TESTED. TRUSTED."</em>, PDF p. 76 / printed p. 74).</td>
+<td><code>109</code> PDF pages (cover dated <strong>October 2026</strong>, <em>Agenda 2027–2031</em>, p. 1).</td>
+</tr>
+<tr>
+<td><strong>Political Posture</strong></td>
+<td>Challenger/continuity ticket promising to build on the Buhari administration (PDF p. 5) and scale Bola Tinubu's Lagos record (PDF pp. 4–5, 7, 19).</td>
+<td>Incumbent consolidation ticket framing 2023–2026 as <em>"hard, necessary reforms"</em> and 2027–2031 as turning stabilisation into <em>"measurable household prosperity"</em> (pp. 7, 16, 101).</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>Foreword (10 narrative points, pp. 4–6) → <strong>16 thematic chapters</strong> (pp. 7–74) → Closing Statement (pp. 75–76).</td>
+<td>Consolidates the 2023 Eight-Point Agenda into <strong>4 Pillars + 4 Enduring Foundations</strong> (<em>"Renewed Hope Agenda 2.0"</em>, p. 17) with uniform <code>6-part</code> chapter templates and <code>Where we are \| Where we will be</code> KPI tables (<code>pp. 31, 50, 79, 92</code>).</td>
+</tr>
+<tr>
+<td><strong>New Governance Sections</strong></td>
+<td>None (no baseline/KPI tables or delivery-discipline framework).</td>
+<td><strong>Fiscal Federation ("Who Delivers What")</strong> (<code>pp. 13–15</code>), <strong>Four Delivery Disciplines &amp; First 100 Days</strong> (<code>pp. 93–94</code>), <strong>Independent Validation</strong> (<code>pp. 95–97</code>), and <strong>Glossary</strong> (<code>pp. 105–108</code>).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="2-core-similarities-continuities">2. Core Similarities &amp; Continuities</h2>
+<p>Despite major shifts in macroeconomic doctrine and presentation, the APC 2027 manifesto carries forward core themes and several signature benchmarks from 2023:</p>
+<ol>
+<li><strong>Eight-Point Agenda Framework:</strong> The 2027 manifesto retains all eight 2023 priorities (Economy, Security, Agriculture, Energy/Natural Resources, Infrastructure, Human Capital/Social Investment, Diversification, Governance) grouped under four pillars (<code>2023 PDF pp. 4–74</code>; <code>2027 pp. 8–9, 17</code>).</li>
+<li><strong>Fuel Subsidy Phase-Out &amp; Reinvestment Framing:</strong> Initiated as a 2023 commitment to <em>"phase out the fuel subsidy"</em> and channel savings into roads, transit, education, and health (<code>2023 PDF pp. 39, 49</code>); framed in 2027 as executed (<code>pp. 7, 60</code>) alongside a pledge to publish <em>"exactly how subsidy savings are lowering the cost of governance and funding development"</em> (<code>2027 p. 89</code>).</li>
+<li><strong>40% Health Insurance Target &amp; Local Pharma:</strong> Both target <strong>40% population health insurance coverage</strong> (<code>2023 PDF p. 49</code> within 2 years via mandatory NHIA; <code>2027 pp. 18, 43, 50</code> by 2031), expand BHCPF/Vulnerable Group funding, and prioritise domestic drug/vaccine production (<code>2023 PDF p. 50</code>; <code>2027 p. 43</code>: 50% BioVaccines by 2031).</li>
+<li><strong>Halving Youth Unemployment &amp; NYSC Reform:</strong> Both pledge to cut youth unemployment in half (<code>2023 PDF p. 59</code>: within 4 years; <code>2027 pp. 18, 44, 50</code>: by 2031) and reorient NYSC toward skills and private-sector placement (<code>2023 PDF p. 60</code>; <code>2027 p. 44</code>).</li>
+<li><strong>35% Women's Representation &amp; Anti-GBV Expansion:</strong> Both retain <strong>at least 35% women's participation</strong> in government/Cabinet/MDAs backed by legal pathways (<code>2023 PDF p. 62</code>; <code>2027 pp. 45, 50</code>), women-focused finance, and nationwide anti-GBV/SARC support (<code>2023 PDF p. 63</code>; <code>2027 pp. 45, 50</code>).</li>
+<li><strong>Core Security Blueprint:</strong> Both pair police expansion with transferring static/VIP guard duties to the <strong>NSCDC</strong> (<code>2023 PDF p. 12</code>; <code>2027 p. 27</code>), Forest Guards/border technology (<code>2023 PDF pp. 10–11</code>; <code>2027 p. 28</code>), domestic defence production and fallen-hero family welfare (<code>2023 PDF p. 9</code>; <code>2027 p. 29</code>), and biometric <strong>NIN</strong> database integration (<code>2023 PDF p. 11</code>; <code>2027 pp. 30–31</code>).</li>
+<li><strong>Power Metering, PPI &amp; Gas Trunklines:</strong> Both keep the <strong>Presidential Power Initiative</strong> (<code>2023 PDF p. 32</code>; <code>2027 pp. 73, 108</code>), aggressive metering to curb estimated billing (<code>2023 PDF p. 32</code>; <code>2027 pp. 58–59, 79</code>), finishing <strong>AKK</strong> and <strong>OB3</strong> pipelines (<code>2023 PDF p. 38</code>; <code>2027 pp. 60, 105, 108</code>), and <strong>Host Community Development Trusts</strong> (<code>2023 PDF p. 37</code>; <code>2027 p. 106</code>).</li>
+<li><strong>Zone Industrial Hubs, Student Loans &amp; Judicial Digitisation:</strong> Six-zone industrial hubs (<code>2023 PDF pp. 24–25</code>; <code>2027 pp. 18, 74</code>), student loans (<code>2023 PDF p. 46</code>; <code>2027 pp. 37–38</code>), Digital MSME Academy (<code>2023 PDF p. 66</code>; <code>2027 p. 44</code>), school sports (<code>2023 PDF p. 58</code>; <code>2027 p. 42</code>), court digitisation (<code>2023 PDF p. 69</code>; <code>2027 pp. 87, 92</code>), and federation revenue allocation review (<code>2023 PDF pp. 14, 71</code>; <code>2027 p. 89</code>) recur across both texts.</li>
+</ol>
+<hr />
+<h2 id="3-key-differences-strategic-shifts">3. Key Differences &amp; Strategic Shifts</h2>
+<h3 id="31-sharpest-doctrinal-pivot-2023-heterodox-expansionism-2027-orthodox-consolidation">3.1 Sharpest Doctrinal Pivot: 2023 Heterodox Expansionism → 2027 Orthodox Consolidation</h3>
+<p>According to verbatim passages verified across both PDFs:</p>
+<ul>
+<li><strong>Fiscal Rules &amp; Oil-Decoupled Spending:</strong> The 2023 Action Plan urged <em>"break[ing] the explicit link between naira expenditure and dollar inflows"</em> and called to <em>"legislatively suspend the limits on government spending"</em> (<code>2023 PDF p. 16</code>). The 2027 Manifesto omits deficit-cap suspension and frames policy around <em>"structural fiscal consolidation"</em> (<code>p. 71</code>), staying <em>"Inside the 60 per cent [debt/GDP] ceiling"</em> at <code>36.85%</code> (<code>pp. 7, 95</code>), <em>"Fund it first from what we already lose"</em> (<code>p. 93</code>), and a 100-day asset/waste audit (<code>pp. 88, 94</code>).</li>
+<li><strong>Monetary Policy &amp; Interest Rates:</strong> The 2023 manifesto called inflation supply-driven and argued <em>"higher interest rates and tighter money-supply will only weaken the patient"</em> (<code>2023 PDF p. 22</code>). The 2027 manifesto notes a <code>23%</code> CBN policy rate (<code>p. 78</code>), commits to <em>"respecting the operational independence of monetary and fiscal institutions"</em> (<code>p. 78</code>), and conditions its <code>≤8%</code> end-2031 inflation goal on <em>"credible, independent monetary policy"</em> (<code>p. 79</code>).</li>
+<li><strong>Exchange Rate Regime:</strong> The 2023 manifesto rejected leaving the naira <em>"to the vagaries of an unrestrained market"</em> (<code>2023 PDF p. 21</code>). The 2027 manifesto defends FX unification (<code>pp. 7, 70–71</code>) and cites the June 2026 IMF Article IV Board welcoming Nigeria's <em>"commitment to a flexible exchange rate"</em> (<code>p. 96</code>).</li>
+<li><strong>Taxation Posture:</strong> The 2023 manifesto warned <em>"During times of economic weakness, increasing taxation is counterproductive"</em> (<code>2023 PDF p. 18</code>). The 2027 manifesto highlights the June 2025 Tax Reform Acts (<code>effective Jan 1, 2026</code>), creating the <strong>Nigeria Revenue Service (NRS)</strong>, <code>≤₦800k</code>/basic-food exemptions, and a <code>15%</code> large-firm minimum tax (<code>pp. 15, 71</code>), while pledging a 100-day review of multiple taxation (<code>p. 94</code>).</li>
+<li><strong>State Directivism vs. Intermediation:</strong> Direct administrative tools in 2023 (bank lending penalty quotas, Commodity Boards, CBN-purchased zero-coupon education bonds, national airline carrier) give way in 2027 to specialised intermediaries (<strong>CrediCorp, MREIF, NELFUND, DBN, BOI</strong>), private flag carriers, ISA 2025 exchanges, and explicit competition rules (<code>p. 74</code>).</li>
+</ul>
+<h3 id="32-selected-quantitative-target-shifts">3.2 Selected Quantitative Target Shifts</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>2023 Target (PDF Page)</th>
+<th>2027 Target (PDF Page)</th>
+<th>Nature of Shift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GDP Growth &amp; Size</strong></td>
+<td><code>10%</code> annual growth; <code>$484.9Bn</code> (2022) → <strong><code>$780.9Bn</code> by 2027</strong> (<code>p. 15</code>)</td>
+<td><strong><code>6%</code> annual real growth</strong> by 2031 (<code>4.43%</code> Q2 2026 baseline, <code>pp. 10, 18</code>); <code>≥12%</code> catalytic-sector growth (<code>p. 79</code>)</td>
+<td>Scaled down &amp; re-anchored; nominal USD target dropped</td>
+</tr>
+<tr>
+<td><strong>Inflation</strong></td>
+<td>Unquantified; anti-rate-hike supply doctrine (<code>p. 22</code>)</td>
+<td><strong>Single-digit (<code>≤8%</code> YoY) by end-2031</strong> (<code>14.63%</code> Sept 2026 baseline, <code>pp. 78–79</code>)</td>
+<td>Newly quantified &amp; doctrinally inverted</td>
+</tr>
+<tr>
+<td><strong>Crude Oil</strong></td>
+<td><strong><code>2.6 mmbpd</code> by 2027</strong>, <code>4 mmbpd</code> by 2030; <code>&gt;1 mmbpd</code> indigenous (<code>p. 37</code>)</td>
+<td>Medium-term <strong><code>3m b/d</code></strong> (<code>1.52–1.56m</code> mid-2026 baseline, <code>pp. 12, 60</code>)</td>
+<td>Timeline relaxed to undated medium-term; indigenous quota omitted</td>
+</tr>
+<tr>
+<td><strong>Power Grid &amp; Meters</strong></td>
+<td>Cites <code>8,000 MW</code> generated / <code>4,500 MW</code> distributed baseline; no MW target; end estimated billing quickly (<code>pp. 32–33</code>)</td>
+<td><strong><code>≥7,500 MW</code> avg / <code>10,000 MW</code> peak by 2031</strong> (<code>4,022 MW</code> Q2 2026); <strong><code>+7m</code> meters</strong> (<code>≥2m/yr</code>); <code>≤16%</code> ATC&amp;C losses (<code>pp. 18, 59, 79</code>)</td>
+<td>Newly quantified 2031 generation &amp; loss KPIs</td>
+</tr>
+<tr>
+<td><strong>Broadband &amp; Fibre</strong></td>
+<td><strong><code>90%</code> population coverage by 2025</strong> (<code>p. 53</code>)</td>
+<td>Cites <code>57.4%</code> July 2026 (<code>p. 67</code>); targets <strong><code>≥125,000 km</code> fibre</strong> via Project BRIDGE (<code>+90,000+ km</code>, <code>pp. 76, 79</code>)</td>
+<td>Missed 2025 penetration goal replaced by physical fibre-km</td>
+</tr>
+<tr>
+<td><strong>ICT &amp; Youth Jobs</strong></td>
+<td><strong><code>1M</code> ICT jobs in 24 months</strong> (<code>p. 51</code>); halve <code>33%</code> youth unemployment (<code>21.5M → 11.9M</code> 2026, <code>pp. 59–60</code>)</td>
+<td><strong><code>1M</code> NATEP export jobs by 2030</strong> (<code>pp. 18, 64</code>); halve youth unemployment <strong>by 2031</strong> (<code>p. 50</code>); <code>2M</code> skilled, <code>30M</code> digitally literate (<code>p. 44</code>)</td>
+<td>Deadlines reset from 2025/2026 to 2030/2031</td>
+</tr>
+<tr>
+<td><strong>Health Insurance</strong></td>
+<td><strong><code>≥40%</code> NHIA within 2 years</strong> (<code>p. 49</code>); clinic <code>≤3 km / 30 min</code> (<code>p. 48</code>)</td>
+<td><strong><code>40%</code> insured by 2031</strong> (<code>&gt;23m</code> baseline); <code>≥90%</code> functional PHCs (<code>pp. 18, 43, 50</code>)</td>
+<td><code>40%</code> deadline pushed 6 years (2025 → 2031)</td>
+</tr>
+<tr>
+<td><strong>Agriculture</strong></td>
+<td>Cultivated arable land <strong><code>35% → 65%</code> in 4 years</strong> (<code>p. 28</code>)</td>
+<td><strong><code>+50%</code> storage by 2028</strong>; <strong>halve post-harvest losses by 2030</strong> (<code>pp. 18, 79</code>)</td>
+<td>Pivoted from acreage expansion to storage/losses</td>
+</tr>
+<tr>
+<td><strong>Housing &amp; Land</strong></td>
+<td>Unscaled chart <code>4.0 → 24.0</code> (<code>p. 27</code>); revise Land Use Act (<code>p. 27</code>)</td>
+<td><strong><code>154,800</code> LGA social units</strong> → <code>200,000</code> homes; <strong><code>₦1tn</code> MREIF</strong>; <strong><code>1M</code> Land4Growth digital titles</strong> (<code>pp. 18, 49–50</code>)</td>
+<td>Quantified LGA units &amp; titling; drops Land Use Act amendment</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="33-droppedreplaced-2023-pledges-vs-major-new-2027-proposals">3.3 Dropped/Replaced 2023 Pledges vs. Major New 2027 Proposals</h3>
+<ul>
+<li><strong>Verified Omitted or Quietly Replaced from 2023:</strong></li>
+<li><em>New National Carrier (<code>2023 p. 42</code>)</em> → replaced by 4 designated private flag carriers (<code>2027 p. 57</code>).</li>
+<li><em>State Commodity Boards (<code>p. 29</code>)</em> &amp; <em>Anchor Borrower's / BoA expansion (<code>p. 30</code>)</em> → replaced by <code>₦200bn</code> GMP and ISA 2025 exchanges (<code>pp. 38, 71</code>).</li>
+<li><em>CBN zero-coupon education bonds &amp; "cost reflective tuition fees" (<code>p. 46</code>)</em> → replaced by <strong>NELFUND</strong> (<code>₦355.87bn</code>, <code>pp. 37–38</code>).</li>
+<li><em>Youth Cabinet &amp; MDA Age Quotas (<code>≥3 &lt;40</code>, <code>6 &lt;50</code>, <code>≥20%</code> MDAs), <code>2M</code> mentors &amp; One-Day Governor Fellowship (<code>pp. 60–61</code>)</em> → all dropped in 2027.</li>
+<li><em>Limiting NJC Mandate to Federal Courts (<code>p. 68</code>)</em> → reversed to strengthening NJC disciplinary timelines (<code>p. 88</code>).</li>
+<li><em>Diaspora Voting Constitutional Exploration (<code>p. 74</code>)</em>, <em>State Refinery Rehabilitation (<code>p. 39</code>)</em>, <em>Apapa-to-Onne/Warri/Calabar Diversion (<code>p. 42</code>, replaced by <code>£746m</code> Apapa/Tin Can upgrade, <code>p. 56</code>)</em>, <em>Lagos–Kano / Benin–Abakaliki / Kano–Maradi named rails (<code>p. 41</code>)</em>, <em>eNaira (<code>p. 54</code>)</em>, <em>Media City SEZ (<code>p. 57</code>)</em>, <em>5-min Water by 2030 &amp; Great Green Wall (<code>p. 17</code>)</em>, <em>Sin Taxes (<code>p. 49</code>)</em>, <em>History/Indigenous Languages (<code>p. 44</code>)</em>, <em>African G-5 (<code>p. 74</code>)</em>, and <em>N-SIP / GEEP / N-Power (<code>p. 64</code>)</em>.</li>
+<li><strong>Major New 2027 Additions:</strong></li>
+<li>Explicit <strong>constitutional/legal framework for state and community policing</strong> (<code>pp. 13, 27</code> — whereas 2023 used <em>"locally-based law enforcement institutions"</em>, <code>p. 11</code>).</li>
+<li><strong>4 new Army divisions + <code>28,000</code> troops</strong>, <strong><code>50,000</code> new police</strong> (<code>1:400</code> target) + <strong>body cameras</strong>, <strong><code>30,150</code> NSCDC recruits</strong>, <strong>190/190 border e-surveillance</strong>, <strong>Mining Marshals</strong>, and <strong>SAR drone fleet</strong> (<code>pp. 26–31</code>).</li>
+<li><strong><code>₦900bn</code> National Affordable CNG Transit Programme (<code>NACTP</code>)</strong> (<code>3,700</code> buses, <code>55,500</code> tricycles, <code>37,000</code> kits, <code>p. 61</code>).</li>
+<li><strong><code>10m</code> tonnes/yr crude steel + <code>1m</code> tonnes aluminium by 2030</strong> (<code>100,000</code> jobs) &amp; <strong>US–Nigeria Critical Minerals Framework</strong> (<code>pp. 69, 77, 79</code>).</li>
+<li><strong>First 100 Days Accountability Package</strong> (asset/waste audit, quarterly cost-of-living basket, multiple-tax review, <code>p. 94</code>), <strong>July 2024 Supreme Court 774 LG autonomy enforcement &amp; Oronsaye completion</strong> (<code>pp. 86, 89</code>), <strong>DEON 2025 &amp; CBN–FCCPC bank transfer auto-reversal</strong> (<code>p. 48</code>), and <strong>BRICS partner / G20 / UNSC</strong> diplomacy (<code>p. 91</code>).</li>
+</ul>
+<hr />
+<h2 id="4-how-much-of-the-2023-manifesto-did-tinubu-accomplish-may-29-2023-nov-13-2026">4. How Much of the 2023 Manifesto Did Tinubu Accomplish? (May 29, 2023 – Nov 13, 2026)</h2>
+<p>Roughly <strong>41.5 months (<code>86.5%</code>)</strong> into the four-year term, <a href="manifesto_audit_2023.html">tinubu_manifesto_notes_04_accomplishment_audit.md</a> audits <strong>101 distinct, concrete, measurable pledges</strong> across all 16 policy chapters (excluding broad Foreword aspirations, mapped separately in its Appendix A). Rather than an arbitrary percentage grade—which treats narrow statutes identically to macro targets—here is the verified breakdown:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th style="text-align: right;">Count (of 101)</th>
+<th style="text-align: right;">Share</th>
+<th>Representative Examples (with Verified Sources)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Implemented / Achieved</strong></td>
+<td style="text-align: right;"><strong>4</strong></td>
+<td style="text-align: right;"><code>4.0%</code></td>
+<td><strong>Electricity Act 2023</strong> (<code>PWR-05</code>, 15–16 state markets); <strong>NCAA Part 19 delay enforcement &amp; Cape Town aviation direction</strong> (<code>TRN-05</code>); <strong>NELFUND Student Loans</strong> (<code>₦375.28B</code> across <code>1.66M</code> apps by Nov 9, 2026 + Jan 2026 ASUU <code>40%</code> pay deal, <code>EDU-04</code>, <a href="https://nairametrics.com/2026/11/09/nelfund-student-loan-disbursements-hit-n375-28-billion/">Nairametrics</a>); <strong>Judicial Pay Act Aug 2024</strong> (<code>+300%</code>, <code>JUD-01</code>).</td>
+</tr>
+<tr>
+<td><strong>Partially Implemented / In Progress</strong></td>
+<td style="text-align: right;"><strong>55</strong></td>
+<td style="text-align: right;"><code>54.5%</code></td>
+<td><strong>State Police Bill</strong> passed NASS + 28–30 State Assemblies awaiting assent (<code>SEC-06</code>, <a href="https://www.vanguardngr.com/2026/11/28-states-approve-state-police-bill-as-nass-moves-to-transmit-to-tinubu/">Vanguard</a>); <strong>4 Tax Reform Acts</strong> eff. Jan 2026 (<code>NRS ₦28.3T</code>, <code>ECON-06</code>, <a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html">PwC</a>); <strong>Oil output</strong> <code>1.65–1.84 mbpd</code> vs <code>2.6</code> target (<code>OIL-01</code>); <strong>OB3 <code>98%</code> / AKK <code>94%</code></strong> (<code>OIL-04</code>); <strong>Metering</strong> <code>61.51%</code> vs <code>100%</code> (<code>PWR-02</code>, <a href="https://nerc.gov.ng/resources/metering-factsheet-for-may-and-june-2026/">NERC</a>); <strong>Lagos–Calabar</strong> <code>151.64 km</code> paved (<code>TRN-01</code>); <strong>AGILE</strong> <code>7.19M</code> girls in 18 states (<a href="https://www.worldbank.org/en/results/2025/11/17/from-classrooms-to-communities-educating-empowering-and-elevating-nigeria-girls-and-women">World Bank</a>); <strong>BHCPF</strong> <code>₦249.5B</code> (<code>HLT-02</code>); <strong>Supreme Court 21 Justices</strong> (<code>JUD-04</code>); <strong>LG autonomy ruling</strong> <code>SC/CV/343/2024</code> vs <code>₦7.43T</code> via state joint accounts (<code>FED-02</code>).</td>
+</tr>
+<tr>
+<td><strong>Mixed / Disputed Outcome</strong></td>
+<td style="text-align: right;"><strong>11</strong></td>
+<td style="text-align: right;"><code>10.9%</code></td>
+<td><strong>FX unification</strong> (<code>&lt;5%</code> spread &amp; <code>$35B–$46B</code> net reserves vs <code>~70%</code> Naira drop &amp; anti-free-float pledge, <code>ECON-08</code>, <a href="https://www.cbn.gov.ng/AboutCBN/Reforms.html">CBN</a> / <a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1ngaea2026001.pdf">IMF</a>); <strong>Fuel subsidy exit</strong> (<code>-96%</code> Q1 2026 PMS imports w/ Dangote vs <code>~7×</code> pump jump &amp; unringfenced savings, <code>OIL-07</code>); <strong>Oil theft CIPP</strong> (<code>3.33M</code> bbl stolen in 2025 per NUPRC, <code>SEC-05</code>, <a href="https://punchng.com/nigeria-lost-3-3m-barrels-to-oil-thieves-in-2025-nuprc/">The Punch</a>); <strong>Cash transfers</strong> (<code>₦658.9B / 10.46M</code> households vs Jan 2024 NSIPA suspension &amp; <code>139M</code> World Bank poverty, <code>SOC-01</code>); <strong>ISA 2025 crypto vs stalled eNaira</strong> (<code>DIG-05</code>); <strong>4D diplomacy vs Jan 2025 AES ECOWAS exit</strong> (<code>FOR-01</code>).</td>
+</tr>
+<tr>
+<td><strong>Not Achieved / Stalled / Reversed</strong></td>
+<td style="text-align: right;"><strong>27</strong></td>
+<td style="text-align: right;"><code>26.7%</code></td>
+<td><strong>Macro inversions:</strong> CBN rate hikes (<code>27.5%</code> peak / <code>23%</code> Sept 2026, <code>ECON-09</code>, <a href="https://www.cbn.gov.ng/MonetaryPolicy/decisions.html">CBN</a>), oil-pegged <code>₦68.32T</code> 2026 budget (<code>ECON-02</code>), USD GDP falling ~half (<code>~$291B</code> 2025 vs <code>$709.9B</code> 2026 target, <code>ECON-01</code>, <a href="https://www.imf.org/external/datamapper/profile/NGA">IMF</a>), debt rising to <code>₦166.79T</code> (<code>ECON-10</code>, <a href="https://nairametrics.com/2026/09/26/nigerias-public-debt-rises-to-n166-79-trillion-in-q2-2026/">Nairametrics</a>); <strong>Missed deadlines:</strong> <code>1M</code> ICT jobs (<code>DIG-01</code>), <code>90%</code> 2025 broadband (<code>59.05%</code> Sept 2026, <code>DIG-02</code>), <code>40%</code> NHIA (<code>23.06M</code> / <code>~10–11%</code>, <code>HLT-01</code>), <code>8,000 MW</code> grid (<code>4,022 MW</code> Q2 2026, <code>PWR-01</code>), <code>65%</code> arable land (<code>12M+ ha</code> unfarmed, <code>AGRI-01</code>); <strong>Unbuilt/Reversed:</strong> <strong>NNPC refineries</strong> (<code>₦8.31T</code> debt, <code>OIL-08</code>), <strong>Nigeria Air</strong> (<code>TRN-06</code>), <strong>48 ministers / <code>~₦1T</code> redundant agency budgets</strong> (<code>ECON-07</code>, <a href="https://guardian.ng/featured/14-yrs-after-oronsaye-report-bloated-agencies-cost-nigeria-n1tr-in-2026/">The Guardian</a>), <strong>youth <code>&lt;40</code> &amp; <code>35%</code> women quotas</strong> (<code>YTH-03/04</code>, <code>WMN-01</code>), <strong>Land Use Act</strong> (<code>ECON-17</code>), <strong>NJC Federal limit</strong> (<code>JUD-03</code>), <strong>Diaspora voting</strong> (<code>FOR-06</code>), <strong>Niger MNJTF exit</strong> (<code>SEC-09</code>).</td>
+</tr>
+<tr>
+<td><strong>Insufficient Verifiable Data</strong></td>
+<td style="text-align: right;"><strong>4</strong></td>
+<td style="text-align: right;"><code>4.0%</code></td>
+<td>Fallen-hero family welfare (<code>SEC-03</code>), <code>~1%</code> NHIA research allocation (<code>HLT-06</code>), biannual <em>State of Youth</em> survey / Fellowship (<code>YTH-05</code>), MFA Strategic Policy Dept (<code>FOR-05</code>).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="key-cross-checks-on-apc-2027-manifesto-claims-section-4">Key Cross-Checks on APC 2027 Manifesto Claims (<code>Section 4</code>)</h3>
+<ul>
+<li><strong>Confirmed with Essential Context:</strong> NBS <code>4.43%</code> Q2 2026 GDP growth, <code>14.63%</code> Sept 2026 CPI (<code>19.59%</code> food, post-Jan 2025 CPI rebasing), <code>23%</code> MPR, <code>$3.4B</code> IMF repayment (Apr 2025), Oct 2025 FATF grey-list exit, FTSE Frontier status, <code>₦4.65T</code> bank recapitalisation, <code>₦28.3T</code> NRS + <code>₦7.28T</code> Customs 2025 collections, <code>$6.1B</code> 2025 non-oil exports, and <code>₦355.87B→₦375.28B</code> NELFUND are supported by primary sources—<strong>with key omissions</strong>: DMO warns debt-service-to-FGN-revenue hits <code>51%</code> in 2026 / <code>71.7%</code> by 2030, only <code>$923M</code> (<code>~4%</code>) of <code>$23.22B</code> 2025 capital inflows was FDI, and World Bank estimates <code>139M</code> Nigerians live in poverty.</li>
+<li><strong>Disputed / Divergent Claims:</strong></li>
+<li><em>Reserves Timing &amp; Internal Conflicts:</em> The 2027 PDF claims <code>"$55.3bn in Sep 2026"</code> (<em>highest since 2019</em> p. 10 vs <em>since 2008</em> p. 101), whereas CBN gross reserves closed Sept 2026 at <code>~$54.9B</code> and crossed <code>$55.2B–$55.26B</code> in late Oct 2026 (<code>9</code> total cross-page discrepancies flagged in <a href="manifesto_comparison.html">tinubu_manifesto_notes_03_comparison_matrix.md</a> / <a href="manifesto_audit_2023.html">tinubu_manifesto_notes_04_accomplishment_audit.md</a> (§4.2)).</li>
+<li><em>Oil Theft &amp; Security:</em> Citing a <code>7-month 2025</code> <code>9,600 bpd</code> theft figure omits NUPRC's full-year 2025 total of <code>3.33M</code> stolen barrels (<code>2.19M</code> in Q4 2025 alone) and SBM Intelligence's <code>+66%</code> kidnap surge (<code>7,825</code> victims).</li>
+<li><em>LG Direct FAAC Card (<code>p. 13</code>):</em> Headline <code>"774 Councils Paid FAAC Directly"</code> conflicts with <code>₦7.43T</code> routed via state joint accounts through late 2025 and the Supreme Court's Osun LG withholding dispute.</li>
+</ul>
+<hr />
+<h2 id="5-civic-lens-documentary-video-blueprint-pre-production">5. Civic Lens Documentary Video Blueprint (Pre-Production)</h2>
+<p>Per <strong>Civic Lens Video Style Guide</strong>, video rendering starts only <strong>after</strong> your narration audio is recorded and Whisper-aligned (<code>scripts/transcribe_word_alignment.py</code>) against an approved scene plan. Below are the strongest verified <strong>Left (2023) → Right (2027 / Record)</strong> visual pairings ready for your script:</p>
+<ol>
+<li><strong>Macro &amp; Spending Rules:</strong> <code>2023 PDF p. 16</code> (<em>"legislatively suspend the limits on government spending"</em>) vs. <code>2027 pp. 71, 93, 95</code> (<em>"structural fiscal consolidation"</em>, <code>36.85%</code> debt/GDP) + DMO debt-service trajectory (<code>51%→71.7%</code>).</li>
+<li><strong>Interest Rates &amp; Inflation:</strong> <code>2023 PDF p. 22</code> (<em>"higher interest rates... will only weaken the patient"</em>) vs. <code>2027 pp. 78–79</code> (<code>23%</code> CBN rate, <code>≤8%</code> inflation <em>"subject to credible, independent monetary policy"</em>).</li>
+<li><strong>FX &amp; Naira Trajectory:</strong> <code>2023 PDF p. 21</code> (<em>"not... left to the vagaries of an unrestrained market"</em>) vs. <code>2027 pp. 7, 70, 96</code> (FX unification, <code>&lt;5%</code> gap, IMF flexible-FX endorsement) + existing Manim Naira graph.</li>
+<li><strong>GDP Growth &amp; Dollar Size:</strong> <code>2023 PDF p. 15</code> (<code>$780.9 Bn</code> 2027 chart at <code>10%</code>) vs. <code>2027 pp. 10, 18</code> (<code>4.43%</code> Q2 2026, <code>6%</code> 2031 target) + IMF USD GDP series.</li>
+<li><strong>Power &amp; Oil Targets:</strong> <code>2023 PDF pp. 32, 37</code> (<code>8,000 MW</code> baseline; <code>2.6 mmbpd</code> by 2027) vs. <code>2027 pp. 60, 79</code> (<code>4,022 MW</code> Q2 2026 → <code>10,000 MW</code> peak 2031; <code>1.52–1.56m</code> → <code>3m b/d</code> medium-term).</li>
+<li><strong>State Policing Phrasing:</strong> <code>2023 PDF p. 11</code> (<em>"locally-based law enforcement institutions"</em>) vs. <code>2027 p. 27</code> (<em>"constitutional and legal framework for accountable state and community policing"</em>) + Nov 2026 State Police Bill status.</li>
+<li><strong>Dropped Flagships Cascade:</strong> <code>2023 pp. 29, 42, 61</code> (Commodity Boards, national carrier, <code>≥3</code> under-40 ministers) → <code>2023–2026</code> reality (Nigeria Air suspended, <code>1–2</code> <code>&lt;40</code> ministers) → <code>2027 pp. 38, 45, 57</code> (<code>₦200bn</code> GMP, 4 private flag carriers, women-only Cabinet quota).</li>
+<li><strong>Housing, Health &amp; Broadband Shifts:</strong> <code>2023 pp. 27, 49, 53</code> (unscaled <code>4.0–24.0</code> housing chart, <code>40%</code> NHIA in 2 yrs, <code>90%</code> broadband by 2025) vs. <code>2027 pp. 43, 49–50, 67, 79</code> (<code>154,800</code> LGA units, <code>40%</code> NHIA pushed to 2031, <code>57.4%</code> broadband → <code>125,000 km</code> fibre).</li>
+</ol>
+    </article>
+  </main>
+
+  <footer>
+    <p>CIVIC LENS INVESTIGATIVE DESK • PRESIDENTIAL MANIFESTO &amp; DELIVERY ARCHIVE</p>
+    <p style="margin-top: 6px;">All claims, targets, and empirical outcomes compiled strictly from official APC 2023 &amp; 2027 manifestos alongside CBN, NBS, DMO, NERC, NRS, judicial, multilateral, and independent press records.</p>
+  </footer>
+</body>
+</html>

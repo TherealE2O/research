@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>101-Pledge Delivery Audit (May 29, 2023 – Nov 13, 2026) &amp; 2027 Self-Reported Claims Cross-Check — Civic Lens Investigation</title>
+  <style>
+    :root {
+      --font-headline: "Georgia", "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "Consolas", "Courier New", monospace;
+
+      --color-bg: #FFFFFF;
+      --color-surface: #F8F9FA;
+      --color-surface-subtle: #F1F5F9;
+      --color-border: #D1D5DB;
+      --color-border-dark: #111827;
+      --color-text: #111827;
+      --color-text-secondary: #374151;
+      --color-text-muted: #6B7280;
+      --color-link: #1D4ED8;
+      --color-link-hover: #1E40AF;
+      --color-accent-red: #B91C1C;
+      --color-accent-blue: #1D4ED8;
+      --color-accent-green: #15803d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pub-header {
+      border-top: 4px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border);
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .pub-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pub-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pub-brand {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .pub-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--color-accent-red);
+      border-left: 1px solid var(--color-border);
+      padding-left: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-back-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-link);
+      text-decoration: none;
+    }
+    .nav-back-link:hover { text-decoration: underline; }
+
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 20px 100px;
+    }
+
+    .inquiry-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 10px;
+    }
+
+    h1.inquiry-title {
+      font-family: var(--font-headline);
+      font-size: 34px;
+      line-height: 1.24;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      color: var(--color-text);
+    }
+
+    .inquiry-deck {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.48;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin-bottom: 22px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .inquiry-meta-bar {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 0;
+      margin: 18px 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+
+    .inquiry-meta-bar strong { color: var(--color-text); }
+
+    .file-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 2px 8px;
+    }
+
+    .table-of-contents {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      margin: 0;
+    }
+    @media (max-width: 680px) {
+      .toc-list { grid-template-columns: 1fr; }
+      .pub-tagline { display: none; }
+    }
+
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: 13.5px;
+    }
+    .toc-list a:hover { text-decoration: underline; }
+
+    .evidence-box {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border-dark);
+      padding: 22px 24px;
+      margin-bottom: 40px;
+    }
+
+    .evidence-box-kicker {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-accent-red);
+      margin-bottom: 6px;
+    }
+
+    .evidence-box-desc {
+      font-size: 14.5px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .evidence-row {
+      border-top: 1px solid var(--color-border);
+      padding-top: 12px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .evidence-row-meta {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-top: 3px;
+    }
+
+    .evidence-row-links {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    h2 {
+      font-family: var(--font-headline);
+      font-size: 24px;
+      line-height: 1.35;
+      margin: 42px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-dark);
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h3 {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 28px 0 12px;
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--color-text);
+    }
+
+    p { margin-bottom: 16px; color: var(--color-text); }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+    }
+    li { margin-bottom: 8px; }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.87em;
+      background: var(--color-surface-subtle);
+      border: 1px solid #E2E8F0;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--color-text);
+    }
+
+    pre {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.45;
+    }
+    pre code {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    .mermaid {
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border);
+      padding: 24px 16px;
+      margin: 24px 0;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      border-radius: 2px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--color-border-dark);
+      padding: 14px 20px;
+      margin: 22px 0;
+      background: var(--color-surface);
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+    blockquote p { margin-bottom: 8px; color: var(--color-text-secondary); }
+    blockquote p:last-child, blockquote ul:last-child { margin-bottom: 0; }
+    blockquote ul { margin: 8px 0 4px 20px; }
+
+    a { color: var(--color-link); text-decoration: underline; word-break: break-word; }
+    a:hover { color: var(--color-link-hover); }
+
+    .table-wrapper {
+      margin: 24px 0;
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #FFFFFF;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 10px 13px;
+      border: 1px solid var(--color-border);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--color-surface-subtle);
+      font-weight: 700;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    tr:nth-child(even) td {
+      background: #FAFAFA;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--color-border);
+      margin: 34px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 26px 20px;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="pub-header">
+    <div class="pub-header-inner">
+      <div class="pub-brand-wrap">
+        <a href="index.html" class="pub-brand">CIVIC LENS INVESTIGATIONS</a>
+        <span class="pub-tagline">Primary Evidence Desk</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-back-link">← Home</a>
+        <a href="tinubu_manifestos.html" class="nav-back-link">Manifesto Master Dossier</a>
+        <a href="tinubu.html" class="nav-back-link">Tinubu 360° Dossier</a>
+        <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_04_accomplishment_audit.md" target="_blank" rel="noopener" class="nav-back-link" style="color: var(--color-text-secondary);">GitHub Markdown ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="inquiry-kicker">Civic Lens Forensic Inquiry • Manifesto Dossier File 04</div>
+    <h1 class="inquiry-title">101-Pledge Delivery Audit (May 29, 2023 – Nov 13, 2026) &amp; 2027 Self-Reported Claims Cross-Check</h1>
+    
+    <div class="inquiry-meta-bar">
+      <div>Primary Field File: <span class="file-pill">tinubu_manifesto_notes_04_accomplishment_audit.md</span></div>
+      <div>Editorial Standard: <strong>Neutral, Source-Attributed Broadsheet</strong></div>
+    </div>
+
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#1-methodology-attribution-standards-classification-taxonomy">1. Methodology, Attribution Standards &amp; Classification Taxonomy</a></li>
+        <li><a href="#2-master-quantitative-scoreboard-all-101-audited-concrete-pledges">2. Master Quantitative Scoreboard (All 101 Audited Concrete Pledges)</a></li>
+        <li><a href="#3-chapter-by-chapter-pledge-by-pledge-audit-may-2023-november-2026">3. Chapter-by-Chapter Pledge-by-Pledge Audit (May 2023 – November 2026)</a></li>
+        <li><a href="#4-cross-check-of-apc-2027-manifesto-self-reported-20232026-claims">4. Cross-Check of APC 2027 Manifesto Self-Reported 2023–2026 Claims</a></li>
+        <li><a href="#appendix-a-broad-aspirational-commitments-vs-concrete-auditable-targets">Appendix A: Broad Aspirational Commitments vs. Concrete Auditable Targets</a></li>
+        <li><a href="#appendix-b-consolidated-verified-primary-independent-source-ledger-sampled-key-citations">Appendix B: Consolidated Verified Primary &amp; Independent Source Ledger (Sampled Key Citations)</a></li>
+      </ul>
+    </div>
+    
+
+    <article>
+<blockquote>
+<p><strong>Audit Scope &amp; Baseline Sources:</strong> This audit evaluates how much of the APC 2023 presidential manifesto — <em>Renewed Hope 2023: Action Plan for a Better Nigeria</em> (<code>RENEWED-HOPE_compressed.pdf</code>, 80 PDF pages; indexed in <a href="manifesto_2023.html">tinubu_manifesto_notes_01_2023_action_plan.md</a>) — was accomplished between inauguration on <strong>May 29, 2023</strong> and <strong>November 13, 2026</strong> (roughly <strong>41.5 months</strong>, or <strong>86.5%</strong> through the four-year constitutional term ending May 29, 2027). It also includes a dedicated empirical cross-check of self-reported 2023–2026 achievement claims published in the APC 2027 manifesto (<a href="manifesto_2027.html">tinubu_manifesto_notes_02_2027_agenda.md</a>, Section 4).</p>
+</blockquote>
+<hr />
+<h2 id="1-methodology-attribution-standards-classification-taxonomy">1. Methodology, Attribution Standards &amp; Classification Taxonomy</h2>
+<h3 id="11-why-no-arbitrary-percentage-score-or-partisan-grade-is-assigned">1.1 Why No Arbitrary Percentage Score or Partisan Grade Is Assigned</h3>
+<p>Reducing an 80-page governing manifesto to an arbitrary percentage score or letter grade masks profound structural differences across pledges:</p>
+<ol>
+<li><strong>Unequal Scope &amp; Materiality:</strong> Enacting a single statutory bill (e.g., the <em>Judicial Office Holders Salaries and Allowances Act, 2024</em>) is far narrower in macro-welfare footprint than hitting a 10% GDP growth path to <code>$780.9 billion</code>, halving youth unemployment, or lifting health insurance to <code>40%</code> of 220M+ citizens. Treating every bullet point as equal in a naive percentage average distorts performance.</li>
+<li><strong>Methodological Breaks &amp; Rebasing (2023–2026):</strong> During 2023–2026, Nigeria’s <strong>National Bureau of Statistics (NBS)</strong> overhauled three flagship yardsticks: (a) adopting the <strong>ILO 1-hour/week labour force definition</strong> (which lowered headline unemployment mathematically from <code>33.3%</code> to <code>4.3%–5.3%</code> while high informality persisted); (b) rebasing <strong>GDP to 2019</strong> prices (<code>₦205.09T</code> 2019; <code>₦372.82T</code> 2024); and (c) rebasing the <strong>Consumer Price Index (CPI) to 2024</strong> in January 2025 (which reset headline inflation from <code>34.80%</code> in December 2024 to <code>24.48%</code> in January 2025). Direct pre-2023 vs. 2026 comparisons require explicitly noting these statistical breaks.</li>
+<li><strong>Elapsed Interim Deadlines vs. Full-Term 2027 Horizon:</strong> Several 2023 manifesto pledges set hard interim deadlines that have <strong>already elapsed</strong> (<code>6 months</code> for PIA/deepwater incentives = Nov 2023; <code>24 months</code> for 1M ICT jobs &amp; <code>2 years</code> for 40% NHIA = May 2025; <code>2025</code> for 90% broadband), whereas multi-year targets (<code>4 years</code> for 65% arable land &amp; halving youth unemployment; <code>2027</code> for 2.6 mbpd crude, +20% gas, OB3/AKK; <code>2030</code> for 5-min potable water) sit near or beyond November 2026.</li>
+</ol>
+<p>Instead of a partisan grade, this audit disaggregates <strong>101 distinct, concrete, measurable pledges, quantitative targets, institutional reforms, and policy doctrines</strong> across all 16 policy chapters (PDF pp. 7–74, using strict <code>PDF Page = Printed Page + 2</code> pagination) and classifies each transparently under one of five categories, triangulating <strong>official/primary data</strong> (CBN, NBS, DMO, NUPRC, NERC, NRS, FMINO, State House) against <strong>independent/critical sources</strong> (World Bank, IMF, SBM Intelligence, Amnesty International, Transparency International, BudgIT, Premium Times, The Punch, Vanguard, BusinessDay, FIJ, PLAC).</p>
+<h3 id="12-five-category-classification-definitions">1.2 Five-Category Classification Definitions</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Operational Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>Implemented / Achieved</code></strong></td>
+<td>Enacted, operationalised, or substantially achieved (<code>~85–100%</code>) as promised, verified by primary records.</td>
+</tr>
+<tr>
+<td><strong><code>Partially Implemented / In Progress</code></strong></td>
+<td>Concrete statute, agency, funding, or physical construction launched and advancing, but material coverage gaps, missed interim deadlines, or incomplete delivery remain as of November 13, 2026.</td>
+</tr>
+<tr>
+<td><strong><code>Mixed / Disputed Outcome</code></strong></td>
+<td>Substantive executive/legislative action taken, but accompanied by sharp policy contradictions against the 2023 text, severe unintended social/macro trade-offs, corruption/operational disruptions, or sharply divergent official vs. independent assessments.</td>
+</tr>
+<tr>
+<td><strong><code>Not Achieved / Stalled / Reversed</code></strong></td>
+<td>Missed an elapsed hard deadline without delivery, stalled with minimal execution, remained un-enacted/unbuilt, or experienced an explicit doctrinal policy <strong>reversal</strong> (e.g., CBN rate hikes, pure FX float, stopping Anchor Borrowers, suspending Nigeria Air, Niger exiting MNJTF).</td>
+</tr>
+<tr>
+<td><strong><code>Insufficient Verifiable Data</code></strong></td>
+<td>Official and independent public disclosures through Nov 13, 2026 lack audited, transparent metrics needed to verify fulfillment or non-fulfillment.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="13-broad-aspirations-vs-measurable-targets">1.3 Broad Aspirations vs. Measurable Targets</h3>
+<p>Rhetorical commitments in the Foreword (PDF pp. 4–6) and Closing Statement (pp. 75–76) — e.g., <em>"build a Nigeria... where sufficient jobs with decent wages create a better life"</em>, <em>"no parent is compelled to send a child to bed hungry"</em>, <em>"a nation of creators, not just of consumers"</em>, and <em>"obliterate terror, kidnapping, banditry"</em> — function as overarching political vision statements rather than discrete auditable deliverables. <strong>Appendix A</strong> catalogues these broad aspirations separately and explains how they map onto the 101 measurable pledges audited below.</p>
+<hr />
+<h2 id="2-master-quantitative-scoreboard-all-101-audited-concrete-pledges">2. Master Quantitative Scoreboard (All 101 Audited Concrete Pledges)</h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Policy Chapter (2023 PDF Pages)</th>
+<th style="text-align: right;">Total Audited</th>
+<th style="text-align: right;">Implemented / Achieved</th>
+<th style="text-align: right;">Partially Implemented / In Progress</th>
+<th style="text-align: right;">Mixed / Disputed Outcome</th>
+<th style="text-align: right;">Not Achieved / Stalled / Reversed</th>
+<th style="text-align: right;">Insufficient Verifiable Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ch. 1: National Security</strong> (pp. 7–12)</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><strong>Ch. 2: Economy — Macro, Fiscal, Monetary, Industry, Housing</strong> (pp. 13–27)</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 3: Agriculture</strong> (pp. 28–31)</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 4: Power</strong> (pp. 32–34)</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 5: Oil &amp; Gas</strong> (pp. 35–39)</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 6: Transportation</strong> (pp. 40–42)</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 7: Education</strong> (pp. 43–46)</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 8: Healthcare</strong> (pp. 47–50)</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><strong>Ch. 9: Digital Economy</strong> (pp. 51–54)</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 10: Sport, Entertainment &amp; Culture</strong> (pp. 55–58)</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 11: Youth Empowerment</strong> (pp. 59–61)</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><strong>Ch. 12: Women Empowerment</strong> (pp. 62–63)</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 13: Social Programs</strong> (pp. 64–66)</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 14: Judicial Reform</strong> (pp. 67–69)</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 15: Federalism / Decentralisation</strong> (pp. 70–71)</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><strong>Ch. 16: Foreign Policy</strong> (pp. 72–74)</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><strong>TOTAL (All 16 Chapters)</strong></td>
+<td style="text-align: right;"><strong>101</strong></td>
+<td style="text-align: right;"><strong>4</strong></td>
+<td style="text-align: right;"><strong>55</strong></td>
+<td style="text-align: right;"><strong>11</strong></td>
+<td style="text-align: right;"><strong>27</strong></td>
+<td style="text-align: right;"><strong>4</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>Key Structural Pattern:</strong> Rather than wholesale legislative inaction or effortless success, the May 2023–November 2026 record shows <strong>broad legislative/institutional initiation (<code>59</code> pledges either <code>Implemented</code> or <code>Partially Implemented / In Progress</code>) colliding with deep quantitative delivery gaps, severe cost-of-living trade-offs (<code>11 Mixed / Disputed</code>), and sharp macroeconomic/operational reversals (<code>27 Not Achieved / Stalled / Reversed</code>)</strong>. Notably, three flagship 2023 macroeconomic pillars — rejecting CBN rate hikes (p. 22), rejecting an <em>"unrestrained market"</em> FX float (p. 21), and decoupling budgets/suspending spending caps (p. 16) — were explicitly inverted in favor of orthodox monetary tightening and FX liberalization.</p>
+</blockquote>
+<hr />
+<h2 id="3-chapter-by-chapter-pledge-by-pledge-audit-may-2023-november-2026">3. Chapter-by-Chapter Pledge-by-Pledge Audit (May 2023 – November 2026)</h2>
+<h3 id="chapter-1-national-security-pdf-pp-712-9-concrete-pledges">Chapter 1: National Security (PDF pp. 7–12) — 9 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SEC-01</strong></td>
+<td>Bolster security forces &amp; create dedicated <strong>Anti-Terrorist Battalions (<code>ABATTS</code>)</strong> with special forces (pp. 8–9)</td>
+<td><strong>Official:</strong> Army expanding from 8 to 12 divisions (<code>28,000</code> new troops approved), <code>50,000</code> police recruits cited alongside Nov 2025 approval for <code>30,000</code> new police (<a href="https://www.vanguardngr.com/2025/11/security-shake-up-tinubu-approves-30000-police-recruits-withdraws-vip-escorts/">Vanguard</a>), and Tinubu’s June 12, 2026 address claiming <code>&gt;13,000</code> terrorists neutralised in a year and <code>&gt;124,000</code> insurgents/dependents surrendered since 2023 (<a href="https://www.tvcnews.tv/full-text-president-bola-tinubus-democracy-day-address-on-june-12-2026/">TVC News</a>). <strong>Independent:</strong> No named <code>"ABATTS"</code> battalion architecture is publicly documented as operational; <strong>SBM Intelligence</strong> (Aug 2026) tracked <strong>7,825 kidnap victims across 1,713 incidents</strong> in Jul 2025–Jun 2026 (+66% surge; <code>₦7.78B</code> paid, <a href="https://www.sbmintel.com/2026/08/the-economics-of-nigerias-kidnap-industry-2026/">SBM Intelligence</a>), and March 2026 Borno resurgence forced Tinubu to relocate security chiefs to Maiduguri (<a href="https://nta.ng/news/featured/von-president-tinubu-orders-security-chiefs-to-relocate-to-maiduguri">NTA News</a>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SEC-02</strong></td>
+<td>Modernise land/sea/air weapons &amp; boost <strong>domestic production of military hardware, small arms &amp; ammunition</strong> (p. 9)</td>
+<td><strong>Official:</strong> Signed <strong>DICON Act 2023</strong> (Nov 2023) repealing colonial-era restrictions to enable private capital/JVs (<a href="https://statehouse.gov.ng/president-tinubu-assents-to-defence-industries-corporation-of-nigeria-bill/">State House</a>); DICON unveiled indigenous MRAPs, drones, and <code>BAT A-1</code> rifles and inked hardware MoUs with the Ministry of Steel (<a href="https://www.steel.gov.ng/read/3282">Ministry of Steel Development</a>). <strong>Independent:</strong> Heavy aerial/combat hardware remains largely imported (<code>₦5.41T</code> 2026 security budget) and military operations drew scrutiny over civilian airstrike errors.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SEC-03</strong></td>
+<td>Raise personnel pay &amp; create a <strong>special program for families of fallen heroes</strong> (housing, scholarships, stipends, health insurance) (p. 9)</td>
+<td>Service pay/allowances and Police Trust Fund barracks upgrades progressed incrementally, but <strong>no audited nationwide metrics confirm a comprehensive operational statutory housing, scholarship, and health-insurance program covering all fallen heroes’ families</strong> across services (flagged again as an uncompleted 2027 commitment on 2027 manifesto p. 29).</td>
+<td><code>Insufficient Verifiable Data</code></td>
+</tr>
+<tr>
+<td><strong>SEC-04</strong></td>
+<td>Rehabilitate <strong>Lake Chad Basin</strong> ecosystem &amp; accelerate <strong>Niger Delta clean-up / fisheries &amp; aquaculture</strong> (pp. 9–10)</td>
+<td><strong>Official:</strong> Reconstituted <strong>HYPREP</strong> Governing Council/BoT, launched a 5-year 2026–2031 remediation plan (<a href="https://von.gov.ng/hyprep-begins-5-year-strategic-plan-for-ogoni-cleanup/">VON</a>), installed community potable water schemes, and APC 2027 claims <code>1,331 of 1,471</code> remediation sites certified (<code>~90%</code>). <strong>Independent:</strong> Community monitors highlight slow pace of full ecological/fisheries restoration in Ogoniland, while Lake Chad instability worsened post-2025 regional fractures.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SEC-05</strong></td>
+<td>Deploy <strong>Critical Infrastructure Protection Plan (<code>CIPP</code>)</strong>: aerial surveillance &amp; real-time sensors to eliminate crude oil theft &amp; protect grids/rail/ports (p. 10)</td>
+<td><strong>Official:</strong> Private pipeline surveillance &amp; NUPRC’s <code>37+</code> alternative evacuation routes cut earlier systemic theft peaks (<a href="https://thewhistler.ng/nuprc-approves-47-6bn-projects-as-oil-output-hits-1-82mbpd/">The Whistler</a>). <strong>Independent:</strong> <strong>NUPRC</strong> 2025 full-year disclosures show <strong>3.33 million barrels</strong> still lost to oil theft in 2025 — with <strong>2.19M barrels (66% of annual losses)</strong> surging in Q4 2025 alone (<a href="https://punchng.com/nigeria-lost-3-3m-barrels-to-oil-thieves-in-2025-nuprc/">The Punch</a>), disproving claims of elimination; transmission tower vandalism also persisted.</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>SEC-06</strong></td>
+<td>Establish community protection &amp; <em>"more formal locally-based law enforcement institutions"</em> with States &amp; NASS (p. 11)</td>
+<td><strong>Legislative progress near finish line:</strong> <strong>Constitution (Sixth Alteration) Bill, 2026 (State Police Bill)</strong> passed both NASS chambers (<a href="https://placng.org/i/wp-content/uploads/2026/09/Transmitted-to-State-Legislatures-%E2%80%93-Constitution-Alteration-6th-Alteration-Bill-2026-to-Provide-for-the-Establishment-of-State-Police-Services.pdf">PLAC</a>), cleared <strong>28–30 State Assemblies</strong> (exceeding the 24-state constitutional threshold), and was transmitted to President Tinubu in early November 2026 (<a href="https://www.vanguardngr.com/2026/11/28-states-approve-state-police-bill-as-nass-moves-to-transmit-to-tinubu/">Vanguard</a>; <a href="https://leadership.ng/tinubu-receives-state-police-bill-after-30-states-approval/">Leadership</a>). <strong>Status as of Nov 13, 2026:</strong> Senate allowed outlier states until Nov 15, 2026; presidential assent and operational stand-up of state police forces remain pending.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SEC-07</strong></td>
+<td>Border tech monitoring, <strong>Forest Guards / Rangers</strong>, &amp; <strong>National Identity Database</strong> integration (p. 11)</td>
+<td><strong>Official:</strong> Signed <strong>NIMC Act 2026</strong> (June 2026, <a href="https://nta.ng/news/security-nigeria/tinubu-signs-landmark-identity-management-reform">NTA News</a>), expanding NIN enrolment to <strong>137.26M</strong> (<a href="https://leadership.ng/nimc-registers-137m-nigerians-as-tinubu-orders-full-nin-enrolment/">Leadership</a>) alongside border e-Gates/e-surveillance (<code>159/190</code> mapped borders claimed). <strong>Gap:</strong> Forest Guards launched only as state pilots (Borno, Sokoto, Kaduna, Niger, Kwara, Kebbi, Oyo) while forest-based banditry/kidnapping expanded sharply (<a href="https://www.sbmintel.com/2026/08/the-economics-of-nigerias-kidnap-industry-2026/">SBM Intelligence</a>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SEC-08</strong></td>
+<td>Free NPF from <strong>VIP &amp; static building guard duties</strong> -&gt; transfer to <strong>NSCDC</strong> (p. 12)</td>
+<td><strong>Official:</strong> In late November 2025, Tinubu ordered the immediate withdrawal of police attached to VIPs and directed VIP guard requests to NSCDC (<a href="https://www.tvcnews.tv/police-withdraw-officers-attached-to-vips-order-return-back-to-base/">TVC News</a>). <strong>Gap:</strong> Full transfer of static protection remains uncompleted (the Oct 2026 manifesto pp. 27, 31 still treats transferring private static protection to Civil Defence via <code>30,150</code> new NSCDC recruits as a 2027–2031 goal).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SEC-09</strong></td>
+<td>Empower and expand <strong>Multinational Joint Task Force (<code>MNJTF</code>)</strong> (p. 12)</td>
+<td><strong>Regional reversal:</strong> In March/April 2025, <strong>Niger’s military government formally withdrew from the MNJTF</strong> following the Alliance of Sahel States (AES) split from ECOWAS, eroding Lake Chad Basin cross-border counterinsurgency coordination (<a href="https://www.theguardian.com/world/2025/apr/01/niger-junta-withdraws-from-lake-chad-anti-islamist-force">The Guardian</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-2-economy-macro-fiscal-monetary-industry-housing-pdf-pp-1327-17-concrete-pledges">Chapter 2: Economy — Macro, Fiscal, Monetary, Industry &amp; Housing (PDF pp. 13–27) — 17 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ECON-01</strong></td>
+<td><strong>10% GDP growth path:</strong> Grow nominal GDP from <code>$484.9B</code> (2022) / <code>$533.3B</code> (2023) to <strong><code>$709.9B</code> (2026)</strong> &amp; <strong><code>$780.9B</code> (2027)</strong> (p. 15)</td>
+<td><strong>Official (NBS):</strong> Real GDP grew <strong>2.7%</strong> (2023), <strong>3.38–3.4%</strong> (2024), <strong>3.89%</strong> (2025; IMF <code>4.0%</code>), and <strong>4.43% in Q2 2026</strong> (<a href="https://atlassportfolios.com/wp-content/uploads/2026/09/GDP-Q22026-REPORT.pdf">Atlas/NBS Q2 2026 PDF</a>). <strong>Independent (IMF/World Bank):</strong> Following ~70% Naira devaluation (<code>~₦461/$</code> to <code>₦1,340–1,680/$</code>), nominal USD GDP dropped to <strong><code>~$213–250B</code> (2024)</strong>, <strong><code>~$290–291B</code> (2025)</strong>, and <strong><code>~$386.67B</code> (2026 IMF proj.)</strong> (<a href="https://www.imf.org/external/datamapper/profile/NGA">IMF DataMapper</a>), roughly <strong>45% below</strong> the <code>$709.9B</code> 2026 manifesto target.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>ECON-02</strong></td>
+<td><strong>Decouple Naira budget from dollar oil inflows</strong> &amp; <strong>legislatively suspend spending limits</strong> with an inflationary ceiling (p. 16)</td>
+<td><strong>Doctrinal non-implementation:</strong> Federal budgets in 2024, 2025, and the enacted <strong><code>₦68.32 trillion</code> 2026 Appropriation Act</strong> remained explicitly benchmarked to oil price/production assumptions (<code>$64.85/bbl</code>, <code>1.84 mbpd</code>, <code>₦1,400/$</code>) (<a href="https://punchng.com/tinubu-signs-%E2%82%A668-32trn-2026-budget-extends-2025-spending-deadline/">The Punch</a>). No statutory suspension of Fiscal Responsibility Act limits was enacted, though CBN halted Ways &amp; Means deficit monetization.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>ECON-03</strong></td>
+<td><strong>Potable water within 5 min by 2030</strong>, dam reticulation &amp; <strong>complete Great Green Wall</strong> (pp. 16–17)</td>
+<td><strong>Official:</strong> FCT completed water loops 1, 2, 5 &amp; 6; consultations started on <em>Nigeria National Water Compact (2026–2030)</em>; NAGGW continued northern shelterbelts/solar boreholes. <strong>Independent:</strong> WASH-NORM baselines (<a href="https://www.nigerianstat.gov.ng/elibrary/read/950">NBS WASH-NORM</a>) show wide rural/urban gaps in safely managed drinking water, and the Great Green Wall remains far from completion. <em>(Statutory 2030 target remains active.)</em></td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>ECON-04</strong></td>
+<td>Expand <strong>CBN/Finance Ministry credit guarantees</strong> for PPP infrastructure (p. 17)</td>
+<td><strong>Official:</strong> <strong>InfraCredit</strong> scaled local-currency infra guarantees and gained <strong>Green Climate Fund Direct Access Entity (DAE)</strong> accreditation in 2026 (<a href="https://infracredit.ng/green-climate-fund-approves-infracredits-accreditation-as-a-direct-access-entity/">InfraCredit</a>); FG created the <strong>National Credit Guarantee Company (<code>NCGC</code>)</strong> (<a href="https://ncgc.ng/">NCGC</a>) and closed 1 operating HDMI road + 4 concessions. <strong>Independent:</strong> Major federal highways still relied predominantly on public budget/contractor-credit terms (e.g., Lagos–Calabar Hitech dispute, <a href="https://punchng.com/concerns-taint-lagos-calabar-coastal-highway/">The Punch</a>) rather than deep competitive PPP guarantees.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>ECON-05</strong></td>
+<td><strong>Import substitution:</strong> luxury taxes/tariffs on non-essential imports &amp; incentives for ECOWAS/AfCFTA manufacturing plants (p. 18)</td>
+<td><strong>Official:</strong> Unveiled <strong>National Industrial Policy (Feb 2026)</strong>, Nigeria First procurement policy, zero-duty waivers for pharma/CNG/EV inputs, and AfCFTA digital origin certification. <strong>Contradiction/Gap:</strong> FG also suspended import duties on staple food imports (2024) to fight inflation; manufacturing stayed at <strong><code>7.72%</code> of GDP (Q2 2026, <code>&lt;60%</code> capacity use)</strong>; and GSK, Sanofi, P&amp;G, Kimberly-Clark &amp; Equinor exited Nigerian manufacturing/operations in 2023–2024.</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>ECON-06</strong></td>
+<td><strong>Avoid tax rate increases during downturn;</strong> build progressive, tech-driven tax system &amp; plug loopholes (p. 18)</td>
+<td><strong>Official:</strong> Enacted <strong>4 Tax Reform Acts (June 26, 2025; effective Jan 1, 2026)</strong> (<a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html">PwC Nigeria</a>), exempting firms <code>≤₦100M</code> turnover / <code>≤₦250M</code> fixed assets from CIT/VAT/Dev-Levy, raising zero-PIT threshold to <code>≤₦800k/yr</code>, retaining 7.5% VAT (0% food/health/edu), consolidating levies into a 4% Dev Levy, and lifting 2025 NRS (<code>₦28.3T</code>, <a href="https://guardian.ng/business-services/nrs-targets-n40-7tr-records-n28-3tr-collections-in-2025/">The Guardian</a>) + Customs (<code>₦7.28T</code>, <a href="https://punchng.com/breaking-customs-smashes-records-with-%E2%82%A67-28tn-revenue-in-2025/">The Punch</a>) collections. <strong>Independent/Critical:</strong> Enacted a 70% bank FX windfall tax, higher top PIT bands, and faced a Dec 2025 governance controversy over alleged alterations between NASS-passed bills and gazetted texts (<a href="https://punchng.com/tax-laws-that-split-abuja-how-tinubus-reforms-sparked-governance-storm/">The Punch</a>).</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>ECON-07</strong></td>
+<td><strong>Cost-of-governance cuts:</strong> streamline agencies, cap govt building costs &amp; senior executive pay, weed out ghost workers (p. 19)</td>
+<td><strong>Official:</strong> FEC approved <strong>Oronsaye Report implementation</strong> on Feb 26, 2024 and audited payrolls via IPPIS/NIN. <strong>Independent:</strong> Cabinet expanded to <strong>48 ministers</strong> (largest under the 1999 Constitution); new ministries (Livestock, Marine/Blue Economy, Regional Development) and multiple regional commissions proliferated; <em>The Guardian</em> (2026) documented redundant agencies still receiving <strong><code>~₦1 trillion</code> in 2026 budgets</strong> (<a href="https://guardian.ng/featured/14-yrs-after-oronsaye-report-bloated-agencies-cost-nigeria-n1tr-in-2026/">The Guardian</a>); and FG commissioned a <strong><code>₦21B</code> VP residence</strong> (<a href="https://www.premiumtimesng.com/news/top-news/701670-tinubu-commissions-n21-billion-vps-official-residence.html">Premium Times</a>) and <strong><code>~₦150B</code> Airbus A330-200</strong> presidential jet (<a href="https://www.mynigeria.com/NigeriaHomePage/NewsArchive/150bn-presidential-Jet-5bn-presidential-yacht-21bn-VP-quarters-Tinubu-s-luxury-spending-732514">MyNigeria</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>ECON-08</strong></td>
+<td>Optimise multiple <strong>FX regime</strong> while explicitly refusing to leave naira <strong><em>"to the vagaries of an unrestrained market"</em></strong> (p. 21)</td>
+<td><strong>Doctrinal pivot with mixed macro impact:</strong> On June 14, 2023, CBN (<code>TED/FEM/PUB/FPC/001/007</code>) collapsed windows into a market-determined willing-buyer/willing-seller float (<a href="https://www.cbn.gov.ng/AboutCBN/Reforms.html">CBN Reforms</a>). Naira fell ~70% (<code>₦461/$</code> -&gt; <code>₦1,600–1,680/$</code>) before clearing verified FX backlogs (part of <code>$7B</code> total claimed, filtering invalid claims) and lifting <strong>net FX reserves from <code>$3.99B</code> (end-2023) to <code>$35B</code> (end-2025, IMF)</strong> (<a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1ngaea2026001.pdf">IMF Art. IV</a>) stabilized the naira at <strong><code>₦1,340–₦1,379/$</code></strong> (<code>&lt;5%</code> parallel spread). Unification succeeded technically, yet inverted the anti-free-float pledge and drove severe inflation.</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>ECON-09</strong></td>
+<td><strong>Anti-rate-hike inflation doctrine:</strong> explicitly reject <em>"higher interest rates and tighter money-supply"</em> (pp. 22–23)</td>
+<td><strong>Direct policy reversal:</strong> CBN under Governor Yemi Cardoso hiked the Monetary Policy Rate (MPR) aggressively from <strong>18.5% (May 2023)</strong> to a historic peak of <strong>27.50% (Nov 2024)</strong> + <code>45%</code> DMB CRR, before recalibrating MPR down to <strong>23.00% on Sept 21–22, 2026</strong> (<a href="https://www.cbn.gov.ng/MonetaryPolicy/decisions.html">CBN MPC Decisions</a>). Headline inflation peaked at <strong>34.80%</strong> (Dec 2024) before rebasing to <code>24.48%</code> (Jan 2025, <a href="https://punchng.com/nigerias-inflation-dropped-to-24-48-after-rebasing-nbs/">The Punch</a>) and cooling to <strong>14.63%</strong> in Sept 2026 (<a href="https://businessday.ng/uncategorized/article/nigerias-inflation-drops-to-14-63-as-food-prices-fall-in-september/">BusinessDay</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>ECON-10</strong></td>
+<td>Limit new <strong>FX debt strictly to cash-flow-generating projects</strong> &amp; prefer naira debt (p. 23)</td>
+<td><strong>Official (DMO) vs. Policy:</strong> Public external debt climbed <strong>+$11.36B (+26.3%)</strong> from <strong>$43.16B (<code>₦33.25T</code>) in Q2 2023</strong> (<a href="https://nigerianstat.gov.ng/elibrary/read/1241381">NBS/DMO Q2 2023</a>) to <strong>$54.52B (<code>₦75.20T</code>) in Q2 2026</strong> (total debt <code>₦166.79T</code> / <code>$120.93B</code>, <a href="https://nairametrics.com/2026/09/26/nigerias-public-debt-rises-to-n166-79-trillion-in-q2-2026/">Nairametrics/DMO</a>). Inflows included <code>$2.2B</code> (2024) and <code>$2.35B</code> (Nov 2025) Eurobonds and World Bank budget-support loans rather than strictly self-liquidating projects. <strong>DMO's DSA</strong> warns debt-service-to-FGN-revenue hits <strong>51% in 2026</strong> (above 50% threshold) and <strong>71.7% by 2030</strong> (<a href="https://nairametrics.com/2026/11/09/nigerias-debt-service-to-revenue-ratio-to-hit-71-7-by-2030-dmo/">Nairametrics</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>ECON-11</strong></td>
+<td><strong>Regional industrial hubs in every zone</strong> + SE/SS dry port + lower input tariffs (pp. 24–25)</td>
+<td><strong>Official:</strong> Unveiled <strong>National Industrial Policy (Feb 2026)</strong>, <code>₦75B</code> Manufacturing Sector Fund (104 firms), <code>₦65.8B</code> MSME fund, and assembled <code>18,252</code> vehicles in 2025. <strong>Independent:</strong> South-East <strong>Isiala Ngwa Dry Port</strong> remains stalled (~10% built, lacking standard-gauge rail, <a href="https://thesun.ng/abia-nsc-to-revive-isiala-ngwa-dry-port-for-afcfta-gains/">The Sun</a>), and operational 6-zone anchor hubs remain deferred into 2027–2031.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>ECON-12</strong></td>
+<td><strong>Youth-hiring corporate tax credits, holidays &amp; low-interest loans</strong> for private firms mentoring youth (p. 24)</td>
+<td><strong>Nigeria Tax Act 2025</strong> (effective Jan 1, 2026, <a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html">PwC</a>) grants enhanced deductions for low-income wage increments/new employment and exempts <code>≤₦100M</code> SMEs, complemented by DBN/BOI SME lines (<code>₦788B</code> DBN cited); measurable national take-up of dedicated youth-hiring tax credits remains early-stage.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>ECON-13</strong></td>
+<td>End unlicensed <strong>clandestine gold mining (NW/NC)</strong> &amp; build regulated artisan jewellery chain (p. 25)</td>
+<td><strong>Official:</strong> <strong>Mining Marshals</strong> arrested <code>1,205</code> suspects (including 8 Chinese &amp; Nigerian illegal miners in Abia, <a href="https://punchng.com/fg-arraigns-eight-chinese-nigerian-for-illegal-mining/">The Punch</a>), reclaimed <code>90+</code> sites, and eMC+ revoked <code>2,557</code> licences; solid minerals revenue grew from <code>₦6B</code> (2023)/<code>₦16B</code> to <code>₦38B</code> (2024) -&gt; <code>₦70B+</code> (2025) -&gt; <code>₦101.11B</code> (Jan–Sept 2026). <strong>Gap:</strong> Illicit gold/mineral smuggling persists widely and domestic jewellery value-chain integration remains small-scale.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>ECON-14</strong></td>
+<td><strong>Merge federal housing agencies</strong> into one unified mortgage/guarantee/secondary entity (p. 26)</td>
+<td><strong>Not merged:</strong> <strong>FMBN, FHA, and NMRC remained separate entities</strong>; Federal Ministry of Housing instead adopted inter-agency "harmonisation" alongside creating <strong>MREIF</strong> (<code>₦140B</code> 9.75% mortgages, <a href="https://statehouse.gov.ng/the-aso-villa-fact-sheet-president-tinubus-housing-reforms-are-moving-more-nigerians-from-renting-to-home-ownership/">State House</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>ECON-15</strong></td>
+<td><strong>Mandatory commercial-bank consumer credit quota</strong> + penalties for non-compliance (p. 26)</td>
+<td><strong>Pivoted model:</strong> Did <strong>not</strong> impose mandatory bank consumer-credit penalty quotas; instead created <strong>CREDICORP</strong>, disbursing <strong><code>₦53.5B</code>–<code>₦61.4B</code> to <code>351k–353,561</code> citizens</strong> via PFIs/fintechs/YouthCred/SPARK (<a href="https://businessday.ng/news/article/fgs-credicorp-has-disbursed-over-n53-5bn-credit-to-351000-nigerians-nwagba/">BusinessDay</a>; <a href="https://www.odogwublog.com/%E2%82%A661-4bn-disbursed-akobundu-mobilises-south-east-women-youths-for-credicorphere-is-the-polished-publication-ready-version/">Odogwu</a>).</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>ECON-16</strong></td>
+<td>Housing units plot (<code>4.0</code> 2023 -&gt; <code>20.0</code> 2027, <strong>unit scale omitted</strong>) + <strong>Social Housing &amp; Civil Servant fixed mortgages</strong> (pp. 26–27)</td>
+<td><strong>Official:</strong> <code>10,000–15,000+</code> Renewed Hope units under construction across 14 sites (Karsana 3,112-unit site, Ibeju-Lekki, <a href="https://punchng.com/renewed-hope-cities-tinubus-housing-initiative-draws-over-100000-nigerians-as-projects-expand-nationwide/">The Punch</a>), <strong>MREIF</strong> issued <code>2,000+</code> 9.75% fixed 20-yr mortgages (<code>₦140B</code>, <a href="https://statehouse.gov.ng/the-aso-villa-fact-sheet-president-tinubus-housing-reforms-are-moving-more-nigerians-from-renting-to-home-ownership/">State House</a>), and <code>11,421</code> social-housing pilot units scoped. <strong>Gap:</strong> Handed-over homes remain a fraction of annual housing deficits (<code>&gt;20M</code> gap) and unit chart omission precludes exact target verification.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>ECON-17</strong></td>
+<td><strong>Revise Land Use Act</strong> with NASS &amp; States to streamline conveyance (p. 27)</td>
+<td><strong>Unchanged:</strong> The <strong>Land Use Act 1978</strong> was not amended during 2023–Nov 2026; <code>&gt;95%</code> of Nigerian land remains untitled "dead capital" (<a href="https://oal.law/the-land-use-act-in-nigeria-dead-capital-and-the-titling-crisis/">OAL Law</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-3-agriculture-pdf-pp-2831-6-concrete-pledges">Chapter 3: Agriculture (PDF pp. 28–31) — 6 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AGRI-01</strong></td>
+<td>Expand <strong>cultivated arable land from 35% to 65% within 4 years</strong> &amp; become net food exporter (pp. 28, 31)</td>
+<td><strong>Official &amp; Independent:</strong> Active arable cultivation remains around <strong>20%–40%</strong>; NAPM/PFSCU tracking cited by <em>The Punch</em> found capital crunches, urea costs (<code>₦47.5k–₦55k/50kg</code>), and insecurity left <strong><code>12M+</code> hectares (<code>&gt;36%</code> of targeted dry-season expansion) unfarmed</strong> (<a href="https://punchng.com/capital-crunch-input-costs-leave-12m-hectares-unfarmed-report/">The Punch</a>). Instead of net food exports, Nigeria waived food import tariffs in 2024; food inflation peaked near <strong>40%</strong> (2024) and stood at <strong>19.59%</strong> (rebased Sept 2026, <a href="https://businessday.ng/uncategorized/article/nigerias-inflation-drops-to-14-63-as-food-prices-fall-in-september/">BusinessDay</a>), with <strong>27M facing acute food insecurity</strong> (<a href="https://www.imf.org/en/news/articles/2026/06/09/pr26190-nigeria-imf-executive-board-concludes-2026-article-iv-consultation-with-nigeria">IMF June 2026</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>AGRI-02</strong></td>
+<td>Introduce <strong>National Commodity Boards</strong> (GMP for 10 named crops) &amp; commodity exchanges (p. 29)</td>
+<td>Did not revive statutory monopoly Commodity Boards; instead passed <strong>ISA 2025</strong> exchange/warehouse-receipt provisions (<a href="https://app.nesgroup.org/download_resource_documents/ESC-%20Fact%20sheet_1744189467.pdf">NESG</a>), scaled <strong>NCX</strong> (<code>24,668 MT</code> traded), and launched a <strong><code>₦200B</code> Guaranteed Minimum Price (GMP)</strong> grain programme via BoA/NCFR.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>AGRI-03</strong></td>
+<td>Modernise <strong>strategic grain reserves, urban cold storage &amp; farm-to-market roads</strong> (p. 29)</td>
+<td>Released <code>13,264.6 MT</code> strategic rice and added <code>+25,000 MT</code> national storage alongside RAAMP/state feeder roads, yet acute post-harvest losses (~40–50%) and severe 2023–2025 staple-food inflation persisted (<code>+50%</code> storage &amp; halving losses deferred to 2028/2030).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>AGRI-04</strong></td>
+<td><strong>Irrigate Nigeria</strong> (PPP small-scale irrigation) &amp; <strong>Farm Nigeria</strong> land clearing across <strong>11 River Basins</strong> (pp. 30–31)</td>
+<td>Developed <code>154,000 ha</code> irrigable land, supported <code>622,818</code> dry-season NAGS-AP farmers (<code>12,550 MT</code> wheat seed), and received <strong>2,000 Belarusian tractors</strong> (<a href="https://businessday.ng/uncategorized/article/photos-fg-receives-first-batch-of-2000-belarusian-tractors-to-tackle-food-crisis/">BusinessDay</a>) — <strong>737 deployed</strong> by late 2026 — yet full 11-river-basin agro-processing co-location remains early.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>AGRI-05</strong></td>
+<td>Priority extension &amp; <strong>tax breaks/credits for voluntary farm cooperatives</strong> (p. 30)</td>
+<td>Distributed <code>449,000+ MT</code> (<code>6M+</code> bags) subsidised/CBN-donated fertiliser and preserved 5-year agribusiness tax holidays under the 2025 Tax Act, though elevated input/diesel costs blunted smallholder gains.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>AGRI-06</strong></td>
+<td>Reform <strong>Bank of Agriculture (BoA)</strong> &amp; <strong>expand Anchor Borrowers' Programme (ABP)</strong> (p. 30)</td>
+<td><strong>Split / Half-Reversed:</strong> Approved <strong><code>₦1.5T</code> BoA recapitalisation</strong> and new governance board (<a href="https://leadership.ng/fg-tasks-new-bank-of-agriculture-board-on-lending-loan-recovery/">Leadership</a>); <strong>conversely, CBN halted/scrapped new ABP disbursements</strong> over massive unrecovered defaults (<a href="https://punchng.com/cbn-agric-financing-scheme-fails-to-impress-farmers/">The Punch</a>).</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-4-power-pdf-pp-3234-6-concrete-pledges">Chapter 4: Power (PDF pp. 32–34) — 6 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PWR-01</strong></td>
+<td>Immediately transmit/distribute <code>8,000 MW</code> generated baseline via <strong>PPI</strong> &amp; expand reliable grid supply (p. 32)</td>
+<td><strong>Official (NERC Q2 2026) vs. Target:</strong> Despite adding <code>980 MW</code> capacity (Zungeru 700, Afam III 240, Kashimbilla 40), unbundling NISO, <code>₦501B</code> GenCo Series 1 bond (<a href="https://statehouse.gov.ng/federal-governments-%E2%82%A6501-billion-inaugural-tranche-under-power-sector-bond-programme-records-100-subscription/">State House</a>), and achieving <strong>0 grid collapses in Q2 2026</strong> (<a href="https://thefact.ng/nigerias-power-sector-recorded-zero-grid-collapse-in-q2-2026-nerc/">The Fact</a>) after multiple 2024–Jan 2026 blackouts, <strong>NERC data</strong> shows Q2 2026 average generation sat at <strong><code>4,022.40 MWh/h</code></strong> (after a brief <code>5,801.84 MW</code> Mar 2025 wheeled peak and <code>+1,007.81 MW</code> capacity gain over 30 months, <a href="https://punchng.com/1gw-in-30-months-nigerians-battle-darkness-as-tinubus-power-generation-promises-falter/">The Punch</a>) — roughly <strong>half</strong> the 2023 manifesto's <code>8,000 MW</code> baseline, driving <code>&gt;250</code> firms off-grid.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>PWR-02</strong></td>
+<td><strong>Eliminate estimated billing</strong> (NMMP/MAP), no unmetered new connections &amp; domestic meter manufacturing tax breaks (pp. 32–33)</td>
+<td><strong>Official (NERC May/June 2026):</strong> National metering climbed from <code>~44–46.6%</code> to <strong><code>61.51%</code></strong> (<code>7.74M</code> metered of <code>12.59M</code> active customers; <code>₦30B</code> MAF Tranche C approved, <a href="https://nerc.gov.ng/resources/metering-factsheet-for-may-and-june-2026/">NERC Fact Sheet</a>; <a href="https://punchng.com/nerc-okays-n30bn-to-meter-band-a-customers/">The Punch</a>). <strong>Gap:</strong> <strong><code>4.85M</code>–<code>5.02M</code> active customers remain unmetered on estimated billing</strong>, missing total elimination.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>PWR-03</strong></td>
+<td>Enable DisCos to charge <strong>cost-reflective tariffs</strong> (p. 33)</td>
+<td>NERC enforced near-cost-reflective <strong>Band A tariffs (<code>~₦209.50/kWh</code> for 20+ hr feeders)</strong> from April 2024 with service-failure refunds, trimming annual power subsidies from <code>~₦2T</code> to <code>~₦1.5T</code>; <strong>Bands B–E (~85% of customers)</strong> remain tariff-subsidized and DisCo ATC&amp;C losses stay elevated (<code>34.9%–36.23%</code>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>PWR-04</strong></td>
+<td><strong>Off-grid solar, mini-grids &amp; rural electrification</strong> grounded in <strong>2060 net-zero</strong> (pp. 33–34)</td>
+<td>Launched <strong>$750M DARES</strong> electrification programme, deploying <code>49</code> mini-grids, <code>1,198</code> solar home systems, <code>6,110</code> SMEs, and <code>&gt;2.1M</code> new grid/off-grid connections, yet <code>&gt;85M</code> Nigerians still lack reliable electricity.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>PWR-05</strong></td>
+<td>Review <strong>Electric Power Sector Reform Act 2005 (EPSRA)</strong> &amp; decentralise governance (p. 34)</td>
+<td>Enacted <strong>Electricity Act 2023</strong> (June 9, 2023; amended 2024), repealing EPSRA 2005, unbundling NISO, and empowering <strong>15–16 State Electricity Regulatory Commissions</strong> to oversee intrastate power markets by mid-2026.</td>
+<td><code>Implemented / Achieved</code></td>
+</tr>
+<tr>
+<td><strong>PWR-06</strong></td>
+<td><strong>"Nigeria First Power Policy"</strong>: gas as #1 priority for domestic power (p. 34)</td>
+<td><strong>OB3</strong> (<code>98–100%</code>) and <strong>AKK</strong> (<code>94%</code>) gas trunklines neared full completion (<a href="https://www.vanguardngr.com/2026/09/ob3-completion-as-nnpc-limited-opens-a-new-chapter-for-nigerias-gas-economy/">Vanguard</a>), yet gas supply shortfalls, unpaid legacy GenCo arrears (<code>₦3.48T–₦4T</code>), and export-price arbitrage continue capping thermal generation well below installed capacity.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-5-oil-gas-pdf-pp-3539-8-concrete-pledges">Chapter 5: Oil &amp; Gas (PDF pp. 35–39) — 8 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OIL-01</strong></td>
+<td>Crude oil output to <strong><code>2.6 mmbpd</code> by 2027</strong> (<code>4 mmbpd</code> by 2030) (p. 37)</td>
+<td><strong>Official (NUPRC):</strong> Output rose from <code>~1.35–1.44 mbpd</code> (2023–2024) to <strong><code>1.65–1.84 mbpd</code></strong> combined (<code>1.50–1.56 mbpd</code> strict crude meeting 1.50M OPEC quota; <code>1.84 mbpd</code> peak April 2026, <a href="https://nta.ng/news/featured/finance-minister-wale-edun-commends-nuprc-as-daily-production-hits-1-84m-barrels-per-day">NTA News</a>; <a href="https://thewhistler.ng/nuprc-approves-47-6bn-projects-as-oil-output-hits-1-82mbpd/">The Whistler</a>). Roughly <strong>0.8–1.0 mbpd short</strong> of the <code>2.6 mmbpd</code> 2027 target with 6 months left to May 2027.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>OIL-02</strong></td>
+<td><strong>Indigenous crude share <code>&gt;1 mmbpd</code> by 2027</strong> (p. 37)</td>
+<td>Completed <code>$4B</code> in four major IOC-to-indigenous asset divestments (Shell/Renaissance, ExxonMobil/Seplat, NAOC/Oando, Equinor/Chappal), lifting <strong>indigenous share to <code>&gt;30%</code> (NUPRC)</strong> — <code>~0.50–0.55 mmbpd</code> of current output, roughly halfway to <code>&gt;1 mmbpd</code>.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>OIL-03</strong></td>
+<td><strong>Deregulate midstream gas &amp; enact PIA/Deepwater fiscal incentives within 6 months</strong> (Nov 2023) (p. 38)</td>
+<td><strong>Missed Nov 2023 6-month deadline; delivered in 2024:</strong> Signed <strong>Executive Orders 40, 41 &amp; 42 (Feb/Mar 2024)</strong> granting non-associated gas tax credits, deepwater incentives, and procurement streamlining (<a href="https://www.nuprc.gov.ng/media/news/5d3ed47727cda4bf8ef399ed">NUPRC</a>), unlocking <code>&gt;$16B</code> in upstream FIDs including Bonga North (<code>~$5B</code>, Dec 2024) &amp; HI Gas (<code>$2B</code>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>OIL-04</strong></td>
+<td><strong><code>+20%</code> gas production</strong> &amp; finish <strong>OB3, ELPS II, AKK &amp; Trans-Nigeria pipelines by 2027</strong> (p. 38)</td>
+<td><strong>Official:</strong> Dry gas output climbed from <strong><code>6.83 bcf/d</code> (2022) to <code>7.94–7.97 bcf/d</code> (2026)</strong> (<strong><code>+15.5% to +16.7%</code></strong>, near <code>+20%</code>, <a href="https://thewhistler.ng/nuprc-approves-47-6bn-projects-as-oil-output-hits-1-82mbpd/">The Whistler</a>). <strong>OB3</strong> achieved Niger crossing (<code>98–100%</code> complete / first commercial flows, <a href="https://www.vanguardngr.com/2026/09/ob3-completion-as-nnpc-limited-opens-a-new-chapter-for-nigerias-gas-economy/">Vanguard</a>) and <strong>AKK</strong> hit <code>94%</code> mainline completion, while final node tie-ins continue toward 2027.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>OIL-05</strong></td>
+<td>Exit <strong>Top 10 global gas flarers</strong> &amp; ring-fence flare penalties for host communities (pp. 36, 38)</td>
+<td><strong>World Bank Global Gas Flaring Tracker</strong> confirms <strong>Nigeria remained in the global Top 9 gas-flaring nations</strong> in 2025/2026 (<a href="https://www.premiumtimesng.com/news/more-news/890558-nigeria-among-top-nine-worlds-gas-flaring-countries-in-2025-world-bank.html">Premium Times</a>), and <strong>Executive Order 9 of Feb 2026</strong> swept gas-flare penalties/deductions into federal account remittance frameworks (<a href="https://uubo.org/wp-content/uploads/2026/05/UUBO-Nigeria-Executive-Order-9-of-2026-on-Oil-Gas-Revenues-1.pdf">UUBO</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>OIL-06</strong></td>
+<td><strong>Full implementation of PIA</strong> (HCDTs, regulatory transparency) (pp. 37–38)</td>
+<td><strong>Official vs. Governance Dispute:</strong> HCDTs and NUPRC licensing/evacuation transparency scaled substantially; however, <strong>Presidential Executive Order No. 9 (Feb 13, 2026)</strong> unilaterally suspended statutory PIA revenue provisions (NNPC 30% management fee &amp; 30% Frontier Exploration Fund, <a href="https://uubo.org/wp-content/uploads/2026/05/UUBO-Nigeria-Executive-Order-9-of-2026-on-Oil-Gas-Revenues-1.pdf">UUBO</a>), raising legal controversy over amending an Act via executive order.</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>OIL-07</strong></td>
+<td><strong>Phase out fuel subsidy</strong> &amp; <strong>earmark savings</strong> to roads, boreholes, transit, education &amp; health (pregnant women/under-5s) (pp. 39, 49)</td>
+<td><strong>Official:</strong> Declared <code>"subsidy is gone"</code> May 29, 2023 (<a href="https://www.channelstv.com/2023/05/29/fuel-subsidy-is-gone-president-tinubu-declares-in-inaugural-speech">Channels TV</a>); after silent 2024 under-recoveries, fully deregulated PMS in Oct 2024 + launched <strong>Crude-for-Naira</strong> to private <strong>Dangote Refinery (650k bpd)</strong> (<a href="https://www.channelstv.com/2026/01/15/dangote-refinery-seeks-naira-for-crude-policy-expansion/">Channels TV</a>), slashing Q1 2026 petrol imports 96% to <code>₦87.4B</code> (<a href="https://www.legit.ng/business-economy/industry/1714864-petrol-import-nigeria-drops-by-96-dangote-refinery-takes-supply/">Legit</a>). <strong>Critical Reality:</strong> Retail petrol surged ~7× (<code>₦185–195/L</code> -&gt; <code>₦1,325–₦1,405+/L</code> Oct/Nov 2026; Dangote gantry cut to <code>₦1,250/L</code> Nov 2026, <a href="https://thetrumpet.ng/petrol-price-today/">The Trumpet</a>; <a href="https://www.legit.ng/business-economy/energy/1740720-dangote-refinery-cuts-petrol-price-n1250l-pricing-system-names-25-marketers/">Legit</a>); <code>₦15.8T</code> reform revenue (per Oyedele, <a href="https://www.tvcnews.tv/tinubu-reforms-prevented-nigerias-economic-collapse-oyedele/">TVC News</a>) went predominantly to general FAAC allocations (<code>₦21.89T</code> in 2025) &amp; debt service (<code>₦15.81T</code> 2026) rather than audited, ring-fenced trust funds.</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>OIL-08</strong></td>
+<td>Rehabilitate <strong>national refineries</strong> (Port Harcourt, Warri, Kaduna) &amp; petrochemical JVs (p. 39)</td>
+<td><strong>Failed public turnaround:</strong> Audited NNPCL exposures tied to PHRC, WRPC, and KRPC reached <strong><code>₦8.31 trillion</code></strong> (<a href="https://leadership.ng/warri-kaduna-port-harcourt-refineries-owe-nnpc-n8-3trn-amid-n264bn-in-fresh-loans/">Leadership</a>); brief mechanical restarts at PHRC and WRPC stalled/suspended and KRPC stayed idle, forcing NNPCL to pivot to Chinese equity JV MoUs while private Dangote Refinery supplied domestic PMS.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-6-transportation-pdf-pp-4042-6-concrete-pledges">Chapter 6: Transportation (PDF pp. 40–42) — 6 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TRN-01</strong></td>
+<td>National multi-lane highway system (PPPs/capital markets) &amp; highway rehab (pp. 16, 40)</td>
+<td><strong>Official:</strong> Active <strong>1,768 km</strong> highway programme — <strong>Lagos–Calabar Coastal Highway</strong> (<code>151.64 km</code> concrete-paved across sections by June 2026; Section 1 opened, <a href="https://tribuneonlineng.com/apc-bets-on-private-capital-to-bridge-nigerias-infrastructure-gap-revive-productive-economy/">Tribune</a>), <strong>Sokoto–Badagry</strong> underway, and <code>227 km</code> Abuja–Makurdi toll road live. <strong>Independent:</strong> Lagos–Calabar sparked Public Procurement Act sole-sourcing &amp; Landmark demolition disputes (<a href="https://punchng.com/concerns-taint-lagos-calabar-coastal-highway/">The Punch</a>), leaned heavily on sovereign funding, and trunk roads nationwide remain patchy.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>TRN-02</strong></td>
+<td>Complete <strong>5 rail corridors</strong> (<strong>Lagos–Kano, Benin–Abakaliki, PH–Maiduguri, Lagos–Calabar, Kano–Maradi</strong>) &amp; state metros (p. 41)</td>
+<td><strong>Official:</strong> NRC logged <code>3.89M</code> passengers in 2025 (<code>₦7.77B</code> passenger + <code>₦3.02B</code> freight, beating target 11%, <a href="https://thenationonlineng.net/nigeria-rail-revenue-beats-target-by-11-as-freight-drives-growth/">The Nation</a>; <a href="https://guardian.ng/news/nrc-records-1-07m-passenger-journeys-in-three-months/">The Guardian</a>); <strong>Kano–Maradi</strong> passed <code>75%</code> construction; Abuja Light Rail &amp; Lagos metros operated. <strong>Gap:</strong> <strong>Benin–Abakaliki</strong> has no active construction; <strong>Lagos–Calabar rail</strong> remains at planning/redesign alignment; <strong>PH–Maiduguri</strong> only restored <code>62 km</code> PH–Aba; <strong>Lagos–Kano</strong> awaits Kaduna–Kano completion.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>TRN-03</strong></td>
+<td>Review <strong>NRC structure</strong> with NASS for private inclusion &amp; specialisation (p. 41)</td>
+<td>State rail development advanced under 5th Constitutional Alteration (Mar 2023) and NRC scaled private freight contracts, <strong>yet statutory NRC unbundling/commercialisation Act remains un-enacted</strong> and NRC still requires heavy federal operating subsidies.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>TRN-04</strong></td>
+<td>Decongest <strong>Apapa Port</strong> -&gt; <strong>Onne, Warri, Calabar</strong> + deepen berths &amp; <strong>dredge waterways</strong> (p. 42)</td>
+<td><strong>Official:</strong> Lagos vessel turnaround fell <code>5 -&gt; 2.7 days</code>, national ports handled <code>129.3M tonnes</code> (2025) boosted by <strong>Lekki Deep Sea Port</strong>, <strong>£746M</strong> UKEF/Citibank Apapa/Tin Can upgrade signed Mar 2026, and FEC approved <strong>Onne, Warri &amp; Calabar upgrades</strong> (<a href="https://punchng.com/fg-approves-upgrade-of-onne-delta-calabar-ports/">The Punch</a>). <strong>Gap:</strong> Lagos still dominates <code>&gt;70%</code> of container cargo with corridor bottlenecks; non-Lagos dredging and NIWA inland river-port freight shifts remain nascent.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>TRN-05</strong></td>
+<td>Aviation: <strong>NCAA passenger delay compensation</strong>, ticket transparency, safety &amp; airport upgrades (p. 42)</td>
+<td>Operationalised <strong>Cape Town Convention Practice Direction</strong> unlocking aircraft dry-leasing; strictly enforced <strong>NCAA Part 19 flight delay/refund compensation</strong> penalties across carriers (<a href="https://thenationonlineng.net/airplanes-to-pay-compensation-for-delayed-canceled-flights-says-keyamo/">The Nation</a>; <a href="https://thenationonlineng.net/keyamo-to-fccpc-ncaa-resolve-impasse-over-air-ticketing-pricing/">The Nation</a>); upgraded MMIA E-wing, cargo terminals, and Kano/PH certifications (<code>+21.7%</code> domestic seat capacity).</td>
+<td><code>Implemented / Achieved</code></td>
+</tr>
+<tr>
+<td><strong>TRN-06</strong></td>
+<td>Aviation: <strong>Continue plans to establish a new national carrier (<code>Nigeria Air</code>)</strong> (p. 42)</td>
+<td><strong>Explicit reversal:</strong> Aviation Minister Festus Keyamo suspended <strong>Nigeria Air</strong> indefinitely, pivoting instead to designating 4 existing private Nigerian airlines (Air Peace, Ibom Air, ValueJet, United Nigeria) as international flag carriers.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-7-education-pdf-pp-4346-6-concrete-pledges">Chapter 7: Education (PDF pp. 43–46) — 6 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EDU-01</strong></td>
+<td>Alleviate <strong>classroom overcrowding</strong>, equip federal schools with <strong>computers/internet</strong> &amp; enforce accreditation (pp. 43–44)</td>
+<td>UBEC/SUBEB &amp; World Bank <strong>AGILE</strong> (<code>18 states</code>, <code>7.19M</code> girls supported, <code>&gt;10,000</code> schools/classrooms claimed) built facilities, yet widespread classroom deficits, offline rural schools, and a <strong><code>₦3.52T</code> (~6–7%) 2026 federal education budget</strong> (<a href="https://www.premiumtimesng.com/news/top-news/844337-2026-budget-tinubu-allocates-huge-share-to-security-education-infrastructure-others.html">Premium Times</a>) still fall well below the <code>15–20%</code> UNESCO norm.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>EDU-02</strong></td>
+<td>Reintroduce <strong>Nigerian History</strong> &amp; make <strong>indigenous languages compulsory through secondary completion</strong> (p. 44)</td>
+<td><strong>NERDC 2025/2026 curriculum</strong> (<a href="https://nerdc.gov.ng/content_manager/pdf_files/Press%20Release%20On%20New%20FG%20Curriculum.pdf">NERDC Release PDF</a>) <strong>reintroduced Nigerian History</strong> as a standalone compulsory subject (P1–JSS3) + <em>Citizenship &amp; Heritage Studies</em> at SS; <strong>partially delivered</strong> on indigenous languages, streamlining to major languages (Hausa, Igbo, Yoruba) at specified levels rather than compulsory universal indigenous-language completion through SS3.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>EDU-03</strong></td>
+<td>Local community <strong>Boards of Education</strong> for federal schools &amp; <strong>TVET AI/robotics/software centres</strong> (pp. 44–45)</td>
+<td>Upgraded <strong>38 technical colleges</strong> &amp; trained <strong><code>117,152</code> TVET students</strong> (stipends <code>₦22.5k -&gt; ₦30k/mo</code>) alongside practical trade subjects; <strong>however</strong>, community-controlled Boards of Education overseeing federal primary/secondary schools were not broadly implemented.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>EDU-04</strong></td>
+<td><strong>Student Loan Scheme (<code>NELFUND</code>)</strong> &amp; enable <strong>cost-reflective tuition</strong> in tertiary institutions (p. 46)</td>
+<td>Re-enacted <strong>Student Loans Act (April 3, 2024)</strong>; by <strong>Nov 9, 2026</strong>, <strong>NELFUND disbursed <code>₦375.28 billion</code></strong> across <strong><code>1,659,853</code> applications</strong> and <code>319</code> institutions (up from <code>₦355.87B</code> Sept &amp; <code>₦372.62B</code> Oct, <a href="https://nairametrics.com/2026/11/09/nelfund-student-loan-disbursements-hit-n375-28-billion/">Nairametrics Nov 9</a>; <a href="https://guardian.ng/education/nelfund-disburses-n372-6b-to-students-institutions/">The Guardian</a>). Public institutional charges rose toward cost-reflective fees, while ASUU accepted a <strong>40% salary review (Jan 2026)</strong> curbing federal strikes (<a href="https://fmino.gov.ng/promise-made-promise-kept-fg-commences-implementation-of-asuu-agreements-on-salary-increase-and-consolidated-tools-allowance/">FMINO</a>).</td>
+<td><code>Implemented / Achieved</code></td>
+</tr>
+<tr>
+<td><strong>EDU-05</strong></td>
+<td><strong>Special Education Fund</strong> financed via <strong>zero-coupon federal bonds</strong> (private or <strong>CBN-purchasable</strong>) (p. 46)</td>
+<td><strong>Not implemented as pledged:</strong> NELFUND and university funding relied on a statutory 1% FIRS/NRS tax transfer, TETFund/Development Levy transitions, and annual budgets rather than issuing CBN-purchasable zero-coupon education bonds.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>EDU-06</strong></td>
+<td>Prioritise high-performing <strong>STEM students</strong> for scholarships, internships, grad admissions &amp; jobs (p. 46)</td>
+<td>Launched <code>₦450M</code> Student Venture Grant (45 students), <code>₦10.5B</code> Digital Technical Academy (<code>32k</code> target), and <code>₦4B</code> 3MTT placement partners (<a href="https://gazettengr.com/nigeria-opens-applications-for-3mtt-delivery-partners-earmarks-n4-billion/">Gazette</a>); no systematic nationwide merit pipeline guaranteeing jobs/graduate slots for top STEM finishers exists.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-8-healthcare-pdf-pp-4750-7-concrete-pledges">Chapter 8: Healthcare (PDF pp. 47–50) — 7 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HLT-01</strong></td>
+<td>Scale <strong>NHIA</strong> mandatory coverage to <strong><code>&gt;=40%</code> of population within 2 years</strong> (by May 2025) (p. 49)</td>
+<td><strong>Official &amp; Independent:</strong> Active enrolment grew <strong>+42.35%</strong> from <code>16.2M</code> (late 2023) to <strong><code>23.06 million</code> in late October 2026</strong> (<a href="https://furtherafrica.com/2026/10/30/nigeria-health-insurance-hits-23m-enrolled-in-2026/">FurtherAfrica</a>). <strong>Missed 2-year deadline &amp; scale:</strong> <code>23.06M</code> represents just <strong><code>~10%–11%</code> of Nigerians</strong>, with out-of-pocket spending still <strong><code>~71%</code></strong> (<a href="https://nigeriahealthwatch.com/articles/thought-leadership/nigerias-state-health-insurance-schemes-are-expanding-enrolment-must-now-lead-to-care/">Nigeria Health Watch</a>), far short of <code>40%</code> (<code>~90M</code>) by May 2025 (40% pushed to <strong>2031</strong> in 2027 manifesto).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>HLT-02</strong></td>
+<td>Primary clinic within <strong>3 km / 30 min</strong> + General hospital per LGA, Tertiary per State, World-Class Specialist per zone (p. 48)</td>
+<td><strong>Official:</strong> Disbursed <strong><code>₦249.5B</code> BHCPF</strong> under Tinubu (<code>₦422.3B</code> since 2019) covering <code>8,300</code> of <code>17,600</code> PHCs and revitalised <strong><code>3,158–3,526</code> PHCs</strong> (<a href="https://www.premiumtimesng.com/health/health-news/924153-nigeria-releases-%E2%82%A6422-3-billion-for-basic-healthcare-since-2019-disburses-%E2%82%A6249-5-billion-under-tinubu.html">Premium Times</a>). <strong>Gap:</strong> Functional PHCs stand at <strong><code>53%</code></strong> overall (2027 manifesto p. 43), leaving tens of millions beyond 3 km/30-min access and outbound medical tourism unreversed.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>HLT-03</strong></td>
+<td><strong>Earmark fuel subsidy savings</strong> for health coverage of <strong>pregnant women &amp; under-5s</strong> (p. 49)</td>
+<td>Launched <strong>MAMII</strong> free emergency obstetric care &amp; C-sections in <code>172</code> priority LGAs (<code>&gt;48,000</code> women treated, <a href="https://www.premiumtimesng.com/health/health-news/752608-updated-nigeria-govt-announces-free-cesarean-sections-for-pregnant-women.html">Premium Times</a>) + <code>14M+</code> girls HPV vaccinated; however, <code>602</code> LGAs await MAMII scale-up (deferred to 2027–2031), under-5 insurance coverage stays near <code>10–11%</code>, and funds flow via general BHCPF rather than a statutory subsidy-savings lockbox.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>HLT-04</strong></td>
+<td>Dedicate <strong>alcohol &amp; tobacco ("sin") consumption taxes</strong> to healthcare funding (p. 49)</td>
+<td>Ad valorem/specific excises on alcohol, tobacco, and SSBs remained in general consolidated revenues <strong>without statutory earmarking to health</strong>, while the 2026 federal health budget (<code>₦2.48T</code>, <code>~6%</code>) remained far below the <strong>15% Abuja Declaration</strong> commitment (<a href="https://punchng.com/abuja-declaration-24-years-later-nigerias-health-budget-still-below-15/">The Punch</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>HLT-05</strong></td>
+<td>Retain health workers via pay raises, family insurance, <strong>favourable mortgages &amp; tertiary scholarships for their children</strong> (p. 49)</td>
+<td>Doubled nursing/medical quotas (<code>~115k</code> nursing intake) &amp; hired <code>&gt;30,000</code> health workers; <strong>however, no dedicated favourable health-worker mortgage or child tertiary-scholarship programme was enacted</strong>, NARD/NMA strikes persisted (e.g., <a href="https://www.premiumtimesng.com/health/health-news/820365-anambra-resident-doctors-begin-seven-day-warning-strike.html">Premium Times</a>), and physician/nurse <em>japa</em> brain drain continued.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>HLT-06</strong></td>
+<td>Allocate <strong><code>~1%</code> of pooled health insurance funds</strong> to domestic research &amp; 6-pillar pandemic preparedness (p. 50)</td>
+<td>NCDC EOCs &amp; PVAC/NIMR operated, <strong>but no audited public NHIA financial disclosure confirms systematic <code>~1%</code> allocation of pooled insurance funds to domestic health research</strong>.</td>
+<td><code>Insufficient Verifiable Data</code></td>
+</tr>
+<tr>
+<td><strong>HLT-07</strong></td>
+<td>Promote <strong>domestic manufacturing of essential medicines &amp; vaccines</strong> (p. 50)</td>
+<td>Signed June 2024 Executive Order waiving tariffs/VAT on pharma inputs &amp; launched <strong>PVAC / BioVaccines</strong> (<code>6.15%</code> pharma growth Q1 2026); yet GSK &amp; Sanofi exited in 2023 and Nigeria still relies heavily on imported APIs/vaccines (<code>50%</code> local essential medicines pushed to <strong>2031</strong>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="chapter-9-the-digital-economy-pdf-pp-5154-5-concrete-pledges">Chapter 9: The Digital Economy (PDF pp. 51–54) — 5 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DIG-01</strong></td>
+<td>Train <strong>1 million digital/ICT workers</strong> &amp; create <strong>1 million new ICT jobs within 24 months</strong> (by May 2025) (p. 52)</td>
+<td><strong>Missed May 2025 job deadline:</strong> Flagship <strong>3MTT</strong> registered <code>1.8M+</code> applicants, trained <strong><code>~179,000 fellows</code> (<code>~300,000</code> broad reach)</strong>, and secured <code>₦4B</code> EU/GIZ/MacArthur partner funding to pivot toward placements (<a href="https://gazettengr.com/nigeria-opens-applications-for-3mtt-delivery-partners-earmarks-n4-billion/">Gazette</a>; <a href="https://guardian.ng/news/fg-opens-3mtt-cohort-5-applications-secures-n4b-funding/">The Guardian</a>); NiYA trained <code>239,726</code> and <em>Digital Literacy for All</em> reached <code>748,988</code> (basic literacy, not formal ICT employment), while the 1M-job export <strong>NATEP / Hire From Nigeria</strong> push only launched Aug–Sept 2026 targeting <strong>2030</strong>.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>DIG-02</strong></td>
+<td>Achieve <strong><code>90%</code> national broadband coverage by 2025</strong> &amp; subsidise broadband for schools/rural areas (p. 53)</td>
+<td><strong>Missed 2025 target:</strong> <strong>NCC</strong> data shows broadband penetration stood at <strong><code>51.97%</code> in Dec 2025</strong> (missing NCC’s own 70% plan) and reached <strong><code>59.05%</code> (<code>~128M</code> subscriptions) in Sept 2026</strong> (<a href="https://leadership.ng/nigerias-mobile-lines-cross-200m-as-mtn-airtel-expand-subscriber-base/">Leadership</a>). Meanwhile, the <code>$2B</code> <strong><code>90,000 km</code> Project BRIDGE</strong> fibre network (<a href="https://fmcide.gov.ng/project-bridge/">FMCIDE</a>) remained in SPV/financing mobilisation in 2026 (<code>~35,000 km</code> existing fibre baseline).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>DIG-03</strong></td>
+<td>Scale <strong>tech start-ups, e-commerce</strong> &amp; local smartphone/ICT assembly (<code>&gt;$750M/yr</code> import substitution) (pp. 52–53)</td>
+<td><strong>Official:</strong> Labelled <code>400+</code> start-ups under the Nigeria Startup Act, unveiled the multilingual <strong>N-ATLAS</strong> AI model (<a href="https://fmcide.gov.ng/nigeria-launches-landmark-ai-model-powered-by-awarri-to-advance-languages-and-ai-at-scale/">FMCIDE</a>), launched the <code>₦10.5B</code> Digital Technical Academy, and reported <code>2.8M</code> light electronics units assembled in 2025 (APC 2027 p. 62). <strong>Gap:</strong> Domestic smartphone manufacturing at <code>&gt;$750M/yr</code> import-substitution scale has not materialised.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>DIG-04</strong></td>
+<td>Fully implement the <strong>2019 E-Government Master Plan</strong> &amp; digitise public workflows (p. 53)</td>
+<td><strong>Official:</strong> National Single Window processed <code>96,035</code> trade documents (Mar–Jul 2026), NIMC integrated <code>44 of 50</code> MDAs and <code>11 of 20</code> databases, CAC handled <code>73–76%</code> of registrations within 24 hours, and passport turnaround dropped from <code>6 weeks to 4 days</code>. <strong>Gap:</strong> Full end-to-end civil-service digitisation across MDAs remains incomplete and deferred into 2027–2031.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>DIG-05</strong></td>
+<td>Review <strong>blockchain/crypto policy</strong> to encourage prudent innovation &amp; <strong>expand eNaira adoption</strong> (p. 54)</td>
+<td><strong>Mixed / Split Trajectory:</strong> Enacted the <strong>Investments and Securities Act (<code>ISA</code>) 2025</strong> (March 2025, <a href="https://app.nesgroup.org/download_resource_documents/ESC-%20Fact%20sheet_1744189467.pdf">NESG Fact Sheet</a>) recognising digital/virtual assets under SEC oversight after CBN lifted the 2021 banking ban (Dec 2023), yet followed with aggressive 2024 P2P/Binance restrictions. Meanwhile, <strong>eNaira retail adoption stagnated</strong>, forcing a CBN backend repositioning pivot in 2026 (<a href="https://weetracker.com/2026/06/09/nigeria-enaira-cbn-reposition/">WeeTracker</a>).</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-10-sport-entertainment-culture-pdf-pp-5558-4-concrete-pledges">Chapter 10: Sport, Entertainment &amp; Culture (PDF pp. 55–58) — 4 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CRE-01</strong></td>
+<td>Constitute <strong>Creative Advisory Team</strong>, tighten IP/copyright enforcement, &amp; expand <strong>creative funds/tax rebates</strong> (p. 56)</td>
+<td><strong>Official:</strong> Created dedicated Federal Ministry of Art, Culture, Tourism &amp; the Creative Economy; FEC approved Nigeria’s first <strong>National IP Policy &amp; Strategy (<code>NIPPS</code>, Dec 2025)</strong> with WIPO (<a href="https://www.wipo.int/en/web/office-nigeria/w/news/2025/nigeria-s-federal-executive-council-approves-national-intellectual-property-policy-and-strategy">WIPO</a>); scaled <code>$618M</code> <strong>iDICE</strong> (<a href="https://www.afdb.org/en/news-and-events/frequently-asked-questions-idice-project-59933">AfDB</a>) and BOI Creative Economy Dev Fund (<code>29,013</code> applications in 2025); arts/entertainment grew <code>11.93%</code> in Q2 2026. <strong>Gap:</strong> Dedicated creative tax rebates and broad piracy enforcement are still scaling.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>CRE-02</strong></td>
+<td>Establish a Dubai-style <strong>Media City Special Economic Zone</strong> &amp; global animation outsourcing hub (pp. 56–57)</td>
+<td><strong>Unbuilt:</strong> No Dubai-style Media City SEZ or large-scale animation outsourcing hub was constructed by November 2026; federal capital focused instead on renovating existing Lagos/Oyo assets and breaking ground on an Abuja arena.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>CRE-03</strong></td>
+<td>Build/remodel <strong>sporting &amp; entertainment venues across all 6 zones</strong> &amp; university creative arts centres (pp. 57–58)</td>
+<td>Renovated Wole Soyinka (National) Theatre and National Museum west wing (Lagos), completed Oyo Cinematographic Centre, broke ground on a <code>4,500-seat</code> Abuja Performance Arena, and upgraded <code>7</code> creative hubs/studios in 2025 (concentrated in Lagos/Oyo/Abuja); <strong>6-zone nationwide stadia and university arts hub rollout remains incomplete</strong>.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>CRE-04</strong></td>
+<td>Implement <strong>National Sports Industry Policy (NISP)</strong>, Athletes’ Welfare Fund, school sports &amp; <strong>Sports Code</strong> (p. 58)</td>
+<td>Revived the <strong>National Sports Commission (<code>NSC</code>)</strong> in Oct 2024; NSC Elite &amp; Podium Board paid <strong><code>₦300M</code> in training grants to <code>31</code> elite athletes</strong> (<code>$10k/$5k/$3k</code> tiers, <a href="https://thesun.ng/nsc-pays-out-n300m-in-training-grants-to-31-elite-athletes/">The Sun</a>), and FG piloted <strong>N-SEEP</strong> school sports (<code>61</code> schools, <code>15,000</code> students). <strong>Gap:</strong> Statutory Athletes’ Welfare Fund for retirees, nationwide school sports, and full Sports Code governance remain partial.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-11-youth-empowerment-pdf-pp-5961-6-concrete-pledges">Chapter 11: Youth Empowerment (PDF pp. 59–61) — 6 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>YTH-01</strong></td>
+<td><strong>Halve <code>~33%</code> youth unemployment</strong> within 4 years (<code>21.5M</code> 2022 -&gt; <code>11.9M</code> 2026) (pp. 59–60)</td>
+<td><strong>Missed substance behind statistical reset:</strong> NBS adopted the ILO <code>1-hour/week</code> work definition (shifting reported unemployment mathematically to <code>4.3%–5.3%</code>), masking severe youth underemployment/informality, high urban hardship, and World Bank estimates of <strong><code>139M</code> Nigerians (<code>~61–63%</code>) in poverty</strong> (<a href="https://guardian.ng/news/139m-nigerians-living-in-poverty-says-world-bank/">The Guardian</a>). Even the APC 2027 manifesto (pp. 18, 44, 50) omits an achieved 2026 youth unemployment figure and resets <em>"halving youth unemployment"</em> to <strong>2031</strong>.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>YTH-02</strong></td>
+<td>Federal youth loans, <strong>2M mentors</strong>, Youth Advisory Council &amp; <strong>NYSC reform</strong> (p. 60)</td>
+<td><strong>Official:</strong> Launched <strong>CREDICORP YouthCred</strong> (<code>&gt;50,000</code> youth reached), NYIF, <code>₦47.87B</code> Presidential Conditional Grant (<code>957,482</code> beneficiaries), <code>₦450M</code> Student Venture Grant (<code>45</code> entrepreneurs), <code>1,184,384</code> NYSC mobilisations clearing backlogs, <code>860</code> Corpreneur grants, and initiated NYSC’s first review in 53 years. <strong>Gap:</strong> <strong>2 million mentors</strong>, statutory Youth Bank legislation, and completed NYSC reform remain unachieved and deferred to 2027–2031.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>YTH-03</strong></td>
+<td>Appoint <strong><code>&gt;=3</code> Cabinet ministers under 40</strong> &amp; <strong><code>6</code> under 50</strong> (<code>9</code> total) (p. 61)</td>
+<td><strong>Independent verification (<code>FIJ</code>):</strong> Only <code>1–2</code> ministers met the <code>&lt;40</code> threshold (<code>Ayodele Olawande</code> ~36–37, plus <code>Jamila Bio Ibrahim</code> ~37–38 who later exited in cabinet reshuffles), while figures like Olubunmi Tunji-Ojo (<code>~46</code>) and Hannatu Musawa (<code>born 1974</code>, &gt;50) left the <strong><code>&gt;=3 under 40</code></strong> pledge unfulfilled (<a href="https://fij.ng/article/tinubu-promised-to-work-with-under-40-ministers-3-years-on-he-hasnt-hired-them/">FIJ</a>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>YTH-04</strong></td>
+<td>Reserve <strong><code>&gt;=20%</code> of MDA political appointments</strong> for youths under 40 (p. 61)</td>
+<td><strong>No verifiable enforcement:</strong> No binding federal executive circular, statutory quota, or published civil-service/board age audit shows <code>&gt;=20%</code> <code>&lt;40</code> representation across MDA political appointments.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>YTH-05</strong></td>
+<td>Permanent biannual <strong><em>"State of the Youth"</em> survey</strong> &amp; <strong>One-Day-Governor Presidential Fellowship</strong> (p. 61)</td>
+<td><strong>No verifiable public record:</strong> Neither a recurring biannual <em>"State of the Youth"</em> national survey series nor a formal One-Day-Governor/President Youth Fellowship programme is corroborated in audited federal datasets through Nov 2026.</td>
+<td><code>Insufficient Verifiable Data</code></td>
+</tr>
+<tr>
+<td><strong>YTH-06</strong></td>
+<td>Establish <strong>Business Incubation Centres</strong> for youth IP registration &amp; SME scaling (p. 60)</td>
+<td>Startup Act portals (<code>400+</code> labelled start-ups), WIPO-backed Dec 2025 IP Policy (<a href="https://www.wipo.int/en/web/office-nigeria/w/news/2025/nigeria-s-federal-executive-council-approves-national-intellectual-property-policy-and-strategy">WIPO</a>), and BOI/iDICE incubation tracks started, but dedicated nationwide youth-IP incubation centres remain limited.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-12-women-empowerment-pdf-pp-6263-4-concrete-pledges">Chapter 12: Women Empowerment (PDF pp. 62–63) — 4 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WMN-01</strong></td>
+<td>Enact legislation &amp; reserve executive/cabinet seats for <strong><code>&gt;=35%</code> women governmental participation</strong> (p. 62)</td>
+<td><strong>Failed legislative &amp; executive target:</strong> Neither the <strong>Reserved Seats for Women Bill</strong> (<code>182</code> temporary NASS/State seats, <a href="https://placng.org/i/wp-content/uploads/2022/02/Factsheet-on-Specific-Seats-Bill.pdf">PLAC Factsheet</a>) nor a statutory 35% affirmative-action law was enacted by Nov 2026. Women formed <strong><code>~19%</code> (<code>9/47</code>)</strong> of Tinubu’s initial ministerial nominees (<a href="https://businessday.ng/news/article/19-of-all-tinubus-ministerial-nominees-are-women/">BusinessDay</a>) and remained <strong><code>~15–19%</code></strong> post-2024 reshuffles — explicitly acknowledged as <strong>"below 35%"</strong> on APC 2027 manifesto p. 45.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>WMN-02</strong></td>
+<td>Concessionary loans &amp; credit-backed financing for <strong>women-owned micro &amp; SME enterprises</strong> (p. 62)</td>
+<td><strong>Official:</strong> <strong>CREDICORP</strong> directed <strong><code>59%</code></strong> of its <code>₦53.5B–₦61.4B</code> loans to women (<a href="https://businessday.ng/news/article/fgs-credicorp-has-disbursed-over-n53-5bn-credit-to-351000-nigerians-nwagba/">BusinessDay</a>), alongside BOI GLOW, NCGC guarantees, and the World Bank <em>Nigeria for Women Project</em> (whose 36-state expansion is scheduled for 2027–2031).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>WMN-03</strong></td>
+<td>Establish <strong>domestic-violence police units, shelters/SARCs</strong> &amp; enforce stiffer penalties (p. 63)</td>
+<td>State-level Sexual Assault Referral Centres (SARCs) and police gender desks expanded selectively with donor support; nationwide <strong>36-state shelter/SARC coverage remains incomplete</strong> (explicitly carried into 2027–2031).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>WMN-04</strong></td>
+<td>Increase <strong>female secondary-school retention</strong> &amp; targeted <strong>female STEM scholarships</strong> (p. 63)</td>
+<td><strong>Official &amp; World Bank:</strong> <strong>AGILE</strong> expanded across <strong><code>18</code> states</strong>, supporting <strong><code>7.19M</code> girls</strong> and enrolling <code>3.7M</code> in secondary school (<a href="https://www.worldbank.org/en/results/2025/11/17/from-classrooms-to-communities-educating-empowering-and-elevating-nigeria-girls-and-women">World Bank</a>). <strong>Gap:</strong> <strong>18 states remain outside AGILE</strong>, and nationwide female STEM scholarship scale-up continues slowly.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-13-social-programs-pdf-pp-6466-4-concrete-pledges">Chapter 13: Social Programs (PDF pp. 64–66) — 4 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SOC-01</strong></td>
+<td>Expand <strong>Conditional Cash Transfers (CCT)</strong> (<code>15M</code> target horizon) &amp; <strong>unconditional elderly/PWD transfers</strong> (pp. 64–65)</td>
+<td><strong>Official &amp; World Bank:</strong> Confirmed <strong><code>₦658.9B</code> (<code>₦657.5B</code> APC) paid to <code>10.46M</code> poor households</strong> (<a href="https://punchng.com/wbank-fg-pays-n658-9bn-to-10-46m-poor-households/">The Punch</a>), <code>13.46M</code> households NIN/BVN-verified on the National Social Register alongside <strong>PreCEFI</strong> (<a href="https://precefi.ng/">PreCEFI</a>), and <code>$1B</code> <strong>HOPE-SP</strong> unveiled Aug 2026. <strong>Disputed / Scandal Reality:</strong> January 2024 Humanitarian Ministry crisis suspended Minister <strong>Betta Edu</strong> over a <code>₦585M</code> private-account memo and triggered EFCC probes into NSIPA/Sadiya Umar-Farouq (<a href="https://statehouse.gov.ng/president-tinubu-suspends-minister-of-humanitarian-affairs-and-poverty-alleviation-from-office/">State House</a>); World Bank flagged irregular payout governance; <strong>139M Nigerians (<code>~61–63%</code>) live in poverty</strong> (<a href="https://guardian.ng/news/139m-nigerians-living-in-poverty-says-world-bank/">The Guardian</a>); and universal statutory elderly/PWD stipends were not enacted.</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>SOC-02</strong></td>
+<td>Expand <strong>N-SIP (GEEP micro-loans, Home-Grown School Feeding, N-Power)</strong> (pp. 64–65)</td>
+<td><strong>Stalled / Suspended under scandal:</strong> <strong>N-Power, HGSF, and GEEP were placed under blanket presidential suspension &amp; forensic audit in Jan 2024</strong> amid NSIPA fraud probes (<a href="https://www.icirnigeria.org/tinubu-suspends-n-power-school-feeding-others-amid-corruption-probe/">ICIR</a>; <a href="https://punchng.com/just-in-tinubu-suspends-n-power-school-feeding-others/">The Punch</a>). Nationwide school feeding revival was pushed to HOPE-SP (<code>2027–2031</code>).</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>SOC-03</strong></td>
+<td>Appoint <strong>Out-of-School Children (OOSC) Czar</strong> &amp; National Task Force (p. 65)</td>
+<td><strong>Official:</strong> Operationalised the <strong>National Commission for Almajiri and Out-of-School Children Education (<code>NCAOOSCE</code>)</strong> (<a href="https://www.ncaoosce.gov.ng/about">NCAOOSCE</a>), UBEC 2025–2028 OOSC Action Plan, and HOPE-EDU. <strong>Independent:</strong> <strong>UNICEF</strong> maintains Nigeria has <strong><code>18.3M</code> OOSC</strong> (<code>10.2M</code> primary + <code>8.1M</code> JSS, <a href="https://www.unicef.org/nigeria/media/7746/file/UNICEF%20Nigeria%20Cheat%20Sheet:%20Out-of-school%20Children.pdf">UNICEF Cheat Sheet PDF</a>), sharply disputed by FME’s <code>~7–8M</code> claim (<a href="https://punchng.com/what-is-nigerias-out-of-school-figure/">The Punch</a>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>SOC-04</strong></td>
+<td>Poor-focused <strong>fintech MSME credit</strong> &amp; dedicated <strong>Digital MSME Academy</strong> (pp. 65–66)</td>
+<td><strong>Official:</strong> Disbursed <code>₦65.8B</code> MSME fund (<code>15,018</code> firms) and <code>₦788B</code> via DBN (<code>688,741</code> MSMEs, 2023–2025). <strong>Gap:</strong> The dedicated <strong>Digital MSME Academy</strong> promised in 2023 remains unbuilt and re-pledged for <strong>2027–2031</strong> (2027 manifesto p. 44).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-14-judicial-reform-pdf-pp-6769-5-concrete-pledges">Chapter 14: Judicial Reform (PDF pp. 67–69) — 5 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JUD-01</strong></td>
+<td>Upgrade <strong>federal judicial welfare/remuneration</strong> &amp; safeguard institutional independence (p. 68)</td>
+<td><strong>Enacted:</strong> Signed the <strong>Judicial Office Holders (Salaries and Allowances) Act (August 2024)</strong> raising federal judicial officers’ salaries by <strong>~300%</strong> alongside preserved federal first-line charge allocations (state-level judicial financial autonomy compliance remained uneven).</td>
+<td><code>Implemented / Achieved</code></td>
+</tr>
+<tr>
+<td><strong>JUD-02</strong></td>
+<td>Constitute <strong>Structural Review Committee</strong> &amp; Legislative Review of outdated criminal/civil statutes (p. 68)</td>
+<td>Convened National Justice Summit (2024), adopted National Policy on Justice, resolved <code>5,834</code> ADR disputes, and reviewed <code>91+</code> laws &amp; <code>63</code> regulations; <strong>comprehensive statutory overhaul remains phased/ongoing</strong> into 2027–2031.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>JUD-03</strong></td>
+<td>Restructure <strong>NJC</strong> &amp; <strong>limit NJC mandate strictly to Federal Courts</strong> (p. 68)</td>
+<td><strong>Unchanged:</strong> Constitutional amendments divesting the National Judicial Council of supervisory/disciplinary authority over State superior courts were <strong>not enacted</strong>; NJC retains unitary jurisdiction over Federal and State superior courts.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>JUD-04</strong></td>
+<td>Expand federal courts/judges, <strong>specialised courts</strong>, &amp; enforce delay/ex-parte discipline (p. 69)</td>
+<td><strong>Official:</strong> Supreme Court attained its full <strong>21-Justice constitutional complement</strong> in March 2026 (<a href="https://www.thisdaylive.com/2026/03/03/as-scourt-attains-full-complement-of-21-justices/">ThisDay</a>), and NJC sanctioned erring judges over conflicting/ex-parte orders. <strong>Gap:</strong> Dedicated specialised federal courts and systemic trial-docket decongestion remain incomplete.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>JUD-05</strong></td>
+<td>Adequately fund &amp; <strong>digitise federal trial and appellate courts</strong> (p. 69)</td>
+<td>Expanded e-filing and digital case tracking in Appellate and Federal High Courts (APC 2027 pp. 84, 92), <strong>yet magistrate and lower trial courts remain predominantly paper-based</strong> (<code>nationwide court digitalisation by 2029</code> deferred to 2027–2031).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-15-federalism-decentralisation-pdf-pp-7071-2-concrete-pledges">Chapter 15: Federalism / Decentralisation (PDF pp. 70–71) — 2 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FED-01</strong></td>
+<td>Devolve <strong>Exclusive Legislative List powers</strong> to States (crime prevention, prisons, stamp duties, taxation) (p. 71)</td>
+<td><strong>Major legislative strides alongside implementation gaps:</strong> <strong>State Police Bill (6th Alteration, 2026)</strong> cleared NASS and <code>28–30</code> State Assemblies awaiting presidential assent as of Nov 2026 (<a href="https://www.vanguardngr.com/2026/11/28-states-approve-state-police-bill-as-nass-moves-to-transmit-to-tinubu/">Vanguard</a>); <strong>2025 Tax Reform Acts</strong> overhauled VAT/stamp-duty rules &amp; Joint Revenue Board; <strong>however, Correctional Services devolution</strong> (passed March 2023, <a href="https://placng.org/Legist/constitution-alteration-on-prisons-railways-starts-off-push-for-devolution-of-powers/">PLAC</a>) saw virtually zero state prison takeovers, leaving federal facilities holding <code>80,000+</code> inmates (<code>~90%</code> under state offenses, <code>&gt;64%</code> awaiting trial).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>FED-02</strong></td>
+<td>Review <strong>Revenue Allocation Formula</strong> -&gt; shift more revenue to <strong>States &amp; Local Governments</strong> (pp. 14, 71)</td>
+<td><strong>Partial tax-share shift vs. stalled statutory vertical formula &amp; patchy LG autonomy:</strong> 2025 Tax Act trimmed FG VAT share <code>15% -&gt; 10%</code> (States <code>55%</code>, LGAs <code>35%</code>) and FAAC hit <code>₦21.89T</code> in 2025. <strong>However</strong>, the core vertical Federation Account formula (<code>52.68%</code> FG / <code>26.72%</code> States / <code>20.60%</code> LGAs) stayed unchanged while RMAFC completed review proposals (<a href="https://fmino.gov.ng/rmafc-completes-review-of-revenue-allocation-formula-paves-way-for-new-sharing-framework/">FMINO</a>). Moreover, despite the FG winning <strong><code>SC/CV/343/2024</code> (July 11, 2024)</strong> on LG autonomy, <code>₦7.43T</code> still flowed via State joint accounts (<a href="https://punchng.com/autonomy-battle-lgs-demand-direct-funds-as-states-receive-n7-43tn/">The Punch</a>; <a href="https://factcheckhub.com/how-much-did-nigeria-disburse-to-its-774-local-governments-in-the-last-three-years/">FactCheckHub</a>), Tinubu warned governors in Dec 2025 to obey (<a href="https://www.vanguardngr.com/2025/12/tinubu-to-govs-obey-supreme-court-judgement-hand-over-local-govt-their-allocation/">Vanguard</a>), and the Supreme Court faulted FG withholding of Osun LG funds (<a href="https://www.premiumtimesng.com/news/headlines/840868-updated-supreme-court-strikes-out-osuns-withheld-lg-allocations-suit-but-faults-fgs-funds-seizure.html">Premium Times</a>; <a href="https://www.premiumtimesng.com/opinion/editorial/856881-editorial-tinubu-release-withheld-osun-council-funds-now.html">Premium Times Editorial</a>).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="chapter-16-foreign-policy-pdf-pp-7274-6-concrete-pledges">Chapter 16: Foreign Policy (PDF pp. 72–74) — 6 Concrete Pledges</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>2023 Manifesto Pledge &amp; Target (PDF Page)</th>
+<th>Verified Record (May 2023 – Nov 2026): Official vs. Independent Evidence</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FOR-01</strong></td>
+<td>Institutionalise <strong>West African ministerial security meetings</strong> &amp; deepen ECOWAS trade/infrastructure (p. 73)</td>
+<td><strong>Official:</strong> Launched <strong>4D Foreign Policy Doctrine</strong> (<a href="https://foreignaffairs.gov.ng/policy/">MFA</a>), hosted West Africa Economic Summit / ECOWAS@50, inked 2024 Niger security pact &amp; Aug 2026 Maiduguri Sahel retreat. <strong>Regional rupture:</strong> <strong>Mali, Burkina Faso, and Niger formally withdrew from ECOWAS on January 29, 2025</strong> (<a href="https://amaniafrica-et.org/the-withdrawal-of-aes-from-ecowas-an-opportunity-for-re-evaluating-existing-instruments-for-regional-integration/">Amani Africa</a>) under the AES bloc, severely fracturing West African economic and security integration (<a href="https://www.thisdaylive.com/2026/10/19/ecowas-aes-move-to-salvage-regional-trade-security-ties/">ThisDay</a>).</td>
+<td><code>Mixed / Disputed Outcome</code></td>
+</tr>
+<tr>
+<td><strong>FOR-02</strong></td>
+<td>Advance African <strong>WTO/IFI reform, climate justice, bilateral trade</strong> &amp; continental malaria push (pp. 73–74)</td>
+<td>Became a <strong>BRICS partner country (Jan 2025, <a href="https://fmino.gov.ng/nigeria-joins-brics-as-a-partner-country/">FMINO</a>)</strong>, retained AU PSC &amp; <strong>IMO Council (2026–2027)</strong> seats, signed the <strong>UAE CEPA (Jan 13, 2026, <a href="https://guardian.ng/news/nigeria/national/nigeria-uae-target-higher-trade-under-cepa/">The Guardian</a>)</strong> &amp; secured China’s May 1, 2026 zero-tariff corridor (<a href="https://nannews.ng/can-nigeria-walk-through-chinas-zero-tariff-door-before-2028/">NAN</a>), rolled out malaria vaccines, and pressed G20/COP debt/climate-justice reforms, though structural WTO/IFI voting reforms remain unachieved globally.</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>FOR-03</strong></td>
+<td>Upgrade <strong>consular services &amp; diaspora databases</strong> (pp. 73–74)</td>
+<td>Rolled out contactless diaspora passport renewals (slashing wait times from <code>6 weeks to 4 days</code>) and <strong>automated <code>~70%</code> of consular services</strong> (with the remaining <code>30%</code> and digital diaspora integration deferred to 2027–2031).</td>
+<td><code>Partially Implemented / In Progress</code></td>
+</tr>
+<tr>
+<td><strong>FOR-04</strong></td>
+<td>Establish an <strong>"African G-5"</strong> bloc of key African powers (p. 74)</td>
+<td><strong>Not created:</strong> No formal <em>"African G-5"</em> institution or permanent five-nation concert led by Nigeria was established between May 2023 and November 2026.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+<tr>
+<td><strong>FOR-05</strong></td>
+<td>Create a dedicated <strong>Department for Strategic Policy</strong> inside the Ministry of Foreign Affairs (p. 74)</td>
+<td><strong>Unverified:</strong> While MFA operates planning/research desks under its 4D framework, no verified public gazette or institutional restructuring confirms creation of a distinct new <em>"Department for Strategic Policy"</em> as pledged.</td>
+<td><code>Insufficient Verifiable Data</code></td>
+</tr>
+<tr>
+<td><strong>FOR-06</strong></td>
+<td>Explore Constitutional amendment enabling <strong>Diaspora voting</strong> (p. 74)</td>
+<td><strong>Failed to pass:</strong> A Diaspora Voting amendment bill advanced past 2nd Reading in the House (<a href="https://punchng.com/fg-moves-to-advance-diaspora-voting-bill/">The Punch</a>), <strong>but failed to secure National Assembly passage</strong> (<a href="https://www.icirnigeria.org/national-assembly-rejects-diaspora-voting/">ICIR</a>) and remains excluded for the 2027 electoral cycle.</td>
+<td><code>Not Achieved / Stalled / Reversed</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="4-cross-check-of-apc-2027-manifesto-self-reported-20232026-claims">4. Cross-Check of APC 2027 Manifesto Self-Reported 2023–2026 Claims</h2>
+<p>To prevent circular self-grading, <strong>Section 4 of <a href="manifesto_2027.html">tinubu_manifesto_notes_02_2027_agenda.md</a></strong> (which catalogues every self-reported 2023–2026 achievement claim made in the October/November 2026 <em>Agenda 2027–2031</em> manifesto) was cross-checked directly against independent statutory agencies, multilateral institutions, and investigative reporting through <strong>November 13, 2026</strong>.</p>
+<h3 id="41-verification-matrix-of-flagship-2027-manifesto-record-claims">4.1 Verification Matrix of Flagship 2027 Manifesto Record Claims</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Policy Domain &amp; 2027 Manifesto Claim (Pages)</th>
+<th>Independent &amp; Primary Record Verification (through Nov 13, 2026)</th>
+<th>Cross-Check Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Core Legislation (<code>4.1</code>):</strong> Enactment of <em>Electricity Act 2023</em>, <em>Student Loan Act (NELFUND)</em>, <em>Judicial Pay Act (Aug 2024, +300%)</em>, <em>ISA 2025</em>, <em>4 Tax Reform Laws (June 26, 2025; eff. Jan 1, 2026)</em>, <em>NIMC Act 2026</em>; claims deregulation/Naira-for-Crude ended petrol shortages (pp. 7, 15, 60, 71, 84, 106–108).</td>
+<td><strong>Laws verified:</strong> All six legislative packages were enacted (<code>ISA 2025</code>, <a href="https://app.nesgroup.org/download_resource_documents/ESC-%20Fact%20sheet_1744189467.pdf">NESG</a>; Tax Acts, <a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html">PwC</a>; NIMC 2026, <a href="https://nta.ng/news/security-nigeria/tinubu-signs-landmark-identity-management-reform">NTA</a>). <strong>Context omitted:</strong> The tax rollout triggered a Dec 2025 legislative scandal over alleged discrepancies between NASS-passed bills and gazetted texts (<a href="https://punchng.com/tax-laws-that-split-abuja-how-tinubus-reforms-sparked-governance-storm/">The Punch</a>), and ending petrol queues came alongside a ~7× pump-price surge (<code>₦185–195/L</code> -&gt; <code>₦1,250–₦1,405+/L</code>).</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>External Reserves (<code>4.2</code>, <code>4.13 #1</code>):</strong> Claims <strong><code>"$55.3bn in Sep 2026"</code> / <code>"US$55.25B"</code></strong> (<em>"highest since 2019"</em> p. 10 vs <em>"highest since 2008"</em> p. 101) &amp; net reserves <code>~$32B</code> (p. 10) / IMF <code>$35B</code> end-2025 (pp. 96–97).</td>
+<td><strong>Date/figure divergence:</strong> <strong>CBN</strong> data confirms gross reserves closed <strong>September 2026 at <code>~$54.9B</code></strong> (<a href="https://businessday.ng/pro/article/naira-cools-across-fx-markets-as-external-reserves-pause-growth/">BusinessDay</a>) and only crossed <strong><code>~$55.2B–$55.26B</code> in late October 2026</strong> (<a href="https://tribuneonlineng.com/nigerias-external-reserves-rise-by-295m-in-october-ytd-accretion-hits-9-7bn/">Tribune</a>). Governor Cardoso separately reported <strong>net FX reserves near <code>$46B</code></strong> (<a href="https://furtherafrica.com/2026/10/14/nigeria-external-reserves-surge-past-us55b-in-2026/">FurtherAfrica</a>). Thus the <code>$55B+</code> level is real by late Oct 2026, while the PDF slightly misdates Sept vs. Oct and conflicts internally (<code>2019</code> vs <code>2008</code>).</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>GDP Growth, Inflation, MPR &amp; Multilateral Forecasts (<code>4.2</code>, <code>4.12</code>, <code>4.13 #2</code>):</strong> <code>4.43%</code> Q2 2026 real GDP, <code>14.63%</code> Sept 2026 headline inflation (<code>19.59%</code> food), <code>23%</code> MPR, World Bank <code>4.3%</code> Oct 2026 upgrade, IMF Art. IV June 2026.</td>
+<td><strong>Metrics verified:</strong> NBS Q2 2026 <code>4.43%</code> (<a href="https://atlassportfolios.com/wp-content/uploads/2026/09/GDP-Q22026-REPORT.pdf">Atlas/NBS</a>), Sept 2026 CPI <code>14.63%</code> (<a href="https://businessday.ng/uncategorized/article/nigerias-inflation-drops-to-14-63-as-food-prices-fall-in-september/">BusinessDay</a>), <code>23.00%</code> MPR (<a href="https://www.cbn.gov.ng/MonetaryPolicy/decisions.html">CBN</a>), World Bank Oct 2026 <code>4.3%</code> forecast (<a href="https://leadership.ng/world-bank-upgrades-nigeria-growth-to-4-3-for-2026/">Leadership</a>), and IMF June 2026 Art. IV (<a href="https://www.imf.org/en/news/articles/2026/06/09/pr26190-nigeria-imf-executive-board-concludes-2026-article-iv-consultation-with-nigeria">IMF</a>) match primary releases. <strong>Omitted context:</strong> The <code>34.8% -&gt; 14.63%</code> inflation drop relied significantly on the <strong>Jan 2025 CPI rebasing</strong> (statistical reset to <code>24.48%</code>); USD GDP fell roughly in half post-float (<code>~$213–291B</code> 2024–2025; <code>~$386.7B</code> proj. 2026, <a href="https://www.imf.org/external/datamapper/profile/NGA">IMF DataMapper</a>); and the same <strong>World Bank</strong> flagged <strong><code>139M</code> Nigerians (<code>~61–63%</code>) in poverty</strong> (<a href="https://guardian.ng/news/139m-nigerians-living-in-poverty-says-world-bank/">The Guardian</a>).</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>Revenues, Debt Ratio, IMF Loan, Eurobonds, Ratings, FATF, FTSE, Banks &amp; NGX (<code>4.2</code>):</strong> NRS <code>₦28.3T</code>, Customs <code>₦7.28T</code>, <code>₦21.89T</code> / <code>₦18.72T H1</code> FAAC, <code>36.85%</code> debt/GDP (2025), <code>$3.4B</code> IMF repaid, <code>$2.35B</code> Eurobond (<code>$13B+</code> orders), S&amp;P <code>B</code> / Moody’s <code>B3</code> / Fitch <code>B</code>, FATF exit, FTSE Frontier, <code>₦4.65T</code> (<code>33/36</code> banks), NGX <code>₦163T</code>, <code>$23.22B</code> capital inflows.</td>
+<td><strong>Verified metrics with sharp fiscal/FDI caveats:</strong> NRS (<a href="https://guardian.ng/business-services/nrs-targets-n40-7tr-records-n28-3tr-collections-in-2025/">The Guardian</a>), Customs (<a href="https://punchng.com/breaking-customs-smashes-records-with-%E2%82%A67-28tn-revenue-in-2025/">The Punch</a>), IMF repayment Apr 30, 2025 (<a href="https://nannews.ng/nigeria-fully-repays-3-4bn-imf-loan-minister/">NAN</a>), Nov 2025 Eurobond (<a href="https://www.premiumtimesng.com/news/top-news/833308-nigerias-2-35-billion-eurobonds-attract-largest-ever-order-book-of-13-billion.html">Premium Times</a>), S&amp;P <code>B</code> May 15, 2026 (<a href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3563619">S&amp;P</a>), FATF Oct 24, 2025 (<a href="https://insights.techcabal.com/nigeria-exited-the-fatf-grey-list-now-it-wants-to-set-the-rules-for-african-fintech/">TechCabal</a>), FTSE Sept 21, 2026 (<a href="https://nairametrics.com/2026/08/27/ftse-russell-confirms-nigerias-frontier-market-status-to-take-effect-september-21/">Nairametrics</a>), <code>₦4.65T</code> banks (<a href="https://african.business/2026/04/finance-services/nigeria-concludes-4-65-trillion-bank-recapitalisation-programme">African Business</a>), and NGX <code>₦163.1T</code> (<a href="https://marketpulseafrica.com/blog/ngx-rallies-as-equity-market-cap-reaches-record-n1631-trillion">MarketPulseAfrica</a>) are verified. <strong>Critical omission:</strong> Nominal debt rose to <strong><code>₦166.79T</code> in Q2 2026</strong> (<a href="https://nairametrics.com/2026/09/26/nigerias-public-debt-rises-to-n166-79-trillion-in-q2-2026/">Nairametrics</a>), <strong>DMO’s DSA</strong> projects debt-service-to-FGN-revenue breaching <strong><code>51%</code> in 2026 and <code>71.7%</code> by 2030</strong> (<a href="https://nairametrics.com/2026/11/09/nigerias-debt-service-to-revenue-ratio-to-hit-71-7-by-2030-dmo/">Nairametrics</a>), and <code>$23.22B</code> 2025 inflows held just <strong><code>$923M</code> (~4%) FDI</strong> (<a href="https://punchng.com/fdi-underperforms-amid-surge-in-2025-capital-inflows/">The Punch</a>) — a fact buried on p. 74 but omitted from p. 10 headlines.</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>Security &amp; Oil Theft (<code>4.3</code>):</strong> Claims <code>8,166</code> military rescues, <code>137.26M</code> NIMC NINs, and crude theft fallen from <code>11,900 bpd (2023)</code> to <strong><code>9,600 bpd</code> (7M 2025, <em>"16-year low"</em>)</strong> (p. 24).</td>
+<td><strong>Mixed / Selectively Framed:</strong> <code>137.26M</code> NIMC NINs is confirmed (<a href="https://leadership.ng/nimc-registers-137m-nigerians-as-tinubu-orders-full-nin-enrolment/">Leadership</a>). However, citing a <code>7-month 2025</code> oil-theft snapshot omits <strong>NUPRC’s full-year 2025 disclosure that <code>3.33 million barrels</code> were stolen in 2025, surging in Q4 2025 (<code>2.19M</code> bbl, 66% of annual theft)</strong> (<a href="https://punchng.com/nigeria-lost-3-3m-barrels-to-oil-thieves-in-2025-nuprc/">The Punch</a>). Section 4.3 also omits the <strong><code>+66%</code> kidnapping surge (<code>7,825</code> victims)</strong> documented by <a href="https://www.sbmintel.com/2026/08/the-economics-of-nigerias-kidnap-industry-2026/">SBM Intelligence</a> and the March 2026 Borno resurgence (<a href="https://nta.ng/news/featured/von-president-tinubu-orders-security-chiefs-to-relocate-to-maiduguri">NTA</a>).</td>
+<td><code>Disputed / Divergent</code></td>
+</tr>
+<tr>
+<td><strong>Power, Oil &amp; Gas, Refining &amp; CNG (<code>4.4</code>, <code>4.13 #3–5</code>):</strong> <code>1.52–1.56 mbpd</code> crude, OB3 <code>98%</code>/AKK <code>94%</code>, <code>96%</code> Q1 petrol import cut, <code>61.51%</code> vs <code>57.3%</code> metered, <code>₦501B</code> GenCo bond, <code>385</code> vs <code>140+</code> vs <code>105</code> CNG infrastructure counts.</td>
+<td><strong>Core production/import/metering shifts verified, major flaws omitted:</strong> <code>1.52–1.56 mbpd</code> crude (<a href="https://nta.ng/news/featured/finance-minister-wale-edun-commends-nuprc-as-daily-production-hits-1-84m-barrels-per-day">NTA</a>), OB3 progress (<a href="https://www.vanguardngr.com/2026/09/ob3-completion-as-nnpc-limited-opens-a-new-chapter-for-nigerias-gas-economy/">Vanguard</a>), <code>96%</code> Q1 petrol import drop (<a href="https://www.legit.ng/business-economy/industry/1714864-petrol-import-nigeria-drops-by-96-dangote-refinery-takes-supply/">Legit</a>), <code>61.51%</code> NERC June 2026 metering (<a href="https://nerc.gov.ng/resources/metering-factsheet-for-may-and-june-2026/">NERC</a>), and <code>₦501B</code> bond (<a href="https://statehouse.gov.ng/federal-governments-%E2%82%A6501-billion-inaugural-tranche-under-power-sector-bond-programme-records-100-subscription/">State House</a>) are confirmed. <strong>Omissions &amp; contradictions:</strong> Public NNPC refineries collapsed despite <strong><code>₦8.31T</code> debt</strong> (<a href="https://leadership.ng/warri-kaduna-port-harcourt-refineries-owe-nnpc-n8-3trn-amid-n264bn-in-fresh-loans/">Leadership</a>) — domestic PMS supply shift came almost entirely from the private Dangote Refinery; grid output stagnated near <code>4,022 MW</code> in Q2 2026 (<a href="https://punchng.com/1gw-in-30-months-nigerians-battle-darkness-as-tinubus-power-generation-promises-falter/">The Punch</a>); and CNG/metering counts conflict across PDF pages (<code>4.13</code>).</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>Transport, Trade, Non-Oil Exports, Digital &amp; Creative (<code>4.5</code>, <code>4.6</code>, <code>4.13 #7–8</code>):</strong> <code>151.64 km</code> Lagos–Calabar concrete, NEPC <code>$6.1B</code> 2025 non-oil exports, UAE CEPA, China zero-tariff, National IP Policy, N-ATLAS, <code>300k</code> 3MTT.</td>
+<td><strong>Verified:</strong> NEPC <code>$6.1B</code> (<a href="https://nepc.gov.ng/blog/2026/02/24/nigerias-historic-non-oil-export-performance-signals-a-new-era-of-economic-possibility/">NEPC</a>), UAE CEPA (<a href="https://guardian.ng/news/nigeria/national/nigeria-uae-target-higher-trade-under-cepa/">The Guardian</a>), China zero-tariff (<a href="https://nannews.ng/can-nigeria-walk-through-chinas-zero-tariff-door-before-2028/">NAN</a>), NIPPS Dec 2025 (<a href="https://www.wipo.int/en/web/office-nigeria/w/news/2025/nigeria-s-federal-executive-council-approves-national-intellectual-property-policy-and-strategy">WIPO</a>), and N-ATLAS (<a href="https://fmcide.gov.ng/nigeria-launches-landmark-ai-model-powered-by-awarri-to-advance-languages-and-ai-at-scale/">FMCIDE</a>). <strong>Qualification:</strong> Lagos–Calabar faced procurement/demolition criticism (<a href="https://punchng.com/concerns-taint-lagos-calabar-coastal-highway/">The Punch</a>); 3MTT’s <code>~300k</code> broad reach exceeds completed core fellows (<code>~179k</code>), and broadband (<code>59.05%</code> Sept 2026) lagged 2025 goals.</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>Agri, NELFUND, AGILE &amp; Health (<code>4.7</code>–<code>4.9</code>):</strong> <code>2,000</code> tractors (<code>737</code> deployed), <code>154k ha</code> irrigation, <strong>NELFUND <code>₦355.87B</code></strong>, ASUU <code>40%</code> pay rise, AGILE <code>18</code> states (<code>7.19M</code> girls), <strong>BHCPF <code>₦235B</code></strong>, <strong>NHIA <code>23M+</code></strong>.</td>
+<td><strong>Confirmed &amp; actually superseded upward by Nov 2026:</strong> NELFUND reached <strong><code>₦375.28B</code> by Nov 9, 2026</strong> (<a href="https://nairametrics.com/2026/11/09/nelfund-student-loan-disbursements-hit-n375-28-billion/">Nairametrics</a>), BHCPF hit <strong><code>₦249.5B</code></strong> (<a href="https://www.premiumtimesng.com/health/health-news/924153-nigeria-releases-%E2%82%A6422-3-billion-for-basic-healthcare-since-2019-disburses-%E2%82%A6249-5-billion-under-tinubu.html">Premium Times</a>), and NHIA stood at <strong><code>23.06M</code></strong> (<a href="https://furtherafrica.com/2026/10/30/nigeria-health-insurance-hits-23m-enrolled-in-2026/">FurtherAfrica</a>). <strong>Omissions:</strong> <code>12M+</code> unfarmed hectares (<a href="https://punchng.com/capital-crunch-input-costs-leave-12m-hectares-unfarmed-report/">The Punch</a>), <code>27M</code> food-insecure citizens (<a href="https://www.imf.org/en/news/articles/2026/06/09/pr26190-nigeria-imf-executive-board-concludes-2026-article-iv-consultation-with-nigeria">IMF</a>), <code>71%</code> out-of-pocket health costs, and health/education budget shares remain below Abuja (<code>15%</code>) / UNESCO (<code>15–20%</code>) standards.</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>Cash Transfers &amp; Minimum Wage (<code>4.10</code>, <code>4.13 #6</code>):</strong> <code>10M+</code> reached / <code>₦657.5B</code> disbursed (pp. 37, 46, 50) vs <code>8.5M / ₦330B</code> tile (p. 12); <code>₦70,000</code> statutory minimum wage.</td>
+<td><strong>Aggregate payouts verified (<code>₦658.9B</code> to <code>10.46M</code> households</strong> per World Bank/FG, <a href="https://punchng.com/wbank-fg-pays-n658-9bn-to-10-46m-poor-households/">The Punch</a>); <strong>however</strong>, p. 12 conflicts internally (<code>₦330B</code>), and the record omits the Jan 2024 Humanitarian Ministry corruption scandal &amp; NSIPA suspension of N-Power/HGSF (<a href="https://statehouse.gov.ng/president-tinubu-suspends-minister-of-humanitarian-affairs-and-poverty-alleviation-from-office/">State House</a>; <a href="https://www.icirnigeria.org/tinubu-suspends-n-power-school-feeding-others-amid-corruption-probe/">ICIR</a>). The <code>₦70k</code> wage floor is law, but uneven state compliance and real-wage erosion spurred <code>₦300k</code> labour demands in 2026 (<a href="https://punchng.com/workers-demand-n300000-minimum-wage/">The Punch</a>).</td>
+<td><code>Confirmed with Qualification</code></td>
+</tr>
+<tr>
+<td><strong>LG Autonomy, Anti-Corruption &amp; Foreign Policy (<code>4.11</code>):</strong> Headline card <strong><code>"774 Councils Paid FAAC Directly"</code></strong> (p. 13) vs p. 86 disclaimer; <code>647</code> corruption cases / <code>442</code> concluded; BRICS partner &amp; <code>70%</code> consular automation.</td>
+<td><strong>LG headline is Disputed / Overstated:</strong> Despite <code>SC/CV/343/2024</code> (July 2024), <code>₦7.43T</code> still passed via state joint accounts through late 2025 (<a href="https://punchng.com/autonomy-battle-lgs-demand-direct-funds-as-states-receive-n7-43tn/">The Punch</a>), Tinubu publicly warned governors in Dec 2025 to comply (<a href="https://www.vanguardngr.com/2025/12/tinubu-to-govs-obey-supreme-court-judgement-hand-over-local-govt-their-allocation/">Vanguard</a>), and the Supreme Court faulted FG withholding of Osun LG allocations (<a href="https://www.premiumtimesng.com/news/headlines/840868-updated-supreme-court-strikes-out-osuns-withheld-lg-allocations-suit-but-faults-fgs-funds-seizure.html">Premium Times</a>). Domestic EFCC recoveries (<code>₦1.233T</code>, <code>10,872</code> convictions, <a href="https://pmnewsnigeria.com/2026/08/31/efcc-recovers-%E2%82%A61-23trn-secures-10872-convictions-in-34-months/">PM News</a>) coincided with a <strong>2-spot fall to <code>142/182</code> (<code>26/100</code>) on TI CPI 2025</strong> (<a href="https://www.premiumtimesng.com/news/top-news/855542-nigeria-drops-two-places-to-142nd-in-2025-corruption-ranking-trails-33-african-countries.html">Premium Times</a>). BRICS partner status (<a href="https://fmino.gov.ng/nigeria-joins-brics-as-a-partner-country/">FMINO</a>) is verified, while the <strong>Jan 29, 2025 AES exit from ECOWAS</strong> (<a href="https://amaniafrica-et.org/the-withdrawal-of-aes-from-ecowas-an-opportunity-for-re-evaluating-existing-instruments-for-regional-integration/">Amani Africa</a>) is conspicuously omitted.</td>
+<td><code>Disputed / Divergent</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="42-summary-of-internal-cross-page-inconsistencies-within-the-2027-manifesto-tinubu_manifesto_notes_02_2027_agendamd-section-413">4.2 Summary of Internal Cross-Page Inconsistencies Within the 2027 Manifesto (<a href="manifesto_2027.html">tinubu_manifesto_notes_02_2027_agenda.md</a> Section 4.13)</h3>
+<p>Audit inspection corroborates <strong>9 distinct internal numeric variations</strong> inside the APC 2027 PDF itself that explain why independent cross-checking is mandatory:</p>
+<ol>
+<li><strong>External reserves:</strong> <code>$55.3bn</code> in Sep 2026 / <em>"highest since 2019"</em> (p. 10) vs. <code>$55.25B</code> (p. 70) vs. <em>"highest level since 2008"</em> (p. 101) vs. IMF end-2025 net <code>$35B</code> (p. 96) — whereas CBN crossed <code>$55.2B</code> only in <strong>late October 2026</strong>.</li>
+<li><strong>2023 GDP baseline:</strong> <code>2.74%</code> (p. 10) vs. <em>"about 2.5 per cent in the second quarter of 2023"</em> (p. 70).</li>
+<li><strong>Mid-2026 crude output:</strong> <code>1.56 mbpd</code> June 2026 (p. 12) vs. <code>1.52 mbpd</code> Q2 2026 (<code>1.70 mbpd</code> incl. condensates, p. 60).</li>
+<li><strong>Power metering, ATC&amp;C &amp; generation:</strong> <code>61.51%</code> metered June 2026 (p. 58, matching NERC) vs. <code>57.3%</code> (p. 59); <code>34.9%</code> ATC&amp;C (p. 59) vs. <code>36.23%</code> (p. 79); <code>4,180–4,775 MW</code> 2025 average (p. 58) vs. <code>4,022 MW</code> Q2 2026 average (p. 79).</li>
+<li><strong>CNG footprint:</strong> <code>140+</code> centres / <code>100,000+</code> conversions (p. 12) vs. <code>17 mother stations, 87 retail outlets, 385 conversion centres</code> (p. 61) vs. <code>105 refuelling stations across 24 states + FCT</code> (p. 73).</li>
+<li><strong>Cash transfers:</strong> <code>8.5M households / ₦330B</code> (p. 12) vs. <code>10M+ people / ₦657.5B</code> (pp. 37, 46, 50; matching <code>₦658.9B / 10.46M</code> World Bank/FG total).</li>
+<li><strong>Non-oil export markets:</strong> <code>128 countries</code> (pp. 62, 64) vs. <code>120 destination markets</code> (p. 74).</li>
+<li><strong>Rail passengers:</strong> <code>7.9 million</code> (p. 12) vs. <code>7.97 million</code> (p. 56).</li>
+<li><strong>Headline GDP target omission:</strong> p. 18 pledges <code>6%</code> annual economic growth, whereas p. 79 tracks <code>"Catalytic Sectors Growth"</code> (<code>9.62%</code> -&gt; <code>&gt;=12%</code>) without repeating an aggregate <code>6%</code> GDP target row.</li>
+</ol>
+<hr />
+<h2 id="appendix-a-broad-aspirational-commitments-vs-concrete-auditable-targets">Appendix A: Broad Aspirational Commitments vs. Concrete Auditable Targets</h2>
+<p>The <em>Renewed Hope 2023</em> Foreword (PDF pp. 4–6) and Closing Statement (pp. 75–76) frame broad political aspirations that cannot be scored in binary isolation without mapping them to the 101 measurable chapter pledges audited in Sections 2–3:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Broad 2023 Manifesto Vision Statement (PDF Location)</th>
+<th>Mapped Concrete Pledges in Section 3</th>
+<th>Auditable Empirical Outcome (May 2023 – Nov 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>"Obliterate terror, kidnapping, banditry, and all other forms of violent extremism"</em> (Foreword, pp. 4–5)</td>
+<td><code>SEC-01</code>..<code>SEC-09</code>, <code>FED-01</code></td>
+<td>Insurgent surrenders claimed (<code>&gt;124k</code> w/ dependents), State Police Bill passed 28–30 assemblies, &amp; NIN hit <code>137.26M</code>; <strong>yet kidnapping rose +66% (<code>7,825</code> victims)</strong> &amp; Niger quit MNJTF.</td>
+</tr>
+<tr>
+<td><em>"Grow our economy, create millions of jobs, make Nigeria a hub for manufacturing"</em> (pp. 4–5, 75)</td>
+<td><code>ECON-01</code>..<code>ECON-17</code>, <code>DIG-01</code></td>
+<td>Macro stabilization returned by late 2026 (<code>4.43%</code> Q2 GDP, <code>$55.2B</code> Oct reserves, <code>14.63%</code> rebased CPI, <code>₦35.5T</code> 2025 tax/customs); <strong>yet USD GDP halved (<code>~$291B</code> 2025), 1M ICT jobs missed, manufacturing stayed <code>7.72%</code>, &amp; ~<code>139M</code> face poverty</strong>.</td>
+</tr>
+<tr>
+<td><em>"No parent is compelled to send a child to bed hungry"</em> / end food insecurity (pp. 5, 28)</td>
+<td><code>AGRI-01</code>..<code>AGRI-06</code>, <code>SOC-01</code>..<code>SOC-02</code></td>
+<td>Inputs (<code>449k+ MT</code> fertiliser, <code>622k</code> NAGS-AP farmers, <code>737</code> tractors) &amp; <code>₦658.9B</code> cash transfers rolled out; <strong>yet <code>65%</code> arable target missed (<code>12M+ ha</code> unfarmed), food inflation hit ~40% before <code>19.59%</code>, &amp; <code>27M</code> face acute food insecurity</strong>.</td>
+</tr>
+<tr>
+<td><em>"A nation of creators, not just of consumers"</em> &amp; shared human-capital renewal (pp. 4–6, 75–76)</td>
+<td><code>EDU-01</code>..<code>06</code>, <code>HLT-01</code>..<code>07</code>, <code>CRE-01</code>..<code>04</code>, <code>YTH-01</code>..<code>06</code>, <code>WMN-01</code>..<code>04</code></td>
+<td>Major wins in <strong>NELFUND (<code>₦375.28B</code>)</strong>, <strong>ASUU stability</strong>, <strong>AGILE (<code>7.19M</code> girls)</strong>, and <strong>National IP Policy</strong>; <strong>offset by missed <code>40%</code> NHIA (<code>~10–11%</code> actual), <code>&gt;=35%</code> women / <code>&lt;40</code> minister targets, and <code>18.3M</code> UNICEF OOSC figure</strong>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="appendix-b-consolidated-verified-primary-independent-source-ledger-sampled-key-citations">Appendix B: Consolidated Verified Primary &amp; Independent Source Ledger (Sampled Key Citations)</h2>
+<ul>
+<li><strong>Official &amp; Multilateral Institutions:</strong> Central Bank of Nigeria (<a href="https://www.cbn.gov.ng/AboutCBN/Reforms.html">CBN Reforms</a>; <a href="https://www.cbn.gov.ng/MonetaryPolicy/decisions.html">CBN MPC Decisions</a>), NBS/Atlas (<a href="https://atlassportfolios.com/wp-content/uploads/2026/09/GDP-Q22026-REPORT.pdf">Q2 2026 GDP PDF</a>), NERC (<a href="https://nerc.gov.ng/resources/metering-factsheet-for-may-and-june-2026/">Metering Factsheet May/June 2026</a>), NEPC (<a href="https://nepc.gov.ng/blog/2026/02/24/nigerias-historic-non-oil-export-performance-signals-a-new-era-of-economic-possibility/">Non-Oil Exports 2025</a>), NUPRC (<a href="https://www.nuprc.gov.ng/media/news/5d3ed47727cda4bf8ef399ed">EO 40–42 Release</a>), State House (<a href="https://statehouse.gov.ng/president-tinubu-assents-to-defence-industries-corporation-of-nigeria-bill/">DICON Act</a>; <a href="https://statehouse.gov.ng/the-aso-villa-fact-sheet-president-tinubus-housing-reforms-are-moving-more-nigerians-from-renting-to-home-ownership/">Housing Fact Sheet</a>; <a href="https://statehouse.gov.ng/president-tinubu-suspends-minister-of-humanitarian-affairs-and-poverty-alleviation-from-office/">Betta Edu Suspension</a>), FMINO (<a href="https://fmino.gov.ng/rmafc-completes-review-of-revenue-allocation-formula-paves-way-for-new-sharing-framework/">RMAFC Review</a>; <a href="https://fmino.gov.ng/nigeria-joins-brics-as-a-partner-country/">BRICS Partner</a>; <a href="https://fmino.gov.ng/promise-made-promise-kept-fg-commences-implementation-of-asuu-agreements-on-salary-increase-and-consolidated-tools-allowance/">ASUU 40% Increase</a>), FMCIDE (<a href="https://fmcide.gov.ng/project-bridge/">Project BRIDGE</a>; <a href="https://fmcide.gov.ng/nigeria-launches-landmark-ai-model-powered-by-awarri-to-advance-languages-and-ai-at-scale/">N-ATLAS AI</a>), MFA (<a href="https://foreignaffairs.gov.ng/policy/">4D Policy</a>), NCAOOSCE (<a href="https://www.ncaoosce.gov.ng/about">About</a>), IMF (<a href="https://www.imf.org/en/news/articles/2026/06/09/pr26190-nigeria-imf-executive-board-concludes-2026-article-iv-consultation-with-nigeria">2026 Art. IV PR</a>; <a href="https://www.imf.org/external/datamapper/profile/NGA">DataMapper</a>), World Bank (<a href="https://www.worldbank.org/en/results/2025/11/17/from-classrooms-to-communities-educating-empowering-and-elevating-nigeria-girls-and-women">AGILE Impact</a>), WIPO (<a href="https://www.wipo.int/en/web/office-nigeria/w/news/2025/nigeria-s-federal-executive-council-approves-national-intellectual-property-policy-and-strategy">NIPPS Approval</a>), AfDB (<a href="https://www.afdb.org/en/news-and-events/frequently-asked-questions-idice-project-59933">iDICE FAQ</a>), UNICEF (<a href="https://www.unicef.org/nigeria/media/7746/file/UNICEF%20Nigeria%20Cheat%20Sheet:%20Out-of-school%20Children.pdf">OOSC Cheat Sheet</a>).</li>
+<li><strong>Independent Think Tanks, Civil Society &amp; Press:</strong> SBM Intelligence (<a href="https://www.sbmintel.com/2026/08/the-economics-of-nigerias-kidnap-industry-2026/">Kidnap Economics Aug 2026</a>), PLAC (<a href="https://placng.org/i/wp-content/uploads/2026/09/Transmitted-to-State-Legislatures-%E2%80%93-Constitution-Alteration-6th-Alteration-Bill-2026-to-Provide-for-the-Establishment-of-State-Police-Services.pdf">State Police 6th Alteration PDF</a>; <a href="https://placng.org/i/wp-content/uploads/2022/02/Factsheet-on-Specific-Seats-Bill.pdf">Reserved Seats</a>; <a href="https://placng.org/Legist/constitution-alteration-on-prisons-railways-starts-off-push-for-devolution-of-powers/">5th Alteration Prisons/Rail</a>), Amani Africa (<a href="https://amaniafrica-et.org/the-withdrawal-of-aes-from-ecowas-an-opportunity-for-re-evaluating-existing-instruments-for-regional-integration/">AES ECOWAS Exit</a>), Amnesty International (<a href="https://www.amnesty.org.ng/2024/11/28/nigeria-police-used-excessive-force-to-violently-quash-endbadgovernance-protests/">EndBadGovernance</a>), FIJ (<a href="https://fij.ng/article/tinubu-promised-to-work-with-under-40-ministers-3-years-on-he-hasnt-hired-them/">Under-40 Ministers</a>), S&amp;P Global (<a href="https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3563619">May 2026 Rating</a>), PwC (<a href="https://www.pwc.com/ng/en/publications/the-nigerian-tax-reform-acts.html">Tax Reform Acts</a>), Premium Times (<a href="https://www.premiumtimesng.com/health/health-news/924153-nigeria-releases-%E2%82%A6422-3-billion-for-basic-healthcare-since-2019-disburses-%E2%82%A6249-5-billion-under-tinubu.html">BHCPF</a>; <a href="https://www.premiumtimesng.com/news/more-news/890558-nigeria-among-top-nine-worlds-gas-flaring-countries-in-2025-world-bank.html">Gas Flaring</a>; <a href="https://www.premiumtimesng.com/news/top-news/855542-nigeria-drops-two-places-to-142nd-in-2025-corruption-ranking-trails-33-african-countries.html">TI CPI 2025</a>; <a href="https://www.premiumtimesng.com/news/headlines/840868-updated-supreme-court-strikes-out-osuns-withheld-lg-allocations-suit-but-faults-fgs-funds-seizure.html">Osun LG Suit</a>), The Punch (<a href="https://punchng.com/nigeria-lost-3-3m-barrels-to-oil-thieves-in-2025-nuprc/">Oil Theft 3.33M</a>; <a href="https://punchng.com/capital-crunch-input-costs-leave-12m-hectares-unfarmed-report/">12M ha Unfarmed</a>; <a href="https://punchng.com/wbank-fg-pays-n658-9bn-to-10-46m-poor-households/">CCT ₦658.9B</a>; <a href="https://punchng.com/autonomy-battle-lgs-demand-direct-funds-as-states-receive-n7-43tn/">LG ₦7.43T</a>; <a href="https://punchng.com/fdi-underperforms-amid-surge-in-2025-capital-inflows/">FDI Share</a>; <a href="https://punchng.com/tax-laws-that-split-abuja-how-tinubus-reforms-sparked-governance-storm/">Tax Law Dispute</a>), Nairametrics (<a href="https://nairametrics.com/2026/09/26/nigerias-public-debt-rises-to-n166-79-trillion-in-q2-2026/">Q2 Debt</a>; <a href="https://nairametrics.com/2026/11/09/nigerias-debt-service-to-revenue-ratio-to-hit-71-7-by-2030-dmo/">DMO 71.7% DSA</a>; <a href="https://nairametrics.com/2026/11/09/nelfund-student-loan-disbursements-hit-n375-28-billion/">NELFUND</a>), BusinessDay (<a href="https://businessday.ng/pro/article/naira-cools-across-fx-markets-as-external-reserves-pause-growth/">Sept Reserves</a>; <a href="https://businessday.ng/uncategorized/article/nigerias-inflation-drops-to-14-63-as-food-prices-fall-in-september/">Sept CPI</a>), The Guardian (<a href="https://guardian.ng/news/139m-nigerians-living-in-poverty-says-world-bank/">139M Poverty</a>; <a href="https://guardian.ng/featured/14-yrs-after-oronsaye-report-bloated-agencies-cost-nigeria-n1tr-in-2026/">Oronsaye ₦1T</a>; <a href="https://guardian.ng/news/fg-opens-3mtt-cohort-5-applications-secures-n4b-funding/">3MTT ₦4B</a>), Leadership (<a href="https://leadership.ng/tinubu-receives-state-police-bill-after-30-states-approval/">State Police 30 States</a>; <a href="https://leadership.ng/warri-kaduna-port-harcourt-refineries-owe-nnpc-n8-3trn-amid-n264bn-in-fresh-loans/">Refineries ₦8.3T Debt</a>; <a href="https://leadership.ng/world-bank-upgrades-nigeria-growth-to-4-3-for-2026/">World Bank 4.3%</a>), ICIR (<a href="https://www.icirnigeria.org/tinubu-suspends-n-power-school-feeding-others-amid-corruption-probe/">NSIPA Probe</a>; <a href="https://www.icirnigeria.org/national-assembly-rejects-diaspora-voting/">Diaspora Voting</a>).</li>
+</ul>
+    </article>
+  </main>
+
+  <footer>
+    <p>CIVIC LENS INVESTIGATIVE DESK • PRESIDENTIAL MANIFESTO &amp; DELIVERY ARCHIVE</p>
+    <p style="margin-top: 6px;">All claims, targets, and empirical outcomes compiled strictly from official APC 2023 &amp; 2027 manifestos alongside CBN, NBS, DMO, NERC, NRS, judicial, multilateral, and independent press records.</p>
+  </footer>
+</body>
+</html>

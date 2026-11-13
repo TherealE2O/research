@@ -13,6 +13,7 @@ Independent investigative research dossiers and primary documentary archives on 
 * **Case File 01 (Bola Ahmed Tinubu):** [https://thereale2o.github.io/research/tinubu.html](https://thereale2o.github.io/research/tinubu.html)
 * **Case File 02 (Atiku Abubakar):** [https://thereale2o.github.io/research/atiku.html](https://thereale2o.github.io/research/atiku.html)
 * **Case File 03 (Big Tech Moderation Hubs):** [https://thereale2o.github.io/research/bigtech.html](https://thereale2o.github.io/research/bigtech.html)
+* **Case File 04 (Tinubu Manifestos 2023 vs. 2027 & Audit):** [https://thereale2o.github.io/research/tinubu_manifestos.html](https://thereale2o.github.io/research/tinubu_manifestos.html)
 
 ---
 
@@ -55,3 +56,21 @@ Independent investigative research dossiers and primary documentary archives on 
 * **Master Web Reader:** [https://thereale2o.github.io/research/bigtech.html](https://thereale2o.github.io/research/bigtech.html)
 * **Master Markdown Dossier:** [`investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md`](investigations/SILICON_VALLEY_AFRICAN_SWEATSHOPS_DOSSIER.md)
 * **Summary:** An investigation into Big Tech outsourcing toxic content moderation and AI data labeling to African workers in Nairobi.
+
+---
+
+## 4. Election Special: Tinubu 2023 vs. 2027 Manifestos & Delivery Audit
+
+* **Master Web Reader:** [https://thereale2o.github.io/research/tinubu_manifestos.html](https://thereale2o.github.io/research/tinubu_manifestos.html)
+* **Master Markdown Dossier:** [`investigations/TINUBU_MANIFESTOS_2023_VS_2027_MASTER.md`](investigations/TINUBU_MANIFESTOS_2023_VS_2027_MASTER.md)
+* **Summary:** A neutral comparative investigation examining the 2023 *Renewed Hope* Action Plan (80 pp., 8 Priority Areas) against the 2027 *Agenda 2027–2031: From Reforms to Prosperity* manifesto (109 pp., 4 Pillars), auditing 101 specific 2023 pledges over May 2023–November 2026 and verifying 2027 self-reported administration claims against CBN, NBS, DMO, NERC, BudgIT, and judicial records.
+
+### Primary Deep-Dive Field Notes:
+
+| File Reference | Scope & Era Covered | Live Web Reader | GitHub Markdown |
+| :--- | :--- | :--- | :--- |
+| **Manifesto Note 01** | **2023 *Renewed Hope* Action Plan Inventory** (80 pp., 8 Priorities) | [Web Reader](https://thereale2o.github.io/research/manifesto_2023.html) | [Markdown](investigations/tinubu_manifesto_notes_01_2023_action_plan.md) |
+| **Manifesto Note 02** | **2027 *From Reforms to Prosperity* Manifesto Inventory** (109 pp., 4 Pillars) | [Web Reader](https://thereale2o.github.io/research/manifesto_2027.html) | [Markdown](investigations/tinubu_manifesto_notes_02_2027_agenda.md) |
+| **Manifesto Note 03** | **2023 vs. 2027 Policy, Target & Doctrine Comparison Matrix** | [Web Reader](https://thereale2o.github.io/research/manifesto_comparison.html) | [Markdown](investigations/tinubu_manifesto_notes_03_comparison_matrix.md) |
+| **Manifesto Note 04** | **2023–2026 Delivery Audit Across 101 Specific Pledges** | [Web Reader](https://thereale2o.github.io/research/manifesto_audit_2023.html) | [Markdown](investigations/tinubu_manifesto_notes_04_accomplishment_audit.md) |
+| **Manifesto Note 05** | **Independent Quality-Assurance & Source Verification Report (Notes 01–04)** | [Web Reader](https://thereale2o.github.io/research/manifesto_verification.html) | [Markdown](investigations/tinubu_manifesto_notes_05_verification_report.md) |

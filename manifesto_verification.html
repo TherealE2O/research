@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independent Verification Report: Page Pagination, Tally Math, Web Spot-Checks &amp; Errata Log — Civic Lens Investigation</title>
+  <style>
+    :root {
+      --font-headline: "Georgia", "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "Consolas", "Courier New", monospace;
+
+      --color-bg: #FFFFFF;
+      --color-surface: #F8F9FA;
+      --color-surface-subtle: #F1F5F9;
+      --color-border: #D1D5DB;
+      --color-border-dark: #111827;
+      --color-text: #111827;
+      --color-text-secondary: #374151;
+      --color-text-muted: #6B7280;
+      --color-link: #1D4ED8;
+      --color-link-hover: #1E40AF;
+      --color-accent-red: #B91C1C;
+      --color-accent-blue: #1D4ED8;
+      --color-accent-green: #15803d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pub-header {
+      border-top: 4px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border);
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .pub-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pub-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pub-brand {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .pub-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--color-accent-red);
+      border-left: 1px solid var(--color-border);
+      padding-left: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-back-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-link);
+      text-decoration: none;
+    }
+    .nav-back-link:hover { text-decoration: underline; }
+
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 20px 100px;
+    }
+
+    .inquiry-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 10px;
+    }
+
+    h1.inquiry-title {
+      font-family: var(--font-headline);
+      font-size: 34px;
+      line-height: 1.24;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      color: var(--color-text);
+    }
+
+    .inquiry-deck {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.48;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin-bottom: 22px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .inquiry-meta-bar {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 0;
+      margin: 18px 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+
+    .inquiry-meta-bar strong { color: var(--color-text); }
+
+    .file-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 2px 8px;
+    }
+
+    .table-of-contents {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      margin: 0;
+    }
+    @media (max-width: 680px) {
+      .toc-list { grid-template-columns: 1fr; }
+      .pub-tagline { display: none; }
+    }
+
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: 13.5px;
+    }
+    .toc-list a:hover { text-decoration: underline; }
+
+    .evidence-box {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border-dark);
+      padding: 22px 24px;
+      margin-bottom: 40px;
+    }
+
+    .evidence-box-kicker {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-accent-red);
+      margin-bottom: 6px;
+    }
+
+    .evidence-box-desc {
+      font-size: 14.5px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .evidence-row {
+      border-top: 1px solid var(--color-border);
+      padding-top: 12px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .evidence-row-meta {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-top: 3px;
+    }
+
+    .evidence-row-links {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    h2 {
+      font-family: var(--font-headline);
+      font-size: 24px;
+      line-height: 1.35;
+      margin: 42px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-dark);
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h3 {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 28px 0 12px;
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--color-text);
+    }
+
+    p { margin-bottom: 16px; color: var(--color-text); }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+    }
+    li { margin-bottom: 8px; }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.87em;
+      background: var(--color-surface-subtle);
+      border: 1px solid #E2E8F0;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--color-text);
+    }
+
+    pre {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.45;
+    }
+    pre code {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    .mermaid {
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border);
+      padding: 24px 16px;
+      margin: 24px 0;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      border-radius: 2px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--color-border-dark);
+      padding: 14px 20px;
+      margin: 22px 0;
+      background: var(--color-surface);
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+    blockquote p { margin-bottom: 8px; color: var(--color-text-secondary); }
+    blockquote p:last-child, blockquote ul:last-child { margin-bottom: 0; }
+    blockquote ul { margin: 8px 0 4px 20px; }
+
+    a { color: var(--color-link); text-decoration: underline; word-break: break-word; }
+    a:hover { color: var(--color-link-hover); }
+
+    .table-wrapper {
+      margin: 24px 0;
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #FFFFFF;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 10px 13px;
+      border: 1px solid var(--color-border);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--color-surface-subtle);
+      font-weight: 700;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    tr:nth-child(even) td {
+      background: #FAFAFA;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--color-border);
+      margin: 34px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 26px 20px;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="pub-header">
+    <div class="pub-header-inner">
+      <div class="pub-brand-wrap">
+        <a href="index.html" class="pub-brand">CIVIC LENS INVESTIGATIONS</a>
+        <span class="pub-tagline">Primary Evidence Desk</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-back-link">← Home</a>
+        <a href="tinubu_manifestos.html" class="nav-back-link">Manifesto Master Dossier</a>
+        <a href="tinubu.html" class="nav-back-link">Tinubu 360° Dossier</a>
+        <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_05_verification_report.md" target="_blank" rel="noopener" class="nav-back-link" style="color: var(--color-text-secondary);">GitHub Markdown ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="inquiry-kicker">Civic Lens Forensic Inquiry • Manifesto Dossier File 05</div>
+    <h1 class="inquiry-title">Independent Verification Report: Page Pagination, Tally Math, Web Spot-Checks &amp; Errata Log</h1>
+    
+    <div class="inquiry-meta-bar">
+      <div>Primary Field File: <span class="file-pill">tinubu_manifesto_notes_05_verification_report.md</span></div>
+      <div>Editorial Standard: <strong>Neutral, Source-Attributed Broadsheet</strong></div>
+    </div>
+
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#executive-summary-final-status">Executive Summary &amp; Final Status</a></li>
+        <li><a href="#1-verification-of-note-01-tinubu_manifesto_notes_01_2023_action_planmd">1. Verification of Note 01: tinubu_manifesto_notes_01_2023_action_plan.md</a></li>
+        <li><a href="#2-verification-of-note-02-tinubu_manifesto_notes_02_2027_agendamd">2. Verification of Note 02: tinubu_manifesto_notes_02_2027_agenda.md</a></li>
+        <li><a href="#3-verification-of-note-04-tinubu_manifesto_notes_04_accomplishment_auditmd">3. Verification of Note 04: tinubu_manifesto_notes_04_accomplishment_audit.md</a></li>
+        <li><a href="#4-verification-of-note-03-tinubu_manifesto_notes_03_comparison_matrixmd">4. Verification of Note 03: tinubu_manifesto_notes_03_comparison_matrix.md</a></li>
+      </ul>
+    </div>
+    
+
+    <article>
+<p><strong>Verifier:</strong> Civic Lens Independent Quality-Assurance Verification Desk<br />
+<strong>Verification Date:</strong> November 13, 2026<br />
+<strong>Scope:</strong> Independent source-level verification of all four deliverables against primary PDFs, rendered page PNGs from both PDFs, extracted OCR/PyMuPDF text files, and independent external records (web-source spot-checks through November 2026).</p>
+<hr />
+<h2 id="executive-summary-final-status">Executive Summary &amp; Final Status</h2>
+<p>All four deliverables have passed post-edit verification. Three deliverables required targeted corrections during pre-publication quality-assurance review, all of which were applied by their respective analysts and re-verified directly against the edited files and primary sources.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Deliverable</th>
+<th>Workstream / Revision Stage</th>
+<th>Verified Size (Post-Edit)</th>
+<th>Verification Scope</th>
+<th>Initial QA Findings</th>
+<th>Final Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="manifesto_2023.html"><code>tinubu_manifesto_notes_01_2023_action_plan.md</code></a></td>
+<td>Research Analyst — 2023 Manifesto <em>(Initial Draft → Revised)</em></td>
+<td>385 lines, 47,464 bytes</td>
+<td>Full visual inspection of all 80 rendered PNGs (<code>page_01.png</code>–<code>page_80.png</code>) + 80-page OCR text</td>
+<td><strong>2 substantive fixes + 2 quote fixes requested in QA review:</strong> incorrect local PDF path on L3, <code>"obscured by OCR on p. 35"</code> despite clear <code>"nearly 90 percent"</code> on <code>page_35.png</code>, bracketed <code>[like]</code>/<code>[by]</code> (L99), missing <code>"fees."</code> (L230).</td>
+<td><strong>PASS</strong> (all fixed &amp; re-verified)</td>
+</tr>
+<tr>
+<td><a href="manifesto_2027.html"><code>tinubu_manifesto_notes_02_2027_agenda.md</code></a></td>
+<td>Research Analyst — 2027 Manifesto <em>(Initial Draft)</em></td>
+<td>613 lines, 88,635 bytes</td>
+<td>PyMuPDF full 109-page extraction of <code>249518a9-31af-4b8e-9457-23903981f412.pdf</code> + visual inspection of 41+ rendered chart/low-text PNGs</td>
+<td><strong>Clean:</strong> 0 author errors across 109 pages, 15 zero-text pages, 409 page refs, 11 Glossary additions, and §4.13's 9 discrepancies. Two source-PDF internal quirks flagged below.</td>
+<td><strong>PASS</strong> (zero edits needed)</td>
+</tr>
+<tr>
+<td><a href="manifesto_audit_2023.html"><code>tinubu_manifesto_notes_04_accomplishment_audit.md</code></a></td>
+<td>Empirical Audit Analyst — 2023–2026 Record <em>(Initial Draft → Revised)</em></td>
+<td>320 lines, 102,127 bytes</td>
+<td>Programmatic chapter/status tally of all 101 pledges, URL inventory (<code>251</code> links / <code>140</code> unique URLs), §4.2 cross-check, and 20+ independent web-source checks</td>
+<td><strong>1 inherited source-path fix in QA review:</strong> L3 cited a non-existent workspace-root path for <code>RENEWED-HOPE_compressed.pdf</code>. Tally (<code>4+55+11+27+4=101</code>) &amp; sources accurate.</td>
+<td><strong>PASS</strong> (fixed &amp; re-verified)</td>
+</tr>
+<tr>
+<td><a href="manifesto_comparison.html"><code>tinubu_manifesto_notes_03_comparison_matrix.md</code></a></td>
+<td>Comparative Matrix Analyst — 2023 vs. 2027 <em>(Initial Draft → Revised)</em></td>
+<td>213 lines, 56,094 bytes</td>
+<td>Full keyword/quote/page verification across 80-page 2023 OCR text + 109-page 2027 PDF, 30-row matrix audit, Civic Lens Video Style Guide (§0–§11) compliance check</td>
+<td><strong>1 citation fix + 2 quote fixes in QA review:</strong> L18 <code>"TRIED. TESTED. TRUSTED."</code> <code>p. 75/73</code> -&gt; <code>p. 76/74</code>; L156 <code>"in shortest possible time"</code> -&gt; <code>"within the shortest possible time frame"</code>; L173 <code>"tell once"</code> -&gt; <code>"tell government once"</code>. <em>(An internal pre-publication transmittal summary also contained stale page refs/row count not in the file.)</em></td>
+<td><strong>PASS</strong> (all fixed &amp; re-verified)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="1-verification-of-note-01-tinubu_manifesto_notes_01_2023_action_planmd">1. Verification of Note 01: <code>tinubu_manifesto_notes_01_2023_action_plan.md</code></h2>
+<ul>
+<li><strong>Primary Source File Verified:</strong> <code>RENEWED-HOPE_compressed.pdf</code> (6,135,196 bytes; 80 PDF pages; note that no copy of <code>RENEWED-HOPE_compressed.pdf</code> exists inside the main repository root directory—it resides in the external archive).</li>
+<li><strong>Pagination &amp; Structure:</strong> Confirmed exact <strong><code>PDF p. N = printed p. N - 2</code></strong> offset across numbered pages <code>PDF pp. 4–76</code> (printed <code>pp. 2–74</code>), unnumbered front matter (<code>pp. 1–3</code>, cover + TOC <code>page_03.png</code>), and unnumbered closing campaign photo pages (<code>pp. 77–80</code>, <code>page_77.png</code>–<code>page_80.png</code>). All 16 thematic chapters (<code>05</code>–<code>70</code> in TOC) plus Foreword (<code>02</code>) and Closing Statement (<code>73</code>) map accurately.</li>
+<li><strong>Critical Quantitative Targets, Quotes &amp; Visual Recoveries Spot-Checked (15 items):</strong></li>
+<li><strong>GDP Projection Chart (<code>PDF p. 15</code> / printed <code>p. 13</code>, <code>page_15.png</code>):</strong> Bar chart verified verbatim: <code>2021: 440.8 Bn</code>, <code>2022: 484.9 Bn</code>, <code>2023: 533.3 Bn</code>, <code>2024: 586.7 Bn</code>, <code>2025: 645.3 Bn</code>, <code>2026: 709.9 Bn</code>, <code>2027: 780.9 Bn</code>; caption <code>"10% GDP growth rate based on 2021 World Bank data"</code>.</li>
+<li><strong>Fiscal Policy (<code>PDF p. 16</code> / printed <code>p. 14</code>, <code>page_16.png</code>):</strong> Verbatim quotes verified (<code>"break the explicit link between naira expenditure and dollar inflows"</code>, <code>"legislatively suspend the limits on government spending"</code>).</li>
+<li><strong>Taxation &amp; FX/Monetary Doctrine (<code>PDF pp. 18, 21–22</code>):</strong> Anti-tax-hike posture (<code>p. 18</code>), anti-unrestrained FX floating (<code>p. 21</code>), and anti-rate-hike supply-side inflation quote (<code>p. 22</code>) verified.</li>
+<li><strong>Housing Graphic &amp; Consumer Credit (<code>PDF pp. 26–27</code>):</strong> Mandatory consumer-credit bank quota + CBN penalties (<code>p. 26</code>) and housing chart (<code>4.0</code> in <code>2023</code>, <code>20.0</code> in <code>2027</code>, <code>24.0</code> in <code>2028</code> with <strong>no unit scale printed</strong>, <code>p. 27</code>) verified.</li>
+<li><strong>Agriculture (<code>PDF pp. 28–31</code>):</strong> <code>35% -&gt; 65%</code> arable land within 4 years, Commodity Boards, Anchor Borrower's expansion verified.</li>
+<li><strong>Power (<code>PDF pp. 32–34</code>):</strong> <code>12,000 MW</code> installed / <code>8,000 MW</code> generated / <code>4,500 MW</code> distributed, metering <code>"within the shortest possible time frame"</code>, EPSRA review verified.</li>
+<li><strong>Oil &amp; Gas (<code>PDF pp. 35–39</code>, <code>page_35.png</code>):</strong> <code>2.6 mmbpd</code> by 2027, <code>4 mmbpd</code> by 2030, <code>206 tcf</code> gas reserves, <code>60%</code> EU share, unlabelled oil-theft graphic (<code>p. 37</code>), refinery rehab &amp; fuel subsidy phase-out (<code>p. 39</code>) verified. <strong>OCR recovery catch:</strong> the raw 2023 OCR text (<code>manifesto_2023_raw.txt</code>, line 1402) misread <code>"90"</code> as <code>"GCI"</code>, whereas <code>page_35.png</code> clearly prints <code>"The sector generates nearly 90 percent of our export earnings"</code>.</li>
+<li><strong>Transportation (<code>PDF pp. 40–42</code>):</strong> NGN 37tn baseline (<code>1.84%</code> Q2 2022 GDP), <code>~90%</code> road transport share, named rail corridors, NRC review, Apapa decongestion to Onne/Warri/Calabar, new national carrier verified.</li>
+<li><strong>Education (<code>PDF pp. 43–46</code>, <code>page_46.png</code>):</strong> History &amp; compulsory indigenous languages, pilot student loan scheme, <code>"to charge more cost reflective tuition fees."</code>, CBN zero-coupon federal bonds verified.</li>
+<li><strong>Healthcare (<code>PDF pp. 47–50</code>, <code>page_49.png</code>):</strong> NHIA <code>at least 40%</code> within two years, fuel-subsidy earmark for pregnant women/under-5s, alcohol/tobacco sin taxes, <code>3 km / 30 min</code> clinic rule verified.</li>
+<li><strong>Digital Economy (<code>PDF pp. 51–54</code>, <code>page_53.png</code>):</strong> <code>1 million</code> ICT jobs in 24 months, <code>90%</code> broadband by 2025, crypto committee &amp; <code>eNaira</code>, <code>US$750M</code> smartphone imports, and <strong><code>500%</code> merchant growth over <code>5 years</code></strong> (<code>page_53.png</code> confirms <code>5 years</code>; raw OCR had misread <code>6 years</code>).</li>
+<li><strong>Youth Quotas &amp; Chart (<code>PDF pp. 59–61</code>, <code>page_61.png</code>):</strong> Youth unemployment <code>33%</code> (<code>21.5M</code> 2022 -&gt; <code>11.9M</code> 2026) halved in 4 years; <strong><code>3</code> cabinet seats under 40 and <code>6 more</code> under 50</strong> (<code>page_61.png</code> confirms <code>6 more</code>; raw OCR had misread <code>cad 3 more</code>), <code>≥20%</code> MDA under-40 appointments, biannual <code>"State of the Youth"</code> survey, One-Day Governor / Presidential Fellowship verified.</li>
+<li><strong>Women Empowerment (<code>PDF pp. 62–63</code>):</strong> <code>≥35%</code> governmental positions law + reserved cabinet/senior posts verified.</li>
+<li><strong>Judiciary &amp; Federalism (<code>PDF pp. 67–71</code>):</strong> NJC mandate limited to Federal Courts (<code>p. 68</code>), constitutional list review &amp; revenue allocation (<code>pp. 14, 71</code>) verified.</li>
+<li><strong>Foreign Policy &amp; Closing (<code>PDF pp. 72–76</code>, <code>page_75.png</code>, <code>page_76.png</code>):</strong> Diaspora voting constitutional exploration (<code>p. 74</code>), African G-5 &amp; malaria (<code>p. 74</code>), Closing Statement signed Tinubu/Shettima + <code>"TRIED. TESTED. TRUSTED."</code> (<code>p. 76</code>).</li>
+<li><strong>Source-PDF Quirks Confirmed:</strong> Duplicate <em>okra</em> (<code>p. 29</code>), repeated skilled-manpower paragraph (<code>p. 49</code>, <code>page_49.png</code>), <code>"four pillars"</code> heading followed by 5 bullets (<code>p. 67</code>), duplicate <code>(ii)</code> numbering (<code>p. 72</code>).</li>
+<li><strong>Corrections Requested &amp; Verified Fixed During QA Review:</strong></li>
+<li>L3 updated from a non-existent workspace-root path to cite <code>RENEWED-HOPE_compressed.pdf</code> cleanly (re-read L1–10).</li>
+<li>L184 updated from <code>"precise share percentage obscured by OCR on p. 35"</code> to <code>nearly 90% of export earnings</code> (re-read L180–190).</li>
+<li>L99 brackets removed from <code>[like]</code>/<code>[by]</code> (re-read L95–105); L230 <code>"fees."</code> restored (re-read L225–235).</li>
+<li><strong>Tone:</strong> Strictly neutral, analytical, and descriptive.</li>
+</ul>
+<hr />
+<h2 id="2-verification-of-note-02-tinubu_manifesto_notes_02_2027_agendamd">2. Verification of Note 02: <code>tinubu_manifesto_notes_02_2027_agenda.md</code></h2>
+<ul>
+<li><strong>Primary Source File Verified:</strong> <code>249518a9-31af-4b8e-9457-23903981f412.pdf</code> (18,861,799 bytes; <strong>109 PDF pages</strong>, <code>PDF p. N = printed p. N</code>).</li>
+<li><strong>Zero-Text &amp; Low-Text Page Verification:</strong> PyMuPDF extraction plus visual inspection of all rendered 2027 page PNGs confirms:</li>
+<li>Exact <strong>15 zero-text pages</strong>: <code>[3, 4, 5, 19, 22, 32, 33, 39, 51, 80, 85, 98, 99, 104, 109]</code>.</li>
+<li>Exact <strong>8 low-text pages</strong>: <code>[1, 11, 14, 34, 52, 53, 81, 100]</code>.</li>
+<li>Exact <strong>Section 1.3 anomalies</strong> verified: <code>p. 11</code> TOC title wording mismatch; <code>p. 52</code> visual image-only layout carrying hidden text string <code>'55'</code>; <code>p. 106</code> <code>IFC</code> glossary entry appending the <code>iDICE</code> definition verbatim (<code>"A US$618 million programme backing film, fashion, music and software value chains."</code>); and all <strong>11 Glossary-only / Glossary-detail</strong> additions (<code>pp. 105–108</code>, including <code>11.25 million</code> GMP households, <code>8,809</code> wards, <code>1 million</code> YouthCred &amp; S.C.A.L.E. Fund, <code>N112 billion</code> National Sugar Institute, <code>442</code> PHCs in <code>37</code> cities for <code>24-hour</code> solar).</li>
+<li><strong>Quantitative, Scorecard, KPI &amp; Quote Checks:</strong></li>
+<li>All <strong>409 page references</strong> fall within <code>1–109</code> (<code>0</code> out-of-range).</li>
+<li>All KPI tables (<code>pp. 31, 50, 79, 92</code>), First 100 Days (<code>p. 94</code>), Four Disciplines (<code>p. 93</code>), Independent Validation (<code>pp. 95–97</code>), and scorecard/body metrics (<code>$55.3bn</code>, <code>4.43%</code>, <code>14.63%</code>, <code>19.59%</code>, <code>23%</code>, <code>36.85%</code>, <code>₦355.87bn</code>, <code>1,659,853</code>, <code>13,456,371</code>, <code>154,800</code>, <code>151.64 km</code>, <code>£746m</code>, <code>₦900bn</code> NACTP, <code>129.3m</code>, <code>US$5.1bn</code>, <code>US$23.22bn / US$923m</code> FDI) match the PDF verbatim.</li>
+<li>All <strong>9 internal cross-page variations</strong> in <strong>Section 4.13</strong> (reserves <code>2019</code> vs <code>2008</code> and <code>$55.3B</code> vs <code>$55.25B</code>; 2023 GDP <code>2.74%</code> vs <code>~2.5%</code>; crude oil <code>1.56</code> vs <code>1.52/1.70</code>; metering <code>61.51%</code> vs <code>57.3%</code>, ATC&amp;C <code>34.9%</code> vs <code>36.23%</code>, generation <code>4,180–4,775 MW</code> vs <code>4,022 MW</code>; CNG <code>140+</code> vs <code>385</code> vs <code>105</code>; cash transfers <code>8.5M/₦330B</code> vs <code>10M+/₦657.5B</code>; export markets <code>128</code> vs <code>120</code>; rail <code>7.9M</code> vs <code>7.97M</code>; headline <code>6%</code> GDP vs <code>≥12%</code> catalytic sector KPI row) verified verbatim on every cited page.</li>
+<li><strong>Source-PDF Quirks Faithfully Reported (Not Author Errors — Flagged for Video Production):</strong></li>
+<li><strong><code>p. 13</code> FAAC Graphic Arithmetic:</strong> The graphic prints <code>₦10.14tn (2023)</code> rising to <code>₦15.26tn (2024, +43%)</code> (<code>page_013_check.png</code>, faithfully transcribed on line 401), whereas exact arithmetic growth is <code>+50.49%</code>.</li>
+<li><strong><code>p. 48</code> DEON Regulations Fine Typography:</strong> The native PDF stream (<code>BNTBBR+InstrumentSerif2-Regular</code> / <code>UJXINJ+Inter-Regular</code>) prints <code>"fines of up to 100 million or 19 per cent of ₦ turnover"</code>, misplacing the <code>₦</code> glyph and printing <code>19 per cent</code> (faithfully transcribed on line 277; legal/fact-checking editors should verify against the statutory FCCPC DEON Regulations text where the turnover penalty ceiling is <code>1%</code>).</li>
+<li><strong>Verdict:</strong> Clean pass; zero edits required.</li>
+</ul>
+<hr />
+<h2 id="3-verification-of-note-04-tinubu_manifesto_notes_04_accomplishment_auditmd">3. Verification of Note 04: <code>tinubu_manifesto_notes_04_accomplishment_audit.md</code></h2>
+<ul>
+<li><strong>101-Pledge Tally &amp; Structural Math (Verified Post-Edit):</strong></li>
+<li>Programmatic parse across all <strong>16 chapters</strong> in Section 3 matches Section 2 (<code>Master Quantitative Scoreboard</code>) and every chapter header count (<code>Ch. 1–16</code>: <code>9, 17, 6, 6, 8, 6, 6, 7, 5, 4, 6, 4, 4, 5, 2, 6</code>) with <strong>zero mismatches</strong> and <strong>zero duplicate IDs</strong>:<ul>
+<li><strong>Total Audited Pledges:</strong> <code>101</code> (<code>101</code> unique IDs)</li>
+<li><strong>Implemented / Achieved:</strong> <code>4</code> (<code>Ch.4: 1</code>, <code>Ch.6: 1</code>, <code>Ch.7: 1</code>, <code>Ch.14: 1</code>)</li>
+<li><strong>Partially Implemented / In Progress:</strong> <code>55</code></li>
+<li><strong>Mixed / Disputed Outcome:</strong> <code>11</code></li>
+<li><strong>Not Achieved / Stalled / Reversed:</strong> <code>27</code></li>
+<li><strong>Insufficient Verifiable Data:</strong> <code>4</code> (<code>Ch.1: 1</code>, <code>Ch.8: 1</code>, <code>Ch.11: 1</code>, <code>Ch.16: 1</code>)</li>
+<li><strong>Check Sum:</strong> <code>4 + 55 + 11 + 27 + 4 = 101</code> (exact match).</li>
+</ul>
+</li>
+<li>All <code>102</code> Section 3 2023-page references fall within <code>1–80</code> (with cross-chapter citations <code>OIL-07 -&gt; p. 49</code>, <code>TRN-01 -&gt; p. 16</code>, <code>FED-02 -&gt; p. 14</code> verified valid). Section 4.2 accurately mirrors all 9 internal 2027 cross-page discrepancies from <a href="manifesto_2027.html">tinubu_manifesto_notes_02_2027_agenda.md</a> §4.13.</li>
+<li><strong>Citation Inventory &amp; Independent Web Empirical Spot-Checks:</strong></li>
+<li><strong>URL Inventory:</strong> <code>251</code> total Markdown links comprising <strong><code>140</code> unique URLs across <code>65</code> distinct domains</strong> (<code>0</code> malformed URLs; top sources include <code>punchng.com</code>, <code>premiumtimesng.com</code>, <code>guardian.ng</code>, <code>leadership.ng</code>, <code>businessday.ng</code>, <code>nairametrics.com</code>, <code>statehouse.gov.ng</code>, <code>vanguardngr.com</code>, <code>fmino.gov.ng</code>, <code>cbn.gov.ng</code>, <code>imf.org</code>, <code>nigerianstat.gov.ng</code>, <code>nerc.gov.ng</code>, <code>worldbank.org</code>). <em>(Note: individual URLs were not batch-crawled for live HTTP status codes due to common anti-bot restrictions; instead, underlying facts/dates/figures were spot-checked via independent web searches.)</em></li>
+<li><strong>Independent Web Spot-Checks (Confirmed Accurate):</strong><ol>
+<li><strong>NBS Macro:</strong> Q2 2026 real GDP growth <strong><code>4.43%</code></strong>; Sept 2026 headline CPI <strong><code>14.63%</code></strong>.</li>
+<li><strong>CBN Policy &amp; Reserves:</strong> Sept 21–22, 2026 MPC cut MPR to <strong><code>23.00%</code></strong>; gross reserves reached <strong><code>~$55.25B</code></strong> around mid-to-late Sept 2026 / Oct 2026 (<code>$54.9B</code>–<code>$55.26B</code> timing qualification in §4.1 verified valid).</li>
+<li><strong>DMO Public Debt &amp; DSA:</strong> Q2 2026 total public debt <strong><code>₦166.79 trillion</code></strong>; DMO Debt Sustainability Analysis baseline debt-service-to-revenue warning at <strong><code>71.7%</code></strong> by 2030.</li>
+<li><strong>NELFUND:</strong> <strong><code>₦355.87 billion</code></strong> cumulative disbursements (Sept 2026) rising to <strong><code>₦375.28 billion</code></strong> (Nov 2026).</li>
+<li><strong>Federalism &amp; State Police:</strong> Supreme Court July 11, 2024 LG financial autonomy ruling (<code>SC/CV/343/2024</code>); Nigeria State Police Sixth Alteration Bill (2026) passed by &gt;24 State Assemblies and transmitted for presidential assent.</li>
+<li><strong>Security, Theft &amp; Corruption:</strong> NUPRC <strong><code>3.33 million</code></strong> barrels crude theft (2025); SBM Intelligence <strong><code>7,825</code></strong> kidnapped across <code>1,713</code> incidents (July 2025–June 2026); Transparency International CPI <strong><code>26/100</code></strong>, ranked <strong><code>142/182</code></strong>.</li>
+<li><strong>Education, Youth, Women &amp; Poverty:</strong> NERDC compulsory Nigerian History rollout (<code>2025/2026</code> academic year); <code>9/47</code> (<strong><code>~19%</code></strong>) female ministerial nominees; FIJ review on under-40 ministerial pledge; World Bank <strong><code>139 million</code></strong> poverty projection.</li>
+<li><strong>Tax, Credit, Refineries, Aviation &amp; Regulation:</strong> NRS <strong><code>₦28.3 trillion</code></strong> 2025 collections; CrediCorp <strong><code>₦53.5 billion</code></strong> to <strong><code>351,000+</code></strong> Nigerians; Nigeria Air nullification/suspension; <strong><code>₦8.31 trillion</code></strong> NNPC exposure across Warri/Kaduna/Port Harcourt refineries; CBN <strong><code>₦4.65 trillion</code></strong> banking recapitalisation; Oct 24, 2025 FATF grey-list exit &amp; May 2025 <code>$3.4B</code> IMF RFI repayment; NERC <strong><code>61.51%</code></strong> June 2026 metering; NIMC <strong><code>137M+</code></strong> NINs; NHIA <strong><code>23.06M</code></strong> enrollees.</li>
+</ol>
+</li>
+<li><strong>Objectivity &amp; Tone Review:</strong> Avoids arbitrary percentage scoring (<code>§1.1</code>), systematically pairs official claims with independent/critical context, and cites exact caveats (e.g., fuel subsidy removal paired with pump-price jump, tax reform gazette dispute, debt service pressure).</li>
+<li><strong>Correction Applied During QA Review:</strong> L3 inherited 2023 PDF path corrected from a non-existent workspace-root path to <code>RENEWED-HOPE_compressed.pdf</code> (re-read L1–5).</li>
+</ul>
+<hr />
+<h2 id="4-verification-of-note-03-tinubu_manifesto_notes_03_comparison_matrixmd">4. Verification of Note 03: <code>tinubu_manifesto_notes_03_comparison_matrix.md</code></h2>
+<ul>
+<li><strong>Structural, Doctrinal &amp; Quantitative Accuracy:</strong></li>
+<li>Verified all doctrinal contrasts (<code>2023 PDF pp. 16, 18, 21–22</code> heterodoxy vs <code>2027 pp. 7, 70–71, 78–79, 93–96</code> fiscal consolidation, CBN independence, FX unification, Tax Reform Acts) and all <strong>30 sector rows</strong> in Section 4 (<code>L145–174</code>).</li>
+<li>Verified every single <strong>"Dropped / Quietly Replaced in 2027"</strong> claim (<code>§3.2</code>, 15 items) against the complete 109-page 2027 PDF text (<code>national carrier</code>, <code>commodity board</code>, <code>zero coupon</code>, <code>cost reflective</code>, <code>under 40</code> / <code>One-Day Governor</code> / <code>State of the Youth</code>, NJC <code>Federal Courts</code> limit, Diaspora voting constitutional amendment, <code>Anchor Borrower</code>, <code>Bank of Agriculture</code>, <code>Farm Nigeria</code>, <code>Land Use Act</code>, <code>Railway Corporation</code>, <code>Lagos-Kano</code> / <code>Benin-Abakaliki</code> / <code>Kano-Maradi</code>, <code>Warri</code>/<code>Calabar</code>/<code>Onne</code> Apapa diversion, <code>eNaira</code>, <code>Media City</code> / <code>animation</code>, <code>N-SIP</code> / <code>GEEP</code> / <code>N-Power</code> / <code>czar</code>, <code>5 minutes</code> water / <code>Great Green Wall</code>, <code>3 km</code> / <code>30 min</code> clinic / <code>sin tax</code> / <code>Nigerian history</code> / <code>indigenous language</code> / <code>clean coal</code> / <code>2060</code> / <code>smartphone</code> / <code>G-5</code> / <code>malaria</code>). Note that <code>Kaduna</code>, <code>Port Harcourt</code>, <code>Calabar</code>, <code>Maiduguri</code>, <code>Diaspora</code>, and <code>refiner</code> appear in 2027 only in distinct contexts accurately distinguished by <a href="manifesto_comparison.html"><code>tinubu_manifesto_notes_03_comparison_matrix.md</code></a> (e.g., <code>PH–Aba</code> rail, <code>Lagos–Calabar</code> coastal road, <code>Diaspora BRIDGE</code> / consular services, conventional refining rather than state refinery turnaround).</li>
+<li>Verified all <strong>"Major New 2027 Proposals"</strong> (<code>§3.3</code>, 11 items) are genuinely absent from the full 2023 OCR extraction (<code>manifesto_2023_raw.txt</code>) (<code>state police</code>, <code>Makurdi</code> Army div, <code>NACTP</code>, <code>MREIF</code>, <code>Land4Growth</code>, <code>Oronsaye</code>, <code>Ward Development</code>, <code>Critical Minerals</code>, <code>Project BRIDGE</code>, <code>NATEP</code>, <code>N-ATLAS</code>, <code>HOPE-EDU</code>, <code>HOPE-SP</code>, <code>AGILE</code>, <code>MAMII</code>, <code>DEON</code>, <code>BRICS</code>, <code>G20</code>, <code>774</code>, <code>CrediCorp</code>, <code>NELFUND</code>, <code>Tinubu Mass</code>, <code>Mining Marshals</code>, <code>body cameras</code>).</li>
+<li><strong>Civic Lens Video Prep (§5 vs. Civic Lens Video Style Guide):</strong></li>
+<li>Strictly enforces Civic Lens Video Style Guide §0 (user voiceover + Whisper word-level alignment gate before assembly/TTS), <code>§2 &amp; §5</code> (authenticated dated broadcast clips &amp; live browser screenshots only, no mock clippings), <code>§3 &amp; §11</code> (<code>Left = 2023 / Right = 2027</code>, archival paper <code>#F3F1E9</code>, blurred real-location plates, mobile-safe sizing, gold sweep highlight without cursor per <code>§7</code>, zero floating stub lines per <code>§11.5</code>).</li>
+<li>All 8 side-by-side exhibit pairings (<code>L189–196</code>) match verbatim quotes and exact page citations on both sides (<code>2027 p. 79</code> confirmed to contain the exact semicolon phrase <code>"at most 8% year-on-year by end-2031; subject to credible, independent monetary policy"</code>).</li>
+<li><strong>Corrections Requested &amp; Verified Fixed During QA Review:</strong></li>
+<li><strong>L18:</strong> <code>"TRIED. TESTED. TRUSTED."</code> updated from <code>PDF p. 75 / printed p. 73</code> to <strong><code>PDF p. 76 / printed p. 74</code></strong> (<code>page_76.png</code>).</li>
+<li><strong>L156:</strong> <code>"in shortest possible time"</code> updated to <strong><code>"within the shortest possible time frame"</code></strong> (<code>2023 PDF p. 32</code>).</li>
+<li><strong>L173:</strong> <code>"tell once"</code> updated to <strong><code>"tell government once"</code></strong> (<code>2027 pp. 90, 94</code>).</li>
+<li><strong>Editorial Note on Internal Pre-Publication Summary:</strong> While <a href="manifesto_comparison.html"><code>tinubu_manifesto_notes_03_comparison_matrix.md</code></a> itself used accurate page citations, an early internal pre-publication transmittal summary misstated Section 4's row count (<code>"18-row"</code> instead of <strong><code>30</code> rows</strong>) and carried several mismatched shorthand page numbers (e.g., <code>2023 p. 34</code> for Electricity Act, <code>2023 p. 25</code> vs <code>p. 26</code>, <code>2023 pp. 17–20</code> vs <code>pp. 24–25</code>, <code>2023 p. 63</code> vs <code>p. 62</code>, <code>2023 p. 65</code> vs <code>p. 64</code>, <code>2027 p. 55</code> vs <code>pp. 61, 73</code> for NACTP, <code>2027 p. 65</code> vs <code>pp. 69, 77, 79</code> for steel, <code>2027 p. 44</code> vs <code>p. 46</code> for social registry, <code>2027 p. 72</code> vs <code>pp. 70–71</code> for credit). The row-count discrepancy was immediately corrected during QA review; downstream readers and video editors should rely exclusively on the verified file <a href="manifesto_comparison.html"><code>tinubu_manifesto_notes_03_comparison_matrix.md</code></a> for all citations.</li>
+</ul>
+    </article>
+  </main>
+
+  <footer>
+    <p>CIVIC LENS INVESTIGATIVE DESK • PRESIDENTIAL MANIFESTO &amp; DELIVERY ARCHIVE</p>
+    <p style="margin-top: 6px;">All claims, targets, and empirical outcomes compiled strictly from official APC 2023 &amp; 2027 manifestos alongside CBN, NBS, DMO, NERC, NRS, judicial, multilateral, and independent press records.</p>
+  </footer>
+</body>
+</html>

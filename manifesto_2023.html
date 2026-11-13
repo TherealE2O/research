@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2023 Renewed Hope Action Plan: Complete Chapter-by-Chapter Inventory &amp; Audit Checklist — Civic Lens Investigation</title>
+  <style>
+    :root {
+      --font-headline: "Georgia", "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "Consolas", "Courier New", monospace;
+
+      --color-bg: #FFFFFF;
+      --color-surface: #F8F9FA;
+      --color-surface-subtle: #F1F5F9;
+      --color-border: #D1D5DB;
+      --color-border-dark: #111827;
+      --color-text: #111827;
+      --color-text-secondary: #374151;
+      --color-text-muted: #6B7280;
+      --color-link: #1D4ED8;
+      --color-link-hover: #1E40AF;
+      --color-accent-red: #B91C1C;
+      --color-accent-blue: #1D4ED8;
+      --color-accent-green: #15803d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pub-header {
+      border-top: 4px solid var(--color-border-dark);
+      border-bottom: 1px solid var(--color-border);
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .pub-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pub-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pub-brand {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .pub-tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      color: var(--color-accent-red);
+      border-left: 1px solid var(--color-border);
+      padding-left: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-back-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-link);
+      text-decoration: none;
+    }
+    .nav-back-link:hover { text-decoration: underline; }
+
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 20px 100px;
+    }
+
+    .inquiry-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-accent-red);
+      margin-bottom: 10px;
+    }
+
+    h1.inquiry-title {
+      font-family: var(--font-headline);
+      font-size: 34px;
+      line-height: 1.24;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      color: var(--color-text);
+    }
+
+    .inquiry-deck {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.48;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      margin-bottom: 22px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .inquiry-meta-bar {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 0;
+      margin: 18px 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+
+    .inquiry-meta-bar strong { color: var(--color-text); }
+
+    .file-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 2px 8px;
+    }
+
+    .table-of-contents {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      margin: 0;
+    }
+    @media (max-width: 680px) {
+      .toc-list { grid-template-columns: 1fr; }
+      .pub-tagline { display: none; }
+    }
+
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: 13.5px;
+    }
+    .toc-list a:hover { text-decoration: underline; }
+
+    .evidence-box {
+      background: var(--color-surface);
+      border: 2px solid var(--color-border-dark);
+      padding: 22px 24px;
+      margin-bottom: 40px;
+    }
+
+    .evidence-box-kicker {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-accent-red);
+      margin-bottom: 6px;
+    }
+
+    .evidence-box-desc {
+      font-size: 14.5px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .evidence-row {
+      border-top: 1px solid var(--color-border);
+      padding-top: 12px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .evidence-row-meta {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      margin-top: 3px;
+    }
+
+    .evidence-row-links {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    h2 {
+      font-family: var(--font-headline);
+      font-size: 24px;
+      line-height: 1.35;
+      margin: 42px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-dark);
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h3 {
+      font-family: var(--font-headline);
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 28px 0 12px;
+      color: var(--color-text);
+      scroll-margin-top: 84px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--color-text);
+    }
+
+    p { margin-bottom: 16px; color: var(--color-text); }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+    }
+    li { margin-bottom: 8px; }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.87em;
+      background: var(--color-surface-subtle);
+      border: 1px solid #E2E8F0;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--color-text);
+    }
+
+    pre {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.45;
+    }
+    pre code {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    .mermaid {
+      background: #FFFFFF;
+      border: 1.5px solid var(--color-border);
+      padding: 24px 16px;
+      margin: 24px 0;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      border-radius: 2px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--color-border-dark);
+      padding: 14px 20px;
+      margin: 22px 0;
+      background: var(--color-surface);
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+    blockquote p { margin-bottom: 8px; color: var(--color-text-secondary); }
+    blockquote p:last-child, blockquote ul:last-child { margin-bottom: 0; }
+    blockquote ul { margin: 8px 0 4px 20px; }
+
+    a { color: var(--color-link); text-decoration: underline; word-break: break-word; }
+    a:hover { color: var(--color-link-hover); }
+
+    .table-wrapper {
+      margin: 24px 0;
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #FFFFFF;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 10px 13px;
+      border: 1px solid var(--color-border);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--color-surface-subtle);
+      font-weight: 700;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    tr:nth-child(even) td {
+      background: #FAFAFA;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--color-border);
+      margin: 34px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 26px 20px;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'neutral',
+        securityLevel: 'loose',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="pub-header">
+    <div class="pub-header-inner">
+      <div class="pub-brand-wrap">
+        <a href="index.html" class="pub-brand">CIVIC LENS INVESTIGATIONS</a>
+        <span class="pub-tagline">Primary Evidence Desk</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-back-link">← Home</a>
+        <a href="tinubu_manifestos.html" class="nav-back-link">Manifesto Master Dossier</a>
+        <a href="tinubu.html" class="nav-back-link">Tinubu 360° Dossier</a>
+        <a href="https://github.com/TherealE2O/research/blob/main/investigations/tinubu_manifesto_notes_01_2023_action_plan.md" target="_blank" rel="noopener" class="nav-back-link" style="color: var(--color-text-secondary);">GitHub Markdown ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="inquiry-kicker">Civic Lens Forensic Inquiry • Manifesto Dossier File 01</div>
+    <h1 class="inquiry-title">2023 Renewed Hope Action Plan: Complete Chapter-by-Chapter Inventory &amp; Audit Checklist</h1>
+    
+    <div class="inquiry-meta-bar">
+      <div>Primary Field File: <span class="file-pill">tinubu_manifesto_notes_01_2023_action_plan.md</span></div>
+      <div>Editorial Standard: <strong>Neutral, Source-Attributed Broadsheet</strong></div>
+    </div>
+
+    <div class="table-of-contents">
+      <div class="toc-title">Table of Contents / Jump to Section</div>
+      <ul class="toc-list">
+        <li><a href="#1-pagination-convention-document-overview">1. Pagination Convention &amp; Document Overview</a></li>
+        <li><a href="#2-chapter-by-chapter-policy-breakdown">2. Chapter-by-Chapter Policy Breakdown</a></li>
+        <li><a href="#3-verifiable-20232027-audit-checklist">3. Verifiable 2023–2027 Audit Checklist</a></li>
+        <li><a href="#4-analytical-notes-for-cross-comparison-2023-vs-2027-20232026-record">4. Analytical Notes for Cross-Comparison (2023 vs 2027 &amp; 2023–2026 Record)</a></li>
+      </ul>
+    </div>
+    
+
+    <article>
+<ul>
+<li><strong>Source File</strong>: <code>RENEWED-HOPE_compressed.pdf</code> (80 PDF pages total)</li>
+<li><strong>Text Extraction Archive</strong>: Full 80-page local OCR text transcript (<code>manifesto_2023_raw.txt</code>)</li>
+<li><strong>Verification Method</strong>: Full WinRT OCR extraction across all 80 pages combined with direct visual inspection of the rendered page PNGs (page-level visual renders <code>page_01.png</code>–<code>page_80.png</code>) to recover chart figures, bold/colored numbers, and OCR-dropped words.</li>
+</ul>
+<hr />
+<h2 id="1-pagination-convention-document-overview">1. Pagination Convention &amp; Document Overview</h2>
+<h3 id="pagination-offset-pdf-page-printed-page-2">Pagination Offset (<code>PDF Page = Printed Page + 2</code>)</h3>
+<p>All references below cite the <strong>exact PDF page number (<code>PDF p. N</code>)</strong> with the printed footer page number in parentheses where applicable:</p>
+<ul>
+<li><strong>PDF pp. 1–3</strong> have no printed footer numbers (Cover, Campaign Epigraph, Table of Contents).</li>
+<li><strong>PDF pp. 4–76</strong> carry printed footer numbers <code>2</code> through <code>74</code> (<strong>exact +2 offset throughout</strong>: <code>PDF p. 4 = printed p. 2</code>, <code>PDF p. 76 = printed p. 74</code>).</li>
+<li><strong>PDF pp. 77–80</strong> are unnumbered visual/campaign closing pages.</li>
+</ul>
+<h3 id="full-table-of-contents-framing-pdf-pp-16-7580">Full Table of Contents &amp; Framing (PDF pp. 1–6, 75–80)</h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Section Title (per TOC / Chapter Header)</th>
+<th>TOC Printed Page</th>
+<th>PDF Page Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>Cover (<code>RENEWED HOPE 2023: ACTION PLAN FOR A BETTER NIGERIA</code>) &amp; Tinubu Epigraph</td>
+<td>—</td>
+<td>PDF pp. 1–2</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Table of Contents</td>
+<td>—</td>
+<td>PDF p. 3</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Foreword</strong>: <em>Agenda for Renewed Hope</em> (signed Bola Ahmed Tinubu)</td>
+<td><code>02</code></td>
+<td>PDF pp. 4–6</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>National Security</strong>: <em>The Bedrock of a Prosperous and Democratic Society</em></td>
+<td><code>05</code></td>
+<td>PDF pp. 7–12</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Economy</strong>: <em>The Approach of Prosperity</em> (Fiscal, Monetary, Industrial, Housing)</td>
+<td><code>11</code></td>
+<td>PDF pp. 13–27</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Agriculture</strong>: <em>Plant the Right Seed, Feed an Entire Nation</em></td>
+<td><code>26</code></td>
+<td>PDF pp. 28–31</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Power</strong>: <em>The Way to a Brighter Nigeria</em></td>
+<td><code>30</code></td>
+<td>PDF pp. 32–34</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Oil and Gas</strong>: <em>Contributing to Prosperity in a New Way</em></td>
+<td><code>33</code></td>
+<td>PDF pp. 35–39</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Transportation</strong>: <em>Moving the Nation Toward Its Cherished Destiny</em></td>
+<td><code>38</code></td>
+<td>PDF pp. 40–42</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Education</strong>: <em>Enlightened Minds, An Essential Pillar of Development</em></td>
+<td><code>41</code></td>
+<td>PDF pp. 43–46</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Healthcare</strong>: <em>A Matter of Right and Urgency</em></td>
+<td><code>45</code></td>
+<td>PDF pp. 47–50</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>The Digital Economy</strong>: <em>Taking Advantage of the Fourth Industrial Revolution</em></td>
+<td><code>49</code></td>
+<td>PDF pp. 51–54</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Sport, Entertainment and Culture</strong>: <em>Creating Prosperity, Celebrating Culture</em></td>
+<td><code>53</code></td>
+<td>PDF pp. 55–58</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Youth Empowerment and Entrepreneurship</strong>: <em>Building the Future, Today</em></td>
+<td><code>57</code></td>
+<td>PDF pp. 59–61</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Women Empowerment</strong>: <em>Building the Nation, Tearing Down Barriers</em></td>
+<td><code>60</code></td>
+<td>PDF pp. 62–63</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Social Programs</strong>: <em>The Making of a More Compassionate Society</em></td>
+<td><code>62</code></td>
+<td>PDF pp. 64–66</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Judicial Reform</strong>: <em>Growth and Investment Encouraged by the Rule of Law</em></td>
+<td><code>65</code></td>
+<td>PDF pp. 67–69</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Federalism / Decentralisation of Power</strong>: <em>In Pursuit of a More Balanced Democracy</em></td>
+<td><code>68</code></td>
+<td>PDF pp. 70–71</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>Foreign Policy</strong>: <em>Establishing Nigeria's Place in the World</em></td>
+<td><code>70</code></td>
+<td>PDF pp. 72–74</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Closing Statement</strong>: <em>A Call to National Action</em> (signed Tinubu &amp; Shettima)</td>
+<td><code>73</code></td>
+<td>PDF pp. 75–76</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Back Matter (photo collage; <em>"Working to Build a Better Nigeria"</em>; <em>"Vote Wisely APC"</em>; <em>"Our Hope for a Better Nigeria"</em>)</td>
+<td>—</td>
+<td>PDF pp. 77–80</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="narrative-framing-foreword-closing-statement">Narrative Framing: Foreword &amp; Closing Statement</h3>
+<ul>
+<li><strong>Continuity with Buhari + Lagos Governance Template</strong>: Both the Foreword (PDF pp. 4–6) and Closing Statement (PDF pp. 75–76) frame the ticket (<em>"TRIED. TESTED. TRUSTED."</em>) as standing <em>"on the foundation emplaced by the current [Buhari] administration"</em> (PDF p. 5) while scaling policies tested during Bola Tinubu's governorship of Lagos State (PDF pp. 4–5, 7, 19).</li>
+<li><strong>Foreword 10-Point Summary (PDF pp. 5–6)</strong>:</li>
+<li>Build a Nigeria, especially for youth, where sufficient jobs with decent wages create a better life.</li>
+<li>Manufacture, create, and invent more goods and services locally (<em>"a nation of creators, not just of consumers"</em>).</li>
+<li>Export more and import less, strengthening the naira.</li>
+<li>Support farmers via productivity-oriented agricultural policy to guarantee decent incomes and feed the nation.</li>
+<li>Modernise and expand public infrastructure for optimal economic growth.</li>
+<li>Empower youth and women via emerging sectors (digital economy, entertainment, culture, tourism).</li>
+<li>Train and provide economic opportunity to the poorest and most vulnerable (<em>"no parent is compelled to send a child to bed hungry"</em>).</li>
+<li>Generate, transmit, and distribute sufficient, affordable electricity.</li>
+<li>Make basic healthcare, education, and housing accessible and affordable.</li>
+<li>Establish bold national security architecture and action <em>"to obliterate terror, kidnapping, banditry, and other forms of violent extremism."</em></li>
+</ul>
+<hr />
+<h2 id="2-chapter-by-chapter-policy-breakdown">2. Chapter-by-Chapter Policy Breakdown</h2>
+<h3 id="chapter-1-national-security-the-bedrock-of-a-prosperous-and-democratic-society-pdf-pp-712-printed-pp-510">Chapter 1: National Security — <em>The Bedrock of a Prosperous and Democratic Society</em> (PDF pp. 7–12 / printed pp. 5–10)</h3>
+<ul>
+<li><strong>Doctrine</strong>: Proactive, intelligence-driven security leveraging technology, personnel recruitment, welfare reform, local policing institutions, and economic root-cause mitigation (PDF pp. 7–12).</li>
+<li><strong>Bolster Security Forces &amp; Redefine Military Doctrine (PDF pp. 8–9)</strong>:</li>
+<li>Recruit, train, and equip additional military, police, paramilitary, and intelligence personnel (PDF p. 8).</li>
+<li><strong>Anti-Terrorist Battalions (<code>ABATTS</code>)</strong>: Establish highly trained, disciplined anti-terrorist battalions with special forces units to seize strategic/tactical initiative against terrorists, kidnappers, and bandits (PDF p. 9).</li>
+<li><strong>Communications, Mobility &amp; Weapons Modernisation</strong>: Upgrade tactical communications and vehicle fleets; modernise land, sea, and air weapons systems; recruit technically skilled military personnel; ramp up <strong>domestic production of basic military hardware, small arms, and ammunition</strong> to cut import dependence (PDF p. 9).</li>
+<li><strong>Aerial &amp; Technological Superiority</strong>: Expand air surveillance/response to deter and swiftly answer attacks (PDF p. 9).</li>
+<li><strong>Personnel &amp; Fallen-Hero Welfare (PDF p. 9)</strong>:</li>
+<li>Raise salaries/special individual and family allowances and guarantee medical care for personnel injured on duty.</li>
+<li>Create a <strong>special program providing housing, scholarships, stipends, and health insurance for families of fallen heroes</strong>.</li>
+<li><strong>Hearts, Minds &amp; Environmental Recovery (PDF pp. 9–10)</strong>:</li>
+<li>Integrate the military's civilian assistance arm into targeted emergency/economic aid with State Governments.</li>
+<li>Rehabilitate the <strong>Lake Chad Basin ecosystem</strong> and subnational economic systems disrupted by conflict.</li>
+<li>Accelerate <strong>environmental clean-up and re-establishment of fisheries/aquaculture in the Niger Delta</strong> to curb poverty-driven youth recruitment.</li>
+<li><strong>Critical Infrastructure Protection Plan (<code>CIPP</code>) (PDF p. 10)</strong>:</li>
+<li>Deploy aerial land/sea surveillance and real-time intrusion/rupture sensors to eliminate <strong>crude oil theft</strong>, pipeline vandalism, and Niger Delta environmental pollution, and to protect <strong>power stations, transmission/distribution networks, seaports, airports, rail, and telecommunications</strong>.</li>
+<li><strong>Communities, Borders, Forests &amp; Identity Database (PDF p. 11)</strong>:</li>
+<li>Work with State Governments and the National Assembly on flexible community protection measures, ranging from civilian neighbourhood watch groups to <em>"more formal locally-based law enforcement institutions"</em> (note: avoids using the exact phrase "state police").</li>
+<li>Strengthen Customs and Immigration border monitoring using <em>"aerial and ground-based technology mechanisms as well as more mobile patrol units."</em></li>
+<li>Revitalise a <strong>Ranger or Forest Guard force</strong> to track and clear violent/criminal hideouts in forests and public lands.</li>
+<li>Sustain and expand integration of the <strong>national identity database</strong> for citizen security.</li>
+<li><strong>International Collaboration &amp; Police/NSCDC Repositioning (PDF p. 12)</strong>:</li>
+<li>Empower and expand <strong>Multinational Joint Task Force (MNJTF)</strong> operations with neighbouring countries and allies.</li>
+<li>Expand <strong>Nigeria Police Force</strong> recruitment, high-tech non-lethal equipment, and manpower development focused on community policing and crime prevention.</li>
+<li><strong>Free police from extraneous guard duties</strong>: Transfer <strong>VIP security and guarding of government buildings, installations, and critical assets to the Nigeria Security and Civil Defence Corps (NSCDC)</strong>, while evaluating/reforming the NSCDC for tighter internal-security integration.</li>
+</ul>
+<hr />
+<h3 id="chapter-2-economy-the-approach-of-prosperity-pdf-pp-1327-printed-pp-1125">Chapter 2: Economy — <em>The Approach of Prosperity</em> (PDF pp. 13–27 / printed pp. 11–25)</h3>
+<ul>
+<li><strong>Baseline Framing &amp; Headline Target (PDF pp. 13–15)</strong>:</li>
+<li>Notes urban population &gt;50% (&gt;100 million of ~200 million people) and youths aged 15–35 at <strong>&gt;65% (&gt;130 million)</strong>.</li>
+<li>Harmonise the <strong>National Infrastructure Policy</strong> and <strong>National Industrial Policy</strong> to accelerate growth.</li>
+<li><strong>GDP Growth Chart (<code>GROSS DOMESTIC PRODUCT (US$)</code>, PDF p. 15)</strong> — caption: <em>"10% GDP growth rate based on 2021 World Bank data"</em>:<ul>
+<li><code>2021</code>: <strong>$440.8 Bn</strong> | <code>2022</code>: <strong>$484.9 Bn</strong> | <code>2023</code>: <strong>$533.3 Bn</strong> | <code>2024</code>: <strong>$586.7 Bn</strong> | <code>2025</code>: <strong>$645.3 Bn</strong> | <code>2026</code>: <strong>$709.9 Bn</strong> | <code>2027</code>: <strong>$780.9 Bn</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2a-fiscal-policy-pdf-pp-1619">2A. Fiscal Policy (PDF pp. 16–19)</h4>
+<ul>
+<li><strong>Review Federal Budgetary Methodology &amp; Spending Limits (PDF p. 16)</strong>:</li>
+<li>Break away from budgeting tied to projected dollar oil revenue (<em>"break the explicit link between naira expenditure and dollar inflows into the economy"</em>); shift to <strong>growth-based budgeting</strong> calibrated to jobs and growth subject to a <strong><em>"clear and mandatory inflationary ceiling on spending."</em></strong></li>
+<li><strong>Legislative Suspension of Spending Limits</strong>: <em>"Much like the European Union has done, we too must be realistic and legislatively suspend the limits on government spending during this protracted moment of global economic turmoil exacerbated by domestic challenges in security, economy and demography."</em></li>
+<li><strong>National Infrastructure Campaign (PDF pp. 16–17)</strong>:</li>
+<li>Use expanded fiscal latitude to hire <em>"millions of unemployed Nigerians"</em> to modernise infrastructure (PDF p. 16).</li>
+<li>Construct a truly <strong>national highway system</strong>; establish a <strong>national potable water supply campaign</strong> committing that <strong>by the end of this decade (2030), no one lives more than five minutes away from a reliable source of potable water</strong> (PDF pp. 16–17).</li>
+<li>Reticulate major dams for power and year-round farming; build rural small-scale irrigation and water-catchment systems.</li>
+<li><strong>Fully complete the Great Green Wall of the North</strong> using commercially viable flora, creating jobs for <em>"tens of thousands of youths and farmers"</em> (PDF p. 17).</li>
+<li>Partner with the CBN and Federal Ministry of Finance to expand <strong>credit guarantees</strong> for PPP infrastructure projects (PDF p. 17).</li>
+<li><strong>Import Substitution &amp; Trade (PDF p. 18)</strong>:</li>
+<li>Discourage importation of <strong>non-essential</strong> products via <strong>luxury taxes, higher tariffs, and higher processing fees</strong>.</li>
+<li>Offer tax credits, rebates, and fiscal incentives for international brands to set up domestic manufacturing plants serving Nigeria, <strong>ECOWAS</strong>, and <strong>AfCFTA</strong> markets.</li>
+<li><strong>Tax Reform, Anti-Waste &amp; Revenue Optimisation (PDF pp. 18–19)</strong>:</li>
+<li>Reject tax rate hikes during economic weakness (<em>"increasing taxation is counterproductive"</em>); instead create a progressive tax regime, deploy technology, plug loopholes, and boost collection efficiency (PDF p. 18).</li>
+<li><strong>Cost-of-Governance Cuts (PDF p. 19)</strong>: Streamline agencies/civil service; impose a <strong>cap on fiscal expenditures for government building construction and on salaries/compensation packages of elected officials and senior federal executive personnel</strong>; weed out ghost workers and ghost projects; replicate <strong>Lagos State IGR</strong> revenue mobilisation and leakage reduction.</li>
+</ul>
+<h4 id="2b-monetary-policy-pdf-pp-2023">2B. Monetary Policy (PDF pp. 20–23)</h4>
+<ul>
+<li><strong>Subordination to Fiscal Jobs/Growth Agenda (PDF p. 20)</strong>:</li>
+<li>Monetary policy has limited transmission (mainly banks) and must complement fiscal goals across three targets: <strong>exchange rate, interest rate, and prices</strong>.</li>
+<li><strong>Exchange Rate Management (PDF p. 21)</strong>:</li>
+<li>Diagnoses naira depreciation as rooted in supply/oil production shortfalls compounded by <em>"an ineffective regime of multiple, somewhat arbitrary, exchange rates"</em> enabling arbitrage and speculation.</li>
+<li><strong>Dual commitment</strong>: Work with the CBN to <strong>review and optimise the exchange rate regime</strong>, while explicitly rejecting pure free-floating: the exchange rate <strong><em>"cannot be ignored nor left to the vagaries of an unrestrained market."</em></strong></li>
+<li><strong>Anti-Rate-Hike Inflation Doctrine (PDF pp. 22–23)</strong>:</li>
+<li>Characterises inflation as <strong>supply-driven</strong>, not excess demand: <strong><em>"To impose the usual anti-inflation medicine of higher interest rates and tighter money-supply will only weaken the patient. The answer to supply-driven inflation is not to suppress normal aggregate demand levels. The better solution is to find ways to increase production and supply."</em></strong></li>
+<li>Rejects copying foreign monetary tightening orthodoxy (PDF p. 23).</li>
+<li><strong>Limit Foreign Debt Obligations (PDF p. 23)</strong>:</li>
+<li>Restrict new foreign-currency debt to <strong>projects that generate cash flows capable of repaying the debt</strong>, and limit FX borrowing to essential expenditures unreachable via naira spending or naira debt.</li>
+</ul>
+<h4 id="2c-industrial-policy-pdf-pp-2425">2C. Industrial Policy (PDF pp. 24–25)</h4>
+<ul>
+<li><strong>National Industrial Master Plan (PDF p. 24)</strong>:</li>
+<li>Tax/credit incentives and tariffs to safeguard domestic manufacturing; lower import tariffs on semi-manufactured inputs (e.g., automotive and IT assembly lines); promote IT for financial inclusion.</li>
+<li>Provide <strong>tax credits, holidays, and reduced-interest loans</strong> to firms hiring a specified percentage of youth and offering on-the-job training/mentoring.</li>
+<li><strong>Geopolitical Industrial Hubs &amp; Solid Minerals (PDF pp. 24–25)</strong>:</li>
+<li>Develop major/minor industrial hubs in <strong>every geopolitical zone</strong>:<ul>
+<li><strong>North West &amp; North East</strong>: textiles.</li>
+<li><strong>South East &amp; South South</strong>: industrial hub and <strong>dry port</strong> focused on labour-intensive manufacturing.</li>
+<li><strong>South West</strong>: glass manufacturing from fine sand; clay-deposit ceramics (dishes/pottery) in deposit areas.</li>
+<li><strong>North Central</strong>: solid mineral exploration and exploitation.</li>
+<li><strong>North West &amp; North Central</strong>: <strong>end unlicensed, environmentally harmful clandestine gold mining</strong> and establish regulated mining feeding local artisan jewellery manufacturing.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2d-housing-policy-pdf-pp-2627">2D. Housing Policy (PDF pp. 26–27)</h4>
+<ul>
+<li><strong>Unified Federal Housing &amp; Mortgage Agency (PDF p. 26)</strong>:</li>
+<li>Merge fragmented federal home-ownership agencies into one adequately capitalised entity with a <strong>three-fold mandate</strong>: (i) grant low-interest mortgages directly; (ii) guarantee qualified bank mortgages; (iii) purchase mortgages from private banks to deepen the secondary market.</li>
+<li><strong>Mandatory Bank Consumer Credit Quota (PDF p. 26)</strong>:</li>
+<li>Earmark a portion of commercial bank lending for affordable consumer loans (automobiles, expensive domestic appliances): <strong>penalise non-compliant banks</strong>, while rewarding compliant banks with tax credits and favourable CBN inter-bank/monetary ratio treatment.</li>
+<li><strong>Housing Units Chart (<code>CUMULATIVE ADDITIONAL HOUSING UNITS</code>, PDF p. 27)</strong>:</li>
+<li>Values plotted: <code>2023: 4.0</code> | <code>2024: 8.0</code> | <code>2025: 12.0</code> | <code>2026: 16.0</code> | <code>2027: 20.0</code> | <code>2028: 24.0</code>.</li>
+<li><em>Audit Note</em>: The Y-axis is labeled simply <code>HOUSING UNITS</code> with <strong>no explicit multiplier unit</strong> (e.g., thousands vs. millions) printed on the graphic.</li>
+<li><strong>Land Use Act, Social Housing &amp; Civil Service Mortgages (PDF p. 27)</strong>:</li>
+<li>Work with National Assembly and States to <strong>revise the Land Use Act</strong> to streamline conveyance.</li>
+<li>Provide developer incentives for affordable-housing set-asides; launch a <strong>new social housing policy</strong> with States/LGAs for the poorest Nigerians.</li>
+<li>Establish <strong>federal payment guarantees for fixed-rate, long-term mortgages</strong> for eligible civil servants.</li>
+</ul>
+<hr />
+<h3 id="chapter-3-agriculture-plant-the-right-seed-feed-an-entire-nation-pdf-pp-2831-printed-pp-2629">Chapter 3: Agriculture — <em>Plant the Right Seed, Feed an Entire Nation</em> (PDF pp. 28–31 / printed pp. 26–29)</h3>
+<ul>
+<li><strong>Headline Quantitative Target (PDF pp. 28, 31)</strong>:</li>
+<li>Increase cultivated arable land from <strong>35% to 65% within four years</strong> (explicitly repeated on both PDF p. 28 and p. 31); become net food exporters.</li>
+<li><strong>Key Mechanisms (PDF pp. 29–31)</strong>:</li>
+<li><strong>Commodity Boards &amp; Exchanges (PDF p. 29)</strong>: Introduce commodity boards guaranteeing minimum prices for strategic crops (<em>"cashew, cocoa, sesame, soya, cassava, yam, rubber, okra, palm kernels, groundnut and okra"</em> [sic: <em>okra</em> printed twice]), alongside strengthened private commodity exchanges.</li>
+<li><strong>Grain Reserves &amp; Market Storage (PDF p. 29)</strong>: Modernise strategic grain reserves; co-fund fresh-produce cold/storage facilities in major city marketplaces via Federal-State-LGA incentives.</li>
+<li><strong>Rural Infrastructure (PDF p. 29)</strong>: Federal incentive/counterpart funding scheme with States/LGAs for farm-to-market roads and freight links.</li>
+<li><strong>Irrigate Nigeria Project (PDF p. 30)</strong>: PPP scheme for small-scale irrigation and water-catchment systems, linked to offtake guarantees and agro-processing plants.</li>
+<li><strong>Farm Cooperatives (PDF p. 30)</strong>: Priority extension services plus <strong>tax breaks and credits</strong> for voluntary cooperatives pooling equipment/fertiliser purchases.</li>
+<li><strong>Agricultural Finance (PDF p. 30)</strong>: Reform <strong>Bank of Agriculture (BoA)</strong> governance strictly around low-cost farm loans for strategic crops; expand <strong>Anchor Borrower's Program</strong> and agricultural credit guarantee scheme.</li>
+<li><strong>Large-Scale Land Clearing — <em>Farm Nigeria</em> Project (PDF p. 31)</strong>: Partner with international/domestic firms and DFIs to clear uncultivated land, <strong>beginning with a focus on the 11 river basins</strong>, co-locating food-processing/semi-processing plants near new farms.</li>
+</ul>
+<hr />
+<h3 id="chapter-4-power-the-way-to-a-brighter-nigeria-pdf-pp-3234-printed-pp-3032">Chapter 4: Power — <em>The Way to a Brighter Nigeria</em> (PDF pp. 32–34 / printed pp. 30–32)</h3>
+<ul>
+<li><strong>Baseline Stats &amp; Grid Targets (PDF p. 32)</strong>:</li>
+<li>Cites <strong>~12,000 MW installed capacity</strong>, <strong>8,000 MW generated</strong>, and <strong>4,500 MW max distributed</strong>; pledges to build on the <strong>Presidential Power Initiative</strong> to transmit/distribute already-generated power immediately and expand on-grid and off-grid renewables with low-cost finance.</li>
+<li><strong>Metering, Tariffs &amp; Domestic Meter Manufacturing (PDF pp. 32–33)</strong>:</li>
+<li><strong>Eliminate estimated billing</strong> by streamlining/accelerating the <strong>National Mass Metering Programme</strong> and <strong>Meter Asset Provider Scheme</strong> within <em>"the shortest possible time frame."</em></li>
+<li><strong>No new grid connection may be energised without a meter</strong>; require DisCos to meter new connections during construction (PDF p. 33).</li>
+<li><strong>Enable DisCos to charge cost-reflective tariffs</strong> (PDF p. 33).</li>
+<li>Reduce import levies on manufacturing inputs and grant targeted tax incentives for <strong>domestic electricity meter manufacturers</strong> (PDF p. 33).</li>
+<li><strong>Renewables, Rural Electrification &amp; Governance (PDF pp. 33–34)</strong>:</li>
+<li><strong>Renewable Energy Plan (PDF p. 33)</strong>: Grounded in Nigeria's <strong>2060 carbon-neutrality commitment</strong>; promote grid-connected solar, mini-grids, interconnected mini-grids, and residential solar.</li>
+<li><strong>Rural Electrification (PDF p. 34)</strong>: Relax regulations for private/State/LGA rural electrification at reasonable tariffs; engage universities/polytechnics in rural energy R&amp;D.</li>
+<li><strong>Power Sector Governance Reform (PDF p. 34)</strong>: Work with National Assembly to <strong>review the Electric Power Sector Reform Act 2005 (EPSRA)</strong>; expand off-grid regime; explore <em>"clean coal, solar, hydro and other sustainable energy technologies."</em></li>
+<li><strong>Nigeria First Power Policy (PDF p. 34)</strong>: Direct <strong>natural gas resources as a #1 priority to Nigerian power generation</strong>; prioritise quick-delivery grid reliability, interconnectedness, and wheeling projects.</li>
+</ul>
+<hr />
+<h3 id="chapter-5-oil-and-gas-contributing-to-prosperity-in-a-new-way-pdf-pp-3539-printed-pp-3337">Chapter 5: Oil and Gas — <em>Contributing to Prosperity in a New Way</em> (PDF pp. 35–39 / printed pp. 33–37)</h3>
+<ul>
+<li><strong>Baseline Context (PDF pp. 35–36)</strong>:</li>
+<li>Oil &amp; gas generates <strong>nearly 90% of export earnings</strong>, represents <strong>over 7% of GDP</strong>, and provides <strong>roughly half of all government revenues</strong> (PDF p. 35); the EU takes nearly <strong>60%</strong> of Nigeria's gas exports from <strong>~206 trillion cubic feet</strong> of reserves (PDF p. 36). Aims to remove Nigeria from the <strong>top 10 gas flarers</strong>.</li>
+<li><strong>Five Structured Goal/Solution Pillars (PDF pp. 37–39)</strong>:</li>
+<li><strong>Increase Domestic Oil Production (PDF p. 37)</strong>:<ul>
+<li><strong>Target</strong>: <strong>2.6 mmbpd by 2027</strong> and <strong>4 mmbpd by 2030</strong>.</li>
+<li><strong>Oil Theft Graphic</strong>: Bar comparison showing sharp decline from <code>2021</code> to <code>2027</code> (no numerical values printed).</li>
+<li><strong>Mechanisms</strong>: Establish a <strong>Special Enforcement and Monitoring Unit</strong> deploying drones, aerial surveillance, and vessel/breach tracking; frontier exploration (e.g., Lake Chad basin); refinery PPPs/international JVs.</li>
+</ul>
+</li>
+<li><strong>Increase Indigenous Participation &amp; Host Communities (PDF p. 37)</strong>:<ul>
+<li><strong>Target</strong>: Indigenous crude oil share <strong>&gt;1 mmbpd by 2027</strong>.</li>
+<li><strong>Mechanisms</strong>: Mandate IOC revenue allocation to indigenous tech transfer; <strong>fully implement the Host Community Development Trust</strong>.</li>
+</ul>
+</li>
+<li><strong>Harness Domestic Gas Potential (PDF p. 38)</strong>:<ul>
+<li><strong>Targets</strong>: <strong>Full deregulation of midstream gas prices within 6 months</strong>; <strong>+20% gas production</strong> and <strong>completion of critical gas infrastructure projects by 2027</strong>.</li>
+<li><strong>Named Infrastructure</strong>: Accelerate Nigeria Gas Master Plan; complete <strong>Obiafu-Obrikom-Oben (OB3)</strong> pipeline, <strong>Trans Nigeria Gas Pipeline</strong>, <strong>Escravos-Lagos Pipeline System (ELPS) II</strong>, <strong>Ajaokuta-Kaduna-Kano (AKK)</strong> pipeline, and the seven key gas projects.</li>
+<li><strong>Flaring Enforcement</strong>: Mandate flare elimination/monetisation plans and flare metering; create a special enforcement unit under PIA; ring-fence non-compliance fines solely for affected communities while offering credits for flare reduction.</li>
+</ul>
+</li>
+<li><strong>Implement Policy Reform — PIA &amp; Deepwater (PDF p. 38)</strong>:<ul>
+<li><strong>Target</strong>: Accelerate <strong>full implementation of the Petroleum Industry Act (PIA)</strong> and enact favourable deepwater investment policies (signature bonus negotiation/post-development deferral, royalty reliefs) <strong>within 6 months</strong>.</li>
+</ul>
+</li>
+<li><strong>Fuel Subsidy Phase-Out, Refineries &amp; Infrastructure Partnerships (PDF p. 39)</strong>:<ul>
+<li><strong>Fuel Subsidy Removal &amp; Reinvestment</strong>: <em>"Achieve stability of petroleum product supply by fully deregulating the downstream sector"</em> and <strong><em>"phase out the fuel subsidy"</em></strong> while dedicating saved subsidy funds to <em>"road construction, to boreholes, public transportation subsidies, education and healthcare funding programs."</em></li>
+<li><strong>Refining</strong>: Rehabilitate national refineries and consider petrochemicals JV models.</li>
+<li><strong>Technology &amp; PPP</strong>: Secure PPPs and producer partnerships, citing <strong>Saudi Aramco's Tera Powers Reservoir modelling platform</strong> and <strong>master gas system</strong> as models.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="chapter-6-transportation-moving-the-nation-toward-its-cherished-destiny-pdf-pp-4042-printed-pp-3840">Chapter 6: Transportation — <em>Moving the Nation Toward Its Cherished Destiny</em> (PDF pp. 40–42 / printed pp. 38–40)</h3>
+<ul>
+<li><strong>Baseline Data (PDF p. 40)</strong>: Sector valued at <strong>NGN 37 trillion</strong>, contributing <strong>1.84% to real GDP in Q2 2022</strong>; road transport accounted for <strong>~90% of all transportation activities in 2021</strong>.</li>
+<li><strong>Roads (PDF p. 40)</strong>: Construct a nationwide multi-lane highway system connecting major cities/regions; rehabilitate/expand federal highways using capital markets and PPPs.</li>
+<li><strong>Rail (PDF p. 41)</strong>:</li>
+<li>Review <strong>Nigerian Railway Corporation (NRC)</strong> structure/operations with National Assembly to boost private sector inclusion and functional specialisation.</li>
+<li>Encourage State Governments to build <strong>state capital metro systems</strong> integrated with national rail.</li>
+<li><strong>Prioritise completion of five critical corridors</strong>: <strong>Lagos–Kano</strong>, <strong>Benin–Abakaliki</strong>, <strong>Port Harcourt–Maiduguri</strong>, <strong>Lagos–Calabar</strong>, and <strong>Kano–Maradi</strong>; deploy security/tech assets to protect rail infrastructure and passengers.</li>
+<li><strong>Maritime / Inland Waterways (PDF p. 42)</strong>:</li>
+<li><strong>Decongest Apapa Port</strong> and redirect traffic to <strong>Onne, Warri, and Calabar</strong> seaports via tax relief, credits, and relaxed duties/tariffs.</li>
+<li>Deepen harbours/shipping lanes and enlarge berths; <strong>dredge strategic inland waterways</strong>; strengthen coordination across <strong>NIMASA, NPA, and NIWA</strong>.</li>
+<li><strong>Aviation (PDF p. 42)</strong>:</li>
+<li>Enforce runway maintenance and airport expansion; mandate aircraft maintenance/incident reporting, ticket-pricing fairness/transparency, and <strong>passenger compensation for airline-attributable delays/cancellations</strong>; upgrade runway surveillance; <strong><em>"continue with the current administration's plans to establish a new national carrier"</em></strong>; strengthen <strong>NCAA</strong>.</li>
+</ul>
+<hr />
+<h3 id="chapter-7-education-enlightened-minds-an-essential-pillar-of-development-pdf-pp-4346-printed-pp-4144">Chapter 7: Education — <em>Enlightened Minds, An Essential Pillar of Development</em> (PDF pp. 43–46 / printed pp. 41–44)</h3>
+<ul>
+<li><strong>Framing (PDF p. 43)</strong>: Treats education as <em>"a natural and constitutional right"</em>, targeting quality, access, funding, management, effectiveness, and competitiveness.</li>
+<li><strong>Basic &amp; Secondary Education (PDF pp. 43–45)</strong>:</li>
+<li><strong>Infrastructure (PDF p. 43)</strong>: Alleviate classroom overcrowding; equip federally funded primary/secondary schools; prioritise computers/internet access.</li>
+<li><strong>Accreditation, Curriculum &amp; National Identity (PDF p. 44)</strong>: Mandatory accreditation standards primary-to-tertiary; permanent <strong>private-sector + educators curriculum committee</strong>; standardised national primary/secondary curriculum; <strong>reintroduce Nigerian history to classrooms</strong>; make <strong>indigenous language courses compulsory through completion of secondary school</strong>.</li>
+<li><strong>Teacher Training &amp; Local School Management (PDF pp. 44–45)</strong>: Standardised teacher training, exams, and accreditation for federal schools; improve teacher welfare; establish local community-inclusive <strong>Boards of Education</strong> to oversee federal primary/secondary schools.</li>
+<li><strong>Technical &amp; Vocational Education (TVET) (PDF p. 45)</strong>: Establish centres of excellence focused on <strong>IT, software development, artificial intelligence, and robotics</strong>.</li>
+<li><strong>Tertiary Education &amp; Financing (PDF p. 46)</strong>:</li>
+<li>Rationalise governance, funding, and compensation structures of tertiary institutions.</li>
+<li><strong>Student Loans &amp; Cost-Reflective Tuition</strong>: Institute a <strong>pilot student loan regime</strong> modelled on Lagos/Kaduna State programs (capped borrowing limits, flexible repayment), enabling institutions <em>"to charge more cost reflective tuition fees."</em></li>
+<li><strong>Special Education Fund</strong>: Legislate a special fund backed by <strong>zero-coupon federal bonds</strong> sold to private investors or <strong>purchased in market clearing exercises by the CBN</strong> to help fund universities while moderating per-capita tuition increases.</li>
+<li><strong>STEM Incentives</strong>: Prioritise high-performing STEM students for scholarships, internships, graduate admissions, and jobs.</li>
+</ul>
+<hr />
+<h3 id="chapter-8-healthcare-a-matter-of-right-and-urgency-pdf-pp-4750-printed-pp-4548">Chapter 8: Healthcare — <em>A Matter of Right and Urgency</em> (PDF pp. 47–50 / printed pp. 45–48)</h3>
+<ul>
+<li><strong>Core Objective (PDF p. 47)</strong>: Achieve <strong>Universal Health Coverage (UHC)</strong>, reduce maternal/infant mortality, and address infrastructure gaps, workforce strain, poor insurance coverage, and medicine/vaccine import dependence.</li>
+<li><strong>Delivery Network &amp; Infrastructure Tiers (PDF pp. 47–48)</strong>:</li>
+<li>Standardise Federal-State-LGA governance and community-level accountability (PDF p. 47).</li>
+<li>Build static + mobile primary clinics via counterpart funding so <strong>no person lives more than 3 km or a 30-minute walk from a primary facility</strong> (PDF p. 48).</li>
+<li>Upgrade, equip, and staff <strong>a general hospital in every LGA, a tertiary facility in every State, and a world-class specialist hospital in each geo-political zone</strong> (to curb outbound medical tourism and attract inbound medical tourists, PDF p. 48).</li>
+<li>Expand preventative screening (vaccinations, eye/cancer/diabetes/blood-pressure screening, PDF p. 48).</li>
+<li><strong>Financing, Health Insurance &amp; Subsidy Reallocation (PDF p. 49)</strong>:</li>
+<li>Raise health share of national budget; scale up the <strong>National Health Insurance Authority (NHIA) Act</strong> to <strong>cover at least 40% of the population within two years</strong> under a mandatory scheme.</li>
+<li>Augment <strong>Basic Health Care Provision Fund (BHCPF)</strong> and <strong>Vulnerable Group Fund</strong>.</li>
+<li><strong>Earmark funds saved from fuel subsidy removal</strong> to provide health coverage for <strong>pregnant women and children under five</strong>.</li>
+<li><strong>Dedicate consumption (sin) taxes on alcohol and tobacco</strong> to healthcare funding.</li>
+<li><strong>Workforce Retention, Emergency Preparedness, Research &amp; Mental Health (PDF pp. 49–50)</strong>:</li>
+<li>Retain skilled health workers via performance-based pay raises, family health insurance, <strong>favourable mortgages/home-ownership plans</strong>, and <strong>tertiary scholarships for their children</strong> (PDF p. 49; <em>editorial note: two consecutive paragraphs on PDF p. 49 repeat this retention sentence almost verbatim</em>). Train and hire community sanitary/preventive health teams.</li>
+<li>Build 6-pillar pandemic/emergency preparedness; <strong>allocate ~1% of pooled health insurance funds to domestic health research</strong>; promote <strong>domestic manufacturing of essential medicines and vaccines</strong>; train primary care workers on early detection of <strong>mental health and drug abuse</strong> (PDF p. 50).</li>
+</ul>
+<hr />
+<h3 id="chapter-9-the-digital-economy-taking-advantage-of-the-fourth-industrial-revolution-pdf-pp-5154-printed-pp-4952">Chapter 9: The Digital Economy — <em>Taking Advantage of the Fourth Industrial Revolution</em> (PDF pp. 51–54 / printed pp. 49–52)</h3>
+<ul>
+<li><strong>Headline Job Target (PDF p. 51)</strong>: <strong>Create 1 million new ICT/digital-economy jobs within the first 24 months in office</strong>.</li>
+<li><strong>Core Pillars (PDF pp. 52–54)</strong>:</li>
+<li><strong>ICT-Enabled Outsourcing (PDF p. 52)</strong>: Train youths for global BPO/outsourcing exports.</li>
+<li><strong>Start-up Ecosystem (PDF p. 52)</strong>: Facilitate domestic/foreign capital access for innovation-driven enterprises (especially fintech) and incentivise tech hubs, parks, accelerators, and angel investors.</li>
+<li><strong>E-Commerce &amp; Tech Manufacturing (PDF p. 53)</strong>: Leverage transport/infrastructure upgrades to support e-commerce (noting 500% merchant growth over 5 years); promote <strong>import substitution and local smartphone/tech assembly</strong> (citing <strong>&gt;US$750M/year</strong> in smartphone imports over the prior 3 years).</li>
+<li><strong>Government Digital Services &amp; Broadband (PDF p. 53)</strong>: Implement the <strong>2019 Nigeria E-Government Master Plan</strong>; achieve the <strong>National Broadband Plan target of 90% population coverage by 2025</strong>.</li>
+<li><strong>Blockchain, Crypto &amp; eNaira (PDF p. 54)</strong>: Establish an <strong>advisory committee to review blockchain and virtual asset (crypto) regulations</strong> to create a business-friendly framework covering finance, identity, and revenue collection; encourage the <strong>CBN to expand use of the eNaira</strong>.</li>
+</ul>
+<hr />
+<h3 id="chapter-10-sport-entertainment-and-culture-creating-prosperity-celebrating-culture-pdf-pp-5558-printed-pp-5356">Chapter 10: Sport, Entertainment and Culture — <em>Creating Prosperity, Celebrating Culture</em> (PDF pp. 55–58 / printed pp. 53–56)</h3>
+<ul>
+<li><strong>Baseline Framing (PDF p. 55)</strong>: Recognises Nollywood, Kannywood, and Afrobeats (music revenue estimated near <strong>US$100 million in 2022</strong>).</li>
+<li><strong>Creative Governance &amp; Incentives (PDF p. 56)</strong>:</li>
+<li>Establish a <strong>Presidential Creative Industry Advisory Team</strong> with active industry practitioners to reform governance/regulation; review <strong>copyright and IP enforcement laws</strong>.</li>
+<li>Designate <strong>Media City as a Special Economic Zone (SEZ)</strong>; launch special investment funds (grants/affordable loans); revise the creative tax regime with <strong>rebates, tax credits, grants, and subsidies</strong>.</li>
+<li><strong>Infrastructure, Capacity Building &amp; Sports (PDF pp. 57–58)</strong>:</li>
+<li><strong>Dubai-Style Media City (PDF p. 57)</strong>: PPP development featuring conference centre, office park, film studios/sound stages, university of the arts, auditoriums, hotels, and residences.</li>
+<li>Rehabilitate existing venues/stadia and build new entertainment/sporting venues in <strong>all 6 geo-political zones</strong> via PPP (PDF pp. 57–58).</li>
+<li>Equip select universities in <strong>all 6 zones</strong> as humanities/film/culture centres of excellence; encourage arts secondary schools across States; establish a <strong>hospitality training program</strong> and an <strong>animation outsourcing hub</strong> (PDF p. 57).</li>
+<li><strong>Sports Reform (PDF p. 58)</strong>: Fully implement the <strong>New National Sports Industry Policy (NISP)</strong>; establish and seed-fund an <strong>Athletes' Welfare Fund</strong>; revive school/grassroots sports; increase sports funding; introduce a <strong>Sports Code of Governance</strong>.</li>
+</ul>
+<hr />
+<h3 id="chapter-11-youth-empowerment-and-entrepreneurship-building-the-future-today-pdf-pp-5961-printed-pp-5759">Chapter 11: Youth Empowerment and Entrepreneurship — <em>Building the Future, Today</em> (PDF pp. 59–61 / printed pp. 57–59)</h3>
+<ul>
+<li><strong>Baseline &amp; Headline Target (PDF pp. 59–60)</strong>:</li>
+<li>Cites <strong>130 million Nigerians aged 15–35</strong> and a <strong>33% unemployment rate</strong>; pledges to <strong><em>"cut the youth unemployment rate in half within four years"</em></strong> (PDF p. 59).</li>
+<li><strong>Unemployment Chart (<code>Number of unemployed people (# mn)</code>, PDF p. 60)</strong> — caption: <em>"Based on NBS estimated current rate of unemployment of 33% (2022)"</em>:<ul>
+<li><code>2022</code>: <strong>21.5M</strong> | <code>2023</code>: <strong>19.0M</strong> | <code>2024</code>: <strong>16.7M</strong> | <code>2025</code>: <strong>14.3M</strong> | <code>2026</code>: <strong>11.9M</strong>.</li>
+</ul>
+</li>
+<li><strong>Entrepreneurship &amp; Jobs Measures (PDF p. 60)</strong>:</li>
+<li>Work with <strong>CBN</strong> to incentivise commercial banks to direct low-cost loans to a <strong>quota of youth-led enterprises</strong>, while <strong>immediately mandating federally owned/affiliated banks</strong> to launch youth-entrepreneur loan schemes.</li>
+<li>Mobilise <strong>2 million volunteer entrepreneurs and professionals</strong> for intergenerational youth mentoring.</li>
+<li>Inaugurate a <strong>Youth Advisory Council</strong> tied to a new <strong>Employment Action Plan</strong>.</li>
+<li><strong>NYSC Reform</strong>: Expand private-sector postings during service and incentivise employers to retain corps members post-service.</li>
+<li>Expand <strong>Business Incubation Centres</strong> supporting youth patent/trademark/IP registration.</li>
+<li><strong>Political Quotas &amp; Governance Mechanisms (PDF p. 61)</strong>:</li>
+<li><strong>Cabinet Age Quotas</strong>: Reserve <strong>at least 3 cabinet positions for persons under age 40</strong> and <strong>6 more positions for persons under age 50</strong> (9 total cabinet seats under 50).</li>
+<li><strong>MDA Political Appointments Quota</strong>: Issue a <strong>presidential directive reserving at least 20% of political appointments to MDAs for qualified persons under age 40</strong>.</li>
+<li>Institute a permanent <strong>biannual <em>"State of the Youth"</em> survey</strong> and launch a <strong>Presidential Fellowship Scheme</strong> modelled on the One-Day Governor program.</li>
+</ul>
+<hr />
+<h3 id="chapter-12-women-empowerment-building-the-nation-tearing-down-barriers-pdf-pp-6263-printed-pp-6061">Chapter 12: Women Empowerment — <em>Building the Nation, Tearing Down Barriers</em> (PDF pp. 62–63 / printed pp. 60–61)</h3>
+<ul>
+<li><strong>Political &amp; Public Sector Representation (PDF p. 62)</strong>:</li>
+<li>Work with National Assembly to pass legislation raising female participation to <strong>at least 35% of all governmental positions</strong>, mandating reserved senior/cabinet/adviser seats in the federal executive and encouraging private-sector parity.</li>
+<li><strong>Economic Empowerment, Safety &amp; Girls' Education (PDF pp. 62–63)</strong>:</li>
+<li>Encourage commercial banks to offer <strong>concessionary loans and incentives for women-owned businesses</strong> (PDF p. 62).</li>
+<li>Expand <strong>specialist police units</strong> for domestic violence; bolster social services (whistleblowing, counselling, sanctuary homes); prioritise prosecution and seek <strong>stiffer criminal penalties for domestic abusers</strong> (PDF p. 63).</li>
+<li>Retain school-aged girls in collaboration with States and fund <strong>scholarships/incentives for female STEM students</strong> (PDF p. 63).</li>
+</ul>
+<hr />
+<h3 id="chapter-13-social-programs-the-making-of-a-more-compassionate-society-pdf-pp-6466-printed-pp-6264">Chapter 13: Social Programs — <em>The Making of a More Compassionate Society</em> (PDF pp. 64–66 / printed pp. 62–64)</h3>
+<ul>
+<li><strong>Expand N-SIP &amp; Income Support (PDF pp. 64–65)</strong>:</li>
+<li>Expand Buhari-era <strong>National Social Investment Program (N-SIP)</strong> components: <strong>Conditional Cash Transfer (<code>CCT</code>)</strong>, <strong>Government Enterprise and Empowerment (<code>GEEP</code>)</strong>, <strong>Homegrown School Feeding (<code>HGSF</code>)</strong>, and <strong><code>N-Power</code></strong>.</li>
+<li>Provide <strong>conditional income support</strong> to very poor households (tied to school attendance, healthcare, and nutrition) and <strong>unconditional income support</strong> to the <strong>elderly, extremely poor, and persons with disabilities</strong> (PDF p. 65).</li>
+<li><strong>MSME Social Investment, Out-of-School Children &amp; Digital MSME Academy (PDF pp. 65–66)</strong>:</li>
+<li>Launch poor-focused MSME support (finance, capital markets, low-cost BDS, <strong>fintech partnerships</strong>) prioritising <strong>PWDs, women, and youth</strong> (PDF p. 65).</li>
+<li>Treat <strong>out-of-school children</strong> as <em>"highest priority"</em> via a <strong>task force headed by a special czar</strong> to review/strengthen school feeding and retention (PDF p. 65).</li>
+<li>Establish a <strong>digital MSME Academy</strong> teaching product development, operations, accounting, taxation, finance, regulations, contracts, and marketing (PDF p. 66).</li>
+</ul>
+<hr />
+<h3 id="chapter-14-judicial-reform-growth-and-investment-encouraged-by-the-rule-of-law-pdf-pp-6769-printed-pp-6567">Chapter 14: Judicial Reform — <em>Growth and Investment Encouraged by the Rule of Law</em> (PDF pp. 67–69 / printed pp. 65–67)</h3>
+<ul>
+<li><strong>Pillars (PDF p. 67)</strong>: States <em>"four pillars"</em> in lead-in text and prints <strong>five</strong> items: Judicial Independence and Integrity; Respect for the Rule of Law; Legal Framework; Access to Justice; Equality Before the Law.</li>
+<li><strong>Institutional, Legislative &amp; Operational Reforms (PDF pp. 68–69)</strong>:</li>
+<li>Form a <strong>Structural Review Committee</strong> (with NJC, States, legal profession) to improve judicial efficiency (PDF p. 68).</li>
+<li>Recommend repeal/amendment of antiquated laws (<strong>Legislative Review</strong>, PDF p. 68).</li>
+<li>Assure <strong>judicial financial and administrative independence</strong>; review and improve <strong>welfare and remuneration of federal judicial officers</strong> (PDF p. 68).</li>
+<li><strong>Restructure the National Judicial Council (NJC)</strong>: Strengthen anti-corruption/discipline capacity while <strong>limiting the scope of the NJC's mandate to Federal Courts</strong> (PDF p. 68).</li>
+<li><strong>Decongest &amp; Digitise Courts (PDF p. 69)</strong>: Increase federal trial courts and judges (with incentives for congested State courts); create <strong>specialised federal courts</strong>; <strong>allocate funds to digitise trial and appellate court processes</strong>; discipline/withhold promotion from judges and sanction lawyers for excessive delays or improper <em>ex parte</em> injunctions.</li>
+</ul>
+<hr />
+<h3 id="chapter-15-federalism-decentralisation-of-power-in-pursuit-of-a-more-balanced-democracy-pdf-pp-7071-printed-pp-6869">Chapter 15: Federalism / Decentralisation of Power — <em>In Pursuit of a More Balanced Democracy</em> (PDF pp. 70–71 / printed pp. 68–69)</h3>
+<ul>
+<li><strong>Constitutional Review of Legislative Lists (PDF pp. 70–71)</strong>:</li>
+<li>Collaborate with National Assembly and States to devolve greater autonomy/control to States, specifically focusing on <strong>crime prevention, prisons, stamp duties, and certain forms of taxation</strong> (PDF p. 71).</li>
+<li><strong>Federation Revenue Allocation Review (PDF p. 71)</strong>:</li>
+<li>Review and recalibrate the <strong>federation revenue allocation formula</strong> across Federal, State, and Local tiers so <strong>more funds go to States and Local Governments</strong> (already previewed on PDF p. 14).</li>
+</ul>
+<hr />
+<h3 id="chapter-16-foreign-policy-establishing-nigerias-place-in-the-world-pdf-pp-7274-printed-pp-7072">Chapter 16: Foreign Policy — <em>Establishing Nigeria's Place in the World</em> (PDF pp. 72–74 / printed pp. 70–72)</h3>
+<ul>
+<li><strong>Three Objectives &amp; Pan-African Posture (PDF p. 72)</strong>: Protect against external aggression, advance Nigeria's interests bilaterally/multilaterally, and elevate Nigeria's global standing as the leader of Africa and the Black world.</li>
+<li><strong>Concrete Diplomatic Commitments (PDF pp. 73–74)</strong>:</li>
+<li>Active sub-regional conflict diplomacy; <strong>institutionalise more frequent meetings of West African foreign affairs and defence ministers</strong> to curb cross-border terrorism and bar non-African terrorist groups (PDF p. 73).</li>
+<li>Boost intra-ECOWAS trade, joint industrialisation, and joint infrastructure; lead African reform pushes at the <strong>WTO and international financial institutions</strong>; advocate <strong>climate justice</strong> so Nigeria/Africa do not pay disproportionately for foreign-caused damage; upgrade <strong>embassy consular services</strong> (PDF p. 73).</li>
+<li>Forge a continent-wide <strong>malaria eradication</strong> research/cooperation push; <strong>establish a <code>"G-5"</code> among major African nations</strong> for common global/continental positions; create a <strong>Department for Strategic Policy within the Foreign Ministry</strong> (PDF p. 74).</li>
+<li>Improve <strong>Diaspora registration/data</strong> and work with the National Assembly to <strong>explore amending the Constitution for greater Diaspora democratic representation and participation</strong> (PDF p. 74).</li>
+</ul>
+<hr />
+<h2 id="3-verifiable-20232027-audit-checklist">3. Verifiable 2023–2027 Audit Checklist</h2>
+<p>The table below isolates every measurable quantitative target, deadline, institutional pledge, and sharp policy doctrine in the 2023 Action Plan for direct comparison against 2023–2026 implementation outcomes.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Pledge / Target / Doctrine</th>
+<th>Specific Metric or Action</th>
+<th>Stated Timeline</th>
+<th>PDF Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Macro / GDP</strong></td>
+<td>Accelerate real/nominal GDP at 10% rate</td>
+<td>Grow GDP from <code>$484.9B</code> (2022) / <code>$533.3B</code> (2023) to <strong><code>$780.9B</code></strong> (2027)</td>
+<td>2023–2027</td>
+<td>p. 15</td>
+</tr>
+<tr>
+<td><strong>Fiscal / Budget</strong></td>
+<td>Decouple naira budget from oil dollars &amp; expand spending</td>
+<td>Establish inflationary spending ceiling; <strong>legislatively suspend spending limits</strong>; cap govt building/executive pay</td>
+<td>Immediate / term</td>
+<td>pp. 16, 19</td>
+</tr>
+<tr>
+<td><strong>Fiscal / Infrastructure</strong></td>
+<td>Potable water &amp; Great Green Wall</td>
+<td>Reliable potable water within <strong>5 minutes</strong> for every citizen (<strong>by 2030</strong>); complete Great Green Wall</td>
+<td>By 2030 / term</td>
+<td>p. 17</td>
+</tr>
+<tr>
+<td><strong>Fiscal / Trade</strong></td>
+<td>Import substitution &amp; tax posture</td>
+<td>Luxury taxes/tariffs on non-essential imports; <strong>avoid tax rate increases during economic weakness</strong></td>
+<td>Term</td>
+<td>p. 18</td>
+</tr>
+<tr>
+<td><strong>Monetary / FX</strong></td>
+<td>Exchange-rate reform without pure free float</td>
+<td>Review/optimise <strong>multiple exchange rate</strong> regime with CBN, yet <strong>not</strong> left <em>"to an unrestrained market"</em></td>
+<td>Immediate / term</td>
+<td>p. 21</td>
+</tr>
+<tr>
+<td><strong>Monetary / Rates</strong></td>
+<td>Anti-tightening inflation doctrine</td>
+<td>Explicitly rejects <em>"higher interest rates and tighter money-supply"</em> for supply-driven inflation</td>
+<td>Policy stance</td>
+<td>p. 22</td>
+</tr>
+<tr>
+<td><strong>Debt</strong></td>
+<td>Limit foreign-currency debt</td>
+<td>Tie new FX debt strictly to <strong>cash-flow-generating projects</strong>; prefer naira debt</td>
+<td>Ongoing</td>
+<td>p. 23</td>
+</tr>
+<tr>
+<td><strong>Industry &amp; Housing</strong></td>
+<td>Regional industrial hubs &amp; housing agency/credit</td>
+<td>Hub in every zone + SE/SS dry port; merge housing agencies; bank consumer-credit quota + penalties; plot <strong><code>4.0</code> (2023) → <code>20.0</code> (2027) → <code>24.0</code> (2028)</strong> cumulative units (<em>unit scale omitted</em>); revise Land Use Act</td>
+<td>2023–2028</td>
+<td>pp. 24–27</td>
+</tr>
+<tr>
+<td><strong>Agriculture</strong></td>
+<td>Cultivated arable land expansion</td>
+<td>Increase cultivated arable land from <strong>35% to 65%</strong>; <strong>Farm Nigeria</strong> starting in <strong>11 river basins</strong>; introduce <strong>Commodity Boards</strong>; reform <strong>BoA</strong></td>
+<td>Within <strong>4 years</strong> (by 2027)</td>
+<td>pp. 28–31</td>
+</tr>
+<tr>
+<td><strong>Power</strong></td>
+<td>Metering, tariffs, EPSRA &amp; Nigeria First</td>
+<td>End estimated billing (NMMP/MAP); no energising unmetered new connections; <strong>cost-reflective DisCo tariffs</strong>; review <strong>EPSRA 2005</strong>; <code>#1</code> gas priority for power; <strong>2060</strong> carbon neutrality</td>
+<td>Shortest possible time / 2060</td>
+<td>pp. 32–34</td>
+</tr>
+<tr>
+<td><strong>Oil Production</strong></td>
+<td>Crude output &amp; indigenous share</td>
+<td>Crude output to <strong>2.6 mmbpd by 2027</strong> (4 mmbpd by 2030); indigenous share <strong>&gt;1 mmbpd by 2027</strong>; special pipeline unit + oil theft drop</td>
+<td>By <strong>2027</strong> / 2030</td>
+<td>p. 37</td>
+</tr>
+<tr>
+<td><strong>Gas &amp; PIA</strong></td>
+<td>Midstream deregulation, gas output &amp; Deepwater</td>
+<td><strong>Deregulate midstream gas prices</strong> &amp; enact <strong>PIA/Deepwater incentives within 6 months</strong>; <strong>+20% gas output</strong> &amp; finish OB3/ELPS II/AKK/Trans-Nigeria <strong>by 2027</strong></td>
+<td><strong>6 months</strong> / <strong>2027</strong></td>
+<td>p. 38</td>
+</tr>
+<tr>
+<td><strong>Fuel Subsidy</strong></td>
+<td>Downstream deregulation &amp; subsidy removal</td>
+<td><strong>Phase out fuel subsidy</strong>, rehabilitate refineries, and <strong>earmark savings</strong> to roads, boreholes, transit subsidies, education &amp; health (pregnant women/under-5s)</td>
+<td>Term</td>
+<td>pp. 39, 49</td>
+</tr>
+<tr>
+<td><strong>Transport</strong></td>
+<td>Rail corridors, ports &amp; national carrier</td>
+<td>Complete <strong>Lagos–Kano, Benin–Abakaliki, PH–Maiduguri, Lagos–Calabar, Kano–Maradi</strong>; review NRC; decongest Apapa (use Onne/Warri/Calabar); <strong>continue national carrier plans</strong></td>
+<td>Term</td>
+<td>pp. 40–42</td>
+</tr>
+<tr>
+<td><strong>Education</strong></td>
+<td>Curriculum, student loans &amp; CBN education bonds</td>
+<td>Reintroduce <strong>Nigerian history</strong> &amp; compulsory <strong>indigenous languages</strong>; <strong>pilot student loan scheme</strong> + cost-reflective tuition; <strong>zero-coupon federal bonds (CBN-purchasable)</strong> Special Ed Fund</td>
+<td>Term</td>
+<td>pp. 44, 46</td>
+</tr>
+<tr>
+<td><strong>Healthcare</strong></td>
+<td>Health insurance, clinic proximity &amp; hospital tiers</td>
+<td><strong>Mandatory NHIA coverage ≥40% of population within 2 years</strong>; primary clinic within <strong>3 km / 30 min</strong>; general hospital per LGA, tertiary per State, specialist per zone; <strong>~1%</strong> insurance funds to research; alcohol/tobacco tax</td>
+<td><strong>2 years</strong> (40% NHIA) / term</td>
+<td>pp. 48–50</td>
+</tr>
+<tr>
+<td><strong>Digital Economy</strong></td>
+<td>Jobs, broadband &amp; blockchain/crypto</td>
+<td><strong>1 million new ICT jobs within 24 months</strong>; <strong>90% broadband coverage by 2025</strong>; virtual-asset/crypto regulatory review committee; expand <strong>eNaira</strong></td>
+<td><strong>24 months</strong> / <strong>2025</strong></td>
+<td>pp. 51–54</td>
+</tr>
+<tr>
+<td><strong>Creative &amp; Sports</strong></td>
+<td>Media City SEZ, venues &amp; NISP</td>
+<td>Build <strong>Dubai-style Media City SEZ</strong>; Presidential Creative Advisory Team; venues in all <strong>6 zones</strong>; implement <strong>NISP</strong> &amp; <strong>Athletes' Welfare Fund</strong></td>
+<td>Term</td>
+<td>pp. 56–58</td>
+</tr>
+<tr>
+<td><strong>Youth</strong></td>
+<td>Cut unemployment &amp; reserve leadership posts</td>
+<td>Halve <strong>33%</strong> youth unemployment within <strong>4 years</strong> (<code>21.5M</code> 2022 → <code>11.9M</code> 2026); <strong>2M</strong> mentors; <strong>≥3 cabinet seats (&lt;40) + 6 (&lt;50)</strong>; <strong>≥20% MDA appointments (&lt;40)</strong>; reform NYSC</td>
+<td>Immediate / <strong>4 years</strong></td>
+<td>pp. 59–61</td>
+</tr>
+<tr>
+<td><strong>Women &amp; Social</strong></td>
+<td>35% quota, N-SIP expansion &amp; out-of-school czar</td>
+<td>Pass <strong>≥35% women governmental participation law</strong>; expand <strong>N-SIP</strong> (<code>CCT, GEEP, HGSF, N-Power</code>); <strong>special czar</strong> task force on out-of-school children; <strong>digital MSME Academy</strong></td>
+<td>Term</td>
+<td>pp. 62–66</td>
+</tr>
+<tr>
+<td><strong>Judiciary &amp; Federalism</strong></td>
+<td>NJC scope, digitisation &amp; devolution</td>
+<td><strong>Limit NJC mandate to Federal Courts</strong>; increase/specialise/digitise federal courts; review <strong>Constitutional legislative lists</strong> (crime prevention, prisons, stamp duties, taxation) &amp; <strong>revenue allocation formula</strong></td>
+<td>Term</td>
+<td>pp. 68–71</td>
+</tr>
+<tr>
+<td><strong>Foreign Policy</strong></td>
+<td>African G-5 &amp; Diaspora voting</td>
+<td>Form <strong>African G-5</strong>; Foreign Ministry <strong>Dept. of Strategic Policy</strong>; <strong>Constitutional amendment exploration for Diaspora voting/representation</strong></td>
+<td>Term</td>
+<td>pp. 73–74</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="4-analytical-notes-for-cross-comparison-2023-vs-2027-20232026-record">4. Analytical Notes for Cross-Comparison (<code>2023</code> vs <code>2027</code> &amp; <code>2023–2026</code> Record)</h2>
+<ol>
+<li><strong>Macroeconomic Orthodoxy Inversion (<code>pp. 16, 21–22</code>)</strong>: The 2023 manifesto explicitly advocated <em>heterodox, expansionary</em> fiscal and monetary doctrines—suspending statutory spending limits, decoupling budgets from oil dollars, rejecting interest-rate hikes against supply-side inflation, and refusing to leave the naira to <em>"an unrestrained market."</em> Whether and why the administration pivoted toward CBN rate hikes, naira floating/unification, and traditional fiscal consolidation after May 2023 is a central baseline comparison point.</li>
+<li><strong>Earmarked Fuel Subsidy Reinvestment (<code>pp. 39, 49</code>)</strong>: Subsidy removal was explicitly paired with ring-fenced spending on public transport subsidies, roads, boreholes, education, and NHIA coverage for pregnant women and under-fives—not merely general deficit reduction.</li>
+<li><strong>Careful Constitutional Phrasing on Policing (<code>pp. 11, 71</code>)</strong>: Although widely debated as "state police," the printed 2023 manifesto carefully uses <em>"more formal locally-based law enforcement institutions"</em> (p. 11) and <em>"crime prevention, prisons"</em> (p. 71).</li>
+<li><strong>Incomplete Graphic Metadata &amp; Internal Editorial Quirks</strong>:</li>
+<li>The housing chart on <strong>PDF p. 27</strong> (<code>4.0</code> to <code>24.0</code>) omits the unit multiplier on the <code>HOUSING UNITS</code> axis, making independent target sizing impossible from the graphic alone.</li>
+<li>The oil-theft graphic on <strong>PDF p. 37</strong> lacks Y-axis figures.</li>
+<li>Minor editorial artifacts appear in the printed PDF itself: duplicated <em>"okra"</em> in the commodity crop list (PDF p. 29), repeated workforce-retention paragraphs (PDF p. 49), <em>"four pillars"</em> followed by five bullets (PDF p. 67), and duplicate <em>(ii)</em> numbering in Foreign Policy objectives (PDF p. 72).</li>
+</ol>
+    </article>
+  </main>
+
+  <footer>
+    <p>CIVIC LENS INVESTIGATIVE DESK • PRESIDENTIAL MANIFESTO &amp; DELIVERY ARCHIVE</p>
+    <p style="margin-top: 6px;">All claims, targets, and empirical outcomes compiled strictly from official APC 2023 &amp; 2027 manifestos alongside CBN, NBS, DMO, NERC, NRS, judicial, multilateral, and independent press records.</p>
+  </footer>
+</body>
+</html>
